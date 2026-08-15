@@ -222,6 +222,7 @@
         </div>
       </div>
       <div class="count-row" id="countRow"></div>
+      <div id="randomIncorrectWrap"></div>
     </div>
 
     <div class="mode-label">By section</div>
@@ -257,8 +258,7 @@
   <div class="resume-modal">
     <h2>Continue where you left off?</h2>
     <p id="resumeModalText"></p>
-    <button class="next-btn" id="resumeContinueBtn" style="width:100%;margin-bottom:10px;"></button>
-    <button class="btn-secondary" id="resumeAllBtn" style="width:100%;"></button>
+    <div id="resumeButtons"></div>
   </div>
 </div>
 
@@ -4216,31 +4216,57 @@ function renderSections(){
   renderRandomCard();
 }
 
+function getIncorrectQIdxs(secId){
+  const results = getResultsMap(secId);
+  return Object.keys(results).filter(k => results[k] === false).map(Number);
+}
+
 function handleSectionClick(sectionId){
   const sec = SECTIONS.find(s=>s.id===sectionId);
   const attempted = getAttemptedSet(sectionId);
   const unattemptedCount = sec.questions.filter(q => !attempted.has(q._qIdx)).length;
-  if (attempted.size > 0 && unattemptedCount > 0){
-    showResumeChoice(sectionId, unattemptedCount, sec.questions.length);
+  const incorrectCount = getIncorrectQIdxs(sectionId).length;
+  if ((attempted.size > 0 && unattemptedCount > 0) || incorrectCount > 0){
+    showResumeChoice(sectionId, unattemptedCount, incorrectCount, sec.questions.length);
   } else {
     startQuiz(sectionId);
   }
 }
 
-function showResumeChoice(sectionId, unattemptedCount, total){
+function showResumeChoice(sectionId, unattemptedCount, incorrectCount, total){
   const sec = SECTIONS.find(s=>s.id===sectionId);
+  const answeredCount = total - unattemptedCount;
   document.getElementById('resumeModalText').textContent =
-    `You've already answered ${total - unattemptedCount} of ${total} questions in ${sec.name}. Pick up where you left off, or start over with everything.`;
-  const contBtn = document.getElementById('resumeContinueBtn');
-  const allBtn = document.getElementById('resumeAllBtn');
-  contBtn.textContent = `Continue — ${unattemptedCount} unattempted`;
-  allBtn.textContent = `All ${total} questions`;
-  contBtn.onclick = () => { closeResumeModal(); startQuiz(sectionId, 'unattempted'); };
-  allBtn.onclick = () => { closeResumeModal(); startQuiz(sectionId, 'all'); };
+    `You've already answered ${answeredCount} of ${total} questions in ${sec.name}. Pick up where you left off, focus on what you got wrong, or start over with everything.`;
+
+  const buttons = [];
+  if (unattemptedCount > 0){
+    buttons.push({ mode:'unattempted', label:`Continue — ${unattemptedCount} unattempted`, cls:'next-btn' });
+  }
+  if (incorrectCount > 0){
+    buttons.push({ mode:'incorrect', label:`Retry incorrect — ${incorrectCount}`, cls:'btn-secondary' });
+  }
+  buttons.push({ mode:'all', label:`All ${total} questions`, cls:'btn-secondary' });
+
+  document.getElementById('resumeButtons').innerHTML = buttons.map((b,i) => `
+    <button class="${b.cls}" data-mode="${b.mode}" style="width:100%;${i < buttons.length-1 ? 'margin-bottom:10px;' : ''}">${b.label}</button>
+  `).join('');
+  document.querySelectorAll('#resumeButtons button').forEach(btn=>{
+    btn.onclick = () => { closeResumeModal(); startQuiz(sectionId, btn.dataset.mode); };
+  });
   document.getElementById('resumeModal').style.display = 'flex';
 }
 function closeResumeModal(){
   document.getElementById('resumeModal').style.display = 'none';
+}
+
+function getAllIncorrectQuestions(){
+  const out = [];
+  SECTIONS.forEach(sec=>{
+    const incorrectIdxs = new Set(getIncorrectQIdxs(sec.id));
+    sec.questions.forEach(q=>{ if (incorrectIdxs.has(q._qIdx)) out.push(q); });
+  });
+  return out;
 }
 
 function renderRandomCard(){
@@ -4265,6 +4291,15 @@ function renderRandomCard(){
     };
   });
   document.getElementById('randomStartBtn').onclick = () => startRandomQuiz(selectedRandomCount);
+
+  const incorrectTotal = getAllIncorrectQuestions().length;
+  const incorrectWrap = document.getElementById('randomIncorrectWrap');
+  incorrectWrap.innerHTML = incorrectTotal > 0
+    ? `<button class="btn-secondary" id="randomIncorrectBtn" style="width:100%;margin-top:10px;">Retry incorrect across all sections — ${incorrectTotal}</button>`
+    : '';
+  if (incorrectTotal > 0){
+    document.getElementById('randomIncorrectBtn').onclick = startIncorrectMixQuiz;
+  }
 }
 
 /* ---------------- Quiz flow ---------------- */
@@ -4274,6 +4309,10 @@ function startQuiz(sectionId, mode){
   if (mode === 'unattempted'){
     const attempted = getAttemptedSet(sectionId);
     const filtered = sec.questions.filter(q => !attempted.has(q._qIdx));
+    if (filtered.length > 0) pool = filtered;
+  } else if (mode === 'incorrect'){
+    const incorrectIdxs = new Set(getIncorrectQIdxs(sectionId));
+    const filtered = sec.questions.filter(q => incorrectIdxs.has(q._qIdx));
     if (filtered.length > 0) pool = filtered;
   }
   currentQuiz = { id: sec.id, title: sec.name, questions: shuffle(pool), isRandom: false };
@@ -4286,6 +4325,16 @@ function startQuiz(sectionId, mode){
 function startRandomQuiz(count){
   const picked = shuffle(ALL_QUESTIONS).slice(0, count);
   currentQuiz = { id: 'random-' + count, title: 'Random mix', questions: picked, isRandom: true };
+  currentQIndex = 0;
+  currentAnswers = new Array(currentQuiz.questions.length).fill(null);
+  showView('view-quiz');
+  renderQuestion();
+}
+
+function startIncorrectMixQuiz(){
+  const picked = getAllIncorrectQuestions();
+  if (!picked.length) return;
+  currentQuiz = { id: 'random-incorrect', title: 'Retry incorrect — all sections', questions: shuffle(picked), isRandom: true };
   currentQIndex = 0;
   currentAnswers = new Array(currentQuiz.questions.length).fill(null);
   showView('view-quiz');
