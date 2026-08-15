@@ -405,7 +405,267 @@ const SECTIONS = [
         correct: 3,
         explain: "The general legal duty sits with the licence holder, covering any condition likely to affect safe driving ability — with a specific carve-out for short-term conditions expected to last under 3 months. Doctors have a duty to advise and, in limited circumstances, to notify directly — but the primary legal duty is the driver's.",
         source: "DVLA — general information and legal framework"
-      }
+      },
+      {
+        stem: "A 34-year-old lorry driver has had three unprovoked seizures over the past four years and now meets the licensing definition of epilepsy. What would be required before his Group 2 entitlement could be considered for restoration?",
+        options: [
+          "Twelve months free of seizures, with anticonvulsant medication continued throughout, matching the Group 1 standard",
+          "Five years free of seizures, with medication use over that period having no bearing on the outcome",
+          "Ten years free of seizures, during which no medication to treat epilepsy has been taken",
+          "Ten years free of seizures, with low-dose anticonvulsant treatment permitted to continue throughout that period",
+          "The Group 2 requirement matches the Group 1 requirement, because a single legal definition applies"
+        ],
+        correct: 2,
+        explain: "Group 2 licensing for established epilepsy requires ten years free of seizures AND no epilepsy medication taken during those ten years, plus no continuing increased risk. Option D is the trap: it isolates the seizure-free interval and drops the medication limb. Because medication-free status is built in, there are no special considerations for medication withdrawal in Group 2, unlike Group 1.",
+        source: "DVLA — Ch1 Neurological disorders — Epilepsy and seizures, Group 2 bus and lorry"
+      },
+      {
+        stem: "A 29-year-old bus driver has a single unprovoked seizure with no identified precipitant. Brain imaging and EEG are both normal. When might his Group 2 entitlement be restored, and what will be required at that point?",
+        options: [
+          "Six months off driving, mirroring the period that applies to a Group 1 driver here",
+          "Five years off driving, followed by a recent neurologist assessment and no epilepsy medication throughout",
+          "Restoration is not possible following any unprovoked seizure, whatever later investigation happens to show",
+          "Twelve months off driving, mirroring the Group 1 period where a causative factor is identified",
+          "Five years off driving, with prophylactic anticonvulsant medication continued throughout to reduce recurrence"
+        ],
+        correct: 1,
+        explain: "Group 2 driving ceases for five years from the date of an isolated seizure. Restoration then requires a recent neurologist assessment indicating annual seizure risk no greater than 2%, and no need for epilepsy medication throughout those five years. Option E is the paired trap — it gets the interval right but inverts the medication limb, since remaining well on prophylaxis is precisely what disqualifies this route.",
+        source: "DVLA — Ch1 Neurological disorders — First unprovoked/isolated seizure, Group 2"
+      },
+      {
+        stem: "A 41-year-old lorry driver with insulin-treated diabetes reports that his warning symptoms of hypoglycaemia are becoming less reliable, though he still recognises most episodes. Would the 'impaired awareness' category allow him to keep his Group 2 entitlement?",
+        options: [
+          "Impaired awareness permits continued Group 2 driving where glucose monitoring is performed more frequently",
+          "Impaired awareness applies to Group 2 only once a severe hypoglycaemic episode has occurred",
+          "Impaired awareness applies identically to both groups, being defined by the advisory panel itself",
+          "Group 2 drivers must have full awareness of hypoglycaemia; no equivalent graded category exists",
+          "Impaired awareness permits continued Group 2 driving where a continuous glucose monitor is worn"
+        ],
+        correct: 3,
+        explain: "Group 2 drivers must have full awareness of hypoglycaemia. The graded categories are defined for Group 1 only: adequate awareness means recognising symptoms in time to stop the vehicle safely, impaired awareness means inability to recognise low or falling glucose due to a TOTAL absence of warning symptoms. Option C is tempting because the Panel does define the term — but expressly for Group 1. Device alarms supplement rather than replace awareness; a driver dependent on alarms must stop and notify DVLA.",
+        source: "DVLA — Ch3 Diabetes mellitus — Impaired awareness of hypoglycaemia; insulin-treated diabetes Group 2 criteria"
+      },
+      {
+        stem: "A 38-year-old coach driver with insulin-treated diabetes has a severe overnight hypoglycaemic episode requiring his partner to wake him and give glucose. He believes episodes occurring during sleep are disregarded for licensing purposes. What is the position?",
+        options: [
+          "He is correct; sleep episodes are disregarded for Group 1 and Group 2 drivers alike",
+          "He is correct, though the episode should be recorded in his own medical records",
+          "Sleep episodes count only where they recur more than once within a twelve-month period",
+          "Sleep episodes count only once they have caused demonstrable harm to the driver concerned",
+          "Group 2 drivers must report every episode of severe hypoglycaemia, including those during sleep"
+        ],
+        correct: 4,
+        explain: "Group 2 drivers must report all episodes of severe hypoglycaemia requiring another person's help, sleep episodes included. Option A is a half-truth: for Group 1, hypoglycaemia during established sleep is no longer relevant for licensing, unless there are separate concerns about recognising low glucose. The exclusion exists but does not extend to Group 2. Note the adjacent thresholds — Group 1 permits no more than one severe episode while awake in 12 months with the most recent over 3 months ago; Group 2 permits none.",
+        source: "DVLA — Ch3 Diabetes mellitus — Severe hypoglycaemia, Group 1 and Group 2"
+      },
+      {
+        stem: "A 47-year-old HGV driver has corrected visual acuity of 6/9 in his better eye and 6/24 in the poorer eye, with full visual fields and no other ocular pathology. He believes this exceeds the Group 2 minimum, which he recalls as 6/12. What is the position?",
+        options: [
+          "He fails: at least 6/7.5 is required in the better eye and 6/60 in the poorer",
+          "He is correct; 6/9 comfortably exceeds the acuity standard that applies to Group 2 drivers",
+          "Only the better eye is assessed, so his poorer-eye acuity does not affect the outcome",
+          "He passes, since binocular acuity with both eyes open exceeds the relevant Group 2 threshold",
+          "The 6/12 figure he recalls applies to both licence groups, his poorer eye being the limiting factor here"
+        ],
+        correct: 0,
+        explain: "Group 2 requires at least Snellen 6/7.5 in the better eye and at least 6/60 in the poorer. 6/7.5 is better acuity than 6/9, so his better eye fails while his poorer eye passes comfortably — counter-intuitive, since 6/9 feels like a strong result. The 6/12 standard (both eyes open, or in the only eye if monocular) is Group 1. Also note the spectacle limit: if glasses are worn to meet the standard, corrective power must not exceed +8 dioptres in any meridian.",
+        source: "DVLA — Ch6 Visual disorders — Higher standard of visual acuity, bus and lorry drivers"
+      },
+      {
+        stem: "A 52-year-old lorry driver undergoes prophylactic ICD implantation for primary prevention, having never had a sustained ventricular arrhythmia. Could his Group 2 entitlement be restored after a period of demonstrated stable device function?",
+        options: [
+          "Restoration is possible after six months if interrogation confirms no inappropriate shock therapy",
+          "Restoration is possible after twelve months of stable device function without arrhythmic events",
+          "The permanent bar applies only where implantation followed a sustained ventricular arrhythmia",
+          "ICD implantation, including prophylactic implantation, bars Group 2 licensing permanently",
+          "Restoration depends on the model of device implanted and its programmed settings"
+        ],
+        correct: 3,
+        explain: "ICD implantation is a permanent bar to Group 2 licensing in all cases, prophylactic implantation included: licence refused or revoked permanently. Option C is the trap — the primary/secondary prevention distinction shapes the Group 1 pathway substantially but does nothing for Group 2. Note also that where ICD implantation is recommended but declined or not performed, the driver is still assessed against the ICD standard; and that DVLA bars Group 2 licensing whenever LVEF is below 40%.",
+        source: "DVLA — Ch2 Cardiovascular disorders — Implantable cardioverter defibrillator, Group 2"
+      },
+      {
+        stem: "A 44-year-old coach driver has alcohol dependence with one high-risk feature, confirmed by medical enquiry. After fourteen months of abstinence he asks about restoration, noting that a Group 1 colleague was relicensed after a shorter period. What is the position?",
+        options: [
+          "Fourteen months already exceeds the Group 2 minimum, so restoration may be considered without delay",
+          "Two years of abstinence is required, a period falling midway between the two group standards",
+          "An identical minimum abstinence period applies to Group 1 and Group 2 drivers in this category",
+          "Three years' abstinence is required, then ongoing abstinence for five years from its onset",
+          "Confirmed dependence with high-risk features permanently bars any future Group 2 licensing"
+        ],
+        correct: 3,
+        explain: "Group 2: licence refused or revoked until a minimum of three years' abstinence, with continued licensing requiring ongoing abstinence for at least five years FROM THE ONSET of abstinence, monitored by DVLA. The five years runs from when abstinence began — it is not three-plus-five. Group 1 by contrast requires one year's abstinence then ongoing abstinence for three years from onset, which correctly explains the colleague's shorter timeline.",
+        source: "DVLA — Ch5 Drug or alcohol misuse and dependence — Alcohol dependence, Group 1 and Group 2"
+      },
+      {
+        stem: "A 61-year-old bus driver is referred after his GP records early cognitive changes, with a working diagnosis of mild dementia. Progression appears slow, he retains good insight, and a formal driving assessment at an approved centre has been suggested. What is the position on his Group 2 entitlement?",
+        options: [
+          "A satisfactory formal driving assessment would allow his entitlement to be retained under review",
+          "Entitlement may continue while progression remains slow, with annual specialist reassessment required",
+          "Entitlement turns on whether short-term memory and judgement are demonstrably preserved",
+          "Entitlement continues until cognitive testing falls below a defined threshold score",
+          "Entitlement will be refused or revoked, whatever the stage or rate of progression"
+        ],
+        correct: 4,
+        explain: "For Group 2, licensing in dementia or any organic syndrome affecting cognitive functioning is refused or revoked, with no individualised pathway. Every distractor imports a genuine Group 1 consideration — slow progression with retained skills permitting a licence subject to annual review, the relevance of short-term memory and judgement, and the possible need for a formal driving assessment — into a group where none of them apply.",
+        source: "DVLA — Ch4 Psychiatric disorders — Dementia and/or organic syndrome affecting cognitive functioning"
+      },
+      {
+        stem: "A newly appointed occupational physician asks how the Group 2 medical standards relate to the Group 1 standards in general terms, so that she knows what to expect when advising vocational drivers. What is the correct general position?",
+        options: [
+          "In most cases the Group 2 standards are substantially higher than the Group 1 standards",
+          "The two sets of standards are identical apart from a small number of named exceptions",
+          "Group 2 standards are generally lower, reflecting the training and experience of vocational drivers",
+          "Relative stringency varies unpredictably between conditions, with no consistent pattern across the guidance",
+          "Group 2 standards exceed Group 1 standards for neurological and cardiovascular conditions only"
+        ],
+        correct: 0,
+        explain: "DVLA states that in most cases the medical standards for Group 2 drivers are substantially higher than for Group 1, reflecting vehicle size and weight and the time an occupational driver spends at the wheel. 'In most cases' is the operative qualifier — option B pushes it too far, since the exceptions are not a defined short list. Excessive sleepiness at mild severity is one shared standard worth knowing.",
+        source: "DVLA — General information — GB driver licensing, licensing and licence groups"
+      },
+      {
+        stem: "A 36-year-old newly qualified HGV driver asks how long his Group 2 entitlement will last and what each renewal will involve as he gets older. What is the correct position?",
+        options: [
+          "Valid for five years, with renewal by self-declaration until 45 and a D4 medical thereafter",
+          "Valid for five years, with a D4 medical examination required at every renewal from the outset",
+          "Valid for ten years, renewable by self-declaration, mirroring the Group 1 photocard renewal cycle",
+          "Valid indefinitely once granted, subject only to notification of any new medical condition",
+          "Renewal frequency depends on his age at first grant, with no fixed maximum duration"
+        ],
+        correct: 0,
+        explain: "Group 2 entitlement is valid for a maximum of five years. New applicants require a D4 medical, but drivers under 45 then renew every five years by self-declaration. At 45 the licence expires and a D4 is required, and thereafter at each five-yearly renewal; from 65, renewal and a D4 are annual. Option B is the trap — it takes the true fact that new applicants need a D4 and flattens the age-tiering into a single rule.",
+        source: "DVLA — General information — Age limits for licensing, Group 2; Ch8 Miscellaneous conditions — Older age"
+      },
+      {
+        stem: "A 55-year-old lorry driver starts haemodialysis for end-stage renal failure. He has intermittent intradialytic hypotension and electrolyte disturbance around sessions, but feels well between them. What is the licensing position?",
+        options: [
+          "Dialysis has no licensing relevance provided the underlying renal failure remains stable",
+          "Only peritoneal dialysis, not haemodialysis, carries relevance to the licensing standards",
+          "Symptoms affecting driving or clinically significant electrolyte disturbance are relevant; Group 2 needs individual assessment",
+          "The standard applies only where loss of consciousness has occurred around a dialysis session",
+          "Electrolyte disturbance is relevant to Group 1 only, Group 2 focusing on cardiovascular stability"
+        ],
+        correct: 2,
+        explain: "CAPD and haemodialysis are covered together: drivers in both groups may drive and need not notify DVLA UNLESS the condition is associated with a disability likely to affect driving and/or significant electrolyte disturbance likely to result in clinical symptoms. Group 2 additionally requires individual assessment for relicensing. The default is permissive, which catches candidates out in the opposite direction; option D sets the trigger far too high at loss of consciousness.",
+        source: "DVLA — Ch7 Renal and respiratory disorders — Chronic renal failure, CAPD or haemodialysis"
+      },
+      {
+        stem: "A 39-year-old lorry driver has persistent cocaine misuse confirmed by medical enquiry. A colleague, also a Group 2 driver, has persistent cannabis misuse and was told a shorter period applied to him. For how long will his own licence be withheld?",
+        options: [
+          "One year free of misuse, matching the period applied to his colleague's cannabis misuse",
+          "Six months free of misuse, matching the Group 1 period for this drug group",
+          "Three years free of misuse, a longer period than applies to the cannabis group",
+          "Five years free of misuse, reflecting the additional risk of stimulant drug use",
+          "The same period applies to every drug group, so his colleague was misinformed"
+        ],
+        correct: 2,
+        explain: "Two tiers apply. Cannabis, amphetamines, MDMA, ketamine and other psychoactives: 6 months Group 1, 1 year Group 2. Opiates, opioids, benzodiazepines, synthetic cannabinoids, methadone, cocaine and methamphetamine: 1 year Group 1, 3 years Group 2. Cocaine sits in the heavier tier despite being a stimulant, and methamphetamine is carved out of the amphetamine line for the same reason. Option A is tempting because one year is real — but it is cannabis at Group 2, or cocaine at Group 1. Multiple substance problems, including concurrent alcohol misuse, are incompatible with licensing in either group.",
+        source: "DVLA — Ch5 Drug or alcohol misuse and dependence — Drug misuse or dependence"
+      },
+      {
+        stem: "A 48-year-old lorry driver with type 2 diabetes, previously on oral medication, is started on insulin. He continues his Group 2 driving the following week, reasoning that his glycaemic control has improved and no adverse event has occurred. What is the position?",
+        options: [
+          "He should have stopped Group 2 driving on commencing insulin, pending DVLA's decision",
+          "Continuing was appropriate, since commencing insulin alone does not affect Group 2 entitlement",
+          "Notification is required only if a hypoglycaemic episode follows the change in treatment",
+          "The duty applies to Group 1 drivers commencing insulin, not to Group 2 holders",
+          "He may continue provided his employer is informed, without separately notifying DVLA"
+        ],
+        correct: 0,
+        explain: "Group 2 applicants must stop driving Group 2 vehicles on commencing insulin, until DVLA has made a licensing decision. The trigger is the treatment change itself, not the occurrence of an adverse event, and improved control does not substitute for the decision. He will also need the condition stable for at least one month before applying, and annual examination by an independent consultant specialist in diabetes with sight of 4 weeks of meter readings. Temporary insulin treatment is a separate category.",
+        source: "DVLA — Ch3 Diabetes mellitus — How DVLA checks requirements for insulin-treated Group 2 licensing"
+      },
+      {
+        stem: "A 31-year-old lorry driver has a first unprovoked seizure. Imaging and EEG are normal, his neurologist is supportive, and annual seizure risk is estimated at 2% or below. Do these findings shorten his Group 2 off-road period?",
+        options: [
+          "Yes; together these features allow restoration after six months, as for Group 1",
+          "Yes; any one of these features alone permits an earlier restoration date",
+          "Yes; where all are present, restoration may be considered after two years",
+          "No; these features inform the assessment made once five years have elapsed",
+          "No; these features bear on Group 1 decisions only and carry no Group 2 weight"
+        ],
+        correct: 3,
+        explain: "The good prognosis features — no relevant structural abnormality on imaging, no definite epileptiform activity on EEG, neurologist support, and annual seizure risk of 2% or lower for bus and lorry drivers — are defined for BOTH groups. They determine whether the licence can be restored at the five-year mark, not whether that period can be compressed. Option E is the mirror-image error: over-applying the Group 1/Group 2 divide to something that genuinely spans both.",
+        source: "DVLA — Ch1 Neurological disorders — Epilepsy and seizures, good prognosis features"
+      },
+      {
+        stem: "A 68-year-old retired teacher who holds a Group 1 licence is diagnosed with early-stage dementia. Her family assume she must surrender her licence immediately. What is the correct position?",
+        options: [
+          "They are correct; any dementia diagnosis results in automatic revocation of Group 1 entitlement",
+          "She must notify DVLA, and a licence subject to annual review may be possible",
+          "No notification is needed provided a family member accompanies her on every journey",
+          "Continued driving requires a formal driving assessment completed within one month of diagnosis",
+          "Her licence will be automatically restricted to short journeys within her local area"
+        ],
+        correct: 1,
+        explain: "Group 1 dementia is 'may be able to drive but must notify DVLA'. DVLA acknowledges varied presentations and rates of progression, with decisions usually based on medical reports; in early dementia where sufficient skills are retained and progression is slow, a licence may be issued subject to annual review. Poor short-term memory, disorientation and lack of insight almost certainly mean no fitness to drive. A formal driving assessment MAY be necessary — option D overstates this into a fixed requirement with an invented deadline.",
+        source: "DVLA — Ch4 Psychiatric disorders — Dementia, Group 1"
+      },
+      {
+        stem: "A 58-year-old office worker holding a Group 1 licence has an ICD implanted following a sustained ventricular arrhythmia associated with loss of consciousness. What is the position on his driving?",
+        options: [
+          "ICD implantation permanently bars Group 1 licensing, as it does Group 2 licensing",
+          "He may resume driving once the device has been implanted and successfully tested",
+          "Driving must stop for six months from implantation, subject to further conditions",
+          "Driving must stop for twelve months regardless of indication or subsequent device performance",
+          "No period off driving applies where implantation was elective rather than emergency"
+        ],
+        correct: 2,
+        explain: "For an ICD implanted for sustained ventricular arrhythmia associated with incapacity, Group 1 driving stops for six months from implantation; resumption requires regular review with interrogation and no other disqualifying condition. Subsequent intervals: inappropriate therapy (e.g. AF or programming) — one month after control, no notification needed; appropriate therapy — six months from the most recent episode; electrode revision or anti-arrhythmic change — one month, no notification; box change — one week, no notification; prophylactic ICD in an asymptomatic individual — one month, with notification.",
+        source: "DVLA — Ch2 Cardiovascular disorders — Implantable cardioverter defibrillator, Group 1"
+      },
+      {
+        stem: "A 45-year-old sales representative holding a Group 1 licence is diagnosed with mild obstructive sleep apnoea (AHI below 15). He assumes his requirements must be more lenient than those applying to an HGV driver with the same diagnosis. What is the position?",
+        options: [
+          "He is correct; Group 1 drivers may resume as soon as treatment is started",
+          "He is correct; only Group 2 drivers must notify DVLA of this diagnosis",
+          "He is wrong in the opposite direction; the Group 1 standard is the stricter one",
+          "The Group 1 standard is more lenient because the apnoea is mild rather than severe",
+          "He is wrong; for excessive sleepiness the two groups face the same requirement"
+        ],
+        correct: 4,
+        explain: "Mild OSA (AHI below 15) sits in the 'excessive sleepiness due to a medical condition' row, where both columns read identically: must not drive, resume only after satisfactory symptom control, notify DVLA if control cannot be achieved within 3 months. Notification is therefore contingent, not automatic. Above AHI 15 the position changes — moderate and severe OSA requires notification from the outset, and review frequency then diverges (Group 1 at least 3-yearly, Group 2 at least annually).",
+        source: "DVLA — Ch8 Miscellaneous conditions — Excessive sleepiness including obstructive sleep apnoea syndrome"
+      },
+      {
+        stem: "A 33-year-old warehouse operative holding a Group 1 licence has alcohol dependence with one high-risk feature, confirmed by medical enquiry. What abstinence will be required?",
+        options: [
+          "Six months' abstinence, with no further period of monitoring required afterwards",
+          "Three years' abstinence, matching the standard that applies to Group 2 drivers",
+          "No fixed minimum applies; restoration rests on the medical report at review",
+          "The period depends on which high-risk feature has been identified in his case",
+          "One year's abstinence, with ongoing abstinence for three years from its onset"
+        ],
+        correct: 4,
+        explain: "Group 1: licence refused or revoked until a minimum of one year's abstinence, with continued licensing requiring ongoing abstinence for at least three years FROM THE ONSET of abstinence, monitored by DVLA — three years total, not one-plus-three. Option B is tempting because three years is a real figure, but at Group 2 it is the minimum before restoration, not the monitoring period. Group 2 requires three years' abstinence then five years from onset.",
+        source: "DVLA — Ch5 Drug or alcohol misuse and dependence — Alcohol dependence, Group 1"
+      },
+      {
+        stem: "Two Group 1 drivers each have a first unprovoked seizure. No cause is identified in the first. The second is found to have an underlying causative factor that may increase the risk of a further seizure. What off-road period applies to each?",
+        options: [
+          "Both face twelve months off driving, the causative factor making no difference",
+          "Six months for the first driver and twelve months for the second",
+          "Both face six months off driving, the causative factor making no difference",
+          "The driver with a causative factor faces the shorter period, the cause being treatable",
+          "Both face the five-year period that applies to Group 2 drivers after a first seizure"
+        ],
+        correct: 1,
+        explain: "Group 1 first unprovoked or isolated seizure: six months from the date of the seizure, extending to twelve months where clinical factors or investigations suggest an underlying causative factor that may increase risk. An identifiable cause lengthens rather than shortens the period, which option D inverts. An isolated seizure means no other unprovoked seizure in the preceding five years, and more than one seizure within 24 hours counts as a single event.",
+        source: "DVLA — Ch1 Neurological disorders — First unprovoked/isolated seizure, Group 1; Isolated seizures"
+      },
+      {
+        stem: "A 40-year-old coach driver has persistent alcohol misuse without high-risk features, confirmed by medical enquiry and otherwise unexplained abnormal blood markers. He has eight months of abstinence, and notes that a Group 1 colleague in a similar position was relicensed after six. What is the position?",
+        options: [
+          "Eight months exceeds the Group 2 minimum for this category, so restoration may be considered",
+          "One year of controlled drinking or abstinence is required, so eight months is insufficient",
+          "His colleague was misinformed; the Group 1 minimum for this category is also one year",
+          "This category is treated identically to confirmed alcohol dependence for Group 2 purposes",
+          "Restoration rests on the blood marker results alone, with no minimum period applying"
+        ],
+        correct: 1,
+        explain: "Persistent alcohol misuse, including alcohol dependence WITHOUT high-risk features, requires a minimum of one year of controlled drinking or abstinence for Group 2 — double the six months for Group 1, so the colleague's account is accurate. Note this category accepts controlled drinking, defined as drinking at a level the clinician confirms acceptably controls the disorder without impact on personal, social and work responsibilities — a real softening compared with the dependence-plus-high-risk-features category, where only abstinence counts.",
+        source: "DVLA — Ch5 Drug or alcohol misuse and dependence — Persistent alcohol misuse; definition of controlled drinking"
+      },
     ]
   },
   {
@@ -2803,6 +3063,136 @@ const SECTIONS = [
         correct: 0,
         explain: "EMF covers frequencies up to 300 GHz and carries insufficient energy to break the bonds holding molecules together, so it does not ionise matter; effects follow from frequency and magnitude instead. Static electric fields build surface charge, magnetic fields induce current flow in the body, and radiofrequency is partially absorbed a short distance into tissue producing localised heating. Option B attaches a real number to the wrong idea — 300 GHz is the upper bound of the range the guidelines cover, not an ionisation threshold, which sits far higher in the UV and X-ray region. Option D overcorrects: non-ionising is not biologically inert.",
         source: "OHOH 2nd ed, Ch 1 — Non-ionizing radiation 1 (Electromagnetic fields)"
+      },
+      {
+        stem: "An employer asks whether he should introduce routine health surveillance for his fork-lift truck drivers, whose whole-body vibration exposure sits above the exposure action value. What is the correct advice?",
+        options: [
+          "Routine health surveillance is required by regulation once exposure exceeds the action value",
+          "Annual audiometry should be offered, since whole-body vibration causes sensorineural loss",
+          "Surveillance should comprise annual lumbar spine imaging to detect disc degeneration",
+          "Routine surveillance is unlikely to help, though monitoring back pain may identify cases",
+          "No monitoring of any kind is warranted, as the health effects of exposure are unproven"
+        ],
+        correct: 3,
+        explain: "There is no specific, early, reversible sign of whole-body vibration injury for surveillance to detect, so monitoring of back pain among exposed employees is advised instead — closer to symptom reporting than to a surveillance programme. Option A is the trap because it applies the HAVS rule: hand-arm vibration surveillance is a legal requirement above the EAV, whole-body vibration surveillance is not, under the same regulations. Option C fails on a general principle: imaging asymptomatic backs finds degenerative change of no predictive value. WBV values are EAV 0.5 and ELV 1.15 m/s2 A(8).",
+        source: "OHOH 2nd ed, Ch 1 — Vibration 1 (Prevention and control); CVAWR 2005"
+      },
+      {
+        stem: "Two identical machines, each producing 87 dB(A) at a worker's position, are run together. What is the resulting sound pressure level at that position?",
+        options: [
+          "90 dB(A)",
+          "174 dB(A)",
+          "87 dB(A)",
+          "93 dB(A)",
+          "89 dB(A)"
+        ],
+        correct: 0,
+        explain: "Doubling the sound energy adds 3 dB, since SPL = 20 x log10(Pa/Pr). Two identical sources gives 87 + 3 = 90 dB(A). Option D represents two doublings, i.e. four machines; each further doubling adds 3 dB (90, 93, 96 for two, four and eight machines). Option B is the arithmetic trap the question targets — decibels never add directly. The corollary matters more in practice: a 3 dB rise doubles the noise dose, so halving exposure time exactly offsets it, and this equal-energy principle is what allows partial exposures to be summed into a single LEP,d.",
+        source: "OHOH 2nd ed, Ch 1 — Noise 1 (Definitions; sound pressure level)"
+      },
+      {
+        stem: "A hygienist must assess noise exposure for a maintenance fitter who moves between several plant areas during a shift, working near different machines for varying periods. Which measurement approach is most appropriate?",
+        options: [
+          "A hand-held sound level meter used to record peak levels at each machine in turn",
+          "Fixed-point measurement at the centre of each plant area the fitter is known to enter",
+          "A personal dosimeter worn at the shoulder, integrating exposure across the whole shift",
+          "Octave-band analysis at the noisiest machine, applied to the full shift as a worst case",
+          "A single spot reading at the workstation where the fitter spends the longest period"
+        ],
+        correct: 2,
+        explain: "A dosimeter worn at the shoulder captures the real pattern of a mobile worker's exposure without requiring retrospective reconstruction of where he stood and for how long — durations that are notoriously unreliable when estimated. Its weaknesses are artefact from shouting, knocks and tampering, so anomalous results need scrutiny. Options A, B and E describe area or spot measurement, suited to a fixed workstation but unable to follow a moving worker. Where a hand-held meter is used, it must be field-calibrated with an acoustic calibrator immediately before and after the survey.",
+        source: "OHOH 2nd ed, Ch 1 — Noise 2 (Instrumentation and determination of LEP,d; Fig 1.1)"
+      },
+      {
+        stem: "An occupational physician reviews the risk assessment for a groundworker using a hand-held breaker. The employer has recorded the vibration magnitude from the manufacturer's data sheet and multiplied it by the eight-hour shift length. What is the principal flaw in this approach?",
+        options: [
+          "Manufacturer's data is inadmissible; only directly measured magnitudes may be used",
+          "The relevant duration is trigger time, not shift length, so exposure is overestimated",
+          "Exposure should be summed across all three axes before any duration is applied",
+          "Vibration magnitude must be expressed as peak rather than root-mean-square acceleration",
+          "The eight-hour reference period applies only to whole-body vibration assessments"
+        ],
+        correct: 1,
+        explain: "Trigger time is the time the tool is actually held while vibrating, not the shift and not even the duration of the task, so using shift length substantially inflates A(8). Workers routinely over-estimate their own trigger time, making observation or tool-mounted monitors more reliable than self-report. Option A is too absolute — manufacturers' data and equipment handbooks are legitimate sources, though direct measurement is preferred for old or poorly maintained tools. Option C describes the three-axis summation producing ahv, which occurs during measurement before duration enters, and option D inverts the rms convention.",
+        source: "OHOH 2nd ed, Ch 1 — Vibration 2 (Risk assessment and monitoring; A(8) formula)"
+      },
+      {
+        stem: "A construction firm proposes issuing anti-vibration gloves to workers using hand-held breakers, as its primary control measure for hand-arm vibration. What is the appropriate response?",
+        options: [
+          "Endorse the proposal here, since gloves interrupt the transmission pathway quite effectively",
+          "Endorse it provided the gloves meet the relevant British Standard for attenuation",
+          "Advise that gloves are unlikely to help, since controls higher in the hierarchy apply first",
+          "Advise that gloves are effective only for whole-body vibration, not hand-transmitted",
+          "Advise that gloves be issued alongside a reduction in the exposure action value"
+        ],
+        correct: 2,
+        explain: "Anti-vibration gloves are unlikely to be helpful in most situations: the frequencies causing HAVS are largely below the range gloves attenuate, and some materials amplify at certain frequencies. Bulky gloves also reduce dexterity and increase grip force, which is itself a determinant of transmitted energy, so the intervention can worsen the exposure. Controls in order: avoidance, substitution, interruption of the pathway at the tool, appropriate selection and maintenance, rest breaks and job rotation. Option E is a category error — exposure action and limit values are set in regulation and cannot be adjusted by an employer. Gloves do have value in cold work, since cold provokes vasospasm, but that is a different rationale.",
+        source: "OHOH 2nd ed, Ch 1 — Vibration 2 (Prevention and control)"
+      },
+      {
+        stem: "A hygienist reports that a worker's exposure has been characterised using measurements from several makes of machine, taking the mean plus one standard deviation of the range. Why is this approach used?",
+        options: [
+          "It corrects for systematic under-reading by accelerometers at low frequencies",
+          "It is the statutory method prescribed for all hand-transmitted vibration assessments",
+          "It converts three-axis measurements into a single frequency-weighted magnitude",
+          "It represents exposure reasonably where operators work across a wide range of machines",
+          "It compensates for the tendency of workers to under-report their daily trigger time"
+        ],
+        correct: 3,
+        explain: "Personal vibration magnitudes vary with posture, technique, applied force and material worked, so several measurements are taken across common operating conditions for each make and model in use; mean plus one standard deviation then sits above the average without chasing the extreme. Option B is the tempting overstatement — this is a pragmatic convention, not a statutory method, and the regulations require only a suitable and sufficient assessment. Option E inverts the trigger-time problem, since workers over-estimate rather than under-estimate. Instruments should meet BS EN ISO 8041, with workplace measurement per BS EN ISO 5349-2.",
+        source: "OHOH 2nd ed, Ch 1 — Vibration 2 (Vibration measurement)"
+      },
+      {
+        stem: "A lorry driver reports low back pain and asks whether his work has caused it. He drives on made roads for most of his shift. Which statement best reflects the evidence and the appropriate response?",
+        options: [
+          "Whole-body vibration is an established cause, so attribution to his work is straightforward",
+          "Low back pain is the primary risk, though evidence is confounded by posture and handling",
+          "Whole-body vibration causes back pain only where exposure exceeds the exposure limit value",
+          "Back pain from driving reflects seated posture alone, with vibration playing no part",
+          "Attribution requires MRI evidence of disc degeneration in a distribution typical of vibration"
+        ],
+        correct: 1,
+        explain: "Low back pain is the primary health risk associated with WBV, but the evidence is weaker and more confounded than for HAVS, because the same jobs carry prolonged constrained seated posture, manual handling and shock loading. Individual attribution is therefore difficult, and option A overstates it. Option C is the important error: the ELV is a regulatory ceiling, not a biological threshold, and the duty is to reduce exposure as low as reasonably practicable regardless. Made roads generate far less exposure than off-road work, so the conversation should shift to the modifiable contributors — seat adjustment and suspension, maintenance, scheduling, and loading practice.",
+        source: "OHOH 2nd ed, Ch 1 — Vibration 1 (Potential health effects; exposure limits)"
+      },
+      {
+        stem: "An employer is selecting hearing protection for workers near a press generating high levels of low-frequency noise. Which measurement is needed to inform the choice of protector?",
+        options: [
+          "The peak sound pressure level measured with C-weighting at the operator's position",
+          "The daily personal noise exposure calculated across the shift as an eight-hour average",
+          "The difference between A-weighted and C-weighted readings taken at the same position",
+          "A dosimeter measurement worn by the operator across several consecutive working shifts",
+          "Octave-band analysis of the noise, since attenuation and noise energy vary with frequency"
+        ],
+        correct: 4,
+        explain: "LEP,d establishes whether protection is needed and which duties are triggered, but collapses the spectrum into one number and so cannot guide selection — the stem's key detail is that this noise is low-frequency dominant, where protectors typically perform worst. Octave-band analysis matches the protector's attenuation profile to the noise spectrum, and equally informs engineering control design. Option C is not nonsense: a large C minus A difference does flag a low-frequency spectrum and is used for screening, but it is a crude proxy rather than a substitute here. Option A belongs to impulse noise and the peak criteria.",
+        source: "OHOH 2nd ed, Ch 1 — Noise 1 (dB(A) and dB(C) weighting); Noise 2 (instrumentation)"
+      },
+      {
+        stem: "Which combination of factors most increases the vibration energy transmitted into the hand-arm system for a given tool?",
+        options: [
+          "Low grip force with the hand-arm held in a neutral orientation to the tool axis",
+          "High grip force and pushing force, with the hand-arm oriented along the vibration axis",
+          "Increased tool weight, which necessarily raises the transmitted vibration magnitude",
+          "Reduced trigger time offset by a corresponding increase in applied feed force",
+          "Use of a well-maintained tool operated on softer rather than harder work material"
+        ],
+        correct: 1,
+        explain: "Transmission of vibration to the operator depends on technique — the type and force of grip, and the orientation of the hand-arm — alongside the tool's intrinsic properties, the material worked and the type of work. A loose grip dissipates energy at the interface; a hard grip couples it into the limb. This is the modifiable element and the basis of training: let the tool do the work and avoid forcing the feed rate. It is also why bulky anti-vibration gloves can be counterproductive. Option C is too absolute, since heavier tools may damp reciprocating forces and be less vibratory for a given output.",
+        source: "OHOH 2nd ed, Ch 1 — Vibration 2 (Main factors affecting exposure)"
+      },
+      {
+        stem: "An occupational physician reviews a forestry worker who has used chainsaws and brush cutters daily for fifteen years. Which statement about his risk of developing hand-arm vibration syndrome best reflects the relationship between exposure and injury?",
+        options: [
+          "Risk is determined by current daily exposure, with historical exposure having no bearing",
+          "Risk plateaus after five years, beyond which further exposure adds no additional harm",
+          "Historical exposure matters only where it exceeded the current exposure limit value",
+          "Risk resolves within two years of exposure ceasing, as vascular changes are reversible",
+          "Injury relates to total lifetime exposure, reflecting years as well as average daily dose"
+        ],
+        correct: 4,
+        explain: "Injury relates to total lifetime exposure, reflecting years of exposure as well as the average daily dose, which is why a long occupational history carries weight even where current A(8) is well controlled. Option C repeats the error of treating a regulatory ceiling as a biological threshold. Option E is worth being firm about: HAVS is not reversible once established — removal from exposure may halt progression and early vascular attacks sometimes become less frequent, but the sensorineural component tends to persist, which is the whole rationale for early detection through surveillance.",
+        source: "OHOH 2nd ed, Ch 1 — Vibration 2 (Risk assessment and monitoring; potential health effects)"
       },
     ]
   },
