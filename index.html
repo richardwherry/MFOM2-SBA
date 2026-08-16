@@ -232,7 +232,7 @@
       <span><span class="legend-dot" style="background:var(--track)"></span>unattempted</span>
     </div>
     <div class="section-grid" id="sectionGrid"></div>
-    <div class="coming-soon">More sections are added over time — ask whoever manages this page to add the next topic.<br>Your progress bars are remembered on this device only and reset if you clear browser data. Anonymous usage data (a random device code, section, question, and pass/fail — never anything identifying you) is logged to help track group progress.</div>
+    <div class="coming-soon">More sections are added over time.<br>Your progress bars are remembered on this device only and reset if you clear browser data. Anonymous usage data (a random device code, section, question, and pass/fail — never anything identifying you) is logged to help track website usage.</div>
   </div>
 
   <div class="view" id="view-quiz">
@@ -2210,6 +2210,136 @@ const SECTIONS = [
         correct: 1,
         explain: "Occupational health professionals who have leadership or management responsibilities should ensure that colleagues for whom they are responsible can continuously improve their standards of practice — this is a stated professional responsibility of the leader, not something that can be left entirely to the individual colleague to manage alone, or deferred without good reason to the next formal appraisal point.",
         source: "FOM Ethics Guidance, 9th ed, para 2.09 — CPD, leadership responsibility for colleagues"
+      },
+      {
+        stem: "An occupational physician is asked to review the case of a 44-year-old warehouse operative absent for four months with chronic low back pain, assessed three weeks ago as unfit for manual handling with a phased return proposed. Two pieces of material now arrive. The employer forwards still images from the site's permanently installed and signposted CCTV system, showing the worker in the staff car park lifting a large box into the boot of his car. Separately, the insurer handling his personal injury claim sends video footage obtained by an investigator who followed him over three weekends and filmed him carrying equipment at a sports club. The insurer asks the physician to revise her opinion in light of the footage, and the employer asks whether the CCTV images mean the worker has been dishonest. Which response best reflects appropriate practice?",
+        options: [
+          "Review both recordings and issue an addendum report, since direct observation of function is more reliable than self-reported limitation",
+          "Accept the CCTV images as legitimate evidence of capability while disregarding the investigator's footage, which was obtained without consent",
+          "Advise that both matters are questions of conduct for management and the insurer, and take no further part in the assessment",
+          "Report the insurer's use of covert filming to the regulator, and decline further involvement until that enquiry concludes",
+          "Decline to comment on either recording as a substitute for assessment, and offer to reassess the worker, putting concerns to him directly"
+        ],
+        correct: 4,
+        explain: "Option B is the tempting distinction, but consent is not the fundamental objection: the CCTV is overt, signposted and lawfully operated, yet a single lift of unknown weight on one occasion says nothing about capacity for repetitive handling across a shift, nor about pain or recovery afterwards. Snapshots of activity are not measures of function. The covert footage adds further objections — obtained without consent and selectively edited by definition — and physicians should neither commission such material nor be drawn into interpreting it. Option C concedes too much, since capability is an occupational health question and withdrawing leaves the employer to act on the images unaided.",
+        source: "ABC of Occ & Env Medicine, 3rd ed, Ch 6 (collecting information; covert surveillance)"
+      },
+      {
+        stem: "A 38-year-old air traffic control assistant is assessed by occupational health following a period of absence. During the consultation she describes symptoms and a medication history she has not shared with her employer, and the physician forms a view about her fitness that involves a temporary restriction. The physician offers to show her the report before it is sent; she reads it, becomes distressed, and states clearly that she withdraws her consent for its release. The employer contacts the service the following day, aware that a report was commissioned, and asks for it. The service manager suggests three possible actions: release it anyway because the restriction concerns safety-critical work; destroy it so that no record of an unreleased opinion exists; or tell the employer nothing at all about the assessment having taken place. What is the most appropriate course?",
+        options: [
+          "Release the report, since the safety-critical nature of her role provides a public interest justification overriding her withdrawal of consent",
+          "Destroy the report and record only that the assessment occurred, so that no opinion exists which the worker has not agreed to",
+          "Retain the report on the record marked as not released, and tell the employer no report can be provided without consent",
+          "Inform the employer that the assessment did not proceed, avoiding disclosure that an opinion was formed and subsequently withheld",
+          "Release a summary omitting clinical detail entirely, since the fitness conclusion alone does not constitute confidential medical information"
+        ],
+        correct: 2,
+        explain: "Destroying the report falsifies the record: the opinion was formed, and the file must show that it was formed and withheld at the worker's request. Option D is dishonest, and note that declining to disclose differs from asserting that nothing happened. Option E is the subtle error — a fitness conclusion derived from confidential information is itself confidential, and stripping the diagnosis does not launder it. Option A is not absurd, since safety-critical work is where an overriding public interest can arise, but the bar is a real and immediate risk to others rather than the mere fact of the role. The practical lever is explaining that without occupational health input the employer must act on whatever information it has.",
+        source: "ABC of Occ & Env Medicine, 3rd ed, Ch 6 (processing information); GMC disclosure guidance"
+      },
+      {
+        stem: "An occupational physician provides a contracted service to a manufacturing company. Over several months she notices a pattern: three workers from the same finishing line have presented with new-onset asthma symptoms, and a fourth with dermatitis affecting both hands. The line uses a two-pack coating system. She raises this with the site manager, who says the extraction system was tested last year and the company is satisfied controls are adequate. She writes formally to the operations director recommending urgent review of exposure control and health surveillance; two months later nothing has changed, and the contract manager at her own employer tells her the client is unhappy and she should be careful not to jeopardise a renewal due in the spring. What should she do next?",
+        options: [
+          "Confine herself to individual clinical care of the affected workers, since exposure control is the employer's responsibility rather than hers",
+          "Notify the Health and Safety Executive immediately, since informal routes have been tried and the workers face continuing exposure",
+          "Accept the client's assurance about the extraction testing, while documenting her concerns fully in case the position changes later",
+          "Escalate within her own organisation and take advice from her defence body, with external disclosure as the next step if that fails",
+          "Advise the affected workers to report the matter to the Health and Safety Executive themselves, since the concern originates with them"
+        ],
+        correct: 3,
+        explain: "The sequence matters as much as the destination: escalate through the management chain, including her own provider's, take advice from a defence organisation or legal adviser, document throughout, and treat external disclosure as the step taken when internal routes have failed. That ordering is what attracts protection under the Public Interest Disclosure Act 1998. Option B may well be where this ends but is premature. The commercial pressure is the real test — the duty to promote worker health sits above ordinary business considerations, and a contract renewal must not enter the clinical judgement. Option C mistakes documentation for action: a well-evidenced file that changes nothing protects the physician, not the workers.",
+        source: "ABC of Occ & Env Medicine, 3rd ed, Ch 6 (commercial considerations); PIDA 1998"
+      },
+      {
+        stem: "A small occupational health provider is losing its contract with a distribution company to a larger competitor at the end of the quarter. It holds clinical records for about 900 workers, including health surveillance records for noise and hand-arm vibration, and records for a smaller group under statutory asbestos surveillance. The outgoing provider's director proposes that, since consent for transfer has not been obtained from each worker individually, the records should be retained by his own company and the incoming provider should start afresh. The client's HR director takes a different view, saying the records were paid for under the contract and should be handed over in full without involving the workers at all. Which approach is most appropriate?",
+        options: [
+          "Transfer to the incoming provider, informing workers of the intention and allowing a reasonable period to object",
+          "Retain the records with the outgoing provider, since transfer without individual consent would breach confidentiality",
+          "Start afresh with new records, since the incoming provider can rebuild surveillance baselines at the first assessment round",
+          "Transfer them to the client, which commissioned and paid for the service and can then pass them to the incoming provider",
+          "Transfer only the statutory asbestos records, since these carry a legal retention duty that overrides the consent difficulty"
+        ],
+        correct: 0,
+        explain: "The organising principle is safeguarding the health and welfare of those the service exists for, and continuity of records almost always serves them. Individual consent is preferable but impracticable at this scale, so workers are informed and given reasonable time to object. Option C is the most damaging: surveillance records are meaningful only as a series compared against the worker's own baseline, and starting afresh discards what detects early disease, while breaching the 40-year asbestos retention duty. Option D confuses paying for a service with custody of clinical records — the employer is entitled to the health record, not the confidential clinical record. Transfer resourcing should be addressed in tender documentation.",
+        source: "ABC of Occ & Env Medicine, 3rd ed, Ch 6 (records policy; transfer); CAR 2012"
+      },
+      {
+        stem: "An occupational health service is asked to support two initiatives at a large teaching hospital. The first is a hepatitis B immunisation programme for staff undertaking exposure-prone procedures. The second is a seasonal influenza campaign, where the trust board proposes that staff who decline should record a reason on a central register, and that departmental uptake figures be reported to managers with a target attached. A consultant surgeon declines hepatitis B vaccination on the grounds that she has no wish to be immunised; a healthcare assistant declines influenza vaccination and objects to giving a reason. What is the correct occupational health position?",
+        options: [
+          "Both programmes may proceed as proposed, since staff working with vulnerable patients accept a duty to be immunised",
+          "Neither worker may be compelled, but the consequences of declining must be explained, and these differ between the two vaccines",
+          "The surgeon may be compelled given the risk to patients, while the healthcare assistant's refusal is a matter of personal choice",
+          "Neither worker may be compelled, and no consequence should follow from either refusal beyond a record of the discussion",
+          "Both refusals should be escalated to the medical director, who holds responsibility for patient safety across the organisation"
+        ],
+        correct: 1,
+        explain: "Two things must be held together: vaccination cannot be compelled, but refusal is not consequence-free, and the consequences must be explained in advance. They differ because the purposes differ. Hepatitis B immunisation for exposure-prone procedures protects patients and connects to EPP clearance, so a non-immune uncleared surgeon faces restriction from those procedures — a consequence of the clearance requirement rather than a punishment, and she should first be offered testing to establish existing immunity. Influenza vaccination primarily protects the worker with no equivalent clearance framework, so option D is nearly right for that strand only. The board's register of reasons converts a voluntary programme into coerced participation; uptake can be monitored in aggregate.",
+        source: "ABC of Occ & Env Medicine, 3rd ed, Ch 6 (promotion and prevention); Green Book"
+      },
+      {
+        stem: "An occupational health service is embedded within a large logistics company and uses the company's IT infrastructure. Its clinical records are held in a dedicated system administered by the company's IT department. Three requests arrive in the same week. The company's internal audit team asks for access to a sample of clinical records to verify that assessments were carried out as invoiced. The IT manager, who holds administrator rights to the database, asks for confirmation that he may access records directly when troubleshooting. A newly appointed occupational health administrator, employed by the company on a standard contract, will need access to appointment and outcome data as part of her role. Which response is most appropriate?",
+        options: [
+          "All three may be permitted, since the company is the data controller and its staff act under its authority",
+          "None may be permitted, as only registered health professionals may have any form of access to clinical records",
+          "Audit access should be refused with an alternative offered; IT and administrative access require defined limits, training and a contractual confidentiality duty",
+          "Audit and administrative access may proceed, while IT access should be refused since troubleshooting can be done on test data alone",
+          "All three should be referred to the company's data protection officer, whose decision determines what access is lawful"
+        ],
+        correct: 2,
+        explain: "The sorting principle is purpose, not job title. Audit for invoice verification is administrative and should be refused with an alternative offered — appointment logs or anonymised activity counts confirm work was done without disclosing findings. IT access cannot simply be refused, since systems need maintenance and pretending otherwise produces worse workarounds: it is constrained, logged, preferably on de-identified data, with the confidentiality duty written into the contract of employment for someone owing no professional duty. Administrative access follows the same conditions on a need-to-know basis. Option A is half right on the law and wrong on its implication — the occupational health professional is usually not the data controller, but retains the ethical duty regardless.",
+        source: "ABC of Occ & Env Medicine, 3rd ed, Ch 6 (storing information); UK GDPR and DPA 2018"
+      },
+      {
+        stem: "A recruitment manager at a national retailer asks occupational health to help streamline pre-placement processes. She proposes that every successful applicant complete a standard health questionnaire covering full past medical history, current medications, mental health history and family history, returned to the recruitment team so that concerns can be flagged before the start date. She also proposes a consent form authorising occupational health to obtain the applicant's complete GP record where any positive answer is given, arguing this saves time compared with targeted reports. She notes that all of this happens after the job offer, so the Equality Act restriction on pre-offer health enquiries does not apply. Which response is most appropriate?",
+        options: [
+          "The proposal is acceptable, since post-offer health enquiries are lawful and the applicant consents to each element",
+          "The proposal is unacceptable in its entirety, since post-offer health enquiries cannot be justified for non-safety-critical retail roles",
+          "The questionnaire may proceed as drafted provided it is marked medical in confidence, but consent for GP records must be obtained separately",
+          "Occupational health should decline involvement, since pre-placement screening of this kind is a recruitment function rather than a clinical one",
+          "Enquiries should be role-specific and returned to occupational health, and blanket access to the full GP record cannot be justified"
+        ],
+        correct: 4,
+        explain: "Her legal point is correct and does not rescue the proposal: section 60 restricts enquiries before a job offer, and clearing that hurdle does not make what follows proportionate. Three faults survive. Scope — generic questionnaires covering family and mental health history gather information with no bearing on capability, and family history concerns relatives who consented to nothing. Destination — option C misses that returning health information to recruiters is the most serious flaw, since a confidentiality marking is not a control if a recruiter reads it. Consent — authorisation to release an entire record cannot be informed, because neither party knows what it contains; consent must be specific to the question asked.",
+        source: "ABC of Occ & Env Medicine, 3rd ed, Ch 6 (pre-employment assessment); Equality Act 2010 s60"
+      },
+      {
+        stem: "An occupational health consultancy is bidding to take over the contract for a food manufacturer. During the tender process the lead physician is contacted by a former colleague who now works for the incumbent provider, and who offers to share the incumbent's current pricing schedule and a summary of its performance against key indicators. Separately, the manufacturer's procurement lead mentions informally that the decision panel would look favourably on a bid including free health screening for the senior management team. The physician is also asked to confirm in the tender that her service can deliver on-site spirometry and audiometry at four sites, which would require recruiting staff she has not yet identified. Which combination of responses is correct?",
+        options: [
+          "Decline the competitor information and the screening offer, and only claim capability she is confident of establishing",
+          "Accept the competitor information, since it was volunteered rather than solicited, but decline the screening offer",
+          "Decline the competitor information, and include the screening for senior managers as a legitimate commercial incentive",
+          "Accept both, since commercial negotiation operates under different norms from clinical practice",
+          "Decline both, and claim the capability, since tender commitments are routinely fulfilled through later recruitment"
+        ],
+        correct: 0,
+        explain: "Three strands fail for three reasons. Option B's reasoning — that unsolicited information is untainted — does not survive use: commercially sensitive competitor material is not hers to hold, and the colleague offering it is breaching his own duty. The screening offer is an inducement dressed as a service, failing commercially as an attempt to influence the decision panel and clinically as screening designed backwards, with no health need or National Screening Committee assessment behind it. Option E is the most realistic-sounding error: staffing up after award is common, but the distinction is between a plan and a hope, and claiming delivery with no identified route is misrepresentation whose cost falls on workers at four sites.",
+        source: "ABC of Occ & Env Medicine, 3rd ed, Ch 6 (commercial considerations)"
+      },
+      {
+        stem: "An occupational physician leads a multidisciplinary occupational health department comprising three occupational health nurses, a physiotherapist, an administrator and a technician. She has line management responsibility for all six. Over several months three situations arise. One of the nurses is absent with a depressive illness and her return to work needs occupational health assessment. The physiotherapist asks the physician informally for advice about a knee problem limiting his own clinical work. The technician mentions during a supervision meeting that he has started medication which makes him drowsy, and asks whether this matters for his role. What is the correct approach across these situations?",
+        options: [
+          "She may assess all three, since she knows their roles best and confidentiality is maintained within the clinical team",
+          "She should assess none of them in an occupational health capacity, and arrange an independent service for staff of her own department",
+          "She may assess the technician and the physiotherapist, but not the nurse, whose mental health record requires greater separation",
+          "She should refer all three to their own general practitioners, since staff of an occupational health service fall outside its remit",
+          "She may provide informal advice to all three, provided nothing is recorded and no formal report is produced"
+        ],
+        correct: 1,
+        explain: "The conflict is structural rather than situational, so it does not soften with the seriousness of the case, which is where option C fails. She writes their appraisals and could bring capability proceedings; a worker cannot speak freely to that person, and she cannot advise impartially on someone whose absence disrupts her own service. The standard answer is a reciprocal arrangement with another provider, agreed in advance. Option E describes what often happens in practice and is worse rather than better: an unrecorded assessment leaves the worker with no record or route of challenge, and hands the manager clinical information she cannot un-know. Option D goes too far — a GP cannot advise on fitness for a specific role.",
+        source: "ABC of Occ & Env Medicine, 3rd ed, Ch 6 (professional relationships); GMC leadership guidance"
+      },
+      {
+        stem: "A national employer is designing a health surveillance and testing programme for a new automated warehouse. It asks occupational health to advise on three proposals. First, a genetic test for a variant associated with susceptibility to occupational asthma, offered at pre-placement and used to direct applicants away from roles involving a known respiratory sensitiser. Second, random drug and alcohol testing for all staff, to be collected and analysed by the occupational health nurses. Third, mandatory annual fitness testing for staff over 55, with continued employment conditional on passing. Which advice is most appropriate?",
+        options: [
+          "All three may proceed provided each is set out in a written policy and applicants are told in advance what is involved",
+          "Genetic testing may proceed as it protects susceptible individuals; the other two require further justification before implementation",
+          "Only the drug and alcohol testing raises concerns, and these are resolved if the employer adopts the Faculty's published guidance",
+          "All three raise significant concerns: genetic selection, occupational health conducting testing, and an age-based conditional standard",
+          "The proposals are matters of employment policy rather than clinical practice, and occupational health should advise only on test accuracy"
+        ],
+        correct: 3,
+        explain: "Option B offers the benign framing that is always used for exclusion: screening people away from a hazard leaves the sensitiser in place for everyone else, shifting the burden from controlling exposure to selecting the exposed, on a marker with poor individual predictive value. Option C treats a written policy as sufficient for drug and alcohol testing — a policy is necessary but does not resolve the role conflict, since nurses who collect the specimen leading to a colleague's dismissal are no longer someone a substance-affected colleague will confide in; independent contractors should collect and analyse, with occupational health advising on interpretation and dependence. Age-based conditional fitness testing applies a criterion by birthday rather than job demand.",
+        source: "ABC of Occ & Env Medicine, 3rd ed, Ch 6 (genetic testing; drug and alcohol testing); FOM guidance"
       },
     ]
   },
@@ -4306,6 +4436,136 @@ const SECTIONS = [
         correct: 0,
         explain: "The general pattern in certifying return to safety-critical or remote work after a significant cardiac event is that any certification granted is initially time-limited, with the possibility of a longer period once sustained control of cardiovascular risk factors has been demonstrated over time, rather than being indefinite from the outset, denied altogether despite confirmed recovery, unrelated to ongoing risk factor control, or governed by one single fixed period regardless of the specific event and its treatment.",
         source: "General principle, graduated/time-limited certification following a significant cardiac event in safety-critical or remote work."
+      },
+      {
+        stem: "A 59-year-old man is referred for an occupational health opinion following his routine statutory medical. He has worked for a licensed asbestos removal contractor for 31 years and remains actively involved in enclosure work, including prolonged use of respiratory protective equipment. He has never smoked. Over the past two years he has noticed increasing breathlessness climbing stairs, though he completes his duties without difficulty. Examination reveals fine late inspiratory crackles at both lung bases, no finger clubbing, and resting oxygen saturation of 96% on room air. Spirometry shows FEV1 82% predicted, FVC 68% predicted, and an FEV1/FVC ratio of 0.91; spirometry five years earlier was normal. Chest radiography shows bilateral pleural plaques without obvious interstitial shadowing. His employer asks whether he can continue unrestricted removal duties while specialist review is arranged. Which is the single best occupational health recommendation?",
+        options: [
+          "Continue unrestricted licensed removal work, since his FEV1 remains above 80% predicted and imaging shows no interstitial change",
+          "Repeat spirometry at his next annual medical, using the interval to establish whether the reduction in FVC is sustained",
+          "Withdraw him from asbestos work on a permanent basis, given that the spirometric change is unlikely to recover",
+          "Restrict him temporarily from removal work involving prolonged RPE while arranging urgent respiratory assessment and HRCT",
+          "Arrange serial chest radiography in preference to HRCT, since it images the pleura adequately at lower radiation dose"
+        ],
+        correct: 3,
+        explain: "Three findings together make this urgent: new symptoms, a restrictive pattern (reduced FVC with a high ratio), and progression from a normal baseline five years ago. Option A is the trap of reading one number — FEV1 is preserved because the defect is restrictive. Option E reverses the sensitivity comparison: plain film shows plaques well, but HRCT is far more sensitive for early interstitial change.",
+        source: "CAR 2012; L143 ACOP — surveillance and interim fitness advice"
+      },
+      {
+        stem: "A four-stage clearance procedure is being carried out following licensed removal of asbestos insulating board from a plant room. The enclosure has been visually inspected and found clean. Air sampling within the enclosure returns a result of 0.008 fibres per cm3. The site supervisor asks the occupational health adviser to confirm that the area can be handed back for reoccupation, noting that the result is comfortably below the control limit of 0.1 fibres per cm3. Which response is most appropriate?",
+        options: [
+          "Reoccupation requires a result below 0.01 fibres per cm3, which this satisfies, alongside the other stages being completed",
+          "The result is below the control limit, so the enclosure may be dismantled and the area released for normal occupation",
+          "Air sampling has limited value at this stage, since visual inspection is the definitive element of the clearance process",
+          "The control limit applies to clearance testing, but the result must be averaged over four hours rather than the sampling period",
+          "Clearance certification is a matter for the licensed contractor alone, and occupational health has no role in advising on it"
+        ],
+        correct: 0,
+        explain: "Two numbers doing different jobs: the control limit of 0.1 f/cm3 over a four-hour TWA governs worker exposure during the work, while the clearance indicator of 0.01 f/cm3 governs handback and is an order of magnitude lower because those re-entering are unprotected. Option B applies the wrong criterion and skips the remaining stages — preliminary check, visual inspection, air monitoring, and final assessment after dismantling. The third figure to hold alongside these is the STEL of 0.6 f/cm3 over 10 minutes.",
+        source: "CAR 2012; HSG248 four-stage clearance; MDHS 39/4"
+      },
+      {
+        stem: "A 61-year-old maintenance engineer is referred after being diagnosed with asbestos-related diffuse pleural thickening during investigation of exertional breathlessness. He worked in shipbuilding between 1983 and 1996 with intermittent exposure to pipe insulation. He smokes 15 cigarettes daily, with a 35 pack-year history. Lung function shows mild restriction, and he performs his current supervisory duties without difficulty. During the consultation he asks whether stopping smoking would make any real difference now, since in his words the asbestos has already done the damage. His employer separately asks whether his continued employment in a non-asbestos maintenance role represents an unacceptable risk. Which statement provides the most appropriate occupational health advice?",
+        options: [
+          "Smoking cessation offers limited benefit at this stage, as his risk is now determined principally by the cumulative asbestos dose",
+          "His diffuse pleural thickening indicates continuing disease activity, making redeployment away from all maintenance work the safer course",
+          "Annual CT screening should be the priority, as early detection of malignancy in asbestos-exposed workers improves survival substantially",
+          "Smoking cessation should be strongly encouraged, since smoking and asbestos interact multiplicatively to raise lung cancer risk",
+          "Retirement on health grounds is worth discussing, given that further physical work may accelerate the progression of pleural disease"
+        ],
+        correct: 3,
+        explain: "The interaction is multiplicative, not additive — asbestos alone around fivefold, smoking around tenfold, together in the region of fifty — so cessation is the most effective intervention available: his asbestos dose is fixed, the multiplier is not. The essential paired point is that smoking neither causes nor multiplies mesothelioma risk. Option C overstates the evidence, which supports low-dose CT in heavy smokers rather than routine annual CT for all exposed workers.",
+        source: "Clinical reasoning — smoking-asbestos synergy for lung cancer, not mesothelioma"
+      },
+      {
+        stem: "A 39-year-old operational firefighter has a history of childhood asthma. Over the previous year he has had three episodes of wheeze associated with upper respiratory tract infections and has been started on a low-dose inhaled corticosteroid with salbutamol as required. Baseline spirometry is normal with minimal bronchodilator reversibility. He completes the annual physical fitness assessment comfortably and reports no limitation during station duties. He recalls one episode of mild wheeze during breathing apparatus training in cold weather, which settled rapidly after using his reliever. His Watch Manager requests advice on ongoing operational fitness. Which consideration is most important in determining his fitness for unrestricted operational duties?",
+        options: [
+          "Whether his inhaled corticosteroid requirement can be reduced or withdrawn over the coming year",
+          "The likelihood of sudden respiratory incapacity while wearing breathing apparatus in an emergency",
+          "The frequency of his upper respiratory tract infections and their relationship to his wheeze",
+          "His performance on the annual physical fitness assessment relative to the national standard",
+          "The absence of significant bronchodilator reversibility on his most recent spirometry"
+        ],
+        correct: 1,
+        explain: "The organising question in safety-critical work is the foreseeable risk during the most hazardous part of the job — BA wear in a fire compartment, with no access to a reliever inside a facepiece and a self-rescue performed while symptomatic. The cold-weather BA episode is the most operationally relevant fact in the history. Option E treats normal tests as reassurance, but normal spirometry on a good day excludes little in a variable disease; option D fails similarly, since the fitness assessment involves no facepiece resistance or heat load.",
+        source: "Occupational respiratory medicine — sudden incapacity in breathing apparatus"
+      },
+      {
+        stem: "A 45-year-old firefighter is referred following a diagnosis of persistent atrial fibrillation, found while investigating intermittent palpitations. Rate control has been achieved with medication and he reports no syncope, chest pain or exercise intolerance. Echocardiography shows structurally normal cardiac anatomy with preserved ventricular function. He completes a treadmill exercise test without ischaemia and maintains good exercise capacity. His cardiologist considers the risk of a serious adverse event low, while acknowledging that recurrence of symptomatic episodes cannot be excluded. He is an experienced firefighter, keen to remain operational, and also holds the appliance driving role. His employer asks whether occupational health can simply sign him off as fit, given the cardiologist's optimism. Which principle should guide your advice?",
+        options: [
+          "The treating cardiologist's assessment should determine the outcome, as they hold the specific expertise in this condition",
+          "His own acceptance of the residual risk should carry decisive weight, given his experience and understanding of the role",
+          "Good exercise tolerance on treadmill testing provides sufficient objective evidence to support unrestricted operational duties",
+          "A diagnosis of persistent atrial fibrillation is incompatible with operational firefighting while medication is required",
+          "Occupational health should independently assess whether the residual risk of sudden incapacity is acceptable for his specific duties"
+        ],
+        correct: 4,
+        explain: "The cardiologist assesses whether the arrhythmia is well managed; the occupational physician assesses whether residual risk of sudden incapacity is acceptable in this particular job. The appliance driving role matters: emergency response driving falls to Group 2 standards, so the answer may differ between his firefighting and driving duties and a single global 'fit' would miss that. Option B misplaces consent, since a worker cannot accept risk on behalf of colleagues or the public.",
+        source: "MFOM principle — occupational assessment distinct from specialist management; DVLA Group 2"
+      },
+      {
+        stem: "A 56-year-old maintenance engineer at a manufacturing plant is referred after repeated episodes of cough, wheeze and chest tightness. He has smoked 15 cigarettes daily for 30 years and carries a diagnosis of mild COPD. He reports symptoms are consistently worse towards the end of the working week and improve markedly during annual leave. His duties include servicing and cleaning two-pack polyurethane spray booths, sometimes while other lines continue running. Spirometry shows mild airflow obstruction with significant bronchodilator reversibility, and serial peak flow monitoring shows more than 20% diurnal variation with clear improvement away from work. His manager asks for advice on his fitness while further investigation is arranged. Which management option is most appropriate?",
+        options: [
+          "Attribute his symptoms to progression of his existing COPD and optimise inhaled therapy, reviewing him again in three months",
+          "Continue his current duties with respiratory protective equipment while serial peak flow recording is extended over six weeks",
+          "Refer for urgent specialist assessment and advise temporary removal from the suspected exposure pending investigation",
+          "Arrange annual spirometry as part of routine health surveillance, since his existing COPD adequately accounts for the pattern",
+          "Support an application for ill-health retirement, given that established occupational asthma would preclude his return to this role"
+        ],
+        correct: 2,
+        explain: "Prognosis in occupational asthma relates to the duration of symptomatic exposure after onset, so investigation and removal run in parallel rather than in sequence. The exposure is isocyanates in two-pack polyurethane, and cleaning spray equipment is a classically high-exposure task. Options A and D share the commonest real-world failure — an existing smoking-related diagnosis anchoring the clinician so a superimposed occupational disease is missed. RPE offers no reliable protection to someone already sensitised.",
+        source: "Occupational asthma — early exposure removal alters prognosis; isocyanates"
+      },
+      {
+        stem: "A 48-year-old laboratory technician has undergone annual spirometry for ten years because of work with respiratory sensitisers. His absolute FEV1 remains within the predicted normal range, but comparison across his records shows a progressive decline averaging approximately 90 mL per year over the past four years. He is asymptomatic, has never smoked, and clinical examination and chest radiography are normal. His employer asks whether surveillance should simply continue as before, since each individual annual result has been reported as normal. Which is the most appropriate interpretation?",
+        options: [
+          "His results should be assessed against the population reference range, which he remains within, so no additional action is indicated",
+          "Serial decline may indicate early occupational respiratory disease despite results within the reference range, and warrants further assessment",
+          "The decline is consistent with expected age-related loss of lung function, and surveillance should continue unchanged",
+          "HRCT should be arranged, as this rate of spirometric decline is sufficient to establish interstitial disease",
+          "He should be removed from work with sensitisers permanently, since asymptomatic decline indicates established sensitisation"
+        ],
+        correct: 1,
+        explain: "In health surveillance the comparator is the worker's own previous results, not a population range — someone starting at 115% predicted can lose substantial function while every report reads normal. Option C requires a number to reject: expected age-related decline in a non-smoking adult is about 25-30 mL per year, so 90 mL is roughly three times that, and it is the sustained trend rather than any single year that makes this actionable. Spirometry alone cannot establish a diagnosis.",
+        source: "Occupational respiratory surveillance — longitudinal decline vs cross-sectional normality"
+      },
+      {
+        stem: "A 50-year-old asbestos removal supervisor attends his annual respiratory protective equipment assessment. He has a BMI of 36 kg/m2, obstructive sleep apnoea managed with CPAP, and hypertension controlled on a single agent. Spirometry shows FEV1 94% predicted, FVC 97% predicted, ratio 0.78. He reports no daytime somnolence, completes his duties without difficulty, and has no problems wearing a full-face powered respirator. During recent emergency drills he completed all required tasks without limitation. He is clean-shaven and his most recent face-fit test was satisfactory. His employer asks whether his obesity should in itself prevent continued RPE use. Which factor should carry the greatest weight in your recommendation?",
+        options: [
+          "His body mass index, which sits within the range associated with increased cardiorespiratory risk during exertion",
+          "His obstructive sleep apnoea, given the implications of the diagnosis for alertness during safety-critical work",
+          "His blood pressure control, which determines his cardiovascular capacity to tolerate the additional physiological load",
+          "His age, which is associated with declining exercise tolerance and reduced physiological reserve under load",
+          "His demonstrated ability to use respiratory protective equipment safely, shown under both test and drill conditions"
+        ],
+        correct: 4,
+        explain: "Fitness rests on demonstrated capability rather than a list of diagnoses, and he has evidence from two directions — normal spirometry with a satisfactory face-fit, and performance under emergency drill conditions. Two details make the answer safe and would change it if absent: clean-shaven with a current face-fit test, and treated OSA without daytime somnolence. Poorly controlled OSA with sleepiness would make option B correct — the diagnosis does not disqualify, but inadequate control may.",
+        source: "Occupational health principle — functional capability over isolated diagnosis in RPE fitness"
+      },
+      {
+        stem: "An occupational health service is reviewing its records management for a licensed asbestos removal contractor. The contractor's business manager proposes destroying the health records of employees who left the company more than seven years ago, in line with the practice used for general personnel files, and asks occupational health to confirm this is acceptable. Which response is correct?",
+        options: [
+          "Health records for those under asbestos surveillance must be kept for at least 40 years from the date of the last entry",
+          "Seven years is appropriate, as it aligns health records with the retention period applied to other employment documentation",
+          "Records may be destroyed once an employee leaves, provided a summary of surveillance findings is offered to the individual",
+          "Retention is governed solely by data protection law, which requires records to be held no longer than is necessary",
+          "Records should be retained until the employee reaches 65, after which occupational exposure is no longer relevant"
+        ],
+        correct: 0,
+        explain: "Forty years from the last entry under CAR 2012, because mesothelioma latency runs 30-40 years and beyond — a record destroyed at seven years disappears exactly when it becomes useful for IIDB and civil claims, attribution and epidemiology. Option D is not wrong about GDPR but wrong about precedence: storage limitation requires data be kept no longer than necessary, and a statutory duty defines what is necessary. Note the distinction between the employer's health record and the confidential clinical record.",
+        source: "CAR 2012 health records (40-year retention); UK GDPR storage limitation"
+      },
+      {
+        stem: "A 63-year-old former insulation engineer has been diagnosed with early asbestosis, confirmed on HRCT and multidisciplinary review. He now works as a maintenance supervisor with no direct asbestos exposure, though he occasionally enters plant rooms where emergency escape respirators are kept. He reports mild exertional breathlessness but walks several miles most weekends. Spirometry shows mild restriction with preserved oxygen saturations at rest and after exercise. He is anxious about his diagnosis and wants to keep working. His employer requests advice on his ongoing fitness for work. Which approach is most appropriate?",
+        options: [
+          "Advise that his diagnosis is compatible with continued work only if all lone working in plant rooms is discontinued",
+          "Recommend he be assessed for ill-health retirement, since asbestosis is progressive and his role involves physical demands",
+          "Assess fitness against the demands of his current role and his objective functional capacity, with adjustments where justified",
+          "Advise that annual CT surveillance be established before any fitness-for-work recommendation is finalised",
+          "Confirm he is fit without restriction or review, as he has no ongoing asbestos exposure in his present role"
+        ],
+        correct: 2,
+        explain: "Apply disease, then impairment, then functional limitation, then occupational capability: asbestosis is the diagnosis, mild restriction the impairment, walking several miles with preserved saturations the functional evidence. Option E is the closer error in the permissive direction — no ongoing exposure is reassuring, but asbestosis progresses in a proportion of cases, so the output is fit with review rather than fit with no review. Asbestosis is prescribed for IIDB (D1).",
+        source: "MFOM principle — fitness assessed against current role demands and objective function"
       },
     ]
   },
