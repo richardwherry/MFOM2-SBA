@@ -677,11 +677,11 @@ const SECTIONS = [
       {
         stem: "In a study comparing two interventions, the p-value for the primary outcome is 0.03. Which statement correctly interprets this value?",
         options: [
-          "There is a 3% probability that the null hypothesis is true",
-          "There is a 97% probability that the alternative hypothesis is true",
-          "If the null hypothesis were true, there would be a 3% probability of observing data this extreme or more extreme",
-          "The result has a 3% chance of being due to bias",
-          "The effect size is clinically significant"
+          "There is a 3% probability overall that the null hypothesis itself is true",
+          "There is a 97% probability overall that the alternative hypothesis itself is true",
+          "If the null hypothesis is true, there is a 3% chance of data this extreme or more",
+          "The result overall has a 3% chance of being due to bias alone",
+          "The effect size found here is definitely large and clinically significant"
         ],
         correct: 2,
         explain: "A p-value is P(data | null hypothesis true), not P(null hypothesis | data). It says nothing directly about the probability the null is true, nor about clinical importance — the classic interpretation trap.",
@@ -690,11 +690,11 @@ const SECTIONS = [
       {
         stem: "A 95% confidence interval for a mean difference is reported. Which statement correctly interprets this interval?",
         options: [
-          "If the study were repeated many times, 95% of such intervals would contain the true population value",
+          "If the study were repeated many times, 95% of intervals would contain the true value",
           "There is a 95% probability that the true value lies within this specific interval",
-          "95% of individual data points fall within this interval",
-          "The interval shows a 95% chance the null hypothesis is false",
-          "The interval is only valid if the sample size exceeds 1000"
+          "95% of all individual data points always fall within this specific interval",
+          "The interval shows there is a 95% chance the null hypothesis is false",
+          "The interval is only ever valid if the sample size exceeds 1000 participants"
         ],
         correct: 0,
         explain: "CI interpretation refers to the long-run behaviour of the method over repeated sampling, not a probability statement about this one interval containing the true value.",
@@ -729,11 +729,11 @@ const SECTIONS = [
       {
         stem: "A new screening test has high sensitivity and specificity, but is applied in a population with a low prevalence of the disease. Which statement is correct?",
         options: [
-          "Sensitivity and specificity will fall as prevalence falls",
-          "PPV and NPV are unaffected by disease prevalence",
+          "Sensitivity and specificity will both fall considerably as disease prevalence falls",
+          "PPV and NPV are both entirely unaffected by disease prevalence here",
           "Sensitivity and specificity are properties of the population, not the test",
-          "The positive predictive value will be lower than in a high-prevalence population, even though sensitivity and specificity are unchanged",
-          "NPV will fall substantially as prevalence falls"
+          "PPV will be lower than in a high-prevalence group, even though sensitivity/specificity are unchanged",
+          "NPV will fall quite substantially as disease prevalence itself falls"
         ],
         correct: 3,
         explain: "Sensitivity and specificity are intrinsic properties of the test and stay constant across populations. PPV and NPV are prevalence-dependent: as prevalence falls, PPV falls (more false positives relative to true positives) while NPV rises.",
@@ -742,11 +742,11 @@ const SECTIONS = [
       {
         stem: "A standardised mortality ratio (SMR) of 150 for an occupational cohort means which of the following?",
         options: [
-          "Mortality in the cohort is 50% higher than expected, based on the reference population's age/sex-specific rates",
+          "Mortality in the cohort is 50% higher than expected, per reference-population age/sex rates",
           "Mortality in the cohort is 150% of all deaths recorded nationally",
-          "The cohort has a 150% probability of death",
+          "The cohort here has a 150% probability of death occurring overall",
           "The reference population's death rate is irrelevant to this calculation",
-          "Fifty more people died than expected, in absolute terms"
+          "Fifty more people in total died than expected, in absolute terms"
         ],
         correct: 0,
         explain: "SMR = (observed deaths / expected deaths) × 100, where expected deaths are derived by applying reference-population age/sex-specific rates to the cohort. 150 means 50% excess mortality relative to that expectation — not an absolute count, and not independent of the reference population.",
@@ -755,10 +755,10 @@ const SECTIONS = [
       {
         stem: "Researchers wish to study a rare occupational cancer with a long latency period, using existing exposure records. Which study design is most appropriate, and why?",
         options: [
-          "A randomised controlled trial, as it removes confounding entirely",
+          "A randomised controlled trial, since it removes confounding entirely from the analysis",
           "A prospective cohort study, as it directly measures incidence",
-          "A case-control study, as it is efficient for rare outcomes and does not require long follow-up",
-          "A cross-sectional study, as it establishes clear temporality",
+          "A case-control study, efficient for rare outcomes without needing long follow-up",
+          "A cross-sectional study, since it clearly establishes temporality between exposure and outcome",
           "An ecological study, as it avoids all forms of bias"
         ],
         correct: 2,
@@ -781,11 +781,11 @@ const SECTIONS = [
       {
         stem: "Which of the following statements about statistical significance is correct?",
         options: [
-          "A statistically significant result always indicates clinical importance",
+          "A statistically significant result here always indicates real clinical importance",
           "A result can be statistically significant without being clinically important, and vice versa",
-          "Statistical significance always confirms causation",
+          "Statistical significance on its own always confirms genuine causation has occurred",
           "A p-value below 0.05 always means the finding is true",
-          "Non-significant results always mean there is no effect"
+          "Non-significant results always mean there is definitely no real effect"
         ],
         correct: 1,
         explain: "Statistical and clinical significance are separate questions — a large sample can make a trivial difference statistically significant, and a genuinely important effect can fail to reach significance in a small study. Any option using \"always\" or \"never\" here should be treated with suspicion.",
@@ -794,10 +794,10 @@ const SECTIONS = [
       {
         stem: "An employer reports an apparent cluster of a rare condition in one department. Which is the most appropriate initial step in investigating this?",
         options: [
-          "Immediately conclude a causal workplace exposure is responsible",
-          "Calculate an SMR using national mortality data only",
+          "Immediately and confidently conclude a causal workplace exposure must be responsible",
+          "Calculate an SMR using only national mortality data available at present",
           "Dismiss the cluster as due to chance without further assessment",
-          "Verify the diagnoses and clearly define the population at risk before comparing observed versus expected cases",
+          "Verify the diagnoses and define the at-risk population before comparing observed versus expected cases",
           "Refer the matter directly to litigation without epidemiological assessment"
         ],
         correct: 3,
@@ -2080,7 +2080,137 @@ const SECTIONS = [
         correct: 0,
         explain: "The UK has a common law jurisdiction, meaning court decisions set precedent that binds future decisions in lower courts, developing the law over time — much of civil law, including the law of tort, has been built this way, with opinions of higher courts (the Supreme Court since 2009, previously the House of Lords) binding those below.",
         source: "ABC Ch5 — UK common law jurisdiction and precedent"
-      }
+      },
+      {
+        stem: "An occupational health service embeds an AI decision-support tool into its routine triage workflow, generating draft fitness-for-work recommendations that clinicians typically approve with minimal amendment. When a flawed recommendation later causes harm, the service argues that responsibility sits with the AI tool's developer, since the output was generated automatically. The correct position is:",
+        options: [
+          "The developer bears sole responsibility here, since the professional did not personally generate the flawed content",
+          "Responsibility is shared equally between developer and professional, regardless of the degree of clinical oversight applied here",
+          "Accountability remains with the occupational health professional, even where an AI tool is embedded in routine workflows",
+          "No individual bears any responsibility at all where an error originates from an embedded automated system",
+          "Responsibility depends entirely on whether the specific error was genuinely foreseeable when the tool was first commissioned"
+        ],
+        correct: 2,
+        explain: "AI should be viewed as a supportive tool, not a substitute for professional expertise, and human-centred decision-making should remain central to the process. Clinical oversight and accountability must be maintained even where AI tools are embedded in routine workflows — responsibility for using the tool, and for the outputs approved, rests with the occupational health professional, not the developer.",
+        source: "FOM Ethics Guidance, 9th ed, para 2.47 — AI as supportive tool, accountability"
+      },
+      {
+        stem: "An occupational physician receives an AI-generated summary report drawing together several years of an employee's health surveillance records, ahead of a complex ill-health retirement assessment. Pressed for time, she forwards the summary directly into her own report with only a brief skim read. Regarding whether this approach meets the standard expected, the correct position is:",
+        options: [
+          "This is acceptable, since AI-generated summaries of this kind are not usually considered subject to error",
+          "This is acceptable provided the AI tool used has previously been validated for general accuracy by its supplier",
+          "This is acceptable only where the employee has separately consented to the use of AI in preparing the summary",
+          "This is unacceptable, but solely because it breaches specific data security requirements protecting worker-identifiable information in this case",
+          "This is unacceptable; AI-generated outputs are subject to error and bias, and must be thoroughly appraised before use in decision-making"
+        ],
+        correct: 4,
+        explain: "AI-generated outputs are subject to error, bias, and misinterpretation, and must never be accepted uncritically. It remains the professional duty of the occupational health professional to thoroughly appraise any data or reports generated by AI before they are used in clinical or advisory decision-making — a brief skim read of a multi-year summary ahead of a complex, consequential assessment falls well short of this standard.",
+        source: "FOM Ethics Guidance, 9th ed, para 2.46 — duty to appraise AI outputs"
+      },
+      {
+        stem: "An occupational health service begins using an AI-based decision tree to help determine the outcome of routine fitness assessments, alongside AI transcription software during consultations. Neither use is mentioned anywhere in the service's documentation or communications to workers. Regarding whether this is acceptable, the correct position is:",
+        options: [
+          "This is acceptable, since the AI tools are used only to support clinical judgement, not replace it",
+          "This is not acceptable; AI use should be clearly indicated where it drives reports or outcomes, included in the privacy notice",
+          "This is acceptable provided the specific tools used have themselves been formally approved by an external regulatory body",
+          "Disclosure is required only for transcription software, since the decision tree doesn't process personal data",
+          "This is not acceptable, but only because the transcription software specifically requires individual written consent"
+        ],
+        correct: 1,
+        explain: "Occupational health professionals need to be transparent about their use of AI. It should be clearly indicated when AI is being used to produce reports from clinical records, or when a decision tree is used to reach an assessment outcome, and it is good practice to ensure this is included in the OH privacy notice, accessible to all workers — silence on both uses falls short of this transparency standard.",
+        source: "FOM Ethics Guidance, 9th ed, para 2.50 — transparency about AI use"
+      },
+      {
+        stem: "An occupational health provider relies on an AI tool to generate a fully automated fitness-for-work outcome for routine pre-placement assessments, with no clinician review built into the standard pathway. A worker undergoing assessment asks whether she has any right to object to this process. Regarding the correct position under Article 22 of the GDPR, this is:",
+        options: [
+          "She has no right to object here, since Article 22 applies only to financial and credit-related automated decisions",
+          "She has a right to object only if the automated decision results in a negative outcome for her specific application",
+          "Article 22 permits automated decisions of this kind freely, provided the algorithm has been independently and formally audited",
+          "She has the option to opt out, and automated decisions cannot be based on special category data without explicit consent",
+          "Article 22 gives her a right to written explanation of the algorithm's logic, but no right to opt out"
+        ],
+        correct: 3,
+        explain: "Article 22 of the GDPR gives an individual the option to opt out of automated decision-making. Under Article 22(4), automated decisions caught by Article 22(1) cannot be based on special category data — which includes health data — unless the data subject has explicitly consented to this. A fully automated fitness-for-work outcome, generated without clinician review and inevitably drawing on health information, engages this protection directly.",
+        source: "FOM Ethics Guidance, 9th ed, para 2.51 — GDPR Article 22, automated decisions"
+      },
+      {
+        stem: "An occupational physician uses an AI tool to help draft the literature review section of a research paper on a novel occupational exposure, including a list of supporting references the tool has generated. Regarding her professional obligation before relying on this output, the correct position is:",
+        options: [
+          "She must ensure the information gained is reviewed for accuracy and that the cited reference sources are actually checked",
+          "No additional verification is required, provided the AI tool used is one specifically marketed for academic or research use",
+          "Verification is only required for the reference list, since the surrounding narrative text is not considered a factual claim",
+          "She may rely on the output without further checking, provided this is disclosed in the paper's methodology section",
+          "Verification obligations under this guidance apply only to AI use in direct clinical practice, not to research activity"
+        ],
+        correct: 0,
+        explain: "When occupational health professionals use AI for the purpose of research, they must ensure that any information gained is reviewed to confirm it is accurate, and must check the cited reference sources — a specific, direct obligation, given the recognised risk of AI tools generating plausible-sounding but inaccurate content or fabricated citations, not something a disclosure statement alone can substitute for.",
+        source: "FOM Ethics Guidance, 9th ed, para 2.52 — AI use in research"
+      },
+      {
+        stem: "An occupational health service adopts AI-based minute-taking and transcription software for use during clinical consultations, alongside AI tools for broader data analysis. Regarding the governance expected around this kind of use, the correct position is:",
+        options: [
+          "No specific oversight is required here beyond the standard consent already separately obtained for the clinical consultation itself",
+          "Oversight requirements apply only to AI tools used for data analysis, not to transcription or minute-taking software",
+          "Errors arising from these tools should be checked and proofed, or subject to human oversight, without compromising consent or confidentiality",
+          "Governance obligations apply only where the software is provided by an external third-party supplier, not developed in-house",
+          "AI tools of this kind are considered administrative rather than clinical, falling outside this guidance's scope"
+        ],
+        correct: 2,
+        explain: "AI is a powerful and useful tool in data management, but organisations choosing to use it should ensure that any errors are checked and proofed, or that there is human oversight, and should ensure that its use does not compromise consent and confidentiality — this applies to the full range of common use cases named, including transcription software, minute-taking and data analysis, not a narrower subset.",
+        source: "FOM Ethics Guidance, 9th ed, para 2.45 — AI in data management, human oversight"
+      },
+      {
+        stem: "An occupational physician is advising an employer considering the introduction of robotic systems to remove workers from certain hazardous manual tasks. The employer asks whether this development is likely to have any bearing on employment opportunities for workers with disabilities. The correct position, drawing on this guidance, is:",
+        options: [
+          "Robotic systems of this kind are generally expected to reduce opportunities for disabled workers, given the additional technical skills required",
+          "The use of robots to remove workers from hazardous situations may increase opportunities for disabled workers, given the reduced physical demands involved",
+          "This guidance takes no position on the relationship between robotics, hazardous work and disability more broadly",
+          "Any effect on disabled workers' opportunities is considered entirely incidental and not a relevant occupational health consideration",
+          "Robotic systems are relevant to this guidance only insofar as they affect confidentiality of the data they generate"
+        ],
+        correct: 1,
+        explain: "The use of robots can remove workers from hazardous situations, and more disabled workers may be able to work in these fields as a result of reduced physical demands — a specific, positive point the guidance makes about the relationship between automation, hazard reduction and disability access, rather than treating robotics as a purely administrative or risk-reduction matter.",
+        source: "FOM Ethics Guidance, 9th ed, para 2.49 — AI, robotics and disabled worker access"
+      },
+      {
+        stem: "An occupational health practitioner is not subject to statutory professional regulation. She asks whether she is nonetheless expected to participate in a formal scheme of continuing professional development. The correct position is:",
+        options: [
+          "No expectation applies here at all to practitioners outside statutory regulation, since CPD obligations are exclusively regulatory",
+          "Participation becomes compulsory only once she personally takes on any leadership or management responsibility for other colleagues",
+          "Formal CPD participation is required for every occupational health professional without exception, whether regulated or not",
+          "Regulatory compliance is required only where regulated, but a formal CPD scheme is highly recommended even where she isn't",
+          "CPD expectations of this kind apply only to professionals working in a commercial, rather than an in-house, occupational health setting"
+        ],
+        correct: 3,
+        explain: "Regulatory requirements around continuing professional development impose specific obligations with which compliance is required for those subject to regulation. For occupational health professionals who are not subject to regulation, participation in one or more formal schemes for professional development is highly recommended — a real, stated expectation, though framed as a recommendation rather than a mandatory regulatory compliance requirement in that specific case.",
+        source: "FOM Ethics Guidance, 9th ed, para 2.09 — CPD, regulated vs non-regulated professionals"
+      },
+      {
+        stem: "An occupational physician due for revalidation questions whether seeking structured feedback from colleagues, workers and other stakeholders is simply good practice, or something revalidation standards specifically require. The correct position is:",
+        options: [
+          "Revalidation standards mandate seeking feedback from colleagues, workers, patients and other stakeholders, to be used to reflect on and improve practice",
+          "Feedback of this kind is recommended good practice, but is not itself a mandated element of revalidation standards",
+          "Revalidation standards require feedback only from patients directly, with colleague and stakeholder feedback being optional",
+          "Feedback-seeking of this kind is a requirement specific to occupational health professionals in leadership roles, not to individual practitioners generally",
+          "Revalidation standards leave the method of demonstrating ongoing competence entirely to the individual professional's discretion"
+        ],
+        correct: 0,
+        explain: "Revalidation standards mandate seeking feedback from colleagues, workers, patients and other stakeholders, which should be used to reflect on, learn from and continuously improve practice — occupational health services should ensure this is built into the appraisal process, rather than treating it as an optional addition to it.",
+        source: "FOM Ethics Guidance, 9th ed, para 2.11 — revalidation, feedback requirement"
+      },
+      {
+        stem: "An occupational health service leader is told by a junior colleague that she has fallen behind on her continuing professional development, given competing clinical workload, but is reluctant to raise this given her own seniority in the team. Regarding the leader's own professional responsibility in this situation, the correct position is:",
+        options: [
+          "The leader bears no specific responsibility at all here, since continuing professional development is considered a matter for each individual practitioner alone",
+          "Occupational health professionals with leadership or management responsibilities should ensure that colleagues for whom they are responsible can continuously improve their standards of practice",
+          "The leader's responsibility is limited to formally reporting the shortfall to an external regulatory body without further local action",
+          "No action is required here unless the colleague's competing clinical workload is itself found to breach local employment policy",
+          "The leader should address this only at the colleague's next scheduled annual appraisal, rather than raising it before that point"
+        ],
+        correct: 1,
+        explain: "Occupational health professionals who have leadership or management responsibilities should ensure that colleagues for whom they are responsible can continuously improve their standards of practice — this is a stated professional responsibility of the leader, not something that can be left entirely to the individual colleague to manage alone, or deferred without good reason to the next formal appraisal point.",
+        source: "FOM Ethics Guidance, 9th ed, para 2.09 — CPD, leadership responsibility for colleagues"
+      },
     ]
   },
   {
@@ -3296,11 +3426,11 @@ const SECTIONS = [
       {
         stem: "A 34-year-old machine operator undergoes audiometric surveillance shortly after starting proceedings against his employer relating to alleged inadequate hearing protection. Two threshold measurements taken twenty minutes apart show a degree of variability that falls within the range sometimes seen even in genuine sensorineural loss, and the overall pattern is broadly, though not perfectly, consistent with noise damage. Regarding the correct approach, the position is:",
         options: [
-          "The ongoing legal proceedings mean the result should be disregarded as unreliable without further assessment",
-          "Objective testing such as otoacoustic emissions should be arranged automatically for every claimant, to provide an independent measure regardless of the audiometric findings",
-          "Any degree of threshold variability confirms non-organic hearing loss and should be reported as such",
-          "The result should be accepted entirely at face value, with no consideration given to the legal context at all",
-          "Some test-retest variability is expected even in genuine hearing loss, and the pattern should be judged on its own merits alongside the clinical context"
+          "The ongoing legal proceedings alone mean the result should be disregarded as unreliable",
+          "Objective testing should be arranged automatically for every claimant, regardless of audiometric findings",
+          "Any degree of threshold variability here confirms non-organic hearing loss has occurred",
+          "The result should be accepted entirely at face value, without considering the legal context",
+          "Some test-retest variability is expected even in genuine hearing loss, and should be judged on its merits"
         ],
         correct: 4,
         explain: "Genuine sensorineural loss can show some test-retest variability, so a degree of it doesn't itself confirm non-organic hearing loss. The finding should be weighed on its merits rather than dismissed because of the litigation context, or interpreted with blinkers that ignore that context entirely. Automatically escalating to further objective testing for every claimant regardless of the findings over-medicalises what may be an unremarkable result.",
@@ -3916,6 +4046,266 @@ const SECTIONS = [
         correct: 3,
         explain: "Carc 1A is a known human carcinogen on human evidence; 1B is presumed, largely on animal evidence; category 2 is suspected on limited evidence. The Sk notation means the substance is absorbed through intact skin in amounts contributing materially to body burden — a warning about route, not about irritation or sensitisation, which have their own classifications. The practical consequence is that air monitoring alone can substantially understate dose, making biological monitoring the meaningful measure. Benzene is exactly this combination; MbOCA is the 1B equivalent.",
         source: "OHOH 2nd ed, Ch 2 — Classification and labelling (Table 2.1, CLP categories); EH40 Sk notation"
+      },
+      {
+        stem: "A 34-year-old male engineer returns from a work assignment in an area with a risk of Zika virus transmission. His partner is not currently pregnant, but the couple are actively trying to conceive. Neither partner has developed any symptoms since his return. Regarding the correct advice, the position is:",
+        options: [
+          "No specific precaution is required, since he has remained entirely asymptomatic since returning",
+          "Conception should be avoided, and barrier methods considered, for two months from his last possible exposure",
+          "Barrier methods should be used for the remainder of the couple's reproductive lives as a precaution",
+          "Conception should be avoided, and barrier methods considered, for three months from his last possible exposure",
+          "No specific advice applies to male travellers under this guidance, only to female travellers"
+        ],
+        correct: 3,
+        explain: "Where the traveller is male and his partner is not pregnant, conception should be avoided (with barrier methods considered) for three months from his last possible Zika virus exposure — the longer of the two standard periods, reflecting more prolonged viral persistence associated with male exposure. Absence of symptoms makes no difference to this advice, which the guidance states applies regardless of whether travellers have symptoms.",
+        source: "UKHSA, Zika virus: preventing the consequences of sexual transmission (GOV-21158, v2, June 2026)"
+      },
+      {
+        stem: "A 40-year-old male sales representative returns from a region with a risk of Zika virus transmission. His partner is currently 18 weeks pregnant. Regarding the correct duration for which barrier methods should be used, the position is:",
+        options: [
+          "Barrier methods are required for two months from his last possible exposure, mirroring the standard female-only exposure period",
+          "Barrier methods are required for three months from his last possible exposure, the standard period for male exposure",
+          "Barrier methods should be used for the duration of the pregnancy, rather than a fixed number of months",
+          "No barrier methods are required, since Zika virus transmission risk applies only prior to conception",
+          "Barrier methods are required until his partner reaches 28 weeks of pregnancy, after which risk is considered negligible"
+        ],
+        correct: 2,
+        explain: "Where the traveller is male and his partner is currently pregnant, barrier methods should be used for the duration of the pregnancy — not one of the fixed two or three-month periods that apply when pregnancy is not a current factor. This reflects the specific concern of congenital Zika syndrome, which requires protection to be maintained throughout the pregnancy rather than for a defined window after exposure.",
+        source: "UKHSA, Zika virus guidance — male traveller, pregnant partner"
+      },
+      {
+        stem: "A 27-year-old female physiotherapist returns from an area with a risk of Zika virus transmission. She is not currently pregnant, and her male partner did not travel with her. Regarding the appropriate advice on avoiding conception, the position is:",
+        options: [
+          "Conception should be avoided for three months from her last possible exposure, the standard period given her own travel",
+          "Conception should be avoided for two months from her last possible exposure",
+          "No specific period applies, since only she, and not her partner, has actually travelled to the affected area",
+          "Conception should be avoided for six months from her last possible exposure, reflecting the female reproductive cycle",
+          "The advice is identical to that for a male traveller whose partner did not travel, requiring three months"
+        ],
+        correct: 1,
+        explain: "Where the traveller is female, she is not pregnant, and her male partner did not also travel, conception should be avoided for two months from her last possible exposure — the shorter of the two standard periods. This is the exposure-limited-to-one-partner scenario, and it is specifically the shorter, not longer, period that applies here, unlike where the male partner has himself travelled.",
+        source: "UKHSA, Zika virus guidance — female traveller, not pregnant, partner did not travel"
+      },
+      {
+        stem: "A 31-year-old female consultant and her male partner both travel together to an area with a risk of Zika virus transmission. Neither is currently pregnant. On their return, regarding the appropriate period for which conception should be avoided, the position is:",
+        options: [
+          "Two months, since the advice for a female traveller always takes precedence over that for her male partner",
+          "One month, reflecting a reduced risk where both partners have been exposed simultaneously",
+          "No defined period applies where both members of a couple have travelled together to the same area",
+          "Two months, matching the period that would apply if only the female partner had travelled",
+          "Three months, since her male partner's own travel and exposure brings the longer period into play"
+        ],
+        correct: 4,
+        explain: "Where the female traveller is not pregnant but her male partner also travelled, the longer three-month period applies — not the two-month period that would apply if he had stayed at home. His own exposure is what brings the longer, male-exposure-associated period into effect, even though the female partner is the one whose travel initiated the scenario.",
+        source: "UKHSA, Zika virus guidance — female traveller, not pregnant, partner also travelled"
+      },
+      {
+        stem: "A 29-year-old female teacher, currently 10 weeks pregnant, returns from an area with a risk of Zika virus transmission. Her male partner did not travel with her. Regarding the correct advice, the position is:",
+        options: [
+          "Barrier methods should be considered for two months from her last possible exposure",
+          "Barrier methods should be used for the remainder of her pregnancy, as would apply if her partner had also travelled",
+          "No specific advice applies, since her own pregnancy status makes sexual transmission risk clinically irrelevant",
+          "Barrier methods should be considered for three months from her last possible exposure",
+          "Termination of pregnancy should be actively discussed given the risk of congenital Zika syndrome"
+        ],
+        correct: 0,
+        explain: "Where the female traveller is pregnant but her male partner did not travel, barrier methods should be considered for two months from her last possible exposure — the shorter, exposure-limited-to-one-partner period, rather than the duration-of-pregnancy advice that applies once the male partner has himself also been exposed.",
+        source: "UKHSA, Zika virus guidance — female traveller, pregnant, partner did not travel"
+      },
+      {
+        stem: "A 33-year-old female architect, currently 22 weeks pregnant, travels to an area with a risk of Zika virus transmission together with her male partner. Regarding the correct duration for which barrier methods should be used following their return, the position is:",
+        options: [
+          "Two months from their last possible exposure, since this is the standard period wherever pregnancy is present",
+          "Three months from their last possible exposure, reflecting her partner's own travel and exposure",
+          "No barrier methods are required once the pregnancy has already progressed beyond the first trimester",
+          "Barrier methods should be used for the duration of the pregnancy",
+          "Barrier methods are required only if her partner develops symptoms consistent with Zika virus infection"
+        ],
+        correct: 3,
+        explain: "Where the female traveller is pregnant and her male partner also travelled, barrier methods should be used for the duration of the pregnancy — the pregnancy-duration advice applies once pregnancy is a current factor, regardless of whether one or both partners travelled, rather than being displaced by the three-month period that his own travel would otherwise trigger.",
+        source: "UKHSA, Zika virus guidance — female traveller, pregnant, partner also travelled"
+      },
+      {
+        stem: "A couple return from an area with a risk of Zika virus transmission. Neither has experienced any symptoms suggestive of Zika virus infection at any point. They ask whether the absence of symptoms means the standard advice on conception and barrier methods can be disregarded. The correct position is:",
+        options: [
+          "The advice may be disregarded, since Zika virus infection without symptoms is not considered transmissible",
+          "The advice applies only if symptoms develop within the first fortnight after return from the affected area",
+          "The advice applies regardless of whether travellers have experienced symptoms or not",
+          "The advice is halved in duration where travellers remain entirely asymptomatic throughout and after travel",
+          "The absence of symptoms in both partners together is sufficient to exclude any ongoing transmission risk"
+        ],
+        correct: 2,
+        explain: "The guidance is explicit that advice on avoiding conception and on using barrier methods applies regardless of whether travellers have symptoms or not. Asymptomatic infection remains a recognised feature of Zika virus, and the absence of symptoms does not reduce, halve or remove the standard precautionary periods.",
+        source: "UKHSA, Zika virus guidance — advice independent of symptoms"
+      },
+      {
+        stem: "A traveller returns from an area with a risk of Zika virus transmission on 1 March, but has unprotected sexual contact with his partner, who remained in the affected area, on a visit back to see her on 20 March. Regarding how his 'last possible Zika virus exposure' should be calculated for the purposes of this guidance, the position is:",
+        options: [
+          "It is fixed at 1 March, the date he first left the country or area with risk of transmission",
+          "It is the later of the two dates — 20 March, reflecting the subsequent unprotected sexual contact",
+          "It is the earlier of the two dates, since risk is considered to peak immediately after initial exposure",
+          "It is calculated as the midpoint between the two dates given, averaging the exposure window",
+          "Only the date of leaving the affected area is relevant; sexual contact afterwards does not extend the exposure period"
+        ],
+        correct: 1,
+        explain: "Last possible Zika virus exposure is defined as the later of either the date of leaving a country or area with risk for Zika virus transmission, or the date of last unprotected sexual contact with a potentially infectious partner. Continued unprotected contact after return, particularly with a partner who remained in or returned to the affected area, pushes the relevant date forward rather than leaving it fixed at the original departure date.",
+        source: "UKHSA, Zika virus guidance — definition of last possible exposure"
+      },
+      {
+        stem: "A couple returning from an area with a risk of Zika virus transmission ask whether barrier methods are only relevant to penetrative vaginal intercourse, since this is the only form of contact they associate with a pregnancy risk. Regarding the correct scope of the guidance's barrier method advice, the position is:",
+        options: [
+          "Barrier methods are relevant only to penetrative vaginal intercourse specifically, matching the couple's own current understanding",
+          "Barrier methods are relevant to any penetrative sexual contact only, but not to oral-genital or oral-anal contact",
+          "Barrier methods are relevant only where conception is a realistic possibility from the specific act involved",
+          "Barrier methods are only required where one partner has previously tested positive for Zika virus infection",
+          "Barrier methods, including condoms or dental dams, apply to oral-genital and oral-anal contact as well as penetrative sex"
+        ],
+        correct: 4,
+        explain: "The guidance specifies barrier methods for penetrative sex (male or female condoms, including for sex toys, which should not be shared) and separately for oral-genital or oral-anal sexual contact, where male or female condoms or dental dams should be used. The advice is not limited to acts carrying a pregnancy risk, since sexual transmission of the virus itself, not only conception, is the concern being addressed.",
+        source: "UKHSA, Zika virus guidance — scope of barrier methods"
+      },
+      {
+        stem: "A couple are planning a holiday to an area with a risk of Zika virus transmission and ask when barrier method precautions should begin, assuming they wish to follow the guidance as closely as possible. The correct position is:",
+        options: [
+          "Barrier methods should begin on arrival in the area or country with risk for Zika virus",
+          "Barrier methods are only necessary from the point of departure back to their home country",
+          "Barrier methods are only necessary once any symptoms suggestive of infection actually develop",
+          "Barrier methods should begin only once written confirmation of local Zika virus activity is obtained",
+          "Barrier method timing is left to individual clinical judgement, with no specific guidance point given"
+        ],
+        correct: 0,
+        explain: "The guidance specifies that use of barrier methods should begin on arrival in the area or country with risk for Zika virus — precautions start at the point exposure risk begins, not retrospectively from the point of return home, and not contingent on symptoms or confirmed local transmission activity.",
+        source: "UKHSA, Zika virus guidance — timing of barrier method use"
+      },
+      {
+        stem: "A sole self-employed contractor is due an offshore medical. No employer or agency exists that is able to formally classify the risk level of his role. Which of the following is correct?",
+        options: [
+          "The examining doctor should personally decide the risk classification based on the tasks described",
+          "The medical should proceed without any risk classification being recorded at all",
+          "The contractor himself should determine and declare his own risk classification",
+          "Where no one can classify the role, the higher-risk category should be assumed by default",
+          "Classification can be deferred indefinitely until an employer is later confirmed"
+        ],
+        correct: 3,
+        explain: "Occupational risk classification is a task-based judgement belonging with the employer or agency commissioning the work, not the examining doctor, who lacks full operational knowledge of the actual duties and should not substitute their own judgement for a formal risk assessment. Where no one is able to provide this, the safer default is to assume the higher-risk category applies, rather than leaving classification undone, guessing informally, or accepting self-declaration from the worker himself. This principle — that risk classification is an organisational responsibility, not a clinical one — recurs throughout occupational health practice.",
+        source: "General principle, drawing on offshore medical governance structure; specific numbered provisions not asserted given uncertainty between the OEUK 7th edition (2024) and Issue 8 (Oct 2025)."
+      },
+      {
+        stem: "A worker exceeds a defined maximum weight threshold set for offshore helicopter safety, but successfully completes practical tests including donning a lifejacket and fastening a harness in a mock helicopter seat. Regarding whether passing these tests overcomes the weight threshold, the correct position is:",
+        options: [
+          "Passing functional tests is sufficient on its own to overcome any weight-related restriction",
+          "Functional tests are the only assessment method relevant here, so no separate threshold exists",
+          "A defined weight threshold operates as a hard limit that functional test performance cannot override",
+          "The threshold applies only to workers who fail the functional tests, not those who pass them",
+          "Functional tests and weight thresholds are unrelated and neither has any bearing on the other"
+        ],
+        correct: 2,
+        explain: "Where a maximum weight or size limit exists specifically because of physical constraints such as helicopter door width, seating configuration or evacuation equipment sizing, it functions as an absolute limit independent of whether an individual can demonstrate the general skills involved. A person can be entirely competent at the practical tasks while still being too large to physically pass through an escape route or be safely seated, so passing functional tests does not substitute for meeting a hard physical constraint — distinct from a functional capacity threshold that can genuinely be met through skill or fitness.",
+        source: "General principle, offshore/aviation safety-equipment sizing logic; exact current weight or BMI figure not asserted given inconsistency between available summaries of the 7th edition (2024) and Issue 8 (Oct 2025)."
+      },
+      {
+        stem: "A worker attending a pre-employment medical for a physically demanding role is found to have a clinic blood pressure of 188/126 mmHg. He is asymptomatic, with no papilloedema, retinal haemorrhage or other signs of accelerated hypertension. Applying UK national clinical guidance on severe hypertension, the correct action is:",
+        options: [
+          "Reassure him and proceed with certification, repeating the reading at his next scheduled review",
+          "Refer him the same day to a hospital specialist, given how markedly elevated the reading is",
+          "Recheck the reading with him lying supine in a darkened room before making any decision",
+          "Certify him for a short period only, and repeat the blood pressure measurement at that review",
+          "Refer him to his GP within seven days, withholding certification until this has occurred"
+        ],
+        correct: 4,
+        explain: "NICE guidance on hypertension (NG136) specifies that a clinic reading of 180/120 mmHg or higher warrants same-day specialist referral only where signs such as papilloedema or retinal haemorrhage are present; without them, referral to the person's own GP within seven days is the appropriate step, with certification withheld until the outcome is known. Proceeding, deferring to a future review, or deliberately seeking a lower reading through repeat testing under different conditions are all specifically discouraged in this situation.",
+        source: "NICE NG136 — hypertension in adults, severe hypertension referral thresholds; independent of any OEUK-specific offshore guidance edition."
+      },
+      {
+        stem: "A worker with a history of a spontaneous pneumothorax, now fully resolved with no surgical treatment, is due to undertake in-water emergency escape training as part of preparation for offshore work. Regarding the physiological basis for treating this history with particular caution in relation to in-water training specifically, the correct position is:",
+        options: [
+          "The concern relates to changes in ambient pressure during in-water and underwater escape exercises",
+          "The concern relates only to the psychological stress of confined, underwater training exercises",
+          "Prior pneumothorax has no specific relevance once the initial episode has fully resolved",
+          "The concern applies equally to all forms of offshore training, not particularly to in-water elements",
+          "The concern is limited to the risk of secondary chest infection during subsequent training exposure"
+        ],
+        correct: 0,
+        explain: "Changes in ambient pressure, of the kind experienced during in-water and underwater escape training, carry a specific risk of triggering a further pneumothorax in someone with a prior history, since trapped or residual air in the pleural space can be affected by pressure change in a way dry, on-land training does not replicate. This is the same underlying physiological concern that applies wherever pressure change is involved, such as diving or hyperbaric exposure, and explains why the caution is specific to in-water elements rather than applying equally across all training, being purely psychological, or being about infection risk.",
+        source: "General principle, diving and hyperbaric medicine (barotrauma risk with pressure change in a history of pneumothorax); not tied to a specific OEUK-edition paragraph."
+      },
+      {
+        stem: "A worker was prescribed an adrenaline auto-injector several years ago as a precaution following a single episode of facial swelling after a meal, but has never needed to use it and has had no further episodes since. Regarding how this history should be interpreted for a fitness-for-work assessment, the most defensible approach is:",
+        options: [
+          "The prescription is disregarded entirely, since it has never actually been used",
+          "The prescription is treated as evidence of the underlying risk, regardless of whether it was used",
+          "Only a formal allergy specialist letter, not the original prescription, has any bearing on the assessment",
+          "The absence of further episodes since the original prescription cancels out its original significance",
+          "The prescription is relevant only if the worker currently carries the device with them at all times"
+        ],
+        correct: 1,
+        explain: "A precautionary prescription made in response to a genuine clinical event is generally treated as evidence of the underlying risk it was intended to manage, regardless of whether the device has ever actually needed to be used, since the absence of a further episode does not retrospectively prove the original risk was overstated, and non-use may simply reflect that no further trigger has yet occurred. Disregarding it, treating the absence of subsequent episodes as cancelling its relevance, or making its significance depend on whether it is currently carried would each risk under-recognising a genuine, if so-far-unrealised, risk.",
+        source: "General principle, precautionary interpretation of risk indicators in fitness-for-work assessment."
+      },
+      {
+        stem: "Two workers with insulin-treated diabetes are being assessed for fitness for a safety-critical remote-worksite role. Both have similar glycaemic control on recent testing. One retains normal awareness of early hypoglycaemic warning symptoms; the other has lost the ability to recognise early warning symptoms of a falling glucose level. Regarding the significance of this difference, the correct position is:",
+        options: [
+          "The difference is not relevant, since glycaemic control on testing is the only factor of significance",
+          "Loss of hypoglycaemia awareness is a materially significant factor distinct from glycaemic control itself",
+          "Hypoglycaemia awareness is relevant only for roles involving direct patient care duties offshore",
+          "The two workers should be assessed identically, since both take the same category of medication",
+          "Awareness of warning symptoms matters only once a severe hypoglycaemic episode has actually occurred"
+        ],
+        correct: 1,
+        explain: "Loss of hypoglycaemia awareness is a materially significant factor in its own right, distinct from glycaemic control on testing, because a worker who cannot recognise early warning symptoms loses the opportunity to take corrective action before a low glucose level progresses to incapacity — a particular concern in a remote or safety-critical setting where rapid medical assistance may not be available. Treating control alone as sufficient, waiting for a severe episode before considering awareness relevant, or assuming the two workers can be assessed identically because they share a medication category all overlook this distinct dimension of risk.",
+        source: "General principle, hypoglycaemia awareness as a determinant of fitness for safety-critical or remote work."
+      },
+      {
+        stem: "A worker with a history of epilepsy is being assessed for a role at a remote offshore worksite, reached only by helicopter, with limited on-site medical facilities and no possibility of rapid evacuation in poor weather. Regarding why the assessment approach for this role may reasonably differ from an equivalent onshore role with ready access to emergency services, the correct position is:",
+        options: [
+          "It should not differ, since epilepsy carries an identical risk profile in every work setting",
+          "Remote-worksite considerations apply only to roles involving driving or operating vehicles",
+          "Weather-dependent evacuation delays have no bearing on fitness-for-work assessment",
+          "The remote and less accessible setting is a legitimate reason for a more cautious assessment",
+          "The assessment should be more lenient offshore, since specialist medical advice is more available"
+        ],
+        correct: 3,
+        explain: "The remoteness of a worksite, and the practical limits this places on emergency response and medical evacuation, particularly where weather can delay helicopter transfer, is a legitimate reason for a more cautious fitness assessment than would apply to an equivalent role with ready access to onshore emergency services — a seizure occurring in a hazardous environment or during an evacuation, without rapid medical support available, carries materially different consequences. This does not mean epilepsy carries an identical risk regardless of setting, that the principle is confined to driving-type roles, that evacuation delay is irrelevant, or that offshore settings are actually more permissive, which inverts the underlying logic.",
+        source: "General principle, remote-worksite fitness-for-work assessment logic (limited medical facilities, evacuation constraints)."
+      },
+      {
+        stem: "A worker is being assessed both for general fitness for offshore work and, separately, for membership of the on-site emergency response team, which requires more strenuous physical exertion including search, rescue and firefighting-type duties. Regarding the relationship between the two assessments, the correct position is:",
+        options: [
+          "The two assessments apply identical standards, since both relate to the same offshore environment",
+          "General fitness for offshore work requires a stricter standard than emergency response team membership",
+          "Only cardiovascular fitness, not respiratory function, differs between the two assessments",
+          "Emergency response team standards are set individually by each worker's own treating doctor",
+          "Emergency response team membership requires meeting a materially stricter standard than general fitness"
+        ],
+        correct: 4,
+        explain: "Emergency response team duties involve materially greater physical exertion, often in hazardous or degraded conditions, than general offshore work, so the standard applied is stricter across the relevant domains rather than being identical to, or more lenient than, the general offshore standard — reflecting the greater physical demand and the safety-critical nature of the role for the wider workforce, not one isolated system such as cardiovascular fitness alone. Standards of this kind are set through an organisational medical framework, not by an individual treating doctor in isolation.",
+        source: "General principle, elevated fitness standards for higher-demand safety-critical roles."
+      },
+      {
+        stem: "A worker requiring long-term anticoagulant medication for a cardiac arrhythmia is being assessed for offshore work, where medical facilities are limited and evacuation may be delayed. Regarding the most appropriate general approach to this assessment, the correct position is:",
+        options: [
+          "Anticoagulant medication is an automatic bar to any offshore work, regardless of the individual's bleeding risk",
+          "Anticoagulant medication has no particular relevance to offshore fitness, provided the indication is well controlled",
+          "An individualised assessment of bleeding risk should be undertaken, rather than a blanket approach either way",
+          "The decision should rest solely with the prescribing cardiologist, without any occupational health input",
+          "Anticoagulant medication is relevant only if the worker has previously experienced a bleeding episode"
+        ],
+        correct: 2,
+        explain: "Given the combination of an increased bleeding risk from anticoagulation and the practical constraints of limited offshore medical facilities and potentially delayed evacuation, an individualised assessment of bleeding risk is the appropriate approach, rather than treating anticoagulation as either an automatic bar or as having no bearing at all. This mirrors the general occupational health principle that medication carrying a genuine risk relevant to a specific working environment warrants individual assessment rather than a blanket rule, and that occupational health input, not the prescribing specialist alone, has a role in that assessment; waiting for a bleeding episode to have already occurred is too late for a preventive approach.",
+        source: "General principle, individualised risk assessment for medication-related fitness for remote/offshore work."
+      },
+      {
+        stem: "A worker had a myocardial infarction some months ago, treated with a coronary stent, and is now being assessed for return to safety-critical offshore work. His cardiologist confirms full functional recovery, no ongoing symptoms, and good control of cardiovascular risk factors. Regarding the general pattern followed in certifying return to this kind of role after a significant cardiac event, the correct position is:",
+        options: [
+          "Certification, once granted, is typically time-limited at first, extending as risk factor control is sustained",
+          "Certification is granted for an indefinite period from the point functional recovery is first confirmed",
+          "No certification of any kind is possible following a myocardial infarction, regardless of subsequent recovery",
+          "Certification duration is unrelated to ongoing control of cardiovascular risk factors once recovery is confirmed",
+          "A fixed, universal waiting period applies after any cardiac event, regardless of severity or treatment"
+        ],
+        correct: 0,
+        explain: "The general pattern in certifying return to safety-critical or remote work after a significant cardiac event is that any certification granted is initially time-limited, with the possibility of a longer period once sustained control of cardiovascular risk factors has been demonstrated over time, rather than being indefinite from the outset, denied altogether despite confirmed recovery, unrelated to ongoing risk factor control, or governed by one single fixed period regardless of the specific event and its treatment.",
+        source: "General principle, graduated/time-limited certification following a significant cardiac event in safety-critical or remote work."
       },
     ]
   },
