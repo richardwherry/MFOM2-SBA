@@ -232,7 +232,7 @@
       <span><span class="legend-dot" style="background:var(--track)"></span>unattempted</span>
     </div>
     <div class="section-grid" id="sectionGrid"></div>
-    <div class="coming-soon">More sections are added over time — ask whoever manages this page to add the next topic.<br>Your scores are remembered on this device only (not shared with anyone) — clearing browser data will reset them.</div>
+    <div class="coming-soon">More sections are added over time — ask whoever manages this page to add the next topic.<br>Your progress bars are remembered on this device only and reset if you clear browser data. Anonymous usage data (a random device code, section, question, and pass/fail — never anything identifying you) is logged to help track group progress.</div>
   </div>
 
   <div class="view" id="view-quiz">
@@ -4541,6 +4541,34 @@ let currentQIndex = 0;
 let currentAnswers = [];       // per-question chosen index or null
 let answeredThis = false;
 
+// ---- Anonymous usage logging (optional, aggregate group stats only) ----
+// A random 6-digit code is generated once per browser and stored locally, purely
+// so distinct devices can be counted in the results sheet — it identifies a
+// browser, not a person, and carries no name or other identifying information.
+const DEVICE_ID_KEY = 'mfom2-sba-device-id';
+function getDeviceId(){
+  try{
+    let id = localStorage.getItem(DEVICE_ID_KEY);
+    if (!id){
+      id = String(Math.floor(Math.random()*1000000)).padStart(6,'0');
+      localStorage.setItem(DEVICE_ID_KEY, id);
+    }
+    return id;
+  }catch(e){ return '000000'; }
+}
+const FORM_ACTION_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScu1TFewef2tazU_ihBvz4xO_xq_mugt1-chW50NDNHq4JikQ/formResponse';
+function logAttempt(sectionName, qIdx, stem, isCorrect){
+  try{
+    const body = new URLSearchParams({
+      'entry.391150295': getDeviceId(),
+      'entry.1193650070': sectionName,
+      'entry.782705805': `${qIdx+1} — ${stem.slice(0,60)}`,
+      'entry.1656572143': isCorrect ? 'Pass' : 'Fail'
+    });
+    fetch(FORM_ACTION_URL, { method: 'POST', mode: 'no-cors', body });
+  }catch(e){ /* logging is best-effort only, never blocks the quiz */ }
+}
+
 function escapeHtml(str){
   const div = document.createElement('div');
   div.textContent = str;
@@ -4798,6 +4826,7 @@ function submitAnswer(idx){
   const q = currentQuiz.questions[currentQIndex];
   currentAnswers[currentQIndex] = idx;
   markAttempted(q._secId, q._qIdx, idx === q.correct);
+  logAttempt(q._secName || currentQuiz.title, q._qIdx, q.stem, idx === q.correct);
 
   document.querySelectorAll('#optionsWrap .option').forEach((el,i)=>{
     el.classList.remove('selected');
