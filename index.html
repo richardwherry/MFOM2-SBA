@@ -1720,7 +1720,7 @@ const SECTIONS = [
       {
         stem: "An occupational physician is asked to advise on a case of possible ill-health retirement. The referral notes that the employee's condition would prevent her from continuing in her current specific role, but she might still be capable of a different type of work entirely. Regarding why this distinction matters for the assessment, the correct position is:",
         options: [
-          "Ill-health retirement may turn on incapacity for a particular job, or for any job at all — genuinely different tests",
+          "Ill-health retirement may turn on incapacity for a particular job, or for any job at all, depending on the specific scheme",
           "The distinction is entirely irrelevant, since all ill-health retirement schemes apply an identical single test regardless of scheme used",
           "Only incapacity for the current specific role is ever considered relevant to any pension scheme's ill-health retirement criteria at all",
           "Only incapacity for any occupation whatsoever is ever considered relevant to ill-health retirement, with the current specific role always being deemed irrelevant",
@@ -1991,13 +1991,13 @@ const SECTIONS = [
         source: "ABC Ch5, Table 5.10 — associative discrimination"
       },
       {
-        stem: "An employee is treated less favourably by a manager who mistakenly believes she has a disabling condition, when in fact she does not. Regarding the correct classification of this treatment, the position is:",
+        stem: "A 41-year-old warehouse supervisor is passed over for promotion to shift manager. During the subsequent grievance, an email comes to light in which her area manager told HR he doubted she could 'cope with the pressure', given her occasional use of a walking stick following a knee injury two years earlier that has since fully healed, leaving no ongoing restriction on her duties. She has never described herself as disabled, and in fact is not — the stick was a temporary aid, no longer needed. HR's initial response is that the Equality Act cannot apply, since she does not meet the definition of disability. Regarding the correct classification of the area manager's treatment of her, the position is:",
         options: [
-          "This may amount to indirect discrimination, since a rule applying to everyone can still disadvantage disabled employees",
-          "This cannot amount to discrimination of any kind at all, since the policy is applied identically to all staff",
-          "This is classified as direct discrimination, since disabled employees are ultimately disadvantaged by the outcome here",
-          "This is classified instead as harassment, since the policy causes offence to disabled employees affected by it",
-          "This is only actionable if the employer can be shown to have intended the disadvantage from the outset"
+          "This cannot amount to discrimination under the Act, since the employee does not actually have the condition believed",
+          "This is classified as associative discrimination, since it involves a mistaken belief about a third party's condition",
+          "This is classified as victimisation, since it follows from an unfounded assumption made privately by the manager about her health",
+          "This is recognised as discrimination by perception, arising from the belief that the person is disabled, whether or not that belief is accurate",
+          "This can only ever be pursued as a claim once the mistaken belief has been formally corrected by independent medical evidence"
         ],
         correct: 3,
         explain: "Discrimination by perception arises where someone is discriminated against because the discriminator believes the person is disabled, regardless of whether that belief is actually accurate — the protection does not depend on the person genuinely having the condition perceived.",
@@ -4696,6 +4696,136 @@ const SECTIONS = [
         correct: 2,
         explain: "Apply disease, then impairment, then functional limitation, then occupational capability: asbestosis is the diagnosis, mild restriction the impairment, walking several miles with preserved saturations the functional evidence. Option E is the closer error in the permissive direction — no ongoing exposure is reassuring, but asbestosis progresses in a proportion of cases, so the output is fit with review rather than fit with no review. Asbestosis is prescribed for IIDB (D1).",
         source: "MFOM principle — fitness assessed against current role demands and objective function"
+      },
+      {
+        stem: "A joinery workshop employs eight workers machining and sanding oak, beech and ash. Personal sampling is carried out on one machinist using an IOM head over a six-hour period covering all his machining tasks, giving a measured concentration of 4.0 mg/m3 inhalable dust. He is on other duties away from the workshop for the remaining two hours of his eight-hour shift, with no dust exposure. The workplace exposure limit for hardwood dust is 3 mg/m3 as an eight-hour TWA. The manager calculates the eight-hour figure, notes it against the limit, and asks you to confirm the company is compliant so he can close the action. What is the correct response?",
+        options: [
+          "The eight-hour TWA is 3.0 mg/m3, which meets the limit, so compliance is achieved and no further action is needed",
+          "The eight-hour TWA is 4.0 mg/m3, since the sample covered all his exposed work, so the limit is exceeded",
+          "The eight-hour TWA is 3.0 mg/m3, but compliance is not achieved, as exposure must be reduced as far as reasonably practicable",
+          "The calculation cannot be completed, since a six-hour sample cannot be extrapolated to an eight-hour reference period",
+          "The eight-hour TWA is 2.4 mg/m3, comfortably within the limit, so control measures are adequate as they stand"
+        ],
+        correct: 2,
+        explain: "TWA is concentration multiplied by time, summed and divided by eight: (4.0 x 6) + (0 x 2) = 24, divided by 8 = 3.0 mg/m3. Option E divides by the sampled period rather than normalising to the eight-hour reference; option B omits normalisation altogether. The judgement is the harder half. Hardwood dust carries both Carc and Sen notations, and for substances with no identifiable safe threshold the WEL is not a target: COSHH requires exposure to be reduced as low as is reasonably practicable in addition to remaining below the limit, with the Schedule 2A principles of good control practice applied. Sitting exactly at the limit is therefore not compliance. The same reasoning applies to carcinogens, mutagens, reproductive toxins, respiratory sensitisers, asbestos, silica, ionising radiation, noise and vibration.",
+        source: "EH40/2005 (hardwood dust 3 mg/m3 inhalable, 8-hr TWA, since Jan 2020); COSHH 2002 reg 7 and Schedule 2A"
+      },
+      {
+        stem: "A fabrication shop welds stainless steel using manual metal arc, and a worker is referred with a two-year history of cough and episodic wheeze. The employer has installed a general dilution ventilation system across the shop and asks what more could reasonably be done, noting that the system was expensive and that welders dislike wearing powered respirators in summer. The production manager confirms that most of the components could be fabricated in mild steel without affecting the finished product, and that the shop holds equipment for other welding techniques. Which intervention would be expected to reduce exposure most effectively?",
+        options: [
+          "Increasing the air change rate of the dilution ventilation and repositioning the inlets away from the welding bays",
+          "Fabricating components in mild steel and switching to a technique generating less fume than manual metal arc",
+          "Issuing powered air-purifying respirators with a higher assigned protection factor, with face-fit testing for each welder",
+          "Rotating welders through non-welding tasks so that no individual exceeds four hours of arc time in any shift",
+          "Fitting on-torch extraction at each welding set, with six-monthly examination and testing of the system"
+        ],
+        correct: 1,
+        explain: "Two routes reduce generation rather than manage what has been generated: mild steel removes chromium and nickel at source, and manual metal arc and flux-cored arc produce substantially more fume than MIG or TIG. Option E is the strongest distractor and is a legitimate engineering control that HSE expects for indoor welding, but it captures fume already generated, with imperfect efficiency where the welder's head is over the work. Option A fails because general dilution ventilation cannot control a point source in the breathing zone. Option D spreads dose across more workers without reducing it, which is inappropriate for a carcinogen. IARC classifies all welding fume as Group 1.",
+        source: "COSHH hierarchy; HSE welding fume guidance; IARC Monograph 118 (2018)"
+      },
+      {
+        stem: "An electronics manufacturer employs twelve people hand-soldering circuit boards at benches. Two have developed work-related wheeze in the past eighteen months. The plant engineer proposes increasing the general ventilation in the room, pointing out that the roof extract already gives good air movement and that fume is visibly cleared from the room within a minute or two of soldering stopping. Why is general dilution ventilation considered inadequate for controlling this exposure?",
+        options: [
+          "Solder fume particles are too small to be removed by general ventilation systems at any air change rate",
+          "Rosin-based fume is denser than air, so it accumulates at bench level rather than rising to the roof extract",
+          "General ventilation cannot be examined and tested at the intervals required by the COSHH regulations",
+          "Dilution ventilation is only permitted where a substance has an assigned workplace exposure limit",
+          "The fume rises directly through the operator's breathing zone before any general air movement dilutes it"
+        ],
+        correct: 4,
+        explain: "The iron sits below the operator's face and hot fume rises by convection straight through the breathing zone, so it is inhaled before dilution occurs. Rapid clearance of the room describes the average room concentration, not the concentration at the nose during work. Option B inverts the physics. The control is capture at source: tip extraction or a fume arm positioned close to the joint and moved as work moves, with LEV thorough examination and test at least every 14 months. Rosin-based solder flux fume is the third commonest cause of occupational asthma in the UK and carries a Sen notation; around 80% of fume arises from the flux, so a rosin-free flux removes the sensitiser at source. Two cases among twelve workers in 18 months is a cluster warranting investigation.",
+        source: "OHOH 2nd ed, Ch 2 (rosin-based solder flux fume); COSHH reg 9; HSE INDG249"
+      },
+      {
+        stem: "A vehicle body shop refinisher uses two-pack paints in a spray booth. Occupational health is asked to quantify his personal exposure to the organic solvents in the paint system, and separately to assess the risk of contact dermatitis from his work. Which combination of approaches is appropriate?",
+        options: [
+          "Sorbent tubes for the solvents; a whole-body skin swabbing protocol to quantify total dermal exposure",
+          "An impinger for the solvents; assessment of glove selection and permeation data for the dermatitis risk",
+          "Sorbent tubes for the solvents; observation of the task to identify where and how skin contact occurs",
+          "A static area sampler for the solvents; a standardised questionnaire to establish dermatitis symptoms",
+          "A cyclone sampler for the solvents; patch testing of the worker to identify the responsible allergen"
+        ],
+        correct: 2,
+        explain: "Solvents are vapours, so the sampler is a pumped sorbent tube (charcoal or similar) with solvent or thermal desorption and GC; diffusive badges are the passive equivalent. An impinger is for reactive vapours that must be trapped in solution, such as the isocyanate hardener in the same paint system, and a cyclone is for respirable dust. For the dermal half there is no routine quantitative method: what lands on skin is not the same as what is absorbed, so patch or swab measurements say little about risk. Risk is established by the potential of the material to cause irritant or allergic dermatitis, direct observation of where and how contact occurs during the task, and the individual's history of onset, progression and distribution.",
+        source: "MDHS 96/104/88 (solvents); OHOH 2nd ed, Ch 2; HSE dermal exposure guidance"
+      },
+      {
+        stem: "The respirator worn by that paint sprayer is a disposable half-mask with an assigned protection factor of 4. He asks what this means in practice for the isocyanate exposure in the booth. Which statement is correct?",
+        options: [
+          "The respirator reduces the concentration inhaled to approximately one quarter of that in the surrounding air",
+          "The respirator is suitable for concentrations up to four times the workplace exposure limit for the substance",
+          "The respirator will filter four out of every five particles of isocyanate aerosol generated during spraying",
+          "The respirator provides adequate protection for four hours of continuous wear before replacement is required",
+          "The respirator has been tested to a standard four times more stringent than that required for nuisance dust"
+        ],
+        correct: 0,
+        explain: "APF is the ratio of concentration outside the facepiece to concentration inside it, so an APF of 4 means the wearer breathes approximately one quarter of the ambient concentration. The occupational point is that APF 4 is inadequate for two-pack spraying, where HSE expects air-fed breathing apparatus. RPE is the last tier of control, its assigned factor assumes correct selection, face-fit testing, clean shaving and maintenance, and real-world performance is routinely lower.",
+        source: "HSE HSG53 Respiratory protective equipment at work; HSE isocyanate paint spraying guidance"
+      },
+      {
+        stem: "A polyurethane foam manufacturer sprays a mixture of polyglycol and isocyanate. Environmental and biological monitoring are both carried out annually. The occupational hygienist asks whether biological monitoring is genuinely useful here, given that air sampling is already in place and the results have been consistently low. What is the strongest argument for biological monitoring in this setting?",
+        options: [
+          "It replaces the need for air sampling, since it directly reflects the concentration reaching the lungs",
+          "It identifies workers who have become sensitised to isocyanates before symptoms develop",
+          "It detects early reversible changes in lung function attributable to isocyanate exposure",
+          "It measures internal dose from all routes, including skin absorption that air sampling cannot detect",
+          "It provides a legally enforceable measure of compliance where a biological monitoring guidance value exists"
+        ],
+        correct: 3,
+        explain: "Air sampling measures the breathing zone; biological monitoring measures what entered the person by all routes, modified by workload, RPE effectiveness and hygiene. In spray application there is real potential for skin contact and for overspray settling on skin and overalls, invisible to an air result. Low air results with a rising urinary level is the signal that control is failing elsewhere. Timing is specific: urine sampled at the end of the period of potential exposure, within one hour, because metabolites clear rapidly. Options B and C confuse the activities: biological monitoring measures exposure, health surveillance detects effect, and sensitisation is a clinical diagnosis requiring serial peak flows and specific IgE where available. Most BMGVs in EH40 are guidance values prompting investigation, not enforceable limits.",
+        source: "MDHS 25/4; EH40 BMGVs; Jones K (2019) Biological monitoring for isocyanates, Occup Med 69(7)"
+      },
+      {
+        stem: "The same manufacturer asks occupational health to advise on glove selection for workers handling the isocyanate component. The purchasing manager has found a supplier offering nitrile gloves at a good price and asks whether these will be suitable. Which factors are most important in selecting gloves for this process?",
+        options: [
+          "The thickness of the glove material and its resistance to tearing during handling of components",
+          "Breakthrough time and permeation rate for the specific chemical, together with task duration and fit",
+          "Compliance with the relevant European standard and the presence of CE marking on the packaging",
+          "The comfort of the glove in prolonged wear, since discomfort is the main reason for non-compliance",
+          "Whether the glove is powdered or powder-free, given the risk of sensitisation to glove constituents"
+        ],
+        correct: 1,
+        explain: "No glove is chemically impermeable indefinitely: it resists a given chemical for a measurable time and then allows permeation. Selection is therefore chemical-specific, matching manufacturer's breakthrough data for that substance to the duration for which the glove will be worn. A glove with a 30-minute breakthrough on a two-hour task offers false confidence while holding chemical against the skin. Material name alone answers nothing without permeation data. Also relevant: fit, cuff length appropriate to the task, a change regime based on breakthrough time rather than visible contamination, doffing technique, inspection for pinholes, and recognition that occlusion itself can cause dermatitis. Option C is necessary but not sufficient; CE marking indicates conformity with a standard, not resistance to this chemical.",
+        source: "EN 374; HSE skin at work guidance; OHOH 2nd ed, Ch 2 (isocyanates)"
+      },
+      {
+        stem: "An electroplating shop runs open chromic acid tanks. A worker on the tank line is referred with nasal crusting and epistaxis, and the manager mentions that several workers have complained of sore throats. He asks which single control would most reduce exposure to the mist rising from the tanks. Which is likely to be most effective?",
+        options: [
+          "Fitting lip extraction along the tank edges to capture mist at the point of release",
+          "Issuing half-mask respirators with particulate filters to all workers on the tank line",
+          "Increasing the height of the tank sides so that mist has further to travel before escaping",
+          "Adding a surfactant or fume suppressant to the tank solution to reduce mist generation",
+          "Installing general ventilation with fresh air introduced at low level across the plating hall"
+        ],
+        correct: 3,
+        explain: "Mist is generated by hydrogen bubbles rising and bursting at the solution surface during electrolysis. A surfactant or fume suppressant lowers surface tension so bubbles break with far less aerosol; floating plastic balls achieve the same physically. This attacks generation, which sits above capture in the hierarchy. Option A is the strong distractor and remains essential in practice, being the standard engineering control for open tanks, but it captures what has already been released and its efficiency falls with tank width and draughts. In practice both are used together. The clinical picture is chromium VI: septal ulceration progressing to perforation, chrome ulcers, upper airway irritation, and in the longer term lung cancer and respiratory sensitisation. Urinary chromium post-shift allows control to be verified.",
+        source: "OHOH 2nd ed, Ch 2 (chromium); HSE and SEA (2018) Hexavalent chromium in electroplating"
+      },
+      {
+        stem: "A worker at a builders' merchant empties 25 kg cement bags into a mixer, generating visible dust clouds. He is referred with dry, cracked, fissured skin on both hands, present for several months and not improving at weekends. He also reports intermittent cough. Which statement best reflects the skin risk from this work?",
+        options: [
+          "Cement causes irritant dermatitis through alkalinity and abrasion, and allergic dermatitis through chromate",
+          "Cement causes allergic contact dermatitis only, mediated by sensitisation to hexavalent chromium in the mix",
+          "Skin effects from cement are confined to irritation, since the pH is insufficient to cause chemical burns",
+          "Persistent dermatitis at this site indicates an underlying constitutional eczema rather than occupational cause",
+          "The absence of weekend improvement excludes an occupational cause and points to a domestic exposure"
+        ],
+        correct: 0,
+        explain: "Both mechanisms operate. Irritant contact dermatitis is commoner and comes first: wet cement is strongly alkaline (pH 12-13), abrasive and hygroscopic, damaging the stratum corneum directly with no immunological step, and prolonged contact causes full-thickness alkali burns, so option C is wrong. Allergic contact dermatitis is mediated by hexavalent chromate present as a natural contaminant, confirmable on patch testing; cement supplied in GB and the EU must contain added ferrous sulphate to reduce chromate to the trivalent form when fresh, a control that decays past shelf life. Cobalt is a less common sensitiser. Options D and E treat chronicity as evidence against occupation: established chronic dermatitis frequently stops clearing at weekends, because a two-day break is insufficient once the barrier is chronically damaged.",
+        source: "OHOH 2nd ed, Ch 2; HSE cement and construction dermatitis guidance"
+      },
+      {
+        stem: "A worker who has developed a suspected occupational skin condition is being investigated. Which statement about distinguishing irritant from allergic contact dermatitis is correct?",
+        options: [
+          "Allergic dermatitis affects only the site of contact, whereas irritant dermatitis spreads to distant sites",
+          "Irritant dermatitis requires prior sensitisation, so it appears only after months of repeated exposure",
+          "Irritant dermatitis affects a minority of exposed workers, whereas allergic dermatitis affects most",
+          "Allergic dermatitis resolves within days of exposure ceasing, whereas irritant dermatitis persists",
+          "Allergic dermatitis may be confirmed by patch testing, while irritant dermatitis is a clinical diagnosis"
+        ],
+        correct: 4,
+        explain: "Patch testing identifies type IV delayed hypersensitivity to a named allergen, applied under occlusion and read at 48 and 96 hours. There is no equivalent test for irritant dermatitis, diagnosed clinically from exposure history, pattern and distribution, and response to reduced contact. Irritant dermatitis is non-immunological and dose-related, requires no prior exposure, occurs in anyone given sufficient exposure, is confined to the contact site, and accounts for the majority of occupational cases. Allergic dermatitis requires prior sensitisation with a latent period, then reacts to tiny amounts, affects only the sensitised minority, and characteristically spreads beyond the contact site. Options A and C invert these. Neither resolves within days. The two commonly coexist, since barrier damage from irritation facilitates sensitisation.",
+        source: "OHOH 2nd ed, Ch 10 (skin disorders); British Association of Dermatologists patch test guidance"
       },
     ]
   },
