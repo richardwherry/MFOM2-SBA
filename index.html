@@ -2805,16 +2805,16 @@ const SECTIONS = [
         source: "L108 — duties triggered by exposure limit value being exceeded"
       },
       {
-        stem: "A workplace has several staff whose exposure sits between the lower and upper exposure action values. Regarding what the employer must additionally provide to these staff, beyond the general risk assessment already carried out, the correct position is:",
+        stem: "An occupational hygienist surveys a metal fabrication workshop and finds that welders working near the plasma cutting bay have a daily noise exposure level of 82 dB(A), placing them between the lower (80 dB(A)) and upper (85 dB(A)) noise exposure action values. The site manager has completed a general noise risk assessment but asks what else must be provided to these welders at this exposure level. What is the correct position?",
         options: [
-          "Nothing further at all is required of the employer until the upper exposure action value is reached",
+          "Nothing further at all is required of the employer until their exposure reaches the upper action value of 85 dB(A)",
           "Suitable information, instruction and training on the risks and on the correct use of hearing protection made available",
-          "Immediate enrolment in the health surveillance programme, which is said to apply only above this threshold",
-          "A formal written warning must be issued to staff regarding the noise levels in their work area",
+          "Immediate enrolment in a hearing health surveillance programme, since surveillance obligations begin at the lower action value",
+          "A formal written warning must be issued to the welders regarding the noise levels in their work area",
           "Provision of hearing protection that they are then legally required to wear at all times while on site"
         ],
         correct: 1,
-        explain: "Once the lower exposure action value is reached, employers must provide employees with suitable and sufficient information, instruction and training relating to the risks from noise exposure and the proper use of hearing protection made available — this duty applies from the lower value, ahead of the compulsory wearing requirement that only bites at the upper value.",
+        explain: "Once the lower exposure action value of 80 dB(A) is reached, employers must provide employees with suitable and sufficient information, instruction and training relating to the risks from noise exposure and the proper use of hearing protection made available — this duty applies from the lower value, ahead of the compulsory wearing requirement, which only bites once exposure reaches the upper value of 85 dB(A). Health surveillance obligations are also triggered at the upper value, not the lower one, so option C states the wrong threshold. At 82 dB(A), the welders sit in this intermediate band: hearing protection must be made available and they may choose to wear it, but they cannot yet be legally compelled to, and surveillance is not yet mandatory.",
         source: "L108 — information, instruction and training duties"
       },
       {
@@ -4839,6 +4839,136 @@ const SECTIONS = [
         correct: 4,
         explain: "Patch testing identifies type IV delayed hypersensitivity to a named allergen, applied under occlusion and read at 48 and 96 hours. There is no equivalent test for irritant dermatitis, diagnosed clinically from exposure history, pattern and distribution, and response to reduced contact. Irritant dermatitis is non-immunological and dose-related, requires no prior exposure, occurs in anyone given sufficient exposure, is confined to the contact site, and accounts for the majority of occupational cases. Allergic dermatitis requires prior sensitisation with a latent period, then reacts to tiny amounts, affects only the sensitised minority, and characteristically spreads beyond the contact site. Options A and C invert these. Neither resolves within days. The two commonly coexist, since barrier damage from irritation facilitates sensitisation.",
         source: "OHOH 2nd ed, Ch 10 (skin disorders); British Association of Dermatologists patch test guidance"
+      },
+      {
+        stem: "A 52-year-old crane operator attends his routine OEUK medical. His BMI is 47. He has no diabetes, hypertension or cardiovascular disease, and passes a six-minute walking test comfortably. His employer confirms in writing that his role is category 1. What is the correct certification pathway?",
+        options: [
+          "A standard certificate of up to one year, since the mobility test was passed and no comorbidities are present",
+          "A standard certificate restricted to category 2 work only, avoiding the need for operator medical advisor involvement",
+          "No certificate of any kind; BMI 45 or above is an absolute bar to any form of offshore certification",
+          "No standard certificate; a conditional certificate may be discussed with the operator medical advisor, subject to further assessment criteria",
+          "A conditional certificate should be issued directly by the medical examiner without operator medical advisor involvement, since the mobility test was passed"
+        ],
+        correct: 3,
+        explain: "A BMI of 45 or above means examinees must not be issued a standard certificate. The medical examiner should obtain a work-tasks risk assessment from the employer, then contact an operator medical advisor to discuss a conditional certificate — which also requires job classification, the mobility test result, and treating physician confirmation of diabetes/cardiovascular risk assessment. Passing the mobility test alone is necessary but not sufficient; it is one of several required elements, not a route around the process. A conditional certificate is not something the medical examiner can issue alone, and BMI ≥45 is not an absolute bar in every case — a conditional pathway does exist, typically restricted to non-NUI, non-category-1 work if approved.",
+        source: "OEUK Medical Fitness for Offshore Work, Issue 8.1a (Feb 2026), section 3.8.4 and Table 16"
+      },
+      {
+        stem: "A 41-year-old rope access technician weighs 118kg in his working clothes. His current OEUK certificate expires in November 2026, and he attends for renewal at that point, still at this weight, with no other relevant medical history. If he remains at 118kg, what is the maximum duration of certificate that can be issued?",
+        options: [
+          "A standard certificate for a maximum of 6 months, unless he shows athletic build, allowing up to 2 years",
+          "A standard certificate for the usual maximum duration of 2 years, since 118kg remains comfortably below the 124kg policy limit",
+          "No certificate of any kind can be issued at this weight once the policy becomes fully mandatory",
+          "A standard certificate for a maximum of 3 months, the same reduced duration that applies at 120.1 to 124kg",
+          "A conditional certificate only, requiring operator medical advisor approval in every case regardless of any other factors"
+        ],
+        correct: 0,
+        explain: "Once the mandatory implementation phase begins (1 November 2026), a weight of 115–120kg is capped at a standard certificate of maximum 6 months — unless the examinee has an athletic morphology, or demonstrates consistent weight control, in which case up to 2 years may be considered. 3 months applies at the higher 120.1–124kg band, not this one; above 124kg is where no certificate can be issued at all. This weight band is still eligible for a standard certificate, not a conditional one requiring operator medical advisor involvement.",
+        source: "OEUK Medical Fitness for Offshore Work, Issue 8.1a (Feb 2026), section 3.8.5.3 and Table 18"
+      },
+      {
+        stem: "A self-employed rigger attends an OEUK medical. No employer or agency is able to provide an occupational risk classification for his role. Regarding how his occupation should be categorised for certification purposes, the correct position is:",
+        options: [
+          "The medical examiner should classify the role themselves, based on the tasks the examinee describes",
+          "Classification should default to category 2, since this is the less restrictive and more common category",
+          "The examinee should be considered to be in a category 1 occupation",
+          "Certification should be withheld entirely until a formal employer risk assessment can be obtained",
+          "The examinee's own description of the role's risk should be accepted and used to determine the category"
+        ],
+        correct: 2,
+        explain: "Where there is no employer or agency to undertake the risk assessment and categorisation, the examinee should be considered to be in a category 1 occupation — the higher-risk default, not the lower-risk one. Medical examiners should not undertake risk assessment and classification themselves, and self-report from the examinee is not a substitute for this. Certification does not need to be withheld outright; the process for a category 1 occupation, including potential conditional certification routes, still applies.",
+        source: "OEUK Medical Fitness for Offshore Work, Issue 8.1a (Feb 2026), section 3, introductory paragraph"
+      },
+      {
+        stem: "A 36-year-old scaffolder attends his initial OEUK medical, having recently joined the offshore industry. He was diagnosed with epilepsy at the age of 19 and has been completely seizure-free for the past 7 years, though he remains on carbamazepine. His neurologist confirms good compliance and therapeutic drug levels, but estimates his ongoing annual risk of further seizures at 5%. His employer has classified his role as category 1. What is the correct certification outcome?",
+        options: [
+          "Standard certificate, since 7 years exceeds the minimum interval required for a category 1 role",
+          "No certificate, since a category 1 role requires 10 years seizure-free without taking anticonvulsant medication during that period",
+          "Standard certificate, since a risk of 5% is still considered an acceptable level for category 1 occupations",
+          "No certificate, since any ongoing anticonvulsant medication is an absolute bar regardless of role category",
+          "Standard certificate, restricted to category 2 work only, given his continued medication"
+        ],
+        correct: 1,
+        explain: "For a category 1 role, Table 6 recognises a single confirmed route to standard certification: seizure-free for at least 10 years, off all anticonvulsant medication throughout that period. At 7 years, still on carbamazepine, and with an estimated risk of 5% — well above the 2% per annum threshold referenced elsewhere in this guidance — he does not meet this. Continued medication is not an absolute bar in every case (option D overstates this — category 2 permits medication with only 6 months seizure-free), but here it means he falls outside the criteria for category 1 certification. His employer has classified the role itself as category 1, so certifying him 'for category 2 work only' is not something the examiner can substitute (option E) — that would mean reclassifying a role the employer has already assessed. Even once the 10-year, medication-free threshold is met, he would remain unfit for normally-unmanned installations without direct operator medical advisor approval.",
+        source: "OEUK Medical Fitness for Offshore Work, Issue 8.1a (Feb 2026), section 3.2.1.1 and Table 6"
+      },
+      {
+        stem: "A 29-year-old production operator, a category 2 role, had a single unprovoked seizure 8 months ago. Full investigation found no cause, and his neurologist does not consider this to represent epilepsy. He is currently on no medication and has had no further events. What is the correct certification position?",
+        options: [
+          "No certificate; a single seizure without a diagnosis of epilepsy requires 5 years seizure-free in any role",
+          "Standard certificate, since 8 months exceeds the 6-month interval required for a category 2 role after a single seizure",
+          "No certificate until the full 12 months typically required after a first unprovoked seizure has elapsed",
+          "Standard certificate, but only if he is also confirmed to have a neurologist-assessed risk below 2% per annum",
+          "No certificate; a single seizure carries the same 10-year requirement as established epilepsy in this role category"
+        ],
+        correct: 1,
+        explain: "For a single seizure without a diagnosis of epilepsy, the required seizure-free interval depends on job category: five years for a category 1 role, but only six months for a category 2 role — his 8 months clears this. The 5-year figure in option A is the category 1 interval, wrongly applied here; the 10-year figure in option E is the established-epilepsy interval, also wrongly applied to a single seizure. As with epilepsy, he would remain unfit for normally-unmanned installations without direct operator medical advisor approval, even once standard certification is granted.",
+        source: "OEUK Medical Fitness for Offshore Work, Issue 8.1a (Feb 2026), section 3.2.2 and Table 8"
+      },
+      {
+        stem: "A 33-year-old warehouse coordinator with insulin-treated type 1 diabetes is assessed for offshore work. Her employer confirms in writing that the role is category 2. Her diabetes team confirms good control over the past 9 months, competent self-management, and retained hypoglycaemia awareness. What is the correct certification approach?",
+        options: [
+          "Standard certificate of one year, annotated category 2 only, unfit for NUIs without OMA approval, UK North Sea only",
+          "Standard certificate of up to two years, with no specific annotation required beyond the standard certificate wording",
+          "No standard certificate; insulin-treated diabetes in any occupational category requires operator medical advisor approval for a conditional certificate",
+          "Standard certificate of up to one year, with annotation restricted to normally-unmanned installations only",
+          "No certificate of any kind until she has completed a minimum of 12 months of confirmed good glycaemic control"
+        ],
+        correct: 0,
+        explain: "In a category 2 role, with a satisfactory treating clinician report, examinees with insulin-treated diabetes may be issued a standard certificate, but it is essential this carries three specific annotations: restricted to the relevant job category, unfit for normally-unmanned installations without direct operator medical advisor approval, and — reflecting differing international requirements — restricted to UK North Sea work only, not Norwegian or Dutch sector work. Certification is also capped at one year with at least annual review, not two years. Category 1 (not category 2) is where insulin-treated diabetes bars standard certification outright.",
+        source: "OEUK Medical Fitness for Offshore Work, Issue 8.1a (Feb 2026), section 3.7.1.1"
+      },
+      {
+        stem: "A 58-year-old mechanical technician has atrial fibrillation treated with a DOAC (rivaroxaban). His cardiologist reports stable rate control and no bleeding episodes. His calculated ORBIT bleeding risk score is 2. His employer has classified the role as category 2. What is the correct certification approach?",
+        options: [
+          "Standard certificate of up to two years, since his ORBIT score is within the acceptable range for standard certification",
+          "No standard certificate; DOAC anticoagulation bars this, but a conditional certificate via an operator medical advisor may be considered",
+          "Standard certificate, since anticoagulation for atrial fibrillation specifically is excepted from the general anticoagulant restrictions",
+          "No certificate of any kind while he continues to require DOAC anticoagulant medication",
+          "Standard certificate restricted to category 2 work only, without any need for operator medical advisor involvement"
+        ],
+        correct: 1,
+        explain: "Examinees requiring DOAC anticoagulant medication are not fit for standard certification, regardless of occupational category. An operator medical advisor may approve a conditional certificate where the ORBIT bleeding risk score is 3 or less — his score of 2 supports an application, though some operator medical advisors apply a stricter threshold of 2 or less. This route is not automatic and remains the operator's decision; only specific low-dose antiplatelet agents for secondary prevention, not DOAC anticoagulation itself, are excepted from this restriction.",
+        source: "OEUK Medical Fitness for Offshore Work, Issue 8.1a (Feb 2026), section 3.21.6.1"
+      },
+      {
+        stem: "A 26-year-old rigger had a spontaneous pneumothorax two years ago, managed conservatively with no surgical treatment. He is due to undertake shallow-water CA-EBS (compressed air escape breathing system) training ahead of starting offshore work. What is the correct position regarding his fitness for this specific training?",
+        options: [
+          "He is fit to train, since more than two years have elapsed since the episode without recurrence",
+          "He is fit to train provided a respiratory specialist confirms normal current lung function on spirometry",
+          "He is unfit for in-water EBS training, an absolute contraindication unless he has undergone bilateral pleurectomy",
+          "He is unfit for offshore work altogether, since spontaneous pneumothorax is an absolute bar to any form of certification",
+          "He is fit to train provided he can demonstrate normal exercise tolerance on a standard fitness assessment"
+        ],
+        correct: 2,
+        explain: "A history of spontaneous pneumothorax is considered an absolute contraindication to in-water EBS training, unless the examinee has been treated by bilateral pleurectomy — a significant surgical procedure unlikely to be justified solely to achieve training eligibility. Neither elapsed time, normal current lung function, nor good exercise tolerance overrides this specific contraindication, since the concern relates to the physiological risk of pressure change during in-water training itself, not to general respiratory fitness. This restricts training, not offshore work as a whole; a treating clinician's advice on the broader implications should still be sought.",
+        source: "OEUK Medical Fitness for Offshore Work, Issue 8.1a (Feb 2026), section 3.6.4, spontaneous pneumothorax"
+      },
+      {
+        stem: "A 44-year-old process operator with mild, well-controlled COPD is being assessed both for general fitness for offshore work and, separately, for membership of the installation's Emergency Response Team (ERT). Spirometry shows FEV1 74% predicted, FVC 88% predicted, and an FEV1/FVC ratio of 76%. Regarding his fitness for these two assessments, the correct position is:",
+        options: [
+          "He is fit for general offshore work, meeting the 60%/75% thresholds, but unfit for ERT, which requires both above 80%",
+          "He is fit for both general offshore work and ERT duties, since his FEV1/FVC ratio comfortably exceeds 70%",
+          "He is unfit for both general offshore work and ERT duties, since his FEV1 is below the general 60% threshold",
+          "He is unfit for general offshore work but fit for ERT duties, since ERT assessment focuses on the FEV1/FVC ratio alone",
+          "He is fit for both, provided he passes an additional aerobic capacity assessment specific to ERT membership"
+        ],
+        correct: 0,
+        explain: "General offshore fitness requires FEV1 at least 60% and FVC at least 75% of predicted — both comfortably met here. ERT membership applies a stricter standard: FEV1 and FVC must both be at least 80% of predicted, with the FEV1/FVC ratio at least 70% — his FEV1 of 74% fails this, even though his ratio alone would pass. The guidance is explicit that the ERT thresholds are greater than the general ones. Passing an aerobic capacity assessment is a separate, later stage of ERT screening and does not substitute for meeting the respiratory standard first.",
+        source: "OEUK Medical Fitness for Offshore Work, Issue 8.1a (Feb 2026), sections 3.6.3 and 4.1.2.1"
+      },
+      {
+        stem: "A 39-year-old maintenance technician with well-controlled insulin-treated type 1 diabetes meets all the criteria for a standard OEUK certificate in his category 2 role, including good glycaemic control, competent self-management, and retained hypoglycaemia awareness. He is now nominated by his employer for training and membership of the installation's Emergency Response Team. Regarding his fitness for this additional role, the correct position is:",
+        options: [
+          "He is fit for ERT duties, on the same basis that supported his standard offshore certification",
+          "He is fit for ERT duties, provided his hypoglycaemia awareness is specifically reconfirmed at the time of ERT assessment",
+          "He is fit for ERT duties provided he carries fast-acting glucose and a glucose monitor at all times while on duty",
+          "His fitness for ERT duties depends on whether his employer's own risk assessment specifically permits it",
+          "He is unfit for ERT duties; insulin-treated diabetes renders an examinee unfit to participate in ERT duties, regardless of control"
+        ],
+        correct: 4,
+        explain: "Insulin-treated diabetes renders an examinee unfit to participate in ERT duties — a firm exclusion, separate from and stricter than the criteria for standard offshore certification, which he otherwise meets. Good control, self-management and hypoglycaemia awareness are exactly the criteria that support standard certification, but they do not open a route into ERT membership; nor do practical mitigations like carrying glucose, or an employer's own risk assessment, override this specific exclusion. This illustrates that ERT fitness is assessed separately from, and can be more restrictive than, general offshore fitness.",
+        source: "OEUK Medical Fitness for Offshore Work, Issue 8.1a (Feb 2026), section 4.1.2.7"
       },
     ]
   },
