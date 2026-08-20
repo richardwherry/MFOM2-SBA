@@ -303,17 +303,17 @@ const SECTIONS = [
         source: "DVLA — Drug misuse or dependence, Nov 2025 update"
       },
       {
-        stem: "A Group 1 car driver has a single TIA with full recovery. Which statement correctly reflects DVLA requirements?",
+        stem: "A 58-year-old delivery driver, holding a standard Group 1 car licence, attends occupational health three weeks after a witnessed episode of sudden right-sided weakness and slurred speech that fully resolved within twenty minutes. He was assessed in the emergency department, diagnosed with a transient ischaemic attack, and has had no further episodes. He is keen to return to his role as soon as possible and asks what DVLA requires of him. What is the correct position?",
         options: [
-          "Driving may continue as normal, since the driver has fully recovered",
-          "A three-month off-road period applies, with no separate notification duty required",
-          "Notification is only required if a second TIA subsequently occurs",
-          "The off-road period is six months, regardless of the recovery",
-          "The driver must notify DVLA, and a one-month off-road period applies"
+          "Driving may continue as normal, since he has already made a full recovery",
+          "He must remain off-road for one month, but does not need to notify DVLA provided his recovery remains complete",
+          "He must remain off-road for one month, and must notify DVLA regardless of the outcome of his recovery",
+          "He must remain off-road for six months, since any cerebrovascular event carries this fixed minimum period",
+          "He may resume driving once his GP confirms recovery, with no fixed minimum time off the road required"
         ],
-        correct: 4,
-        explain: "TIA notification and the off-road period are two separate determinations, exactly as with syncope: the duty to notify exists independent of how mild or transient the event was, and the standard single-event off-road period for TIA with full recovery is one month.",
-        source: "DVLA Ch1 — Neurological disorders"
+        correct: 1,
+        explain: "A single TIA in a Group 1 driver requires a minimum one-month period off the road, regardless of how mild or transient the event was — this fixed period isn't shortened by an early, complete recovery, and doesn't extend to six months. Provided recovery remains complete, DVLA doesn't need to be notified for a single TIA — a common misconception, since many assume any cerebrovascular event triggers a mandatory report. But this isn't simply a GP sign-off with no fixed minimum either; the one-month period applies as an absolute minimum regardless of how soon the driver feels able to return. Notification only becomes necessary if residual neurological deficit persists at the one-month mark, or if there's been more than one stroke/TIA within the preceding three months.",
+        source: "DVLA, Assessing Fitness to Drive (Nov 2025) — transient ischaemic attack, Group 1"
       },
       {
         stem: "A Group 2 applicant has asymptomatic carotid stenosis of 40%, no other cardiovascular disease, and no history of TIA or stroke. Which statement is correct?",
@@ -5342,6 +5342,404 @@ const SECTIONS = [
         explain: "Despite work being generally recognised as good for health and long-standing awareness of these specific hazards, conditions such as lead poisoning and asbestosis remain depressingly common in current practice — long recognition of a hazard has not translated into its elimination.",
         source: "ABC of Occ & Env Medicine, Ch1 — occupational disease still occurring despite recognition"
       }
+    ]
+  },
+  {
+    id: "heops",
+    name: "Higher Education Occupational Health (HEOPS)",
+    icon: "H",
+    source: "HEOPS Conference 2026; HEOPS Guidance for Occupational Health in Higher Education Institutions v14; HEOPS General Guidance on Adjustments for Students Training in Regulated Professions v23; HEOPS Medical Students Standards of Medical Fitness to Train 2026; HEOPS Health Surveillance Guidance in UK Universities, Feb 2019",
+    questions: [
+      {
+        stem: "A 21-year-old occupational therapy student has a progressive musculoskeletal condition affecting hand dexterity. Occupational health is asked to design an assessment to determine whether he can safely perform the practical skills his course requires. Regarding the appropriate method, the correct position is:",
+        options: [
+          "A functional capability assessment should be used, which may include history, examination, or assessment of practical capability within a simulated or real environment",
+          "A formal diagnosis alone is sufficient to determine his fitness, since the diagnosis itself reveals the degree of functional impairment",
+          "A standardised written questionnaire completed by the student himself is the recommended method, without any further clinical input",
+          "Assessment should be based entirely on his academic performance to date, since this reflects his overall capability",
+          "A single generic capability checklist, applied identically regardless of the specific course or condition, is the appropriate method"
+        ],
+        correct: 0,
+        explain: "Assessment of medical fitness to train is based on a thorough and holistic functional capability assessment (FCA), which may include history, physical examination, or assessment of practical capability (not skills) within a simulated or real environment — tailored to the merits of each case, not a single generic checklist. A diagnosis alone does not reveal the degree of functional impairment in any particular individual; establishing a diagnosis is a useful part of the process, but it is function, not diagnosis, that determines fitness. Self-completed questionnaires and academic performance alone are not substitutes for a proper functional assessment.",
+        source: "HEOPS Conference 2026 (Functional Capability Assessment); HEOPS Medical Students Standards of Medical Fitness to Train 2026"
+      },
+      {
+        stem: "A functional capability assessment is being designed for a nursing student with a visual impairment, to determine whether she can safely undertake practical clinical skills. Regarding what this assessment is actually intended to establish, the correct position is:",
+        options: [
+          "Whether she has achieved the same level of technical proficiency as her peers at this stage of training",
+          "Whether she can perform the relevant tasks safely, efficiently and repeatedly — not a test of skills or proficiency",
+          "Whether she meets a fixed pass mark applied identically across all students, regardless of the task involved",
+          "Whether she is likely to enjoy a career in the profession, based on her performance during the assessment",
+          "Whether her academic knowledge of the relevant procedures is sufficient, independent of any practical demonstration"
+        ],
+        correct: 1,
+        explain: "The outcome sought from a functional capability assessment is whether the individual can perform relevant tasks safely, efficiently and repeatedly — it is explicitly not a test of skills or proficiency, which is a separate matter for the course's own competency assessments. A fixed pass mark, comparison of technical proficiency against peers, career-enjoyment prediction, or academic knowledge alone all miss this specific, function-based purpose, which exists to inform what reasonable adjustments might enable safe participation.",
+        source: "HEOPS Conference 2026 (Functional Capability Assessment)"
+      },
+      {
+        stem: "A medical school's disability advisory service asks occupational health whether it can simply lower the mandatory clinical examination competency a student with a hand tremor must achieve, rather than adjusting how that competency is assessed. Regarding this specific proposal under the Equality Act 2010, the correct position is:",
+        options: [
+          "The competency standard itself must always be lowered wherever a student has a relevant disability, regardless of the reason the standard exists",
+          "Neither the competency standard nor the method of assessing it may ever be adjusted for a disabled student",
+          "Adjustments can be made to assessment methods, not the standard itself, if that standard is proportionate to a legitimate aim",
+          "The decision belongs entirely to the medical school, with no relevance to the Equality Act's provisions on competence standards",
+          "Competency standards may be adjusted freely, provided the adjustment does not increase the medical school's costs"
+        ],
+        correct: 2,
+        explain: "Where a competence standard is a proportionate means of achieving a legitimate aim — such as patient safety — applying that standard is not disability discrimination under the Equality Act, and a qualifications body or regulator is not required to make reasonable adjustments to the standard itself. What can be adjusted are the methods of teaching, learning and assessment by which a student demonstrates that a mandatory competency is met, and other aspects of the training environment that don't affect the competency itself. This is a specific statutory provision, not simply a matter of institutional discretion or cost.",
+        source: "HEOPS General Guidance on Adjustments for Students Training in Regulated Professions v23; Equality Act 2010, ss.53 and 96"
+      },
+      {
+        stem: "A medical student requests a private room and additional rest breaks during written academic examinations, citing anxiety that makes sitting a standard exam difficult. Occupational health is asked to advise the medical school on this request. Regarding the appropriate approach, the correct position is:",
+        options: [
+          "The request should be granted automatically, since regulatory bodies specify these exact conditions must apply during all written academic examinations",
+          "The request should be declined automatically, since no adjustments to written examination conditions are ever permitted for medical students",
+          "The request is entirely a matter for the examinations office, with no role for occupational health in the assessment at all",
+          "This needs careful specialist analysis, since a genuine need for these adjustments may signal unfitness for far more demanding clinical duties",
+          "The request should be assessed only against the student's academic performance in previous written examinations"
+        ],
+        correct: 3,
+        explain: "Regulatory bodies don't specify the conditions that must apply during academic written exams, so medical schools can in principle offer such adjustments on request — but if a student were to 'need' a private room or rest breaks on genuine medical grounds, this calls into question their fitness for much more demanding, lengthy clinical duties, under conditions where a private room is impossible to guarantee and multiple distractions from third parties are unavoidable. This is exactly the kind of request that needs careful analysis by an accredited occupational medicine specialist to distinguish adjustments genuinely required on medical grounds from those that are discretionary.",
+        source: "HEOPS General Guidance on Adjustments for Students Training in Regulated Professions v23"
+      },
+      {
+        stem: "A large NHS trust's occupational health service is reviewing its approach to staff who decline a vaccine recommended for their specific role. A manager asks whether the trust can simply make vaccination a compulsory condition of employment for that role. What is the correct position?",
+        options: [
+          "Vaccination can be made compulsory for any role the employer considers safety-critical, without any further legal consideration",
+          "Vaccination is compulsory for all healthcare workers in direct patient contact roles, under a specific statutory requirement",
+          "Compulsory vaccination is permitted only where the vaccine in question is included in the routine UK childhood immunisation schedule",
+          "The legal position depends entirely on whether the specific vaccine is currently in short supply nationally",
+          "There are no universally mandatory vaccines for UK workers by law, since mandatory medical treatment is generally not permitted"
+        ],
+        correct: 4,
+        explain: "In the UK, there are no universally mandatory vaccines for workers by law, since mandatory medical treatment is generally not permitted — this applies across occupational sectors, including healthcare, and isn't simply at the employer's discretion to override for any role it considers safety-critical. This doesn't mean declining is consequence-free (an employer may lawfully manage the resulting risk through redeployment or, in some circumstances, dismissal), but the vaccine itself cannot be compulsorily administered.",
+        source: "HEOPS Conference 2026 (Immunisation and Vaccination)"
+      },
+      {
+        stem: "A care assistant employed at a residential care home providing care to clinically vulnerable residents declines COVID-19 vaccination during the height of the pandemic, at a time when this was not yet a legal requirement for care home staff. Her employer, having suffered a serious outbreak with resident deaths, makes vaccination a condition of continued employment and explores but cannot find an alternative role removing her from resident contact. She is dismissed and brings an unfair dismissal claim. Drawing on the actual UK case law this scenario is based on, what is the correct position?",
+        options: [
+          "Employment tribunals have found dismissals of this kind fair as a reasonable management instruction, though tied closely to the pandemic's specific facts",
+          "Dismissal in these circumstances can never be fair, since an employee has an absolute right to decline any vaccine without any employment consequence",
+          "Dismissal is automatically fair in every case involving a declined occupational vaccine, regardless of context or whether redeployment was explored",
+          "The fairness of the dismissal depends solely on whether her decision was based on a religious belief",
+          "Tribunals have consistently held that vaccine refusal can never justify dismissal outside a formal statutory vaccination mandate"
+        ],
+        correct: 0,
+        explain: "Employment tribunals (Allette v Scarsdale Grange Nursing Home; Dimitrova and Masiero v Barchester Healthcare) found dismissals of care home staff who declined COVID-19 vaccination during the pandemic to be fair, treating the requirement as a reasonable management instruction protecting clinically vulnerable residents, weighed against the employee's Article 8 right to private life. Crucially, the tribunals were explicit that this turned on the specific facts of the pandemic emergency — acute mortality risk, no alternative role, timing before any statutory mandate existed — and shouldn't be read as a general rule that any vaccine refusal justifies dismissal. That makes option C too absolute in the other direction, just as B and E are too absolute in denying any possibility; D wrongly reduces the analysis to religious belief alone, a separate discrimination question the tribunals also considered and rejected.",
+        source: "Allette v Scarsdale Grange Nursing Home Ltd [2022]; Dimitrova and others v Barchester Healthcare Ltd; Masiero and others v Barchester Healthcare Ltd [EAT]"
+      },
+      {
+        stem: "An occupational health nurse is completing a pre-placement vaccination assessment for a new healthcare assistant. The nurse identifies that the individual has a documented history of anaphylaxis to a prior vaccine dose. Regarding how this should be classified for the purposes of the vaccination programme, the correct position is:",
+        options: [
+          "This is not a recognised exemption category at all, and the vaccine should still be offered on the same basis as to any other new starter",
+          "This is a medical exemption, alongside contraindications such as specific conditions or a previous serious adverse reaction to a vaccine or its ingredient",
+          "This falls under the same exemption category as someone who has already had the disease the vaccine is designed to prevent",
+          "This should be treated purely as a religious or personal-belief objection, rather than as a medical matter",
+          "This can only be classified as an exemption if a second, independent anaphylactic reaction has also occurred"
+        ],
+        correct: 1,
+        explain: "A history of anaphylaxis is specifically listed as a medical exemption category, alongside vaccines being contraindicated due to other medical conditions and a previous serious adverse reaction to a vaccine or an active ingredient in it. This is a genuinely distinct category from natural immunity through prior infection (a separate 'disease or conditions' category), and is a medical matter, not a religious or personal-belief one; a single documented episode is sufficient, without requiring a second confirmatory reaction.",
+        source: "HEOPS Conference 2026 (Immunisation and Vaccination)"
+      },
+      {
+        stem: "A 19-year-old fresher applying to a demanding professional degree course discloses a long history of anorexia nervosa, now in remission with ongoing outpatient support. Occupational health is asked why a specific fitness standard exists for this condition, rather than relying on general fitness-to-study processes. Which of the following best explains the rationale?",
+        options: [
+          "A specific standard exists purely because the condition is classified in a way that makes it administratively convenient to standardise",
+          "General fitness-to-study processes are considered entirely adequate, and a condition-specific standard offers no additional value",
+          "Affected individuals often lack insight into being unwell, and mortality from the condition is high",
+          "The specific standard exists mainly to restrict access to higher education for students with any history of an eating disorder",
+          "The rationale relates solely to infection control considerations, in the same way as for other communicable conditions"
+        ],
+        correct: 2,
+        explain: "A dedicated fitness standard exists because individuals with an eating disorder often lack insight into being unwell, may prioritise their course at the expense of their health, and because mortality from the condition is high — with lifetime prevalence peaking just before individuals start higher education, exactly when institutional and psychological pressures specific to that environment (course demands, loss of usual pastoral support, having to self-feed) can worsen the picture. It is not an infection-control matter, and the standard exists to support timely intervention and safe participation, not to restrict access.",
+        source: "HEOPS Conference 2026 (Fitness to Study for Applicants and Students with Severe Eating Disorders)"
+      },
+      {
+        stem: "An occupational health physician is reviewing current guidance on eating disorders relevant to fitness-to-study decisions. She notes that recent guidance has shifted away from the older Maudsley model. Regarding this shift, the correct position is:",
+        options: [
+          "The Maudsley model remains the current standard, and MEED applies only to inpatient settings rather than higher education fitness-to-study decisions",
+          "MEED and the Maudsley model are simply two names for the same underlying set of clinical criteria",
+          "The shift relates only to the treatment of eating disorders in children, with no relevance to higher education students",
+          "MEED guidelines have replaced the Maudsley model, with less emphasis on BMI alone and greater emphasis on a collaborative, multimodal approach",
+          "MEED places materially greater weight on BMI as a determinant of risk than the Maudsley model did"
+        ],
+        correct: 3,
+        explain: "MEED (Medical Emergencies in Eating Disorders) guidelines have replaced the older Maudsley model, with several key differences relevant to fitness-to-study decisions: less emphasis on BMI alone as the determinant of risk, a collaborative multimodal approach, and greater emphasis on supporting long-term outpatient treatment during a course, alongside earlier intervention for a better outcome. It applies to higher education fitness-to-study decisions specifically, not only inpatient settings, and is not simply a relabelling of the same criteria.",
+        source: "HEOPS Conference 2026 (Fitness to Study for Applicants and Students with Severe Eating Disorders)"
+      },
+      {
+        stem: "A 20-year-old student with a severe eating disorder has a BMI of 15.4 kg/m2, ongoing purging, and persistent electrolyte disturbance, with rapid weight loss over recent weeks. Occupational health is asked whether an intermission from studies to focus on treatment should be recommended. Which combination of features most strongly supports this recommendation?",
+        options: [
+          "Her BMI alone, considered in isolation from any other physical, psychological or social feature of her presentation",
+          "The duration of her current academic term, since intermission decisions are governed principally by the academic calendar",
+          "Her own personal preference regarding whether to continue her studies, considered independently of her medical presentation",
+          "Whether she has previously achieved good academic results, since strong prior performance outweighs current medical risk",
+          "A significantly compromised physical state, such as this presentation, with rapid weight loss and medical instability as defined by MEED"
+        ],
+        correct: 4,
+        explain: "Guidelines for recommending a year's intermission focus on a significantly compromised physical state — for example a low BMI together with purging, excess exercise, poor fluid intake, or persistent electrolyte disturbance, with risk greater still where there has been rapid weight loss — alongside significantly compromised psychological or social function, or a need for intensive treatment as recommended by a specialist. BMI alone does not determine risk; it is a proxy measurement among several factors. Strong prior academic performance can mask severity and does not indicate medical fitness or wellbeing, and intermission decisions are not governed by the academic calendar or personal preference alone.",
+        source: "HEOPS Conference 2026 (Fitness to Study for Applicants and Students with Severe Eating Disorders)"
+      },
+      {
+        stem: "A student who took a year's intermission for treatment of a severe eating disorder is being assessed by occupational health ahead of a planned return to her course. Her BMI is now 17.5 kg/m2, she is medically stable, reports no suicidal ideation, and is engaged in her specialist's recommended ongoing monitoring programme. Regarding whether these findings support a return to study, the correct position is:",
+        options: [
+          "Broadly consistent with fitness to return: physical stability, adequate psychological/social functioning, and engagement with recommended treatment and monitoring",
+          "A BMI above 17 kg/m2 alone is sufficient to confirm fitness to return, regardless of any other physical or psychological finding",
+          "She cannot be considered fit to return until all treatment and monitoring has been fully completed and discontinued",
+          "The decision to return should be made solely by her academic department, without any occupational health input",
+          "Occupational health should independently determine whether her weight and physical state remain stable, through its own ongoing monitoring"
+        ],
+        correct: 0,
+        explain: "Indicators supporting fitness to return include a stable and uncompromised physical state (broadly, BMI above 17 kg/m2 and medically stable), sufficient psychological and social functioning to cope with student life, and continued engagement with whatever management programme a specialist in eating disorders recommends — her presentation is consistent with these criteria together, not BMI in isolation. Fitness to return doesn't require treatment to have been completed and discontinued; ongoing engagement is itself part of what's expected. Day-to-day physical health monitoring, such as regular weight and vital sign checks, is not the occupational health role, and is rarely a role for HEI student services either — this needs to be clarified with the specialist team, not undertaken independently by occupational health.",
+        source: "HEOPS Conference 2026 (Fitness to Study for Applicants and Students with Severe Eating Disorders)"
+      },
+      {
+        stem: "A student midway through treatment for a severe eating disorder is due to move from home-based care to living independently at university as part of a planned transition. Her treating specialist proposes pausing weekly therapy sessions during the move. Occupational health is asked to comment on who should authorise this pause. What is the correct position?",
+        options: [
+          "Occupational health should authorise the pause directly, since this falls within its role of advising on fitness to study",
+          "Only the treating specialist should agree to a pause, since transitions carry particular risk they are best placed to judge",
+          "The decision belongs to the academic department, in consultation with disability services, rather than to any clinical party",
+          "The student herself may decide to pause treatment temporarily, without this needing agreement from her specialist",
+          "A pause of this kind requires no specific authorisation, since treatment interruptions during term-time transitions are considered routine"
+        ],
+        correct: 1,
+        explain: "Transitions are proven to carry particular risk in eating disorders, and only the treating specialist should advise on transition arrangements mid-treatment, or agree to a pause in treatment — occupational health needs assurance that any transition arrangement is robust, safe and supported by the receiving team, rather than authorising this itself. This is not a decision for the academic department, disability services, or the student alone to make independently of the specialist, and it is specifically not treated as routine or low-risk.",
+        source: "HEOPS Conference 2026 (Fitness to Study for Applicants and Students with Severe Eating Disorders)"
+      },
+      {
+        stem: "A student with a history of a severe eating disorder, now stable, is being supported by occupational health while transitioning back into a professional healthcare training programme. Her treating specialist is finalising a plan for her return, and occupational health is coordinating with the course about her training arrangements. Regarding what occupational health should establish before this transition plan is finalised, the correct position is:",
+        options: [
+          "Occupational health should confirm with the course provider which adjustments are genuinely available, and communicate this to the specialist before finalising the plan",
+          "Occupational health should assume that part-time study is available as an adjustment for any course, without needing to confirm this with the course provider",
+          "Occupational health should finalise the transition plan independently of the treating specialist's own recommendations, since course logistics are outside the specialist's expertise",
+          "Occupational health should proceed with the specialist's plan without modification, since only the specialist's clinical judgement is relevant to the transition",
+          "Occupational health should defer entirely to the course provider's standard policy, without input from either the specialist or occupational health's own assessment"
+        ],
+        correct: 0,
+        explain: "Before arranging any treatment transition, occupational health needs to confirm with the course provider what adjustments are actually practicable for the specific course in question — for example whether deferment or part-time study is genuinely available — and communicate this to the treating specialist, to avoid a transition plan being built around a course the student cannot actually attend. This is a collaborative, course-specific check, not something to assume is uniformly available (or unavailable) across all courses; it doesn't remove the specialist's clinical authority over whether transition is advisable, nor does occupational health act entirely independently of the specialist or defer entirely to the course provider without any clinical input.",
+        source: "HEOPS Conference 2026 (Fitness to Study for Applicants and Students with Severe Eating Disorders) — collaborative approach to transition planning"
+      },
+      {
+        stem: "An occupational physician providing services to an NHS trust is asked to report the outcome of a statutory health surveillance assessment to the employer. The worker has not been asked to consent to this specific disclosure. Regarding the correct position under the FOM Ethics Guidance, 9th edition, the correct position is:",
+        options: [
+          "Consent is needed to report the result of statutory health surveillance to the employer, unless statute provides otherwise",
+          "No consent is ever required to report the result of any statutory health surveillance, since the employer commissioned the assessment",
+          "Consent is required only where the health surveillance result is abnormal, and not where the result is normal",
+          "The employer is automatically deemed to know whatever information occupational health holds, whether or not it has been disclosed",
+          "Consent requirements for statutory health surveillance reporting are identical in every respect to consent for a management referral report"
+        ],
+        correct: 0,
+        explain: "The FOM Ethics Guidance, 9th edition, advises that consent is needed to report the result of statutory health surveillance to the employer unless statute provides otherwise — not an automatic disclosure simply because the employer commissioned the assessment, and not limited only to abnormal results. The guidance also specifically states that an employer is not deemed to know what occupational health knows but hasn't told them, contrary to earlier EHRC guidance, citing the Hartman and Q v L cases — disclosure isn't assumed just because the information exists within the service.",
+        source: "HEOPS Conference 2026 (Legal Update); FOM Ethics Guidance, 9th edition"
+      },
+      {
+        stem: "A university occupational health service is advising HR on changes to unfair dismissal law taking effect from January 2027 under the Employment Rights Act 2025. Regarding the probationary period, the correct position is:",
+        options: [
+          "The standard probationary period is being extended from two years to five years, giving employers materially longer to assess new employees",
+          "Probationary periods are being abolished entirely, with all employees gaining full unfair dismissal protection from their first day",
+          "The change applies only to fixed-term contracts, with no effect on the probationary period for permanent employees",
+          "The relevant change under the Act relates to statutory sick pay specifically, and has no bearing on probationary periods at all",
+          "The standard probationary period is being reduced from two years to six months, and employers should review their contractual procedures"
+        ],
+        correct: 4,
+        explain: "The Employment Rights Act 2025 reduces the qualifying period connected to unfair dismissal protection, described as a reduction in the probationary period from two years to six months, alongside removal of the cap on compensation for unfair dismissal — employers are advised to review their contractual probationary period and procedures in light of this. This is a reduction, not an extension or abolition, and applies to the standard position, not solely to fixed-term contracts; it is a distinct change from the separate day-one right to statutory sick pay introduced from April 2026.",
+        source: "HEOPS Conference 2026 (Legal Update); Employment Rights Act 2025"
+      },
+      {
+        stem: "An employee wishes to bring an employment tribunal claim relating to an incident that occurred in September 2026. Their solicitor is advising on the applicable limitation period for bringing the claim. Regarding the change introduced from October 2026, the correct position is:",
+        options: [
+          "The standard limitation period for bringing a claim to the employment tribunal has increased from three months to six months",
+          "The standard limitation period has been reduced from six months to three months, shortening the window to bring a claim",
+          "No limitation period change has taken effect, and the position remains exactly as it was before October 2026",
+          "The limitation period change applies only to claims of unfair dismissal, with no effect on other types of tribunal claim",
+          "The limitation period has been extended to two years, matching the standard period for a breach of contract claim"
+        ],
+        correct: 0,
+        explain: "From October 2026, the limitation period to bring a claim to the employment tribunal increased from three months to six months — a change occupational health practitioners advising on the timing of workplace processes should be aware of, since it materially extends the window during which a claim connected to events they have advised on could still be brought. This isn't limited to unfair dismissal specifically, and six months is the new figure, not two years.",
+        source: "HEOPS Conference 2026 (Legal Update); Employment Rights Act 2025"
+      },
+      {
+        stem: "A university's estates department, which regularly uses external contractors on campus, asks occupational health and HR whether the institution has any legal duty regarding harassment of its own staff by those contractors. Regarding the position taking effect from October 2026, the correct answer is:",
+        options: [
+          "Employers have no legal responsibility at all for harassment carried out by anyone who is not directly employed by them",
+          "Employers must take all reasonable steps to prevent harassment of employees, including by third parties like contractors, students and visitors",
+          "The duty to prevent harassment applies only to sexual harassment, and not to harassment related to any other protected characteristic",
+          "The duty applies only where the third party is a contractor specifically, and does not extend to students, visitors or the public",
+          "This duty has applied unchanged since the Equality Act 2010 first came into force, with no recent legislative change in this area"
+        ],
+        correct: 1,
+        explain: "From October 2026, employers are required to take all reasonable steps to prevent sexual harassment of their employees, and are under a legal duty not to permit harassment related to any protected characteristic, not just sexual, by third parties in the course of employment — with third parties explicitly including contractors, students, visitors and members of the public. Taking 'all reasonable steps' mirrors the standard under section 109(4) of the Equality Act, and will typically require a risk assessment and review of policies and procedures; this is new, not a position unchanged since 2010, and is not limited only to sexual harassment or to contractors specifically.",
+        source: "HEOPS Conference 2026 (Legal Update); Employment Rights Act 2025"
+      },
+      {
+        stem: "A university's occupational health service, providing pre-placement assessments for a range of vocational courses, is asked by a course director why students undertaking fieldwork are within scope of the Health and Safety at Work etc. Act 1974, given that they are not employees of the institution. What is the correct explanation?",
+        options: [
+          "Students are only covered by the Act once they have graduated and taken up employment, not while they remain enrolled as students",
+          "Section 3 requires employers to ensure the health and safety of persons affected by their undertaking, including students on fieldwork",
+          "The Act applies to students only where they hold a part-time employment contract with the institution in addition to their studies",
+          "Health and safety legislation has no application to higher education institutions in any capacity, since these fall outside its intended scope",
+          "Students are covered only during fieldwork specifically, and not during teaching or other HEI-sanctioned project work"
+        ],
+        correct: 1,
+        explain: "Section 3 of the Health and Safety at Work etc. Act 1974 requires employers to ensure that the health and safety of persons affected by their undertaking are not put at risk — students fall within the scope of this section during teaching and when engaged in other activities sanctioned by their HEI as a course requirement, such as fieldwork, placements or projects, not only in one specific activity to the exclusion of others. This applies regardless of any employment contract, and applies to enrolled students directly, not only after graduation.",
+        source: "HEOPS Guidance for Occupational Health in Higher Education Institutions v14, Section 4A"
+      },
+      {
+        stem: "A university safety adviser identifies that postgraduate researchers in a chemistry department are exposed to a substance requiring health surveillance under COSHH. The researchers are enrolled students rather than employees of the university. Regarding whether they should be included in the health surveillance programme, the correct position is:",
+        options: [
+          "They should not be included, since COSHH health surveillance obligations apply only to individuals with an employment contract",
+          "Inclusion is at the university's discretion, and is not required by health and safety legislation in any circumstances",
+          "They should be included only if they are also being paid a stipend or salary in addition to their student status",
+          "They should be included, since research students exposed to a health risk requiring surveillance should always be in the programme",
+          "Health surveillance for this group is the sole responsibility of the department's academic supervisor, rather than the OH service"
+        ],
+        correct: 3,
+        explain: "Research students involved in work where health surveillance for employees is required under legislation such as COSHH should always be included in the surveillance programme — unless everyone exposed to the health risk is included, the value of the programme as a means of monitoring the effectiveness of control measures is undermined. This isn't restricted to those with an employment contract or a stipend, isn't simply a matter of institutional discretion, and identifying the need for surveillance is a shared responsibility between whoever undertakes the risk assessment (often the supervisor or principal investigator) and the institution's occupational health and safety advisers, not the supervisor's sole responsibility.",
+        source: "HEOPS Health Surveillance Guidance in UK Universities, Feb 2019; HEOPS Guidance for Occupational Health in Higher Education Institutions v14"
+      },
+      {
+        stem: "A course organiser contacts occupational health, concerned that a student has disclosed a diagnosis of infectious tuberculosis and asking about the risk to other students on the course. Regarding the appropriate response, the correct position is:",
+        options: [
+          "Occupational health should disclose the student's full clinical details directly to the course organiser, given the potential public health concern",
+          "With the student's consent, occupational health should liaise with the treatment team and local public health team, who can advise on risk and screening",
+          "Occupational health has no role in this situation at all, since infectious disease management is entirely a matter for the treating clinical team",
+          "The course organiser should be advised to make direct contact with the student's treating clinicians themselves, without occupational health involvement",
+          "No action is required from occupational health unless a confirmed case of transmission to another student has already occurred"
+        ],
+        correct: 1,
+        explain: "With the student's consent, occupational health can make contact with the treatment team and the local public health team, who are able to advise on the extent of risk to others and their plans for screening contacts — occupational health can then assist the public health team in identifying potential contacts, distributing information, and providing clinic space for screening, minimising disruption to teaching. Full clinical disclosure directly to the course organiser bypasses the correct route and the student's consent; occupational health does have a coordinating role here, and action shouldn't wait for a confirmed case of transmission before contacts are considered.",
+        source: "HEOPS Guidance for Occupational Health in Higher Education Institutions v14, Case Study: Managing Public Health Concerns"
+      },
+      {
+        stem: "A university's student health centre, which also provides primary care to enrolled students, is approached by a course director asking whether the centre's GPs can simply provide the occupational health sign-off required before a student begins a clinical placement, since the GP already knows the student well. What is the correct position?",
+        options: [
+          "This is acceptable, since a GP with an existing relationship with the student is best placed to give a well-informed opinion",
+          "A student GP service cannot provide occupational health advice for registered students, for both ethical and competency reasons",
+          "This is acceptable provided the GP obtains the student's separate consent before providing occupational health advice",
+          "This is acceptable only for non-clinical placements, and not for those involving direct patient contact",
+          "This is a matter for the student to decide, since either route provides equally valid occupational health input"
+        ],
+        correct: 1,
+        explain: "A student general practice service cannot provide occupational health advice for students registered with it for primary care, for both ethical and competency reasons — occupational health practice is fundamentally different from general practice, relying on expertise and independence from the patient advocacy inherent in a treatment relationship. Existing familiarity with the student doesn't substitute for this independence, additional consent doesn't resolve the underlying conflict, and this isn't limited to clinical placements specifically or left as a student's own choice between two equally valid options.",
+        source: "HEOPS Guidance for Occupational Health in Higher Education Institutions v14, Section 4D"
+      },
+      {
+        stem: "An occupational physician providing services to a university is asked by the HR director to soften a fitness-for-work report because the department is short-staffed and cannot easily redeploy the individual concerned. Regarding the professional principle most directly engaged here, the correct position is:",
+        options: [
+          "The physician should accommodate the request, since supporting the institution's operational needs is part of the occupational health role",
+          "The physician should accommodate the request only if the HR director puts it in writing, to protect the physician's own position",
+          "Occupational health professionals must never let judgement be influenced by a conflict of interest, especially when advising the employer",
+          "The physician should decline to provide any further reports to this employer as a result of the request",
+          "The request is appropriate, since occupational health reports are ultimately commissioned and owned by the employer"
+        ],
+        correct: 2,
+        explain: "The International Code of Ethics for Occupational Health Professionals states that occupational health professionals must under no circumstances allow their judgement and statements to be influenced by any conflict of interest, particularly when advising the employer — operational pressure such as staffing difficulty does not justify softening a clinical opinion. A written request doesn't resolve the ethical problem, and while the report may have been commissioned by the employer, that doesn't make the employer entitled to shape its clinical content; declining all future reports is a disproportionate response to a single inappropriate request, rather than the correct immediate response to it.",
+        source: "HEOPS Guidance for Occupational Health in Higher Education Institutions v14; International Code of Ethics for Occupational Health Professionals (ICOH)"
+      },
+      {
+        stem: "An occupational health physician working within a university is considering whether a specific piece of confidential clinical information volunteered by a student can be disclosed without the student's consent. Regarding the circumstances in which such a professional duty of confidentiality can be breached, the correct position is:",
+        options: [
+          "Confidentiality may be breached whenever the physician judges disclosure to be in the student's own best interests",
+          "Confidentiality may be breached whenever the information would be useful to the course director in managing the student's attendance",
+          "Confidentiality may never be breached under any circumstances, regardless of the nature or seriousness of the information disclosed",
+          "Confidentiality may be breached only for serious risk of death or major injury, risk to others, or a statutory duty to disclose",
+          "Confidentiality may be breached provided the physician documents the reasons for disclosure in the clinical record afterwards"
+        ],
+        correct: 3,
+        explain: "This professional duty of confidentiality can only be breached if, in the opinion of the occupational health practitioner, the worker is at serious risk of death or major injury, if other people will be at risk, or, exceptionally, where there is a statutory obligation to disclose — a specific, limited set of circumstances, not simply whenever disclosure might be judged generally useful or in the student's own interests as the physician sees it. Documenting the reasons afterwards is good practice once a decision to disclose has properly been made on one of these grounds, but doesn't itself create a fourth, independent ground for breaching confidentiality.",
+        source: "HEOPS Guidance for Occupational Health in Higher Education Institutions v14, Section on Confidentiality"
+      },
+      {
+        stem: "A nursing student with a hand tremor that affects handwriting requests, as a reasonable adjustment, that she be permitted to use an electronic recording device to dictate all of her clinical notes during placements, instead of handwriting them. Occupational health is asked whether this is an adjustment that can reliably be offered. What is the correct position?",
+        options: [
+          "This should be offered without further consideration, since electronic recording devices are considered reasonable in every clinical environment",
+          "This should be refused outright, since no student may ever use an electronic recording device during a clinical placement",
+          "This is acceptable only once she has qualified and is working independently, but not while she remains a student",
+          "This depends entirely on whether her condition is found to meet the Equality Act's definition of a disability",
+          "This isn't reliably available, since dictation during some activities is impractical and recording devices could impair patient safety"
+        ],
+        correct: 4,
+        explain: "Electronic recording devices are not considered reasonable in all clinical environments: dictating clinical records during some clinical activities is impractical, and using such devices could impair patient safety in areas such as infection control. This is a genuine limitation on what can be guaranteed in professional practice, rather than something available in every clinical environment or reserved until after qualification; the Equality Act's disability definition is relevant to whether adjustments must be considered at all, but doesn't determine whether this specific adjustment is practicable once that threshold is met.",
+        source: "HEOPS General Guidance on Adjustments for Students Training in Regulated Professions v23"
+      },
+      {
+        stem: "A functional capability assessment is being carried out for a paramedic science student with a significant anxiety disorder, focusing specifically on the domain of team working. Regarding what this domain is intended to assess, the correct position is:",
+        options: [
+          "The ability to work with service users, carers and colleagues, including identifying anxiety/stress in others and adapting practice",
+          "The student's general likeability and popularity among his immediate peer group on this specific course",
+          "Whether the student agrees with every clinical decision made by more senior members of the team, without exception",
+          "The student's willingness to work unpaid overtime whenever his team happens to be short-staffed",
+          "The student's academic ranking relative to other students undertaking this same functional capability assessment"
+        ],
+        correct: 0,
+        explain: "Team working, as a functional capability assessment domain, concerns the ability to work in partnership with service users, carers and colleagues — including the ability to identify anxiety and stress in others, and to adapt practice and provide support where appropriate. This is a specific, functionally-defined competency, not a measure of general popularity, uncritical agreement with senior colleagues, willingness to work unpaid overtime, or academic ranking, none of which reflect the actual skill being assessed.",
+        source: "HEOPS Medical Students Standards of Medical Fitness to Train 2026, Team Working domain"
+      },
+      {
+        stem: "An occupational health physician assessing a student's fitness to train is asked by a course director why a specific, internationally recognised diagnostic classification system is preferred over informal or ambiguous descriptions of a student's condition. What is the correct rationale?",
+        options: [
+          "Ambiguous diagnostic descriptions are preferred, since they allow greater flexibility in how a student's condition is later interpreted",
+          "A recognised system like ICD-10 gives consistency and is recognised by UK courts and pension schemes",
+          "Diagnostic classification systems are used only to satisfy administrative record-keeping requirements, with no bearing on clinical decision-making",
+          "A recognised classification system removes the need for any separate assessment of the student's actual functional capacity",
+          "The choice of classification system is a matter of personal preference for the assessing physician, without any wider significance"
+        ],
+        correct: 1,
+        explain: "It's desirable that diagnostic classification systems are clear, objective and widely recognised, since this allows consistency of diagnostic definition and facilitates clear communication between healthcare practitioners; ambiguous diagnostic definitions are undesirable because they have low validity and tend to medicalise behaviours within the normal range. ICD-10, the World Health Organisation's classification system, meets these criteria and is recognised by UK courts and pension schemes. A diagnosis, however clearly classified, does not replace the need for a separate functional capability assessment — it establishes the spectrum of possible functional impairments that might occur, rather than the degree of impairment in any particular individual.",
+        source: "HEOPS General Guidance on Adjustments for Students Training in Regulated Professions v23"
+      },
+      {
+        stem: "A university occupational health service is designing a new pre-placement health questionnaire for students entering a science degree involving laboratory work. A colleague proposes including broad questions about family medical history and lifestyle, arguing that more information is always better for risk assessment. What is the correct position under data protection principles applicable here?",
+        options: [
+          "Broad collection is appropriate, since the Data Protection Act imposes no specific limit on the scope of health information gathered in an occupational context",
+          "Broad collection is appropriate provided the information is stored securely and access is restricted to occupational health staff",
+          "Collection of health information must be fair to workers, with intrusion no more than absolutely necessary, for a clear justified purpose",
+          "Broad collection is appropriate only if the student is informed in advance that the information will be gathered",
+          "Data protection principles apply only to information that is subsequently shared with a third party outside occupational health"
+        ],
+        correct: 2,
+        explain: "The Data Protection Act code of practice states that collection of health information about workers in the employment context must be fair to individual workers, and that the intrusion represented by collecting health information must be no more than is absolutely necessary — there must be a clear purpose, justified by real benefits, for collecting any particular piece of health information, rather than 'more is always better'. Secure storage and advance notice don't, by themselves, satisfy this principle if the underlying collection itself isn't justified and proportionate; nor is the principle limited only to information that ends up being shared outside occupational health.",
+        source: "HEOPS General Guidance on Adjustments for Students Training in Regulated Professions v23; Data Protection Act Employment Practices Code"
+      },
+      {
+        stem: "A dental hygiene student breaks her dominant wrist in a non-course-related accident and requires temporary adjustments to her practical training for eight weeks while it heals, with no anticipated long-term effect on her ability to practise. Regarding how training institutions should approach this situation compared with a permanent condition, the correct position is:",
+        options: [
+          "Exactly the same threshold applies as for a permanent condition, since the Equality Act makes no distinction based on duration",
+          "No adjustments of any kind are available for a temporary, self-limiting condition, since these fall outside the scope of the guidance entirely",
+          "The adjustments available must be identical to those that would need to remain in place after her eventual graduation",
+          "Greater flexibility is available for temporary adjustments needed because of a self-limiting condition with no permanent or long-term effect on fitness to train or practise",
+          "The decision must be deferred to the regulatory body itself, rather than being made by the training institution and occupational health"
+        ],
+        correct: 3,
+        explain: "Students who experience temporarily impaired function due to self-limiting medical events, which only require adjustments for a short time and have no permanent or long-term effect on fitness to train or practise, will sometimes need temporary adjustments to their training course — since these adjustments will self-evidently not be necessary after graduation, greater flexibility is available to training institutions in this circumstance than for adjustments that would need to persist into professional practice. This isn't the same threshold as for a permanent condition, isn't excluded from consideration altogether, and doesn't require referral to the regulatory body for a straightforward, time-limited situation like this.",
+        source: "HEOPS General Guidance on Adjustments for Students Training in Regulated Professions v23"
+      },
+      {
+        stem: "An occupational health service is asked to advise on health surveillance for a university chemistry department where postgraduate researchers frequently work with newly synthesised compounds whose full toxicological profile is not yet established. Regarding a specific challenge this presents compared with a typical industrial setting, the correct position is:",
+        options: [
+          "No such challenge exists, since research involving small quantities of material is inherently lower risk than industrial-scale processes",
+          "The challenge relates only to staff turnover, and has no bearing on the actual assessment of exposure or hazard",
+          "This challenge is unique to chemistry departments, and does not arise in other research disciplines within a university",
+          "Health surveillance cannot be provided at all where the full toxicological profile of a substance is not yet established",
+          "Research at the margins of knowledge may involve novel materials in novel situations, making exposure hard to estimate"
+        ],
+        correct: 4,
+        explain: "Higher education research is by its nature often at the margins of what is known and understood, so exposure may occur to novel hazardous materials and agents, in novel situations, where it's difficult to estimate exposure — this is a genuine, HE-specific challenge, not something automatically resolved by the small quantities sometimes involved, since research may also involve small amounts of materials known to be highly biologically active, highly infectious or extremely reactive. This isn't limited to chemistry, applying across HE research fields generally, and difficulty establishing a full toxicological profile calls for expert judgement in determining appropriate surveillance, not the withholding of surveillance altogether.",
+        source: "HEOPS Health Surveillance Guidance in UK Universities, Feb 2019, Section 2 (Background)"
+      },
+      {
+        stem: "An occupational health assessment concludes that a physiotherapy student, who has a disability within the meaning of the Equality Act 2010, would benefit from an alteration to how a specific practical assessment is normally conducted. Regarding the correct term for the general category of adjustment this represents, the correct position is:",
+        options: [
+          "An alteration to a provision, criterion or practice (PCP), one of the categories of reasonable adjustment the higher education institution must consider",
+          "An auxiliary aid, a term reserved exclusively for physical equipment such as assistive technology, and not applicable to a change in assessment method",
+          "A derogation, a term specific to statutory licensing frameworks such as those used for professional driving qualifications",
+          "A competence standard adjustment, which the Equality Act specifically prohibits regardless of the circumstances",
+          "An accommodation, a term with no specific legal definition or status under the Equality Act 2010"
+        ],
+        correct: 0,
+        explain: "Where an applicant is disabled within the meaning of the Equality Act 2010, the higher education institution must consider reasonable adjustments including auxiliary aids (such as, but not limited to, assistive technology), physical features of the premises, and alteration of a provision, criterion or practice (PCP) — a change to how an assessment is normally conducted falls into this last category. Auxiliary aid isn't limited only to physical equipment in this context, since it's given as one example within a broader adjustment framework; 'derogation' and 'accommodation' aren't the terms used within this specific statutory framework, and competence standards themselves are not something the Act requires to be adjusted, unlike a PCP.",
+        source: "HEOPS Medical Students Standards of Medical Fitness to Train 2026"
+      },
     ]
   }
 ];
