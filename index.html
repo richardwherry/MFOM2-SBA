@@ -1193,6 +1193,136 @@ const SECTIONS = [
         correct: 3,
         explain: "A proportional mortality ratio divides deaths by other deaths rather than by a population at risk, so proportions across all causes are constrained to sum to one. A deficit of deaths from a common cause, entirely plausible in an employed cohort subject to the healthy worker effect, arithmetically raises the proportion attributable to every other cause with no change in the underlying rate. An elevated PMR is a signal worth pursuing rather than a risk estimate. The method earns its place precisely where the denominator is irrecoverable.",
         source: "Occupational epidemiology — proportional mortality ratio"
+      },
+      {
+        stem: "An occupational physician is asked to advise whether exposure to a metalworking fluid mist caused a cluster of extrinsic allergic alveolitis at a machining plant. The literature contains several cohort studies reporting associations of similar magnitude in different countries and industries, a plausible immunological mechanism involving mycobacterial contamination of the fluid, and case series in which symptoms resolved when workers were removed from exposure and returned when they went back. Which feature of this body of evidence most strengthens the case for causation?",
+        options: [
+          "The associations reported reach conventional statistical significance",
+          "The exposure is one that regulators already control under COSHH",
+          "The findings are consistent across different populations and settings",
+          "The studies were published in peer-reviewed occupational journals",
+          "The affected workers were all employed at the same machining plant"
+        ],
+        correct: 2,
+        explain: "Consistency of association across different populations, investigators and settings is one of the strongest of the Bradford Hill considerations, because it makes explanation by a bias peculiar to one study far less likely. The vignette also supplies plausibility and, in the symptom resolution and recurrence, experimental or reversibility evidence. Statistical significance is not itself a criterion for causation, and regulatory status and publication venue speak to neither. Note that Hill offered these as considerations to aid judgement rather than as a checklist to be scored.",
+        source: "Causal inference — Bradford Hill considerations"
+      },
+      {
+        stem: "A study of hand-arm vibration syndrome among stonemasons groups workers into four bands of cumulative vibration exposure. The prevalence of blanching rises from 4% in the lowest band, to 11%, then 19%, then 34% in the highest, with the trend statistically significant. An expert witness argues that this pattern carries particular weight in attributing the condition to work. Which consideration is he invoking, and why does it strengthen the argument?",
+        options: [
+          "Biological gradient, since a graded relationship is harder to explain by bias or confounding alone",
+          "Consistency, since the same association appears across all four exposure bands",
+          "Specificity, since one exposure is producing one clearly defined outcome",
+          "Temporality, since the exposure bands are constructed from cumulative lifetime exposure",
+          "Coherence, since the finding agrees with what is known of vibration physiology"
+        ],
+        correct: 0,
+        explain: "A dose-response or biological gradient means that risk rises with increasing exposure, and it strengthens causal argument because most confounders and biases would have to be distributed across exposure bands in an improbably graded way to reproduce it. Option B misuses consistency, which refers to replication across separate studies rather than across strata within one. Specificity is the weakest of Hill's considerations in occupational medicine, since most exposures cause several outcomes and most outcomes have several causes.",
+        source: "Causal inference — biological gradient"
+      },
+      {
+        stem: "Two occupational physicians independently classify 200 chest radiographs from a silica-exposed cohort as showing profusion of small opacities at or above category 1/0, or below it. They agree on 176 of the 200 films, giving raw agreement of 88%, and the department proposes accepting this as evidence of adequate reliability. A researcher points out that only 12% of films were classified as abnormal by either reader, and calculates a kappa statistic, which is considerably lower than the raw agreement suggests. Why does kappa give the more informative answer here?",
+        options: [
+          "Kappa corrects for the different thresholds the two readers were using",
+          "Kappa measures the validity of classification against a reference standard",
+          "Kappa weights disagreements according to how far apart the categories are",
+          "Kappa accounts for the agreement that would be expected by chance alone",
+          "Kappa adjusts the estimate for the number of films each reader assessed"
+        ],
+        correct: 3,
+        explain: "When one category dominates, two readers guessing independently would still agree on most films simply by both calling them normal, so raw agreement is inflated and tells you little. Kappa expresses observed agreement in excess of that expected by chance, and falls sharply in this situation. Option B confuses reliability with validity: kappa says nothing about whether either reader is correct, only whether they agree. Weighted kappa, in option C, is a variant used for ordered categories such as the full ILO profusion scale.",
+        source: "Measurement — kappa and chance-corrected agreement"
+      },
+      {
+        stem: "A health surveillance programme for flour handlers records annual spirometry. A worker's FEV1 falls from 3.62 litres to 3.41 litres over one year, a drop of about 6%. The occupational health nurse asks whether this represents a genuine decline requiring referral. The department's quality records show that when the same healthy individual is tested twice on the same day by the same operator, readings routinely differ by up to 5%. What does this imply for interpreting the worker's result?",
+        options: [
+          "Referral is unnecessary, since a 6% change cannot be clinically important",
+          "The observed change is close to the limits of measurement repeatability",
+          "The measurement is invalid, since spirometry requires three-monthly intervals",
+          "The fall confirms a genuine decline, since it exceeds the recorded variability",
+          "Repeatability data cannot inform the reading of an individual result"
+        ],
+        correct: 1,
+        explain: "Within-subject repeatability sets a floor below which change cannot confidently be distinguished from measurement noise. A 6% fall sits barely outside a documented same-day variation of up to 5%, so it is suggestive but far from conclusive on a single reading. The right response is neither dismissal nor referral on this figure alone, but repeat measurement and inspection of the trend across successive years, which is precisely why serial surveillance data are more informative than any one result.",
+        source: "Measurement — repeatability and within-subject variation"
+      },
+      {
+        stem: "A mortality study restricted to workers currently employed at a chemical plant finds no excess of respiratory disease compared with the general population. A reviewer notes that workers who developed respiratory symptoms tended to transfer out of exposed areas or leave employment altogether, and that the analysis excluded anyone who had left the company. She argues the design cannot detect the effect it set out to measure. Which phenomenon is she describing?",
+        options: [
+          "The healthy hire effect, whereby recruitment selects fit applicants",
+          "Non-differential misclassification of respiratory exposure",
+          "Confounding by smoking, which differs between leavers and stayers",
+          "Lead-time bias arising from earlier detection through surveillance",
+          "The healthy worker survivor effect, whereby ill workers leave exposure"
+        ],
+        correct: 4,
+        explain: "The healthy worker survivor effect operates after hire rather than at recruitment: those who become unwell move out of exposed work or leave employment, so a cohort restricted to current employees is progressively depleted of exactly the cases the study seeks. It biases occupational studies toward the null and is distinct from the healthy hire effect, which acts at selection. The remedies are to follow leavers, to analyse by time since first exposure rather than by current status, and to treat employment status as a time-varying variable.",
+        source: "Occupational epidemiology — healthy worker survivor effect"
+      },
+      {
+        stem: "A company operates two plants and calculates a standardised mortality ratio for each against national rates. Plant A returns an SMR of 118 and plant B an SMR of 96. The managing director concludes that plant A is the more hazardous and directs that resources be moved accordingly. The occupational physician notes that the two workforces differ markedly in age structure, with plant A employing a much older workforce. Why does this undermine the comparison?",
+        options: [
+          "Each SMR is weighted by its own workforce's age structure, so the two are not directly comparable",
+          "Standardised mortality ratios cannot be calculated where workforces differ in size",
+          "Age standardisation is invalid unless both workforces are compared with each other",
+          "The national reference rates will have changed between the two calculation periods",
+          "An SMR above 100 has no interpretation unless the confidence interval excludes 100"
+        ],
+        correct: 0,
+        explain: "The SMR is a product of indirect standardisation: national age-specific rates are applied to each cohort's own age distribution to generate expected deaths. Because the weighting differs between cohorts, two SMRs are each valid against the national reference but are not strictly comparable with one another, however routinely that comparison is made. Direct standardisation, which applies each cohort's rates to a common standard population, produces figures that can properly be set side by side.",
+        source: "Occupational epidemiology — direct and indirect standardisation"
+      },
+      {
+        stem: "An established cohort of 22,000 chemical workers has been followed for twenty years, with serum samples stored at recruitment. Investigators now wish to test whether a biomarker of exposure predicts bladder cancer, of which 90 cases have occurred. Assaying every stored sample would be prohibitively expensive. They propose assaying the samples of all 90 cases together with samples from 360 cohort members who were free of disease when each case arose, matched on age and year of recruitment. Which design is this, and what is its principal advantage here?",
+        options: [
+          "A cross-sectional study, which avoids the cost of longitudinal follow-up",
+          "A case-cohort study, which permits several outcomes to share one comparison group",
+          "A nested case-control study, which preserves exposure measured before disease onset",
+          "A retrospective cohort study, which yields relative risks rather than odds ratios",
+          "An ecological study, which relies on group-level rather than individual exposure"
+        ],
+        correct: 2,
+        explain: "Selecting cases and matched controls from within an existing cohort is a nested case-control design. It retains the cohort's great strength, that exposure was recorded or stored before disease developed, so recall bias and reverse causation are avoided and temporality is secure, while assaying only a fraction of the samples. A case-cohort design is the close relative in option B, differing in that the comparison group is a random subcohort selected at baseline, which can then serve several outcomes.",
+        source: "Study design — nested case-control"
+      },
+      {
+        stem: "An occupational physician is prioritising preventive work across a manufacturing group. Exposure to a solvent carries a relative risk of 6.0 for a particular neurological outcome but affects only 1% of the workforce. Exposure to prolonged awkward postures carries a relative risk of 1.9 for chronic low back pain and affects 55% of the workforce. She wants to identify which exposure accounts for the greater share of disease across the group as a whole. Which measure answers that question, and what determines its value?",
+        options: [
+          "Relative risk, which is determined by the strength of association alone",
+          "Population attributable fraction, determined by both relative risk and exposure prevalence",
+          "Attributable risk in the exposed, determined by the incidence among exposed workers",
+          "Number needed to harm, determined by the reciprocal of the relative risk",
+          "Standardised morbidity ratio, determined by comparison with national rates"
+        ],
+        correct: 1,
+        explain: "The population attributable fraction expresses the proportion of disease in the whole population that would be avoided if the exposure were removed, and it depends on how common the exposure is as well as how strong the association. A modest relative risk affecting most of a workforce can therefore account for far more disease than a large relative risk affecting a handful, which is why aetiological strength and preventive priority frequently point in different directions. Option C gives the burden among exposed workers only, and says nothing about the group as a whole.",
+        source: "Measures — population attributable fraction"
+      },
+      {
+        stem: "A study examines whether attendance at a workplace health check reduces subsequent cardiovascular events. Employees are classified as attenders or non-attenders according to whether they attended at any point during a five-year period, and follow-up for both groups is counted from the start of that period. Attenders show substantially lower event rates. A statistician objects that employees classified as attenders could not have had an event before attending, since an employee who died early would necessarily have been counted as a non-attender. Which bias is she identifying?",
+        options: [
+          "Attrition bias arising from differential loss to follow-up between groups",
+          "Selection bias, since healthier employees choose to attend health checks",
+          "Confounding by socioeconomic position and health-related behaviours",
+          "Immortal time bias, since attenders must survive long enough to attend",
+          "Detection bias, since attenders undergo more thorough clinical assessment"
+        ],
+        correct: 3,
+        explain: "Immortal time is a period during which the outcome could not, by the way exposure was defined, have occurred. Counting the interval before attendance as exposed follow-up guarantees an event-free stretch for attenders alone and manufactures an apparent benefit. Option B describes a real and additional problem, but it is a separate one that would persist even if the time were correctly allocated. The remedy is to treat attendance as a time-varying exposure, so follow-up counts as unexposed until the check occurs.",
+        source: "Bias — immortal time bias"
+      },
+      {
+        stem: "A five-year follow-up study of upper limb symptoms among assembly workers begins with 900 participants and completes with 540. Those lost to follow-up were more likely to have reported symptoms at baseline, and departmental records suggest many left because they could no longer manage the work. The investigators analyse only those with complete data and report a low incidence of new symptoms. What is the most important limitation of that analysis?",
+        options: [
+          "The reduced sample size means the study is underpowered to detect an effect",
+          "Symptom reporting at baseline cannot be verified against clinical examination",
+          "Confounding by age is likely, since younger workers complete follow-up more often",
+          "The confidence interval will be too narrow given the losses sustained",
+          "Losses are related to the outcome, so the completers understate true incidence"
+        ],
+        correct: 4,
+        explain: "Attrition matters not through its size but through whether it is related to exposure or outcome. Here the people leaving are disproportionately those developing the very problem under study, so restricting analysis to completers systematically removes cases and understates incidence. Loss of power, in option A, is a real but secondary consequence: a study can be adequately powered and still thoroughly biased. Sensitivity analyses that impute plausible outcomes for those lost are the usual response.",
+        source: "Bias — attrition and loss to follow-up"
       }
 ]
   },
