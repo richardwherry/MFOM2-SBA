@@ -669,39 +669,39 @@ const SECTIONS = [
     ]
   },
   {
-    id: "stats",
-    name: "Statistics & Epidemiology (LO11)",
-    icon: "S",
+    id: "research",
+    name: "Research (LO11)",
+    icon: "R",
     source: "Coggon, Epidemiology for the Uninitiated",
     questions: [
       {
-        stem: "In a study comparing two interventions, the p-value for the primary outcome is 0.03. Which statement correctly interprets this value?",
+        stem: "An occupational health department trials two manual handling training packages across a distribution centre, randomising teams to a conventional classroom package or a task-specific package delivered on the warehouse floor. The primary outcome is reported handling injuries over the following year, and the analysis returns a p-value of 0.03. The operations director, who is sceptical of the new package, asks what that figure actually tells him. Which statement correctly interprets it?",
         options: [
-          "There is a 3% probability overall that the null hypothesis itself is true",
+          "There is a 3% probability overall that the null hypothesis itself is actually true",
           "There is a 97% probability overall that the alternative hypothesis itself is true",
           "If the null hypothesis is true, there is a 3% chance of data this extreme or more",
-          "The result overall has a 3% chance of being due to bias alone",
-          "The effect size found here is definitely large and clinically significant"
+          "There is a 3% chance overall that the result is explained entirely by bias alone",
+          "The difference between the two packages is undoubtedly large and clinically important"
         ],
         correct: 2,
-        explain: "A p-value is P(data | null hypothesis true), not P(null hypothesis | data). It says nothing directly about the probability the null is true, nor about clinical importance — the classic interpretation trap.",
+        explain: "A p-value is P(data given the null hypothesis is true), not P(null hypothesis given the data). It says nothing directly about the probability the null is true, nor about clinical importance. Note also that p-values quantify random error alone: bias and confounding do not shrink with sample size, so a thoroughly biased study can still return a very small p-value.",
         source: "Coggon, Epidemiology for the Uninitiated — hypothesis testing"
       },
       {
-        stem: "A 95% confidence interval for a mean difference is reported. Which statement correctly interprets this interval?",
+        stem: "A study of a workplace physiotherapy service reports that the mean reduction in days of certified absence was 4.2 days, with a 95% confidence interval of 1.1 to 7.3 days. The occupational health manager is preparing a business case and wants to describe the interval accurately to a finance committee, without overstating what it shows. Which statement correctly interprets this interval?",
         options: [
-          "If the study were repeated many times, 95% of intervals would contain the true value",
-          "There is a 95% probability that the true value lies within this specific interval",
-          "95% of all individual data points always fall within this specific interval",
-          "The interval shows there is a 95% chance the null hypothesis is false",
-          "The interval is only ever valid if the sample size exceeds 1000 participants"
+          "If the study were repeated many times, 95% of such intervals would contain the true value",
+          "There is a 95% probability that the true value lies within this particular interval",
+          "95% of individual patients fall within this range of absence reduction",
+          "The interval shows a 95% chance that the null hypothesis is false",
+          "The interval is valid only where the sample exceeds 1,000 participants"
         ],
         correct: 0,
-        explain: "CI interpretation refers to the long-run behaviour of the method over repeated sampling, not a probability statement about this one interval containing the true value.",
-        source: "Coggon, Epidemiology for the Uninitiated"
+        explain: "Confidence interval interpretation refers to the long-run behaviour of the method across repeated sampling, not to a probability statement about the one interval in front of you. Option B is the intuitive reading and the one most often given, but the true mean is a fixed unknown quantity rather than a random variable, so it has no probability distribution to sit inside. Option C describes a prediction interval, which would be considerably wider.",
+        source: "Coggon, Epidemiology for the Uninitiated — estimation"
       },
       {
-        stem: "In an epidemiological dataset, \"number of children in a household\" is best classified as which type of variable?",
+        stem: "An occupational health researcher is preparing a dataset from a workforce survey for analysis, and must assign each field a variable type before choosing summary statistics and tests. One field records the number of dependent children living in each employee's household, taking values such as 0, 1, 2 and 3. She needs to classify it correctly, since the choice determines whether a mean or a median is the appropriate summary. This variable is best classified as:",
         options: [
           "Nominal",
           "Ordinal",
@@ -710,11 +710,11 @@ const SECTIONS = [
           "Discrete numerical"
         ],
         correct: 4,
-        explain: "Countable whole-number values with no fractional meaning (0, 1, 2, 3...) are discrete numerical data, not continuous and not categorical. Family size has repeatedly been the specific example that trips this up.",
+        explain: "Countable whole-number values with no meaningful fractional values in between are discrete numerical data. Household size is the specific example that repeatedly trips this up, because the values are numbers and the temptation is to call anything numeric continuous. The test is whether values between the whole numbers would mean anything for an individual: no household contains 2.4 children.",
         source: "Coggon, Epidemiology for the Uninitiated — data types"
       },
       {
-        stem: "\"Blood group\" (A, B, AB, O) is best classified as which type of variable?",
+        stem: "An occupational health informatics lead is configuring an automated reporting tool for a pre-placement health record system. Before the tool can generate valid summaries, each field must be assigned a variable type, since this governs which statistics the software is permitted to calculate. One field records ABO blood group, entered as A, B, AB or O. The categories are stored internally as code numbers, but the coding is arbitrary and no category ranks above or below another. This variable is best classified as:",
         options: [
           "Ordinal",
           "Nominal",
@@ -723,50 +723,50 @@ const SECTIONS = [
           "Ratio"
         ],
         correct: 1,
-        explain: "Blood group has no inherent order or numerical meaning between categories, making it nominal categorical data — the paired trap alongside family size as discrete numerical.",
+        explain: "Blood group has no inherent order and no numerical meaning between categories, making it nominal categorical data. Storing categories as code numbers is a database convenience and does not make the variable numerical, which is precisely why the variable type must be declared: nothing otherwise prevents software from reporting a mean blood group.",
         source: "Coggon, Epidemiology for the Uninitiated — data types"
       },
       {
-        stem: "A new screening test has high sensitivity and specificity, but is applied in a population with a low prevalence of the disease. Which statement is correct?",
+        stem: "A test for latent tuberculosis infection with high sensitivity and specificity is currently used to screen new healthcare staff recruited from high-incidence countries, where infection is common. A trust proposes extending the same test to all administrative and estates staff, among whom latent infection is rare. The occupational health consultant is asked what will happen to the test's performance in the new group. Which statement is correct?",
         options: [
           "Sensitivity and specificity will both fall considerably as disease prevalence falls",
-          "PPV and NPV are both entirely unaffected by disease prevalence here",
-          "Sensitivity and specificity are properties of the population, not the test",
-          "PPV will be lower than in a high-prevalence group, even though sensitivity/specificity are unchanged",
-          "NPV will fall quite substantially as disease prevalence itself falls"
+          "Predictive values are entirely unaffected by the underlying prevalence of infection",
+          "Sensitivity and specificity are properties of the population rather than the test",
+          "Positive predictive value will be lower than in the high-prevalence group, though sensitivity and specificity are unchanged",
+          "Negative predictive value will fall quite substantially as disease prevalence falls"
         ],
         correct: 3,
-        explain: "Sensitivity and specificity are intrinsic properties of the test and stay constant across populations. PPV and NPV are prevalence-dependent: as prevalence falls, PPV falls (more false positives relative to true positives) while NPV rises.",
+        explain: "Sensitivity and specificity are conditioned on true disease status and are intrinsic to the test, so they remain constant across populations. Predictive values are conditioned on the test result and are prevalence-dependent: as prevalence falls, false positives come to outnumber true positives, so positive predictive value falls while negative predictive value rises. Extending the programme would generate a stream of positive results that mostly prove false on investigation.",
         source: "Coggon, Epidemiology for the Uninitiated — screening"
       },
       {
-        stem: "A standardised mortality ratio (SMR) of 150 for an occupational cohort means which of the following?",
+        stem: "A mortality analysis of a cohort of former coke oven workers is presented to a company medical committee. The analysis compares deaths in the cohort with the numbers that would have been expected had the cohort experienced the age-specific and sex-specific death rates of the general population over the same period. The reported standardised mortality ratio for all causes is 150. The committee asks what that figure means. Which interpretation is correct?",
         options: [
-          "Mortality in the cohort is 50% higher than expected, per reference-population age/sex rates",
-          "Mortality in the cohort is 150% of all deaths recorded nationally",
-          "The cohort here has a 150% probability of death occurring overall",
-          "The reference population's death rate is irrelevant to this calculation",
-          "Fifty more people in total died than expected, in absolute terms"
+          "Mortality in the cohort is 50% higher than expected from reference-population age and sex rates",
+          "Mortality in the cohort accounts for 150% of all deaths recorded nationally",
+          "Members of the cohort have a 150% probability of death during follow-up",
+          "The reference population's death rates play no part in the calculation",
+          "Fifty more people died than expected, in absolute terms"
         ],
         correct: 0,
-        explain: "SMR = (observed deaths / expected deaths) × 100, where expected deaths are derived by applying reference-population age/sex-specific rates to the cohort. 150 means 50% excess mortality relative to that expectation — not an absolute count, and not independent of the reference population.",
+        explain: "SMR is observed deaths divided by expected deaths, multiplied by 100, where expected deaths come from applying reference-population age and sex specific rates to the cohort's own structure. A value of 150 indicates 50% excess mortality relative to that expectation. It is a ratio rather than a count, and it is wholly dependent on the reference population chosen, which is why the comparator should always be stated.",
         source: "Hunter's Diseases of Occupations — epidemiological methods"
       },
       {
-        stem: "Researchers wish to study a rare occupational cancer with a long latency period, using existing exposure records. Which study design is most appropriate, and why?",
+        stem: "A research team wishes to investigate whether occupational exposure to a specific aromatic amine is associated with bladder cancer among former rubber industry workers. The cancer is uncommon, latency between exposure and diagnosis typically exceeds twenty years, and the industry has largely closed, though detailed employment and exposure records have been preserved. Funding is limited and results are needed within three years. Which study design is most appropriate, and why?",
         options: [
-          "A randomised controlled trial, since it removes confounding entirely from the analysis",
-          "A prospective cohort study, as it directly measures incidence",
-          "A case-control study, efficient for rare outcomes without needing long follow-up",
+          "A randomised controlled trial, since randomisation effectively removes the risk of confounding",
+          "A prospective cohort study, since it measures disease incidence directly over time",
+          "A case-control study, since it is efficient for rare outcomes and needs no long follow-up",
           "A cross-sectional study, since it clearly establishes temporality between exposure and outcome",
-          "An ecological study, as it avoids all forms of bias"
+          "An ecological study, since it avoids bias arising specifically at the individual level"
         ],
         correct: 2,
-        explain: "For a rare, long-latency outcome, a case-control design is the efficient choice — it starts from cases and looks back at exposure, avoiding the need to follow a large cohort forward for years to accumulate enough events.",
+        explain: "For a rare outcome with long latency, a case-control design begins with cases that have already occurred and looks backwards at exposure, avoiding the need to follow a large cohort forward for decades. A prospective cohort would be scientifically preferable but is ruled out by the timescale and by the exposure having ceased. The preserved records matter: exposure assessed from personnel files rather than participant recall largely defuses the design's principal weakness.",
         source: "Coggon, Epidemiology for the Uninitiated — study designs"
       },
       {
-        stem: "In a study of noise exposure and hearing loss, age is associated with both noise exposure duration and hearing loss, but is not on the causal pathway between them. This is best described as which of the following?",
+        stem: "An analysis of hearing loss among shipyard workers finds a strong association between years of noise exposure and threshold shift. A reviewer notes that older workers have both accumulated more years of noise exposure and lost more hearing through presbycusis, and that ageing is not a consequence of noise exposure nor a step through which noise causes hearing loss. The relationship between age, exposure and outcome here is best described as:",
         options: [
           "Selection bias",
           "Information bias",
@@ -775,115 +775,115 @@ const SECTIONS = [
           "Confounding"
         ],
         correct: 4,
-        explain: "A variable associated with both exposure and outcome, but not a step on the causal pathway between them, is a confounder — distinct from bias, which arises from flaws in study design or measurement rather than from a third variable.",
-        source: "Coggon, Epidemiology for the Uninitiated — confounding vs bias"
+        explain: "A variable associated with both the exposure and the outcome, but lying outside the causal pathway between them, is a confounder. The third criterion is what separates it from a mediator, and adjusting for a mediator would wrongly remove part of a real effect. Effect modification is different again: the true effect would differ in size across age strata rather than disappearing on adjustment. Confounding can be handled analytically; bias, which arises from design or measurement flaws, generally cannot.",
+        source: "Coggon, Epidemiology for the Uninitiated — confounding versus bias"
       },
       {
-        stem: "Which of the following statements about statistical significance is correct?",
+        stem: "An occupational health team is appraising two papers for a journal club. The first reports a statistically significant reduction in a fatigue score that amounts to less than a point on a sixty-point scale. The second reports a substantial improvement in return-to-work rates that fails to reach significance in a study of forty participants. A trainee asks how the two findings should be weighed against each other. Which statement about statistical significance is correct?",
         options: [
-          "A statistically significant result here always indicates real clinical importance",
-          "A result can be statistically significant without being clinically important, and vice versa",
-          "Statistical significance on its own always confirms genuine causation has occurred",
-          "A p-value below 0.05 always means the finding is true",
-          "Non-significant results always mean there is definitely no real effect"
+          "A statistically significant result indicates clinical importance",
+          "A result can be statistically significant without being clinically important, and the reverse",
+          "Statistical significance establishes that the association is causal",
+          "A p-value below 0.05 establishes that the finding is true",
+          "A non-significant result establishes that no real effect exists"
         ],
         correct: 1,
-        explain: "Statistical and clinical significance are separate questions — a large sample can make a trivial difference statistically significant, and a genuinely important effect can fail to reach significance in a small study. Any option using \"always\" or \"never\" here should be treated with suspicion.",
-        source: "Coggon, Epidemiology for the Uninitiated"
+        explain: "Statistical and clinical significance answer separate questions, and the two papers illustrate both halves. A large sample can drive a trivial difference to a very small p-value, while a genuinely important effect can fail to reach significance in a small study. Absence of evidence is not evidence of absence: the second paper warrants attention to its confidence interval, which in a study of forty participants will usually still admit a worthwhile benefit.",
+        source: "Coggon, Epidemiology for the Uninitiated — inference"
       },
       {
-        stem: "An employer reports an apparent cluster of a rare condition in one department. Which is the most appropriate initial step in investigating this?",
+        stem: "The safety manager at a semiconductor plant contacts occupational health having identified four cases of a rare haematological malignancy over six years among staff who have worked in one production area. He is concerned about a shared solvent exposure and asks for the matter to be escalated. Two of the four diagnoses are reported second-hand, and it is not yet clear how many people have worked in the area or for how long. Which is the most appropriate initial step?",
         options: [
-          "Immediately and confidently conclude a causal workplace exposure must be responsible",
-          "Calculate an SMR using only national mortality data available at present",
-          "Dismiss the cluster as due to chance without further assessment",
-          "Verify the diagnoses and define the at-risk population before comparing observed versus expected cases",
-          "Refer the matter directly to litigation without epidemiological assessment"
+          "Conclude immediately that a causal workplace exposure is responsible and act accordingly",
+          "Calculate a standardised mortality ratio using available national mortality data",
+          "Dismiss the cluster entirely as a chance occurrence without any further assessment",
+          "Verify the diagnoses and define the population at risk before comparing observed with expected cases",
+          "Refer the matter directly for litigation without any epidemiological assessment"
         ],
         correct: 3,
-        explain: "Cluster investigation begins with verifying that cases are genuine and correctly diagnosed, and precisely defining the at-risk population and time period — only then can a meaningful observed-versus-expected comparison be made. Jumping to causation or dismissing the concern both skip this step.",
+        explain: "Cluster investigation begins by confirming that cases are real and correctly diagnosed, and by defining precisely who was at risk and over what period. Clusters frequently dissolve once histology is reviewed and the apparently identical cancers prove to be different diseases. Option B fails because expected numbers require a defined population and person-time. Jumping to causation and dismissing the concern are errors of the same kind, and the second damages the credibility of the service as much as the first.",
         source: "Coggon, Epidemiology for the Uninitiated — cluster investigation"
       },
       {
-        stem: "A very large occupational cohort finds that a workplace intervention lowers mean diastolic blood pressure by 0.4 mmHg, with p = 0.0002. The most appropriate conclusion is:",
+        stem: "A workplace cardiovascular risk programme is evaluated in a cohort of just over forty thousand employees. Mean diastolic blood pressure in the intervention group is 0.4 mmHg lower than in the comparison group, and the difference has a p-value of 0.0002. The programme lead proposes rolling the intervention out nationally on the strength of this result, describing the evidence as overwhelming. The most appropriate conclusion is that the finding is:",
         options: [
-          "The effect is both statistically and clinically significant",
+          "Both statistically significant and clinically significant",
           "Statistically significant but of negligible clinical importance",
-          "The p-value indicates a large treatment effect",
-          "The result must be due to confounding",
-          "The very narrow p-value on its own proves the exposure is causal here"
+          "Indicative of a large treatment effect, given the very small p-value",
+          "Necessarily the product of unmeasured confounding",
+          "Proof of a causal relationship, given the strength of the p-value"
         ],
         correct: 1,
-        explain: "Statistical significance answers whether an effect is real, never whether it matters. A very large sample can drive a trivial 0.4 mmHg difference to a tiny p-value. The tempting distractors misread the p-value as an effect size, a confounding artefact, or proof of causation.",
-        source: "Inference — statistical vs clinical significance"
+        explain: "Statistical significance answers whether an effect is likely to be real, never whether it matters, and a cohort of forty thousand will detect differences far too small to influence any clinical outcome. A difference of 0.4 mmHg is smaller than the measurement error on a single reading. Option C is the error the programme lead is making: the p-value reflects effect size and sample size together, so it cannot be read as a measure of magnitude.",
+        source: "Inference — statistical versus clinical significance"
       },
       {
-        stem: "Investigators studying a rare occupational cancer identify affected workers from a registry and compare past exposures with matched unaffected controls. This design:",
+        stem: "Investigators studying angiosarcoma of the liver among former vinyl chloride workers identify affected individuals through a national cancer registry, then trace matched unaffected workers from the same plants and compare occupational histories obtained by interview and from personnel files. No follow-up of an unaffected population forward in time is undertaken. Which statement about this design is correct? It:",
         options: [
-          "Yields an odds ratio and is prone to recall bias",
+          "Yields an odds ratio and is vulnerable to recall bias",
           "Yields a relative risk directly",
           "Establishes disease incidence in exposed and unexposed groups",
-          "Is well suited to studying rare exposures",
-          "Establishes the correct temporal sequence between exposure and outcome with certainty"
+          "Is well suited to the study of rare exposures",
+          "Establishes the temporal sequence between exposure and outcome with certainty"
         ],
         correct: 0,
-        explain: "A rare disease identified from a registry, with exposure looked at retrospectively, is a case-control design: it yields an odds ratio (not a relative risk, which needs cohort denominators) and is prone to recall bias. “Suited to rare exposures” is the trap — that describes a cohort. Rare disease → case-control; rare exposure → cohort.",
+        explain: "Starting from registry-identified cases and looking backwards at exposure is a case-control design. It produces an odds ratio rather than a relative risk, since it lacks the population denominators a cohort provides, and interview-derived exposure histories are open to recall bias. Option D is the trap worth memorising: a rare disease points to case-control, while a rare exposure points to cohort.",
         source: "Study design — case-control"
       },
       {
-        stem: "A study reports a relative risk of 1.8 with a 95% confidence interval of 0.9 to 3.5. Which statement is correct?",
+        stem: "A cohort study of shift work and incident type 2 diabetes reports a relative risk of 1.8 for rotating night shift workers compared with day workers, with a 95% confidence interval of 0.9 to 3.5. An employee representative reads the abstract and argues that the study proves night work causes diabetes and that the shift system should be redesigned. The occupational physician is asked to comment on the statistical finding. Which statement is correct?",
         options: [
           "The result is statistically significant at the 5% level",
-          "There is a 95% probability the true relative risk is 1.8",
-          "The interval would widen if the sample size were increased",
-          "Compatible with no effect; not statistically significant",
-          "The null hypothesis of no association here can confidently be rejected"
+          "There is a 95% probability that the true relative risk is 1.8",
+          "Increasing the sample size would widen the interval",
+          "The interval is compatible with no effect, so the result is not statistically significant",
+          "The null hypothesis of no association can confidently be rejected"
         ],
         correct: 3,
-        explain: "The 95% confidence interval (0.9 to 3.5) crosses 1, the no-effect value for a ratio, so no association remains plausible and the result is not significant at the 5% level. A CI is not a probability distribution over the point estimate, and a larger sample narrows rather than widens it.",
-        source: "Inference — confidence interval"
+        explain: "The interval spans 1, the no-effect value for a ratio measure, so no association remains compatible with the data. That is not the same as showing there is no effect: the interval also reaches 3.5, so a substantial risk remains equally compatible, and the honest reading is that the study is imprecise rather than negative. Note that the null value is 1 for ratios but 0 for differences, and larger samples narrow intervals rather than widening them.",
+        source: "Inference — confidence intervals"
       },
       {
-        stem: "A trial comparing two return-to-work interventions reports a p-value of 0.04 for the primary outcome. Which interpretation is correct?",
+        stem: "A trial comparing two return-to-work interventions for employees absent with musculoskeletal pain reports a p-value of 0.04 for the primary outcome of sustained return at six months. A colleague summarising the paper for a team meeting wants to state the result in one sentence without misrepresenting it. Which interpretation is correct?",
         options: [
-          "There is a 4% probability that the null hypothesis is actually true",
-          "There is a 96% probability that the intervention is genuinely effective",
-          "If the null hypothesis is true, this occurs 4% of the time",
-          "The observed difference between the two study groups is clinically meaningful and important",
-          "The study was shown to have 96% statistical power overall"
+          "There is a 4% probability overall that the null hypothesis itself is actually true",
+          "There is a 96% probability overall that the intervention is genuinely truly effective",
+          "If the null hypothesis is true, data this extreme or more would occur 4% of the time",
+          "The difference between the two groups studied is genuinely clinically meaningful",
+          "The study was clearly shown to have 96% statistical power overall"
         ],
         correct: 2,
-        explain: "The p-value is calculated assuming the null hypothesis is true, and gives the probability of data at least this extreme under that assumption — P(data|null), never P(null|data). “4% probability the null is true” is the classic inversion.",
+        explain: "The p-value is calculated assuming the null hypothesis is true, and gives the probability of data at least as extreme as that observed under that assumption. The phrase describing more extreme data is essential: the p-value is a tail area, not the probability of the particular result obtained. Options A and B are the classic inversion. Power is fixed by design before the study runs and cannot be read off a result.",
         source: "Inference — p-value definition"
       },
       {
-        stem: "Investigators wish to model a binary outcome (occupational asthma: present or absent) from several predictors including cumulative exposure, age and smoking status, simultaneously. The most appropriate analysis is:",
+        stem: "Investigators analysing a survey of bakery workers wish to examine which factors predict a diagnosis of occupational asthma, recorded simply as present or absent. They want to assess cumulative flour dust exposure, age, atopic status and smoking simultaneously, and to report the independent contribution of each while adjusting for the others. Which analysis is most appropriate?",
         options: [
           "Multiple logistic regression",
           "Multiple linear regression",
-          "One-way ANOVA",
+          "One-way analysis of variance",
           "Chi-squared test",
           "Spearman rank correlation"
         ],
         correct: 0,
-        explain: "The outcome is binary (asthma present/absent), so logistic regression is correct — it yields adjusted odds ratios for each predictor. Multiple linear regression is for a continuous outcome. Always classify the outcome variable first: binary → logistic, continuous → linear.",
+        explain: "The outcome is binary, so logistic regression is correct and yields an adjusted odds ratio for each predictor. The rule that settles most test-selection questions is to classify the outcome variable first: binary points to logistic, continuous to linear. A chi-squared test could examine flour exposure against asthma alone but takes one predictor at a time and cannot adjust, so it fails as soon as independent contributions are required.",
         source: "Statistical tests — test selection"
       },
       {
-        stem: "A cohort of employed workers shows an all-cause standardised mortality ratio of 82 compared with the general population. The most likely explanation is:",
+        stem: "A mortality study of a large cohort of currently and formerly employed local authority workers reports an all-cause standardised mortality ratio of 82 relative to the general population of the same region, standardised for age and sex. The cohort includes both office-based and manual staff, and no single occupational exposure dominates. A manager suggests the finding shows that working for the authority is good for health. The most likely explanation is:",
         options: [
-          "The workplace exposure is protective",
-          "Confounding by age that standardisation cannot address",
-          "Recall bias in exposure assessment",
+          "The occupational exposures in this workforce are genuinely protective",
+          "Residual confounding by age that standardisation has not addressed",
+          "Recall bias affecting the ascertainment of exposure",
           "The healthy worker effect",
-          "A calculation error, as an SMR cannot fall below 100"
+          "A calculation error, since a standardised mortality ratio cannot fall below 100"
         ],
         correct: 3,
-        explain: "An SMR below 100 in an employed cohort reflects the healthy worker effect: employment selects for health, so the workforce is compared against a general population that includes the too-sick-to-work. Age is what standardisation already adjusts for, so it cannot be the residual explanation, and an SMR can genuinely fall below 100.",
+        explain: "Employment selects for health twice over: those too unwell to work never enter the cohort, and those who become unwell tend to leave it. The comparator is a general population containing both groups, so an employed cohort will usually show an SMR below 100 whatever the work involves. Age cannot be the residual explanation, since standardisation has already adjusted for it, and values below 100 are routine rather than impossible. The effect biases occupational cohort studies toward the null.",
         source: "Occupational epidemiology — healthy worker effect"
       },
       {
-        stem: "A study finds solvent exposure associated with cognitive impairment (RR 2.8), but after adjustment for age the RR falls to 1.1. Age here is best described as:",
+        stem: "A study of printers reports that exposure to organic solvents is associated with cognitive impairment, with an unadjusted relative risk of 2.8. When the analysis is repeated with adjustment for age, the relative risk falls to 1.1. The investigators note that older printers had both longer solvent exposure histories and more cognitive impairment, and that age is not itself a consequence of solvent exposure. In this analysis, age is best described as:",
         options: [
           "An effect modifier",
           "A confounder",
@@ -892,11 +892,11 @@ const SECTIONS = [
           "A source of selection bias"
         ],
         correct: 1,
-        explain: "The estimate collapsing from 2.8 to 1.1 on adjustment is the signature of confounding: age is associated with both solvent exposure and the outcome and was generating the apparent effect. A mediator sits on the causal pathway (age is not caused by exposure); an effect modifier would make the effect differ across age groups rather than vanish.",
+        explain: "An estimate that collapses toward the null on adjustment is the signature of confounding: age was associated with both exposure and outcome and was generating the apparent effect. A mediator lies on the causal pathway, which age cannot, since exposure does not cause ageing. Effect modification would show a different pattern entirely, with the association persisting but differing in size between age strata rather than vanishing.",
         source: "Bias — confounding"
       },
       {
-        stem: "A screening test of fixed sensitivity and specificity is applied first to a high-prevalence and then to a low-prevalence population. Which statement is correct?",
+        stem: "A national programme uses a single screening questionnaire, of fixed and well-characterised sensitivity and specificity, to identify probable occupational asthma. It is applied first in a population of bakery and spray-painting workers, where the condition is relatively common, and subsequently across an office-based workforce where it is rare. The occupational physician overseeing both programmes is asked how the measures will behave across the two settings. Which statement is correct?",
         options: [
           "Sensitivity falls as prevalence falls",
           "Specificity falls as prevalence falls",
@@ -905,11 +905,11 @@ const SECTIONS = [
           "All four measures are unchanged by prevalence"
         ],
         correct: 2,
-        explain: "Sensitivity and specificity are intrinsic to the test and do not change with prevalence. Predictive values do: as prevalence falls, a positive result is more likely to be a false alarm, so positive predictive value falls (and negative predictive value rises).",
+        explain: "Sensitivity and specificity are conditioned on true disease status and do not vary with prevalence. Predictive values are conditioned on the test result and do vary: in a low-prevalence setting a positive result is far more likely to be a false alarm, so positive predictive value falls while negative predictive value rises. In the office workforce most positive questionnaires would lead to monitoring and referral that find nothing.",
         source: "Screening — predictive value and prevalence"
       },
       {
-        stem: "In a cohort study the incidence of disease is 15 per 1,000 person-years in the exposed and 5 per 1,000 in the unexposed. What is the attributable risk in the exposed?",
+        stem: "A cohort study of foundry workers examines the relationship between respirable silica exposure and chronic bronchitis. Among exposed workers the incidence is 15 per 1,000 person-years; among unexposed workers at the same sites it is 5 per 1,000 person-years. The occupational physician wishes to express how much of the disease burden among exposed workers could in principle be removed if the exposure were eliminated, in units that a plant manager will understand. What is the attributable risk in the exposed?",
         options: [
           "3.0",
           "0.33",
@@ -918,11 +918,11 @@ const SECTIONS = [
           "10 per 1,000 person-years"
         ],
         correct: 4,
-        explain: "Attributable risk is the risk difference: 15 − 5 = 10 per 1,000 person-years, keeping the rate units. 3.0 is the relative risk (15÷5); a ratio is a bare number while a risk difference carries units — the units tell you which measure you have computed.",
-        source: "Measures — attributable vs relative risk"
+        explain: "Attributable risk is the risk difference, 15 minus 5, and it retains the rate units. Option A is the relative risk. The units are the quickest way to tell the two apart: a ratio is a bare number while a difference carries units. Relative risk answers how strongly exposure is associated with disease, which bears on causation; attributable risk answers how much disease removing the exposure would prevent, which bears on control.",
+        source: "Measures — attributable versus relative risk"
       },
       {
-        stem: "A study concludes that a workplace exposure is associated with disease when in truth no such association exists. This is best described as:",
+        stem: "A workplace study concludes that exposure to a particular process chemical is associated with an increased incidence of dermatitis. Subsequent large and well-conducted investigations establish that no such association exists, and that the original finding arose by chance. The original study had used the conventional 5% significance threshold. This type of erroneous conclusion is best described as:",
         options: [
           "A Type II error, whose probability is beta",
           "A Type II error, whose probability is alpha",
@@ -931,10 +931,270 @@ const SECTIONS = [
           "A Type I error, whose probability is alpha"
         ],
         correct: 4,
-        explain: "A false-positive conclusion — reporting an association that does not truly exist — is a Type I error, probability alpha (the 0.05 threshold). Type II/beta is the opposite: a false negative, missing a real effect. Type I / false positive / alpha; Type II / false negative / beta.",
+        explain: "Reporting an association that does not truly exist is a false positive, which is a Type I error with probability alpha, the threshold the study adopted. A Type II error is the opposite failure, missing a real effect, with probability beta, and power is one minus beta. The pairing to hold is Type I with false positive and alpha, Type II with false negative and beta. Options B and C are mismatched pairs, so naming the error correctly is not sufficient.",
         source: "Inference — Type I and Type II error"
+      },
+      {
+        stem: "A large iron foundry runs a hearing conservation programme. As a first-pass screen, 500 production workers undergo automated pure-tone audiometry at a single frequency; everyone then has a full diagnostic assessment by an audiologist, which is taken as the reference standard. Of the 500 workers, 80 are confirmed by the audiologist to have noise-induced hearing loss. The automated screen identified 72 of these 80 correctly, and was also positive in 84 of the workers whom the audiologist cleared. The occupational health manager is planning clinic capacity and asks a practical question: of the workers the automated screen flags for referral, what proportion will actually turn out to have noise-induced hearing loss?",
+        options: [
+          "82%",
+          "90%",
+          "46%",
+          "98%",
+          "80%"
+        ],
+        correct: 2,
+        explain: "The manager is asking for the positive predictive value, read across the positive row: 72 true positives out of 156 total positives. The other figures are all genuine properties of this test, which is what makes them plausible. Sensitivity is 90%, specificity 80%, negative predictive value 98% and overall accuracy 82%. The commonest error is to read down a column rather than across a row. Note that predictive value is only modest despite good test characteristics, because prevalence is 16%.",
+        source: "Screening — predictive value from a two-by-two table"
+      },
+      {
+        stem: "An occupational physician is assessing a bakery worker with intermittent wheeze and is considering a workplace-based screening questionnaire for occupational asthma. Validation work in a comparable population shows the questionnaire has a sensitivity of 90% and a specificity of 80% against serial peak flow and specific challenge testing. The physician wants to express the questionnaire's usefulness in a way that does not depend on how common occupational asthma happens to be in the particular workforce being screened, so that the same figure can be quoted to bakeries, paint sprayers and laboratory animal handlers alike. Which value expresses this, and what is it here?",
+        options: [
+          "The positive likelihood ratio, which is 4.5",
+          "The positive predictive value, which is 4.5",
+          "The positive likelihood ratio, which is 1.1",
+          "The negative likelihood ratio, which is 0.13",
+          "The diagnostic odds ratio, which is 36"
+        ],
+        correct: 0,
+        explain: "Likelihood ratios derive from sensitivity and specificity alone, so unlike predictive values they are independent of prevalence and transfer between populations. The positive likelihood ratio is the true positive rate divided by the false positive rate, 0.90 divided by 0.20, giving 4.5. Option C is sensitivity divided by specificity, a common slip. As a guide to magnitude, a ratio above 10 shifts probability substantially, around 5 moderately, and below 2 very little.",
+        source: "Screening — likelihood ratios and prevalence independence"
+      },
+      {
+        stem: "An asbestos removal contractor introduces annual low-dose CT surveillance for its former lagging workers. After eight years the company's medical adviser reports that workers whose mesothelioma was detected on surveillance survived a mean of 4.1 years from diagnosis, against 2.3 years for those who presented symptomatically to their GP before surveillance began. He proposes extending the programme across the group on the strength of this. A reviewer notes that when the two groups are compared by age at death rather than by time from diagnosis, the distributions are almost identical, and that mortality from mesothelioma in the surveilled workforce has not fallen. Which explanation best accounts for the reported survival difference?",
+        options: [
+          "Confounding by age at first asbestos exposure",
+          "The healthy worker survivor effect operating within the surveilled group",
+          "Selection of workers with lower cumulative exposure into surveillance",
+          "Earlier diagnosis has lengthened the measured interval without postponing death",
+          "A genuine treatment benefit that the mortality analysis is underpowered to detect"
+        ],
+        correct: 3,
+        explain: "This is lead-time bias. Surveillance moves the moment of diagnosis earlier in the natural history, so the interval between diagnosis and death lengthens even if the date of death is entirely unchanged. The identical age at death and unchanged mortality are the giveaway. Survival measured from diagnosis is therefore not a valid endpoint for evaluating screening, and mortality across the whole population offered screening is. Option E is the trap for the enthusiast but cannot explain superimposable age at death.",
+        source: "Screening — lead-time bias"
+      },
+      {
+        stem: "A chemical manufacturer offers voluntary three-yearly spirometry to all process operators. Over a decade, cases of occupational obstructive lung disease detected through the programme have a notably more indolent course than cases diagnosed between rounds when workers presented with symptoms. The screen-detected cases show slower decline in FEV1 and fewer are medically retired. The occupational health team concludes that early detection is modifying disease behaviour. An epidemiologist points out that a screening round samples the workforce at fixed moments in time, and that disease which progresses slowly occupies a longer detectable phase than disease which progresses quickly. Which phenomenon is she describing?",
+        options: [
+          "Lead-time bias, since screening advances the point of diagnosis",
+          "Length-time bias, since slowly progressive disease is preferentially detected",
+          "Non-differential misclassification of the spirometric outcome",
+          "Regression to the mean in repeated spirometric measurement",
+          "Confounding by smoking status between the two detection routes"
+        ],
+        correct: 1,
+        explain: "Length-time bias arises because periodic screening acts as a series of snapshots: the longer a case spends detectable but pre-symptomatic, the more likely a round is to catch it, while rapidly progressive disease declares itself between rounds. The screened group is therefore enriched for indolent disease from the outset. Option A is the adjacent concept most often confused with it: lead-time concerns when a given case is diagnosed, length-time concerns which cases enter the screened group at all.",
+        source: "Screening — length-time bias"
+      },
+      {
+        stem: "A university occupational health service surveys all 4,200 staff about work-related stress, using an anonymous online questionnaire distributed by email with two reminders. The response rate is 38%. Among respondents, 44% score above the threshold for probable common mental disorder, against a general working population figure of around 17%. The service prepares a report stating that nearly half the workforce has probable psychiatric morbidity, and recommends immediate additional counselling provision. Before it goes to the executive, a colleague raises a methodological concern about the inference being drawn. Which is the most important limitation?",
+        options: [
+          "Recall bias, since respondents reconstruct symptoms retrospectively",
+          "Confounding by academic grade and contract type",
+          "Regression to the mean on repeated measurement of the score",
+          "Information bias arising from the anonymity of the questionnaire",
+          "Non-response bias, since staff experiencing stress were more likely to respond"
+        ],
+        correct: 4,
+        explain: "With a 38% response rate the respondents are a self-selected subset, and the survey topic supplies the mechanism: people who feel stressed have more motivation to complete a stress questionnaire. The prevalence among respondents cannot be generalised to the workforce. This cannot be corrected by adjustment, because the missing data are missing precisely because of the outcome; the remedies are improving response or sampling non-responders intensively. The survey may still show where problems cluster.",
+        source: "Bias — non-response and selection bias"
+      },
+      {
+        stem: "Investigators conduct a case-control study of chronic solvent-induced encephalopathy among painters and decorators. Cases are recruited from a specialist neurology clinic after diagnosis; controls are painters of similar age from the same trade association who have no cognitive complaints. Both groups complete the same structured interview about products used, years of exposure, and use of respiratory protection across their working lives. Cases report substantially heavier and less protected exposure than controls, yielding an odds ratio of 4.2. The investigators have no independent records of the products used. Which bias most threatens this finding, and in which direction would it act?",
+        options: [
+          "Recall bias, inflating the odds ratio because diagnosed cases search their histories more thoroughly",
+          "Recall bias, attenuating the odds ratio because cognitive impairment degrades cases' recall",
+          "Selection bias, since clinic-based cases differ systematically from trade association controls",
+          "Interviewer bias, since the same structured instrument was used in both groups",
+          "Non-differential misclassification, biasing the odds ratio toward the null value of one"
+        ],
+        correct: 0,
+        explain: "Someone given a diagnosis attributed to solvents has strong reason to reconstruct their exposure history in detail and to read ambiguous memories as exposure, while an unaffected colleague has no such prompt. This differential misclassification typically exaggerates the association. Option B describes a real counter-current but not the dominant effect. Option E names the right mechanism for random error but the wrong type: misclassification differing by case status does not reliably bias toward the null.",
+        source: "Bias — recall bias and differential misclassification"
+      },
+      {
+        stem: "A cohort study examines whether occupational exposure to respirable crystalline silica is associated with rheumatoid arthritis. Individual exposure measurements were never made, so investigators assign exposure using a job exposure matrix built from job title and industry code held in personnel records. The matrix classifies whole job categories as exposed or unexposed; within any category, actual exposure varied considerably between individual workers and between sites. Outcome ascertainment is by rheumatology record linkage and is complete and accurate for both groups. The study reports a relative risk of 1.1 with a confidence interval spanning one, and the authors conclude there is no association. What is the most important criticism of that conclusion?",
+        options: [
+          "The healthy worker effect will have depressed the relative risk below its true value",
+          "Confounding by smoking is likely to have masked a real association",
+          "Exposure misclassification unrelated to outcome will have biased the estimate toward the null",
+          "Record linkage cannot establish the temporal sequence needed for causal inference",
+          "The confidence interval indicates the study was adequately powered to exclude an effect"
+        ],
+        correct: 2,
+        explain: "A job exposure matrix assigns one exposure value to everyone sharing a job title, pooling heavily and negligibly exposed workers. Crucially this happens independently of who develops arthritis, since it is driven by job coding rather than disease status. Non-differential misclassification of a binary exposure dilutes the contrast between groups and drags the estimate toward the null, so a null result here is weak evidence of no effect rather than evidence of absence.",
+        source: "Bias — non-differential misclassification and job exposure matrices"
+      },
+      {
+        stem: "A case-control study of manual handling and chronic low back pain in warehouse workers reports an odds ratio of 3.2 for those in the highest tertile of lifting frequency. Chronic low back pain is common in this workforce, with a period prevalence of around 30%. A trade union newsletter reports the finding as showing that frequent lifting makes workers three times as likely to develop back pain, and the employer's adviser is asked whether this is a fair reading. Which response is correct?",
+        options: [
+          "It is fair, since the odds ratio and relative risk are mathematically equivalent measures",
+          "It overstates the effect, because the odds ratio exceeds the relative risk when the outcome is common",
+          "It understates the effect, since case-control designs systematically attenuate true associations",
+          "It is fair, because the case-control design directly estimates incidence in both exposure groups",
+          "It cannot be assessed without knowing the total number of controls that were recruited"
+        ],
+        correct: 1,
+        explain: "The odds ratio approximates the relative risk only when the outcome is rare, conventionally below about 10%. At 30% the two diverge and the odds ratio is the more extreme, so translating it into three times as likely exaggerates the risk. This matters in occupational medicine because so many outcomes of interest are common. Option D states the design's limitation in reverse: a case-control study begins with cases and cannot generate incidence, which is why it yields an odds ratio at all.",
+        source: "Measures of association — odds ratio versus relative risk"
+      },
+      {
+        stem: "A randomised trial evaluates a structured vocational rehabilitation programme for employees off work with common mental disorder for more than six weeks. At six months, 45% of the intervention group have returned to sustained work, against 25% of those receiving usual care. The difference is statistically significant. An occupational health director costing the programme for a workforce of several thousand wants to know how many employees would need to be put through the programme for one additional person to return to work who would not otherwise have done so. What figure should she be given?",
+        options: [
+          "1.8",
+          "2.2",
+          "20",
+          "5",
+          "45"
+        ],
+        correct: 3,
+        explain: "The number needed to treat is the reciprocal of the absolute risk difference. The difference is 20 percentage points, and the reciprocal of 0.20 is 5. Option A is the relative risk and option B its reciprocal; option C is the absolute difference left unconverted. The NNT translates trial results into service planning because it is expressed in people rather than ratios, but it is specific to this baseline risk and cannot be carried to a population with a different spontaneous return-to-work rate.",
+        source: "Measures of effect — number needed to treat"
+      },
+      {
+        stem: "An employer is considering a workplace intervention to reduce needlestick injury among domestic and portering staff. The manufacturer's promotional material states that the device halves the risk of sharps injury, citing a trial in which the annual injury rate fell from 0.4% to 0.2%. The occupational health adviser is asked to comment on how the claim should be presented to a staff side committee that must decide whether to press for the device across a workforce of 900. Which presentation is most informative for that decision?",
+        options: [
+          "The claim is misleading, because a relative risk reduction cannot be calculated from rates",
+          "The claim should be rejected, since a difference of this size cannot be clinically meaningful",
+          "The relative reduction of 50% is the appropriate figure, as it is independent of baseline risk",
+          "The absolute figures should be withheld, since they will discourage adoption of a device that works",
+          "The relative reduction is 50%, but the absolute reduction is just 0.2 percentage points, about two per thousand"
+        ],
+        correct: 4,
+        explain: "The claim is arithmetically true and close to useless for a resource decision, since a relative risk reduction is silent about baseline risk. The absolute reduction gives a number needed to treat of 500 and roughly two injuries prevented annually across this workforce. Option D is the paternalistic error of managing the committee rather than informing it. For a rare but severe outcome a small absolute reduction may still justify investment, which is exactly the judgement the committee should make.",
+        source: "Measures of effect — absolute versus relative risk reduction"
+      },
+      {
+        stem: "Two food processing plants owned by the same company report occupational contact dermatitis to the corporate occupational health team. Plant A has a point prevalence of 12% among line workers; plant B reports 4%. Investigation shows that the annual incidence of new cases is closely similar at the two sites, and that exposures, glove provision and hand hygiene arrangements are essentially identical. Plant A has a long-established workforce with very low turnover, and affected workers are redeployed within the line and remain in post. Plant B has high turnover, and workers who develop hand symptoms frequently leave within a few months. Which best explains the difference in prevalence?",
+        options: [
+          "Cases persist longer in plant A, and prevalence reflects incidence multiplied by duration",
+          "Plant B is systematically under-ascertaining new cases of dermatitis",
+          "The healthy worker hire effect is operating more strongly at plant A",
+          "Plant A's workforce has a higher underlying susceptibility to irritant exposure",
+          "Point prevalence is not a valid comparison between workplaces of differing size"
+        ],
+        correct: 0,
+        explain: "Prevalence is a function of how often disease arises and how long affected people remain in the population counted, approximated by incidence multiplied by mean duration. With incidence equal, the plant retaining affected workers accumulates cases while the plant whose affected workers leave exports them. The apparently better site may be the one failing its workers, since departure driven by ill health is a form of the healthy worker survivor effect. Option C names that effect but attaches it to the wrong plant.",
+        source: "Occupational epidemiology — prevalence, incidence and duration"
+      },
+      {
+        stem: "A cohort of 240 workers at a rubber manufacturing plant is followed to examine the incidence of bladder cancer. Follow-up is not uniform: some workers are recruited at the start and followed for the full ten years, while others join later, retire, or are lost to follow-up, and those who develop the disease stop contributing once diagnosed. Careful accounting gives a total of 1,150 person-years of observation, during which 23 incident cases occur. The occupational physician wishes to report a measure that properly accounts for the differing lengths of time individuals were at risk. Which figure should be reported?",
+        options: [
+          "9.6% cumulative incidence over the follow-up period",
+          "20 cases per 1,000 person-years",
+          "2.3 cases per year of the study",
+          "23 per 1,000 population at risk",
+          "4.8 cases per 1,000 person-years"
+        ],
+        correct: 1,
+        explain: "An incidence rate uses person-time in the denominator precisely because individuals contribute unequal periods at risk. Twenty-three cases divided by 1,150 person-years gives 20 per 1,000 person-years. Option A is the cumulative incidence, a legitimate measure but one that ignores varying follow-up and becomes misleading when losses are substantial. Cumulative incidence is a proportion bounded by zero and one; an incidence rate carries units of per-time and is unbounded.",
+        source: "Occupational epidemiology — person-time and incidence rates"
+      },
+      {
+        stem: "An occupational health department evaluates whether a new early-intervention physiotherapy pathway reduces sickness absence for musculoskeletal complaints. Two independent groups of employees are compared: 60 referred through the new pathway and 64 managed conventionally. The outcome is total days of certified absence over the following year. The distribution in both groups is heavily right-skewed, with a large cluster at very few days and a long tail of prolonged absences; log transformation does not adequately normalise it. The department wants to test whether the two groups differ. Which test is most appropriate?",
+        options: [
+          "Independent samples t-test, since the sample sizes are large enough for robustness",
+          "Paired t-test, comparing each participant against their previous year's absence",
+          "Mann-Whitney U test",
+          "Wilcoxon signed-rank test",
+          "Chi-square test of the proportion exceeding twenty days' absence"
+        ],
+        correct: 2,
+        explain: "The data are continuous, markedly non-normal, resist transformation and come from two independent groups, which is the standard indication for the Mann-Whitney U test. Sickness absence is the archetypal example, being bounded at zero with a long tail. Option D is the commonest error: the Wilcoxon signed-rank test is the non-parametric method for paired data. Establish the pairing structure first, then decide whether a parametric method is appropriate.",
+        source: "Statistical tests — non-parametric methods for independent groups"
+      },
+      {
+        stem: "A hearing conservation programme introduces improved acoustic enclosures on a press line. To assess the effect on noise exposure, personal dosimetry is carried out on the same 22 press operators before the enclosures are installed and again three months afterwards, each worker acting as their own comparison. Daily personal noise exposure values are approximately normally distributed at both time points, and the differences between each worker's two readings are also approximately normally distributed. The team wishes to test whether mean exposure has changed. Which test should be used?",
+        options: [
+          "Independent samples t-test comparing the two sets of readings",
+          "Mann-Whitney U test, given the modest sample size",
+          "One-way analysis of variance across the two time points",
+          "Chi-square test comparing the proportion exceeding the upper action value",
+          "Paired t-test on the within-worker differences"
+        ],
+        correct: 4,
+        explain: "Each worker contributes two measurements, so the observations are paired and the relevant quantity is the within-worker difference, which is stated to be approximately normal. Treating the readings as independent samples discards the pairing and the precision it was designed to gain, since between-worker variation in noise exposure is large. A sample of 22 is not itself a reason to abandon a parametric test when the distributional assumption is met; non-normality would be.",
+        source: "Statistical tests — paired data and repeated measures"
+      },
+      {
+        stem: "An occupational health researcher compares fatigue scores across four shift patterns operated at a distribution centre. Rather than testing all four groups together, she performs a separate t-test for every possible pair of shift patterns, giving six tests in total, and reports that one pair differs significantly at p less than 0.05. She proposes on this basis that the shift pattern concerned should be withdrawn. A statistician advises that the analysis is not sound as conducted. What is the principal problem?",
+        options: [
+          "The t-test cannot be applied to psychometric scores, which are ordinal",
+          "Six comparisons is too few to detect a difference between four groups reliably",
+          "Type II error rises with each additional comparison, so a real effect may be missed",
+          "Performing multiple pairwise tests inflates the chance of a false positive above 5%",
+          "The groups must be of equal size before any pairwise comparison is legitimate"
+        ],
+        correct: 3,
+        explain: "Each test at a 5% significance level carries its own 5% chance of a spurious positive under the null. Across six comparisons the probability that at least one reaches significance by chance alone rises to roughly a quarter, so a single significant pair among six is close to what would be expected if no shift pattern differed. The appropriate approach is a single global test across all four groups, with post-hoc pairwise testing and adjustment only if that is significant. Option C names the right family of error but the wrong member.",
+        source: "Inference — multiple comparisons and Type I error inflation"
+      },
+      {
+        stem: "A randomised trial compares a case-managed return-to-work programme against usual care for employees on long-term sickness absence. Of 180 employees randomised to the programme, 41 never attend an appointment, and a further 22 disengage after the first session; several of these are among the most unwell. The investigators present a per-protocol analysis restricted to the 117 participants who completed the programme as designed, which shows a large and highly significant benefit. A reviewer asks for the intention-to-treat analysis instead. Why is that the appropriate primary analysis?",
+        options: [
+          "Analysing participants in the groups to which they were randomised preserves the comparability that randomisation created",
+          "It will demonstrate a larger treatment effect, since the full randomised sample is retained",
+          "Per-protocol analysis is invalid whenever any participant is lost from a randomised trial",
+          "Intention-to-treat removes the need to account for missing outcome data in the analysis",
+          "It converts the trial into an equivalence design, which suits a behavioural intervention better"
+        ],
+        correct: 0,
+        explain: "Randomisation balances known and unknown prognostic factors between arms. Excluding participants on the basis of something that happened after randomisation destroys that balance, leaving a selected and better-motivated subgroup compared against an unselected control group. Option B has the direction backwards: intention-to-treat is typically more conservative, and that is a feature, since it answers the question a service faces. Option D inverts the truth, as analysing everyone requires missing outcomes to be handled explicitly.",
+        source: "Trial methodology — intention-to-treat analysis"
+      },
+      {
+        stem: "A cluster randomised trial allocates twelve manufacturing sites either to a participatory ergonomics programme or to continue existing arrangements, with upper limb symptoms as the primary outcome. Neither the workers nor the ergonomists delivering the programme can be masked to allocation, since the intervention involves visible workplace redesign and structured worker involvement. The trial steering group is concerned that the outcome data will be vulnerable to bias, and asks what methodological safeguards remain available. Which is the most important?",
+        options: [
+          "Analysing individual workers rather than sites, to increase the effective sample size",
+          "Ensuring the two arms are balanced for site size before allocation is revealed",
+          "Having outcomes assessed by researchers kept unaware of each site's allocation",
+          "Substituting an objective register-based outcome, which removes the need for blinding",
+          "Accepting that unblinded trials cannot support causal inference and reverting to observation"
+        ],
+        correct: 2,
+        explain: "Blinding is a set of separable procedures applying to participants, those delivering the intervention, outcome assessors and analysts. Where the first two are impossible, blinded outcome assessment remains achievable and protects against the detection and observer bias that arise when an assessor aware of allocation elicits or interprets symptoms differently. Option B describes allocation concealment, which protects the randomisation process itself rather than the measurement of outcomes.",
+        source: "Trial methodology — blinding, allocation concealment and outcome assessment"
+      },
+      {
+        stem: "A systematic review pools eleven studies of workplace mindfulness programmes and their effect on psychological distress. The summary standardised mean difference favours the intervention, but the reported I-squared statistic is 78%. The included studies vary in programme length from four to twelve sessions, in delivery from face-to-face to app-based, and in setting from healthcare to financial services. An occupational health director asks what the I-squared value means for how much confidence she should place in the single pooled figure.",
+        options: [
+          "78% of the included studies showed a statistically significant benefit",
+          "Most of the variation in results between studies reflects real differences rather than chance",
+          "The pooled estimate has 78% power to detect a clinically important difference",
+          "78% of the studies were judged to be at low risk of bias on formal appraisal",
+          "Publication bias accounts for approximately 78% of the observed summary effect"
+        ],
+        correct: 1,
+        explain: "I-squared expresses the proportion of total variability across study results attributable to genuine between-study heterogeneity rather than sampling error. A value of 78% is substantial and unsurprising given the range of programme lengths, formats and settings. The practical consequence is that a single pooled figure may represent no real-world implementation well, and that exploring the sources of heterogeneity is more informative than the summary estimate. High heterogeneity is neither poor study quality nor publication bias.",
+        source: "Evidence synthesis — heterogeneity in meta-analysis"
+      },
+      {
+        stem: "A meta-analysis examines the association between long working hours and incident cardiovascular disease, pooling eighteen cohort studies. The authors construct a funnel plot of effect estimate against standard error. The plot is visibly asymmetric: small studies reporting large positive associations are well represented, while small studies reporting null or negative findings are largely absent, and the large studies cluster around a more modest effect. Which interpretation of this pattern is most appropriate?",
+        options: [
+          "The asymmetry confirms conclusively that the association is causal rather than confounded",
+          "Small studies should simply be excluded and the pooled estimate then recalculated",
+          "The finding indicates an excessive degree of statistical heterogeneity between the studies",
+          "Funnel plot asymmetry is generally expected whenever more than ten studies are pooled",
+          "The pooled estimate may be inflated, since small null studies appear to be missing from the literature"
+        ],
+        correct: 4,
+        explain: "A symmetrical funnel is expected when small studies scatter widely around the true effect in both directions through sampling error alone. Asymmetry of the kind described is the classic signature of publication bias, and the pooled estimate is then built on a selected literature. Discarding the small studies does not solve the problem and loses real information; the appropriate responses are to acknowledge the limitation and search harder for unpublished work. Asymmetry is suggestive rather than diagnostic, since it can have other causes.",
+        source: "Evidence synthesis — publication bias and funnel plot asymmetry"
+      },
+      {
+        stem: "An occupational physician reviews a mortality analysis of former employees at a chemical plant. Complete employment records survive, but the size and composition of the workforce at risk over the relevant decades cannot be reconstructed, so person-years cannot be calculated and a standardised mortality ratio cannot be derived. The analysis instead uses death certificates alone, expressing deaths from each cause as a proportion of all deaths in the cohort and comparing this with national proportions. The result shows a proportional mortality ratio of 138 for cancer of the liver and biliary tract. Which caveat is most important when interpreting this?",
+        options: [
+          "A PMR cannot achieve statistical significance without person-years in the denominator",
+          "PMRs are valid only where the cohort exceeds one thousand deaths in total",
+          "The result is uninterpretable, since death certificate diagnoses are inherently unreliable",
+          "An elevated PMR may reflect a deficit of deaths from other causes rather than genuine excess",
+          "The PMR will systematically understate risk because it excludes those still living"
+        ],
+        correct: 3,
+        explain: "A proportional mortality ratio divides deaths by other deaths rather than by a population at risk, so proportions across all causes are constrained to sum to one. A deficit of deaths from a common cause, entirely plausible in an employed cohort subject to the healthy worker effect, arithmetically raises the proportion attributable to every other cause with no change in the underlying rate. An elevated PMR is a signal worth pursuing rather than a risk estimate. The method earns its place precisely where the denominator is irrecoverable.",
+        source: "Occupational epidemiology — proportional mortality ratio"
       }
-    ]
+]
   },
   {
     id: "bbv",
@@ -1201,7 +1461,137 @@ const SECTIONS = [
         correct: 1,
         explain: "45 mIU/mL falls in the 10–100 band — protected but suboptimal — so one immediate additional dose is given with no further testing (Table 18.9). Below 10 is non-responder; above 100 needs no action.",
         source: "Green Book Ch18, Table 18.9 — anti-HBs 10–100 tier"
-      }
+      },
+      {
+        stem: "A 24-year-old hospital porter, who has never received hepatitis B vaccination as this has not previously been offered to him in his non-clinical role, sustains a needlestick injury from a discarded needle protruding through a split waste bag while moving rubbish for disposal from an overfilled sharps bin. The needle's source cannot be identified or traced. What is the correct post-exposure management?",
+        options: [
+          "An accelerated course of hepatitis B vaccine should be started; HBIG is not routinely required for this specific combination",
+          "An accelerated course of hepatitis B vaccine plus HBIG should be given, exactly as for a confirmed HBsAg-positive source",
+          "No specific hepatitis B prophylaxis is required, since the source's HBV status is unknown rather than confirmed positive",
+          "A standard, non-accelerated course of hepatitis B vaccine should be considered, with no requirement for an accelerated schedule",
+          "Management should be deferred entirely until the source can be identified and tested, given the uncertainty involved"
+        ],
+        correct: 0,
+        explain: "For an unvaccinated individual sustaining a significant exposure from a source of unknown HBV status, the guidance recommends an accelerated course of hepatitis B vaccine alone — HBIG is only added to this regimen where the source is confirmed HBsAg-positive, not for an unknown source. This is a genuinely counterintuitive distinction: an unknown source isn't automatically managed with the same intensity as a confirmed positive one for someone unvaccinated — in contrast to a known non-responder, where HBIG is given even against an unknown source, since a non-responder can't rely on vaccine-induced immunity alone. Non-clinical staff such as porters are not routinely offered hepatitis B vaccination in the way clinical staff are, so genuine non-vaccination is a realistic starting point here. The accelerated schedule (0, 1, 2 months, with a further dose at 12 months if ongoing risk continues) still applies, and management proceeds without delay rather than awaiting source identification.",
+        source: "Green Book Chapter 18 (Hepatitis B, Feb 2026) — post-exposure management for an unvaccinated healthcare worker exposed to a source of unknown HBV status"
+      },
+      {
+        stem: "A newly appointed healthcare assistant asks her occupational health team to clarify which type of incident would actually be classified as a significant exposure for the purposes of hepatitis B post-exposure risk assessment. Which of the following meets this definition?",
+        options: [
+          "A needlestick injury causing a visible puncture wound to the skin",
+          "Blood from a patient splashing onto the worker's intact, unbroken skin",
+          "A patient spitting at the worker, with saliva contacting the worker's face",
+          "Contact with a patient's faeces during routine personal care",
+          "A scratch from a sterile, uncontaminated sharp instrument that has not been used on a patient"
+        ],
+        correct: 0,
+        explain: "A significant exposure is one from which HBV transmission may result: percutaneous injury (needlestick or other contaminated sharp object injury, or a bite causing bleeding or a visible skin puncture), mucocutaneous exposure to blood (non-intact skin, conjunctiva or mucous membrane), or sexual exposure. A needlestick causing a visible puncture wound meets this directly. None of the others carry meaningful risk: HBV doesn't cross intact skin; seroconversion after spitting has never been reported; faecal exposure poses no risk; and a sterile, uncontaminated sharp object can't transmit infection regardless of the injury.",
+        source: "Green Book Chapter 18 (Hepatitis B, Feb 2026) — definition of significant exposure"
+      },
+      {
+        stem: "A 34-year-old healthcare worker, vaccinated against hepatitis B as an adult, has an anti-HBs level of 6 mIU/mL when tested 6 weeks after completing her primary course, with no markers of current or past infection on further testing. What is the correct next step, before she can be classified as a true vaccine non-responder?",
+        options: [
+          "She should be classified as a non-responder immediately and managed with HBIG if subsequently exposed",
+          "A repeat full course of vaccine should be given, with anti-HBs retested 1 to 2 months after completion",
+          "A single challenge dose of vaccine should be given, with retesting 1 to 2 months later",
+          "No further vaccine is required; her result alone is sufficient to confirm non-response",
+          "Testing should be repeated immediately using a different assay, since a single low reading is unreliable"
+        ],
+        correct: 1,
+        explain: "For someone vaccinated as an adult with an anti-HBs level below 10 mIU/mL and no evidence of current or past infection, the correct step is a repeat full course of vaccine, with anti-HBs retested 1 to 2 months after completion — only if the level remains below 10 mIU/mL at that point is she classified as a true non-responder, requiring HBIG for protection if subsequently exposed. A single challenge dose, rather than a full repeat course, is the pathway used for someone vaccinated in childhood, not as an adult — a genuine point of confusion between the two pathways. Classifying her as a non-responder immediately, without this repeat course and retest step, is premature.",
+        source: "Green Book Chapter 18 (Hepatitis B, Feb 2026) — non-responder classification pathway for those vaccinated against hepatitis B as an adult"
+      },
+      {
+        stem: "A 29-year-old healthcare worker has her anti-HBs level checked 4 months after completing her primary hepatitis B vaccine course, rather than the recommended 1 to 2 month window. The result is 7 mIU/mL. What is the correct interpretation?",
+        options: [
+          "This result definitively confirms non-response, since any level below 10 mIU/mL at any testing interval indicates non-response",
+          "This result cannot be interpreted at all and should be entirely disregarded, with no further action taken",
+          "This result, taken outside the recommended interval, may not indicate non-response, since immune memory may still remain",
+          "This result should be immediately treated in the same way as a true non-responder, with no further testing required",
+          "This result indicates she requires HBIG immediately, regardless of any exposure having occurred"
+        ],
+        correct: 2,
+        explain: "A low antibody level below 10 mIU/mL in someone tested at the wrong interval may not indicate true non-response, since immune memory can persist even as measured antibody levels wane over time — testing at the correct 1 to 2 month interval is what allows non-response to be reliably distinguished from simple antibody decline. This doesn't mean the result is meaningless or that it can simply be disregarded, but it also shouldn't be treated as automatically confirming non-response, applied as if she were a confirmed non-responder, or used as grounds for HBIG in the absence of any actual exposure.",
+        source: "Green Book Chapter 18 (Hepatitis B, Feb 2026) — testing interval and immune memory"
+      },
+      {
+        stem: "A 26-year-old healthcare worker, who received a complete hepatitis B vaccine course as part of the routine childhood immunisation schedule, has an anti-HBs level below 10 mIU/mL when tested as an adult. What is the correct next step?",
+        options: [
+          "A full repeat course of hepatitis B vaccine should be given, exactly as for someone vaccinated as an adult",
+          "She should be classified as a non-responder immediately, without any further vaccine dose being given",
+          "No further action is required, since childhood vaccination is considered to confer lifelong protection regardless of any subsequent test result",
+          "A challenge dose of hepatitis B vaccine should be given, with anti-HBs retested 1 to 2 months later",
+          "HBIG should be given now, as a precaution, in case of a future occupational exposure"
+        ],
+        correct: 3,
+        explain: "Due to waning of vaccine-induced antibody levels over time, a challenge dose of vaccine, rather than a full repeat course, can be used in someone vaccinated in childhood to determine whether vaccine-induced immune memory is still present — anti-HBs is then retested 1 to 2 months after this single dose. A full repeat course is the pathway for someone vaccinated as an adult, not in childhood — a genuine, easily confused distinction between the two pathways. Immediate non-responder classification, assuming lifelong protection regardless of testing, and pre-emptive HBIG in the absence of exposure are all incorrect.",
+        source: "Green Book Chapter 18 (Hepatitis B, Feb 2026) — non-responder classification pathway for those vaccinated against hepatitis B in childhood"
+      },
+      {
+        stem: "A 41-year-old healthcare worker completed a full primary course of hepatitis B vaccine several years ago but never had an anti-HBs blood test carried out in the recommended 1 to 2 month period afterwards. She remains at ongoing risk of occupational exposure. What is the correct approach now?",
+        options: [
+          "No testing is required at this stage, since completion of the primary course itself confirms an adequate response",
+          "She must restart the entire vaccination course from the beginning, since the original window for testing has passed",
+          "Testing is now meaningless, since too much time has elapsed since her original course was completed",
+          "She should be managed as a presumed non-responder by default, given the absence of any historical test result",
+          "She should be tested now, with subsequent management based on the result obtained"
+        ],
+        correct: 4,
+        explain: "Healthcare workers who did not have their antibody response checked in the recommended 1 to 2 month window following completion of the primary course should be tested now, with management based on the result obtained. Completing the course does not itself confirm an adequate response, since 10 to 15% of people respond poorly or not at all; testing now remains meaningful despite the elapsed time, and does not require restarting the whole course from scratch, nor does the absence of a historical result justify defaulting to presumed non-responder status without actually testing her.",
+        source: "Green Book Chapter 18 (Hepatitis B, Feb 2026) — post-vaccination testing algorithm for healthcare workers whose antibody response was never checked in the recommended 1-2 month window"
+      },
+      {
+        stem: "A 28-year-old care assistant presents with malaise and jaundice six weeks after a needlestick injury from a source later confirmed HBsAg positive. Her serology shows HBsAg positive, HBeAg positive, IgM anti-HBc positive, and anti-HBs negative. Regarding the significance of the IgM anti-HBc result specifically, the correct position is:",
+        options: [
+          "It confirms chronic infection, since IgM anti-HBc is the marker that persists throughout the chronic carrier state",
+          "It confirms acute infection, distinguishing this presentation from chronic hepatitis B, where anti-HBc would be exclusively IgG",
+          "It is of no diagnostic value once HBsAg and HBeAg are already both positive",
+          "It indicates she has been successfully vaccinated in addition to acquiring this new infection",
+          "It confirms she is no longer infectious, since IgM antibodies indicate the immune response has already cleared the virus"
+        ],
+        correct: 1,
+        explain: "IgM anti-HBc is the marker of recent, acute infection, typically present for around six months before switching to IgG — this is what distinguishes her presentation as acute hepatitis B rather than a chronic infection, where anti-HBc would be present as IgG only, without an IgM component. It carries real diagnostic weight precisely in a case like this, where HBsAg and HBeAg alone cannot distinguish a new acute infection from a flare or discovery of pre-existing chronic infection. Vaccination never produces anti-HBc of either class, and IgM positivity reflects recent infection, not viral clearance — she remains highly infectious given concurrent HBeAg positivity.",
+        source: "Green Book Chapter 18 (Hepatitis B, Feb 2026) — serological distinction between acute and chronic infection"
+      },
+      {
+        stem: "A 34-year-old phlebotomist under investigation for deranged liver function has hepatitis B serology performed. The result shows HBsAg negative, anti-HBs negative, and IgM anti-HBc positive, with all other markers negative. Her clinician is uncertain how to interpret this combination, given the absence of HBsAg. What is the correct explanation?",
+        options: [
+          "This pattern is invalid and must reflect laboratory error, since IgM anti-HBc cannot be positive without HBsAg also being positive",
+          "This pattern indicates she was vaccinated recently and has not yet developed a full antibody response",
+          "This pattern is consistent with the core window period, where HBsAg has cleared but anti-HBs has not yet risen",
+          "This pattern definitively excludes hepatitis B as a cause of her deranged liver function",
+          "This pattern indicates chronic hepatitis B with an unusually low viral load undetectable by HBsAg testing"
+        ],
+        correct: 2,
+        explain: "During the core window period of acute hepatitis B infection, HBsAg has fallen to undetectable levels but anti-HBs has not yet risen sufficiently to be detected — IgM anti-HBc may be the only marker present during this interval, and recognising this pattern matters, since relying on HBsAg alone would miss a genuine, recent infection. This is not laboratory error, is not the vaccine pattern (which never produces anti-HBc), does not exclude hepatitis B as a cause of her liver dysfunction, and is not how chronic infection with low viral load would typically present, since HBsAg is usually readily detectable in chronic infection regardless of viral load.",
+        source: "Green Book Chapter 18 (Hepatitis B, Feb 2026) — the core window period in acute infection"
+      },
+      {
+        stem: "A 52-year-old warehouse worker, found to be HBsAg negative on routine occupational screening, is noted to have anti-HBc positive as an isolated finding, with anti-HBs also negative. Regarding the correct approach to this result, the position is:",
+        options: [
+          "This result should be disregarded entirely, since isolated anti-HBc positivity has no recognised clinical significance",
+          "This confirms current chronic infection, and he should be managed on that basis without further testing",
+          "This confirms he has been successfully vaccinated, and no further action is required",
+          "This result requires further evaluation, since it may reflect a false positive, past resolved infection, or occult low-level infection",
+          "This result should be repeated using the same assay after 24 hours, which will resolve the ambiguity in every case"
+        ],
+        correct: 3,
+        explain: "Isolated anti-HBc positivity, without HBsAg or anti-HBs, is a genuinely ambiguous pattern with several possible explanations: a false positive result, past resolved infection where protective anti-HBs has since waned below detectable levels, or occult infection with ongoing low-level viral replication not producing detectable HBsAg — further evaluation, which may include HBV DNA testing, is warranted rather than any of these being assumed. It is not the vaccine pattern, since vaccination never produces anti-HBc; it does not confirm current chronic infection on its own; and simply repeating the same assay shortly afterwards does not resolve the underlying ambiguity, which usually requires a different, more discriminating test.",
+        source: "Green Book Chapter 18 (Hepatitis B, Feb 2026) — interpretation of isolated anti-HBc positivity"
+      },
+      {
+        stem: "A 45-year-old healthcare worker with known chronic hepatitis B, previously HBeAg positive, is retested as part of routine occupational health follow-up and is now found to be HBeAg negative with anti-HBe positive. Regarding the general significance of this seroconversion, the correct position is:",
+        options: [
+          "It generally reflects declining viral replication and reduced infectivity, though HBeAg-negative variants mean this is not universal",
+          "It has no bearing on infectivity, since HBeAg and anti-HBe status are unrelated to the level of viral replication",
+          "It confirms complete clearance of the virus, equivalent to losing HBsAg entirely",
+          "It indicates he has been successfully treated with antiviral therapy, since seroconversion of this kind cannot occur spontaneously",
+          "It is only relevant to vertical transmission risk in pregnancy, with no bearing on any other transmission route"
+        ],
+        correct: 0,
+        explain: "Seroconversion from HBeAg to anti-HBe generally reflects declining viral replication and reduced infectivity, since HBeAg is a marker closely, though not perfectly, associated with active viral replication. This is not universal — HBeAg-negative variants of the virus exist, where significant viral replication and infectivity can persist despite anti-HBe positivity, so this seroconversion cannot be relied upon in isolation to confirm reduced risk. It does not confirm complete viral clearance (which is marked by loss of HBsAg, not HBeAg), can occur spontaneously without antiviral treatment, and has relevance well beyond vertical transmission risk in pregnancy.",
+        source: "Green Book Chapter 18 (Hepatitis B, Feb 2026) — HBeAg to anti-HBe seroconversion and infectivity"
+      },
     ]
   },
   {
@@ -3273,16 +3663,16 @@ const SECTIONS = [
         source: "OHOH 2nd ed, Ch 1 — Thermal environment 1 (Health effects; heat balance)"
       },
       {
-        stem: "A hygienist assesses a workshop where a large furnace radiates heat across the working area, though the air itself is moved by extract ventilation. Which instrument pairing is needed to characterise the environment adequately?",
+        stem: "An occupational hygienist is asked to assess heat stress risk in a metal foundry workshop, after several furnace operators report feeling light-headed and unusually fatigued during a spell of hot weather. A large furnace at one end of the workshop radiates heat continuously across the working area, and although a roof-mounted extract ventilation system removes some of the rising hot air, workers standing closest to the furnace still describe the heat as intense. The hygienist wants to calculate the indoor WBGT index for the area to establish whether current exposure limits are being exceeded. Which instrument pairing provides the measurements required to do this?",
         options: [
           "A globe thermometer and a natural wet bulb, capturing radiant load and humidity",
           "A dry bulb and a globe thermometer, separating air temperature from radiant load",
           "A dry bulb thermometer and a psychrometer, determining temperature and humidity",
           "A natural wet bulb and a kata thermometer, capturing evaporation and air movement",
-          "An aspirated psychrometer alone, integrating all four parameters into one reading"
+          "An aspirated psychrometer alone, capturing wet and dry bulb temperature but missing radiant heat"
         ],
         correct: 0,
-        explain: "These are the two inputs the indoor WBGT requires. The globe thermometer (bulb at the centre of a matt black sphere) captures the radiant load that a dry bulb cannot see, and the unaspirated natural wet bulb responds to the actual air movement across it, so the extract ventilation is already reflected. Option B is the strongest distractor and does separate air from radiant temperature — but it omits humidity, which constrains evaporation and therefore determines whether a worker copes. A kata thermometer measures air velocities below 0.5 m/s and is not a WBGT input.",
+        explain: "These are the two inputs the indoor WBGT requires. The globe thermometer (bulb at the centre of a matt black sphere) captures the radiant load that a dry bulb cannot see, and the unaspirated natural wet bulb responds to the actual air movement across it, so the extract ventilation is already reflected. Option B is the strongest distractor and does separate air from radiant temperature — but dry bulb temperature is not itself an input to the indoor WBGT formula, and this pairing omits humidity entirely, which constrains evaporation and therefore determines whether a worker copes. A kata thermometer measures air velocities below 0.5 m/s and is not a WBGT input.",
         source: "OHOH 2nd ed, Ch 1 — Thermal environment 1 (Parameters and instruments for heat stress)"
       },
       {
@@ -5912,7 +6302,6 @@ function renderSections(){
     return `
       <div class="section-card" data-section="${sec.id}">
         <div class="section-top">
-          <div class="section-icon">${sec.icon}</div>
           <div class="section-main">
             <div class="section-name">${escapeHtml(sec.name)}</div>
             <div class="section-meta">${total} questions</div>
