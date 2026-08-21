@@ -113,6 +113,15 @@
   .random-name{font-weight:600;font-size:15px;}
   .random-meta{font-size:12px;color:var(--muted);margin-top:2px;font-family:'IBM Plex Mono',monospace;}
   .count-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+  .unattempted-toggle{
+    display:flex;align-items:center;gap:8px;margin-top:12px;padding-top:12px;
+    border-top:1px solid var(--line);font-size:13px;color:var(--ink);cursor:pointer;
+  }
+  .unattempted-toggle input[type=checkbox]{
+    width:16px;height:16px;accent-color:var(--brass);cursor:pointer;flex-shrink:0;
+  }
+  .unattempted-toggle input[type=checkbox]:disabled{cursor:not-allowed;opacity:.5;}
+  .unattempted-toggle span{line-height:1.4;}
   .count-chip{
     font-family:'IBM Plex Mono', monospace;font-size:12.5px;
     padding:7px 14px;border-radius:20px;border:1px solid var(--line);background:#fbfaf6;
@@ -222,6 +231,7 @@
         </div>
       </div>
       <div class="count-row" id="countRow"></div>
+      <div id="randomUnattemptedToggleWrap"></div>
       <div id="randomIncorrectWrap"></div>
     </div>
 
@@ -1502,7 +1512,7 @@ const SECTIONS = [
         source: "Green Book Ch18 — serology, past cleared infection"
       },
       {
-        stem: "An unvaccinated worker sustains a significant sharps injury from an HBsAg-positive source. The correct prophylaxis is:",
+        stem: "A 27-year-old newly qualified operating department practitioner, who has never received hepatitis B vaccination, sustains a needlestick injury while assisting with an emergency procedure on a patient with known chronic hepatitis B who is confirmed HBsAg positive. The needle had been used directly on the patient moments earlier, causing a visible puncture wound to her finger. What is the correct post-exposure management?",
         options: [
           "Hepatitis B vaccine alone is sufficient, as HBIG adds very little benefit",
           "HBIG alone is sufficient, with no accompanying vaccine course needed at all",
@@ -1511,8 +1521,8 @@ const SECTIONS = [
           "Accelerated course of hepatitis B vaccine plus HBIG with the first dose"
         ],
         correct: 4,
-        explain: "An unvaccinated worker exposed to an HBsAg-positive source has no existing immunity and faces the highest-risk combination: an accelerated vaccine course to build active immunity plus HBIG with the first dose for immediate passive cover (Table 18.8).",
-        source: "Green Book Ch18, Table 18.8 — post-exposure prophylaxis"
+        explain: "An unvaccinated worker exposed to a confirmed HBsAg-positive source has no existing immunity and faces the highest-risk combination: an accelerated vaccine course to build active immunity plus HBIG with the first dose for immediate passive cover. This needlestick, causing a visible puncture wound from a needle just used on the source patient, is unambiguously a significant exposure, so the full combined regimen applies rather than vaccine alone, HBIG alone, or a single dose of either.",
+        source: "Green Book Chapter 18 (Hepatitis B, Feb 2026) — post-exposure prophylaxis for an unvaccinated worker exposed to a confirmed HBsAg-positive source"
       },
       {
         stem: "A worker's hepatitis B serology shows anti-HBs positive, HBsAg negative, and anti-HBc negative. This pattern indicates:",
@@ -5413,7 +5423,7 @@ const SECTIONS = [
         source: "OEUK Medical Fitness for Offshore Work, Issue 8.1a (Feb 2026), section 3.2.1.1 and Table 6"
       },
       {
-        stem: "A 29-year-old production operator, a category 2 role, had a single unprovoked seizure 8 months ago. Full investigation found no cause, and his neurologist does not consider this to represent epilepsy. He is currently on no medication and has had no further events. What is the correct certification position?",
+        stem: "A 29-year-old production operator on an offshore installation, undergoing his OEUK medical for a category 2 role, had a single unprovoked seizure 8 months ago. Full investigation found no cause, and his neurologist does not consider this to represent epilepsy. He is currently on no medication and has had no further events. What is the correct certification position?",
         options: [
           "No certificate; a single seizure without a diagnosis of epilepsy requires 5 years seizure-free in any role",
           "Standard certificate, since 8 months exceeds the 6-month interval required for a category 2 role after a single seizure",
@@ -5467,11 +5477,11 @@ const SECTIONS = [
       {
         stem: "A 44-year-old process operator with mild, well-controlled COPD is being assessed both for general fitness for offshore work and, separately, for membership of the installation's Emergency Response Team (ERT). Spirometry shows FEV1 74% predicted, FVC 88% predicted, and an FEV1/FVC ratio of 76%. Regarding his fitness for these two assessments, the correct position is:",
         options: [
-          "He is fit for general offshore work, meeting the 60%/75% thresholds, but unfit for ERT, which requires both above 80%",
-          "He is fit for both general offshore work and ERT duties, since his FEV1/FVC ratio comfortably exceeds 70%",
-          "He is unfit for both general offshore work and ERT duties, since his FEV1 is below the general 60% threshold",
-          "He is unfit for general offshore work but fit for ERT duties, since ERT assessment focuses on the FEV1/FVC ratio alone",
-          "He is fit for both, provided he passes an additional aerobic capacity assessment specific to ERT membership"
+          "He is fit for general offshore work, but unfit for ERT duties, since his FEV1 does not reach the stricter threshold that role requires",
+          "He is fit for both general offshore work and ERT duties, since his FEV1/FVC ratio is well within the normal range",
+          "He is unfit for both general offshore work and ERT duties, since his FEV1 falls below the minimum threshold for either role",
+          "He is unfit for general offshore work but fit for ERT duties, since ERT assessment relies on the FEV1/FVC ratio alone",
+          "He is fit for both, provided he also passes a separate aerobic capacity assessment specific to ERT membership"
         ],
         correct: 0,
         explain: "General offshore fitness requires FEV1 at least 60% and FVC at least 75% of predicted — both comfortably met here. ERT membership applies a stricter standard: FEV1 and FVC must both be at least 80% of predicted, with the FEV1/FVC ratio at least 70% — his FEV1 of 74% fails this, even though his ratio alone would pass. The guidance is explicit that the ERT thresholds are greater than the general ones. Passing an aerobic capacity assessment is a separate, later stage of ERT screening and does not substitute for meeting the respiratory standard first.",
@@ -5724,6 +5734,97 @@ const SECTIONS = [
         explain: "Health professionals should be alert to the possibility of dengue in returning travellers with fever or flu-like illness, and should seek advice from a local microbiology, virology or infectious disease consultant, sending appropriate samples with a full clinical and travel history to the UKHSA Rare and Imported Pathogens Laboratory for diagnosis — the Imported Fever Service offers 24/7 telephone access to expert advice for suspected travel-associated infections including dengue. Dengue can in fact be confirmed by blood test; there is no specific antiviral treatment, with management being supportive; and vaccination has no role in treating a current suspected infection, nor should diagnostic action be delayed until symptoms resolve.",
         source: "NaTHNaC/UKHSA, Dengue factsheet — diagnosis and specialist advice pathway"
       },
+      {
+        stem: "A 38-year-old office worker with rheumatoid arthritis has been treated with an anti-TNF biologic (adalimumab) for the past two years, but stopped this treatment eight months ago on her rheumatologist's advice, with no other immunosuppressive treatment since. She is now being assessed for a work posting requiring yellow fever vaccination. What is the correct position?",
+        options: [
+          "Yellow fever vaccine should not be given; biological therapy is a contraindication to live vaccines for 12 months after stopping",
+          "Yellow fever vaccine can be given now, since 8 months exceeds the 6-month interval required after stopping biological therapy",
+          "Yellow fever vaccine can be given now, since anti-TNF therapy has no bearing on live vaccine administration once treatment has actually stopped",
+          "Yellow fever vaccine should be given at a reduced dose, given her relatively recent history of biological therapy",
+          "Yellow fever vaccine can be given now, provided a specialist confirms her inflammatory markers have normalised"
+        ],
+        correct: 0,
+        explain: "Immunosuppressive biological therapy such as anti-TNF agents is a contraindication to live vaccines, including yellow fever, for 12 months after stopping treatment, unless otherwise directed by a specialist — her 8 months falls short of this. The 6-month figure in option B is the interval that applies after chemotherapy, radiotherapy, or solid organ transplant immunosuppression, not biological therapy specifically — a genuine point of confusion between different immunosuppression categories with different timeframes. There is no reduced-dose route around a live vaccine contraindication, and normalised inflammatory markers do not substitute for the defined time interval.",
+        source: "Green Book Chapter 32 (Tuberculosis), live vaccine contraindications — biological therapy timing; applies generally to live vaccines per Chapter 6"
+      },
+      {
+        stem: "A 45-year-old teacher completed a course of chemotherapy for breast cancer five months ago and has since made a good recovery, with no ongoing treatment. She is planning a trip requiring yellow fever vaccination and asks whether enough time has passed. What is the correct position?",
+        options: [
+          "Yes; 5 months exceeds the interval required following completion of chemotherapy for malignant disease",
+          "Not yet; live vaccines remain contraindicated for 6 months after completing chemotherapy or radiotherapy for malignant disease",
+          "Not yet; the same 12-month interval that applies after biological therapy also applies following chemotherapy",
+          "Yes, provided her most recent blood count confirms normal white cell numbers at the time of vaccination",
+          "Not yet; live vaccines remain permanently contraindicated following any history of chemotherapy for malignant disease"
+        ],
+        correct: 1,
+        explain: "Live vaccines are contraindicated in those who are receiving, or have received in the past 6 months, immunosuppressive chemotherapy or radiotherapy for malignant disease — her 5 months falls just short of this. This is a distinct, shorter interval from the 12 months that applies after biological therapy such as anti-TNF agents, a genuinely easy distinction to lose track of. A normal blood count does not substitute for the defined interval, and the contraindication is time-limited, not permanent.",
+        source: "Green Book Chapter 32 (Tuberculosis), live vaccine contraindications — chemotherapy/radiotherapy timing"
+      },
+      {
+        stem: "A 50-year-old warehouse manager was treated for a severe asthma exacerbation with prednisolone 45mg daily for ten days, two months ago, and has since stopped all steroid treatment. He is now due to travel for work to a region requiring yellow fever vaccination. What is the correct position?",
+        options: [
+          "Yellow fever vaccine can be given now, since 2 months exceeds the interval required following any course of oral corticosteroids",
+          "Yellow fever vaccine can be given now, since prednisolone at any dose or duration has no bearing on live vaccine administration",
+          "Not yet; high-dose corticosteroids (over 40mg prednisolone daily for more than a week) contraindicate live vaccines for 3 months",
+          "Not yet; the same 12-month interval that applies after biological therapy also applies following high-dose corticosteroids",
+          "Not yet; a single short course of any dose of corticosteroids permanently contraindicates all future live vaccination"
+        ],
+        correct: 2,
+        explain: "A course of high-dose corticosteroids — more than 40mg prednisolone daily, for more than a week, as in his case — is a contraindication to live vaccines for 3 months after stopping; his 2 months falls short of this. Both the specific dose and duration thresholds matter here, since lower-dose or shorter courses do not trigger the same restriction. This is a materially shorter interval than the 12 months for biological therapy, again illustrating that different immunosuppressive treatments carry genuinely different timeframes, not a single universal rule.",
+        source: "Green Book Chapter 32 (Tuberculosis), live vaccine contraindications — high-dose corticosteroid timing"
+      },
+      {
+        stem: "A 41-year-old librarian with psoriatic arthritis takes methotrexate 20mg weekly, having stopped this medication six weeks ago ahead of planning a pregnancy. She is now being assessed for MMR vaccination, having been found non-immune to rubella on antenatal screening. What is the correct position?",
+        options: [
+          "MMR vaccine should not be given, since any dose of methotrexate contraindicates live vaccines for 3 months after stopping",
+          "MMR vaccine can be given now, since her methotrexate dose was below the specific threshold that would have triggered a live vaccine contraindication",
+          "MMR vaccine should not be given, since methotrexate at any dose carries the same 12-month contraindication as biological therapy",
+          "MMR vaccine can be given now, since non-biological oral immune modulating drugs never affect live vaccine administration",
+          "MMR vaccine should not be given until a full 6 months have elapsed, matching the interval for chemotherapy"
+        ],
+        correct: 1,
+        explain: "The specific threshold for methotrexate as a non-biological oral immune modulating drug is above 25mg per week — her dose of 20mg weekly sits below this threshold, so it does not trigger the 3-month live vaccine contraindication that would apply above that dose. This is a genuinely precise, dose-specific threshold rather than a blanket rule applying to any dose of the drug, and is a different figure again from the 12-month interval for biological therapy or the 6 months for chemotherapy.",
+        source: "Green Book Chapter 32 (Tuberculosis), live vaccine contraindications — non-biological immune modulating drug thresholds"
+      },
+      {
+        stem: "A 33-year-old solicitor is due to start a new immunosuppressive biological therapy for inflammatory bowel disease in three weeks' time. Her occupational health adviser identifies that her vaccination history is incomplete for several inactivated vaccines relevant to her role. What is the most appropriate timing for these vaccines?",
+        options: [
+          "The vaccines should be deferred entirely until after her course of biological therapy has been completed",
+          "The vaccines should ideally be given now, at least 2 weeks before the immunosuppressive treatment commences",
+          "The vaccines should be given on the same day her biological therapy is started, for practical convenience",
+          "The vaccines should be given no more than 48 hours before her biological therapy is due to start",
+          "The timing of inactivated vaccines has no bearing on the timing of starting biological therapy"
+        ],
+        correct: 1,
+        explain: "Wherever possible, vaccination of individuals due to commence immunosuppressive treatment should be carried out before immunosuppression occurs, and inactivated vaccines should ideally be given at least 2 weeks before commencement — this gives the best chance of an adequate immune response before her ability to respond is reduced. Deferring entirely until after treatment risks a prolonged period of both reduced protection and reduced ability to respond well when eventually given; giving vaccines on the same day, or only 48 hours before, doesn't allow sufficient time for a response to develop before treatment starts.",
+        source: "Green Book Chapter 7, Immunisation of individuals with underlying medical conditions — pre-immunosuppression vaccine timing"
+      },
+      {
+        stem: "A 29-year-old warehouse operative lives with his partner, who has very severe immunosuppression following a recent bone marrow transplant and would normally be nursed in isolation. His employer's occupational health service offers annual influenza vaccination to staff. Regarding which type of influenza vaccine is most appropriate for him, given his household circumstances, the correct position is:",
+        options: [
+          "He should not receive any influenza vaccine at all, given the risk his partner's immunosuppression creates",
+          "He should receive live attenuated influenza vaccine, since this is preferred for all close contacts of immunosuppressed individuals",
+          "He should receive inactivated influenza vaccine, rather than the live attenuated version, given his partner's very severe immunosuppression",
+          "The type of influenza vaccine given to him has no bearing on his partner's health, regardless of his partner's degree of immunosuppression",
+          "He should receive live attenuated influenza vaccine, provided he avoids close contact with his partner for two weeks afterwards"
+        ],
+        correct: 2,
+        explain: "Most contacts of immunosuppressed individuals can safely receive live attenuated influenza vaccine, but close contacts of those with very severe immunosuppression — such as someone who would normally be nursed in isolation, as his partner's transplant history suggests — should receive inactivated vaccine instead. This is a specific exception to the general rule that live vaccines are usually safe to give to household contacts of immunosuppressed individuals, rather than a reason to withhold vaccination from him entirely or to rely on a period of avoided contact after a live vaccine.",
+        source: "Green Book Chapter 7, Immunisation of individuals with underlying medical conditions — household contacts, live influenza vaccine exception"
+      },
+      {
+        stem: "A 47-year-old accountant with rheumatoid arthritis on long-term immunosuppressive therapy is due her annual influenza vaccination through her employer's occupational health scheme. She has heard that her medication may reduce how well vaccines work for her and asks whether there is any point being vaccinated at all. What is the correct response?",
+        options: [
+          "Vaccination should be withheld, since a reduced antibody response means the vaccine will provide no meaningful protection",
+          "Vaccination should be withheld until her immunosuppressive therapy is stopped, to allow a normal antibody response to develop",
+          "She should receive a live attenuated version of the vaccine instead, since this produces a more robust response in immunosuppressed individuals",
+          "She should still be vaccinated; inactivated vaccines are recommended for immunosuppressed individuals, even though the antibody response may be reduced",
+          "Vaccination should proceed, but only if her medication is temporarily paused for two weeks around the time of vaccination"
+        ],
+        correct: 3,
+        explain: "Individuals with immunosuppression should be given all inactivated vaccines in accordance with national recommendations, even though they may not mount as good an antibody response as immunocompetent individuals — a reduced response is not the same as no protection, and is not a reason to withhold a vaccine that remains appropriate for her. Stopping her immunosuppressive therapy solely to improve vaccine response is not appropriate advice, live vaccines are generally the ones requiring greater caution in immunosuppression rather than being preferred, and temporarily pausing medication around vaccination is not part of standard guidance here.",
+        source: "Green Book Chapter 7, Immunisation of individuals with underlying medical conditions — inactivated vaccines in immunosuppression"
+      },
     ]
   },
   {
@@ -5759,17 +5860,17 @@ const SECTIONS = [
         source: "ABC of Occ & Env Medicine, Ch2 — provisos of the Waddell & Burton review"
       },
       {
-        stem: "HSE statistics for 2009/2010 reported approximately 28.5 million working days lost overall due to workplace injury and ill health combined. Regarding how this total was split between the two causes, the correct position is:",
+        stem: "An HR director reviewing HSE's most recent annual workplace statistics (2024/25) is deciding where to focus the company's prevention budget, having read that combined workplace injury and ill health resulted in an estimated 40.1 million working days lost across Great Britain that year. Regarding the split between these two causes, and its implications for where prevention effort would have the greatest impact, the correct position is:",
         options: [
-          "The split was roughly equal between ill health and injury overall across the two categories",
-          "The majority of days lost were due to workplace injury rather than ill health",
-          "The large majority of days lost, around 23.4 million, were due to ill health",
-          "Injury accounted for over 20 million of the days lost, with ill health responsible for the remainder",
-          "The statistics did not distinguish between injury and ill health as separate causes"
+          "The split was roughly equal between ill health and injury, so prevention effort should be divided evenly between the two",
+          "The majority of days lost were due to workplace injury, so injury prevention should be the clear budget priority",
+          "The large majority of days lost were due to ill health, making ill-health prevention the area of greatest potential impact",
+          "Injury accounted for slightly more than half of the days lost, with ill health responsible for the remainder",
+          "The statistics did not distinguish between injury and ill health as separate causes, so the split cannot inform prioritisation"
         ],
         correct: 2,
-        explain: "Of the 28.5 million days lost overall, around 23.4 million were attributed to work-related ill health, with the remaining 5.1 million due to workplace injury — ill health, not injury, accounted for the large majority of lost working time.",
-        source: "ABC of Occ & Env Medicine, Ch2 — HSE 2009/2010 days lost statistics"
+        explain: "Of the 40.1 million working days lost overall in 2024/25, around 35.7 million were attributed to work-related ill health, with the remaining 4.4 million due to workplace injury — ill health, not injury, accounted for the large majority of lost working time, and by a wider margin than in earlier HSE statistics. For an HR director deciding where prevention effort will have the greatest impact, this points clearly toward ill-health prevention — particularly stress, depression and anxiety, and musculoskeletal disorders, which together account for the great majority of ill-health cases — rather than an even split or an injury-first approach.",
+        source: "HSE, Health and safety at work: Summary statistics for Great Britain 2025 (published Nov 2025) — working days lost 2024/25"
       },
       {
         stem: "A CIPD survey found that the ranking of common causes of short-term sickness absence differs between manual and non-manual workers, once minor illnesses such as colds and headaches are excluded. Regarding this difference, the correct position is:",
@@ -6501,18 +6602,47 @@ function getAllIncorrectQuestions(){
   return out;
 }
 
+function getAllUnattemptedQuestions(){
+  const out = [];
+  SECTIONS.forEach(sec=>{
+    const attempted = getAttemptedSet(sec.id);
+    sec.questions.forEach(q=>{ if (!attempted.has(q._qIdx)) out.push(q); });
+  });
+  return out;
+}
+
+let randomUnattemptedOnly = false;
+
 function renderRandomCard(){
   const total = ALL_QUESTIONS.length;
+  const unattemptedTotal = getAllUnattemptedQuestions().length;
   const h = history['random-' + selectedRandomCount];
   document.getElementById('randomMeta').textContent =
     `${total} questions available across ${SECTIONS.length} sections`
     + (h ? ` · ${h.bestScore}/${h.bestTotal} best · ${h.lastDate}` : '');
 
-  const opts = getCountOptions(total);
+  const toggleWrap = document.getElementById('randomUnattemptedToggleWrap');
+  if (toggleWrap){
+    toggleWrap.innerHTML = `
+      <label class="unattempted-toggle">
+        <input type="checkbox" id="randomUnattemptedCheck" ${randomUnattemptedOnly ? 'checked' : ''}>
+        <span>Unattempted questions only ${unattemptedTotal > 0 ? `(${unattemptedTotal} available)` : '(none left — all questions attempted)'}</span>
+      </label>
+    `;
+    const check = document.getElementById('randomUnattemptedCheck');
+    check.disabled = unattemptedTotal === 0;
+    check.onchange = () => {
+      randomUnattemptedOnly = check.checked;
+      renderRandomCard();
+    };
+  }
+
+  const effectiveTotal = randomUnattemptedOnly ? Math.max(unattemptedTotal, 1) : total;
+  const opts = getCountOptions(effectiveTotal);
   const row = document.getElementById('countRow');
   row.innerHTML = opts.map(n => `
     <button class="count-chip ${n===selectedRandomCount?'active':''}" data-count="${n}">
-      ${n===total ? `All (${n})` : n}
+      ${n===effectiveTotal ? `All (${n})` : n}
     </button>
   `).join('') + `<button class="random-start-btn" id="randomStartBtn">Start</button>`;
 
@@ -6555,7 +6685,9 @@ function startQuiz(sectionId, mode){
 }
 
 function startRandomQuiz(count){
-  const picked = shuffle(ALL_QUESTIONS).slice(0, count);
+  const sourcePool = randomUnattemptedOnly ? getAllUnattemptedQuestions() : ALL_QUESTIONS;
+  const pool = sourcePool.length > 0 ? sourcePool : ALL_QUESTIONS;
+  const picked = shuffle(pool).slice(0, count);
   currentQuiz = { id: 'random-' + count, title: 'Random mix', questions: picked, isRandom: true };
   currentQIndex = 0;
   currentAnswers = new Array(currentQuiz.questions.length).fill(null);
