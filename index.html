@@ -676,6 +676,19 @@ const SECTIONS = [
         explain: "Persistent alcohol misuse, including alcohol dependence WITHOUT high-risk features, requires a minimum of one year of controlled drinking or abstinence for Group 2 — double the six months for Group 1, so the colleague's account is accurate. Note this category accepts controlled drinking, defined as drinking at a level the clinician confirms acceptably controls the disorder without impact on personal, social and work responsibilities — a real softening compared with the dependence-plus-high-risk-features category, where only abstinence counts.",
         source: "DVLA — Ch5 Drug or alcohol misuse and dependence — Persistent alcohol misuse; definition of controlled drinking"
       },
+      {
+        stem: "A 54-year-old lorry driver holding a Group 2 vocational licence is referred to occupational health two months after coronary artery bypass graft surgery. He is asymptomatic, and his GP has assessed him as generally fit for work. His employer's management remain cautious about returning him to driving duties. What is the correct position regarding his fitness to resume Group 2 driving?",
+        options: [
+          "He may resume Group 2 driving now, since his GP has confirmed general fitness for work already",
+          "He cannot yet be relicensed; Group 2 needs exercise testing and an ejection fraction over 40%, from 3 months post-op",
+          "Occupational health's role here is simply to manage his sickness absence until he is fully recovered",
+          "Management must defer to occupational health's opinion in preference to any other clinical view",
+          "He should be referred to a general return-to-work scheme, since no condition-specific DVLA standard applies here"
+        ],
+        correct: 1,
+        explain: "Following CABG, a Group 2 licence holder must not drive and must notify DVLA; relicensing requires a satisfactory exercise tolerance test and an ejection fraction of at least 40% on echocardiography, and this assessment cannot take place until at least 3 months postoperatively — his 2 months falls short of this on both counts. A GP's general fitness-for-work opinion is a different assessment entirely from DVLA's specific vocational driving standard, and does not substitute for it. Occupational health's role here is to apply the correct fitness-to-drive standard, not simply to manage sickness absence, and no party is entitled to have their opinion automatically preferred over the applicable regulatory standard.",
+        source: "DVLA, Assessing Fitness to Drive (Nov 2025) — Group 2, coronary artery bypass graft surgery"
+      },
     ]
   },
   {
@@ -1333,7 +1346,7 @@ const SECTIONS = [
         correct: 4,
         explain: "Attrition matters not through its size but through whether it is related to exposure or outcome. Here the people leaving are disproportionately those developing the very problem under study, so restricting analysis to completers systematically removes cases and understates incidence. Loss of power, in option A, is a real but secondary consequence: a study can be adequately powered and still thoroughly biased. Sensitivity analyses that impute plausible outcomes for those lost are the usual response.",
         source: "Bias — attrition and loss to follow-up"
-      }
+      },
 ]
   },
   {
@@ -1731,6 +1744,97 @@ const SECTIONS = [
         correct: 0,
         explain: "Seroconversion from HBeAg to anti-HBe generally reflects declining viral replication and reduced infectivity, since HBeAg is a marker closely, though not perfectly, associated with active viral replication. This is not universal — HBeAg-negative variants of the virus exist, where significant viral replication and infectivity can persist despite anti-HBe positivity, so this seroconversion cannot be relied upon in isolation to confirm reduced risk. It does not confirm complete viral clearance (which is marked by loss of HBsAg, not HBeAg), can occur spontaneously without antiviral treatment, and has relevance well beyond vertical transmission risk in pregnancy.",
         source: "Green Book Chapter 18 (Hepatitis B, Feb 2026) — HBeAg to anti-HBe seroconversion and infectivity"
+      },
+      {
+        stem: "An occupational health physician is interpreting hepatitis B serology for a healthcare worker as part of routine screening. Which combination of results indicates a highly infectious chronic carrier?",
+        options: [
+          "Core antibody (anti-HBc) positive, with surface antigen (HBsAg) negative",
+          "Core antibody (anti-HBc) positive and surface antigen (HBsAg) positive",
+          "Core antibody (anti-HBc) positive, surface antigen (HBsAg) positive, and e antigen (HBeAg) positive",
+          "A high (>1,000 IU/l) surface antibody (anti-HBs) level",
+          "A strongly positive anti-HBc IgM level in isolation"
+        ],
+        correct: 2,
+        explain: "The combination of anti-HBc positive, HBsAg positive and HBeAg positive together indicates a highly infectious chronic carrier state, with HBeAg specifically reflecting a high level of active viral replication and infectivity. Anti-HBc positive with HBsAg negative reflects past, resolved infection rather than a current highly infectious state. A high anti-HBs level reflects strong immunity, whether from vaccination or past infection, and does not indicate current infectivity. An isolated strongly positive anti-HBc IgM points toward acute or recent infection specifically, rather than confirming the chronic, highly infectious carrier state this question asks about.",
+        source: "Green Book Chapter 18 (Hepatitis B) — serological markers of infectivity"
+      },
+      {
+        stem: "A newly qualified doctor asks their occupational health department what their professional obligations are regarding disclosure of a blood-borne virus infection, should they ever become infected during their career. What is the correct position under current UK guidance?",
+        options: [
+          "Healthcare workers are permanently barred from performing any exposure-prone procedures once infected with any blood-borne virus",
+          "All health clearance checks for exposure-prone procedures may be completed after clinical duties have already begun",
+          "Only surgeons and dentists need to be concerned with exposure-prone procedure guidelines; other clinical roles are exempt",
+          "Healthcare workers have a professional duty to inform occupational health if they know or suspect infection with a blood-borne virus",
+          "Exposure-prone procedure clearance is a desirable but ultimately optional step for those working in operating theatres"
+        ],
+        correct: 3,
+        explain: "Healthcare workers have a clear professional duty to inform occupational health if they know or suspect they are infected with a blood-borne virus, allowing appropriate assessment and, where relevant, health clearance arrangements to be put in place. Infection with a blood-borne virus does not result in a permanent bar from all exposure-prone procedures in every case, since clearance depends on the specific virus and, for some, on viral suppression; health clearance checks should be completed before clinical duties involving exposure-prone procedures begin, not afterwards, and this applies to a range of clinical roles undertaking such procedures, not only surgeons and dentists. Clearance is a required step, not an optional one, for these roles.",
+        source: "UKHSA, Integrated guidance for the management of healthcare workers living with blood-borne viruses"
+      },
+      {
+        stem: "A newly qualified doctor is starting a residency in obstetrics and gynaecology, a specialty involving regular exposure-prone procedures. Beyond standard health clearance such as TB and hepatitis B immunity, what additional health clearance must they obtain before being permitted to perform exposure-prone procedures?",
+        options: [
+          "Proof of a hepatitis B surface antibody (anti-HBs) titre below 100 mIU/mL",
+          "A signed declaration confirming no travel to high-risk BBV areas within the preceding six months",
+          "Completion of a three-dose hepatitis B vaccination course, regardless of the antibody response achieved",
+          "Annual screening for all blood-borne viruses for the entire duration of their surgical training",
+          "Negative status for HIV and hepatitis C, plus evidence of being non-infectious for hepatitis B"
+        ],
+        correct: 4,
+        explain: "Before undertaking exposure-prone procedures, additional health clearance requires confirmed negative status for HIV and hepatitis C (by RNA or antibody testing), together with evidence of being non-infectious for hepatitis B — such as a negative surface antigen result, or otherwise meeting the low-infectivity criteria set out in current guidance. A high, not low, anti-HBs titre is what's required to demonstrate hepatitis B immunity, rather than a titre below 100 mIU/mL; travel history is not the relevant clearance criterion, and completing the vaccination course alone, without confirming the antibody response or infection status, is not sufficient. Ongoing monitoring frequency varies by circumstance, rather than defaulting to annual screening throughout training regardless of results.",
+        source: "UKHSA, Integrated guidance for the management of healthcare workers living with blood-borne viruses — exposure-prone procedure clearance"
+      },
+      {
+        stem: "An orthopaedic surgeon living with HIV, on antiretroviral therapy with a stable, undetectable viral load, continues to perform exposure-prone procedures under occupational health supervision. What frequency of viral load monitoring is required in this situation?",
+        options: [
+          "Every 6 weeks",
+          "Every 12 weeks",
+          "Every 6 months",
+          "Every 12 months",
+          "Monitoring is no longer appropriate, and they should not be undertaking exposure-prone procedures at all"
+        ],
+        correct: 1,
+        explain: "For an HIV-positive healthcare worker performing exposure-prone procedures under joint supervision of occupational health and their treating physician, viral load monitoring is required quarterly — every 12 weeks — even once viral load is stable and undetectable, rather than being extended to a longer interval or discontinued. This reflects the precautionary, closely monitored basis on which continued clearance to perform exposure-prone procedures is granted, rather than these procedures being incompatible with a well-controlled HIV infection altogether.",
+        source: "UKHSA/UKAP guidance — HIV-positive healthcare workers performing exposure-prone procedures, monitoring frequency"
+      },
+      {
+        stem: "A healthcare worker, screened after close contact with a patient with confirmed laryngeal tuberculosis, is found to be both Mantoux and interferon-gamma release assay (IGRA) positive. She has no symptoms. What is the most appropriate immediate next step?",
+        options: [
+          "Start treatment for latent TB infection immediately",
+          "Repeat the IGRA in 6–8 weeks",
+          "Arrange a chest X-ray to assess for active TB",
+          "Give BCG vaccination because she has evidence of TB infection",
+          "Exclude her from clinical duties until completion of TB treatment"
+        ],
+        correct: 2,
+        explain: "With both Mantoux and IGRA positive, active disease must be excluded before any further management is decided, and a chest X-ray is the appropriate immediate next step. Starting treatment for latent TB infection is correct once active disease has genuinely been excluded, but offering it before that point risks masking or inadequately treating active disease, which needs a different management approach entirely. Repeating the IGRA makes no sense here -- that step is relevant when an initial test taken too soon after exposure is negative, within the window before conversion, not when the result is already positive. BCG vaccination is not given to someone already infected -- it would be pointless once infection is confirmed, and her infection status is precisely why it is not indicated, not a reason to give it. Excluding her from clinical duties until treatment is complete is premature, since whether treatment or exclusion is needed at all depends on what the chest X-ray shows.",
+        source: "NICE NG33; UKHSA TB contact tracing -- excluding active disease before managing latent infection"
+      },
+      {
+        stem: "An infection control team is reviewing which body fluids should be treated as carrying the same significant risk of blood-borne virus transmission as blood when they come into contact with non-intact skin. Which of the following carries the highest risk in this context?",
+        options: [
+          "Vomit",
+          "Nasal secretions",
+          "Sweat",
+          "Urine",
+          "Vaginal secretions"
+        ],
+        correct: 4,
+        explain: "Vaginal secretions, alongside blood and semen, are classified as a higher-risk body fluid for blood-borne virus transmission purposes, requiring the same precautions as blood when contact with non-intact skin occurs. Vomit, nasal secretions, sweat and urine are all considered low or negligible risk in this context, unless visibly contaminated with blood, in which case the blood itself — not the fluid it is mixed with — is what drives the risk assessment.",
+        source: "UK infection control guidance — body fluid risk classification for blood-borne virus exposure"
+      },
+      {
+        stem: "An occupational health physician is explaining interferon-gamma release assay (IGRA) testing to a trainee, who has heard several claims about what the test can and cannot do. What is the correct characteristic of IGRA testing?",
+        options: [
+          "It is affected by previous BCG vaccination, in the same way as Mantoux testing",
+          "It measures immune response to tuberculosis-specific proteins",
+          "It requires energetic shaking of the sample as soon as it is collected",
+          "It distinguishes reliably between latent and active tuberculosis disease",
+          "It cannot be used in anyone who has previously received the BCG vaccine"
+        ],
+        correct: 1,
+        explain: "IGRA testing works by measuring the immune response — specifically interferon-gamma release — to tuberculosis-specific antigens, distinguishing it from Mantoux testing, which can cross-react with antigens shared by the BCG vaccine strain. A key advantage of IGRA is precisely that it is not affected by previous BCG vaccination, unlike Mantoux, so it can still be used in those who have been vaccinated. It does not distinguish between latent infection and active disease — a genuinely important limitation, since a positive result on its own cannot tell you which of the two you are dealing with, and that distinction still requires clinical, radiological and microbiological assessment.",
+        source: "Interferon-gamma release assay methodology — TB-specific antigen response and BCG independence"
       },
     ]
   },
@@ -3144,6 +3248,97 @@ const SECTIONS = [
         explain: "The British Thoracic Society lists respiratory infection representing a risk to others (including TB) as a contraindication to air travel, and specifies that patients with TB should consult their specialist team before flying to confirm they're no longer contagious — a clinical judgement made by the treating team, not a fixed timescale. Option E confuses two different thresholds: the 8-hour flight duration is the criterion used for contact tracing of fellow passengers around a known infectious case, not a rule that makes travel itself permissible for the affected passenger. A surgical mask alone or reliance on cabin air filtration doesn't substitute for specialist confirmation of non-infectious status, and the restriction isn't fixed for the whole treatment course.",
         source: "British Thoracic Society, Clinical Statement on Air Travel for Passengers with Respiratory Disease, Online Appendix 2 (March 2022); WHO Tuberculosis and air travel guidance"
       },
+      {
+        stem: "An occupational health department completes annual health surveillance for noise exposure across a manufacturing site and prepares a report summarising the aggregate, anonymised results for the employer, without identifying any individual worker. A manager queries whether individual consent is required before this summary can be shared. What is the correct position?",
+        options: [
+          "Individual informed consent is not needed to provide collective, anonymised results of health surveillance to the employer",
+          "Consent must always be given in writing before any information derived from a health surveillance programme can be shared",
+          "The employer should automatically be given access to individual reports within a fixed number of working days of any assessment",
+          "Once an individual has given consent for their information to be used in this way, that consent can never subsequently be withdrawn",
+          "Where occupational health is provided by a third-party contractor, that contractor should resolve all consent questions without the employer's involvement"
+        ],
+        correct: 0,
+        explain: "Providing the employer with collective, anonymised results of health surveillance — for example, the proportion of a workforce showing early signs of noise-induced hearing loss — does not require individual informed consent, since no individual is identifiable from this aggregate data. This is quite different from sharing an individual's own results, which does require consent. Consent need not always be in writing, is not automatically time-limited to a fixed number of days once given, and remains withdrawable rather than irrevocable once given.",
+        source: "UK GDPR and Data Protection Act 2018 — aggregate versus individual health data; FOM Ethics Guidance"
+      },
+      {
+        stem: "An occupational health department is reviewing its information governance practices against the Caldicott Principles, following an audit that identified inconsistent handling of patient-identifiable information across different teams. Which of the following correctly reflects one of these principles?",
+        options: [
+          "Patient-identifiable data should be used by default, in preference to anonymised or pseudonymised alternatives",
+          "The roles of Data Protection Officer and Caldicott Guardian should always be combined into a single position",
+          "Only permanent members of staff need to be trained and aware of their confidentiality and data protection responsibilities",
+          "Every transfer of patient-identifiable information should have a clear and justified purpose, scrutinised at each stage",
+          "The minimum necessary amount of identifiable information should be used only where this is administratively convenient"
+        ],
+        correct: 3,
+        explain: "One of the core Caldicott Principles is that every proposed transfer of patient-identifiable information should be scrutinised, with a clear and justified purpose. The principles favour using the minimum necessary identifiable information for a given purpose, not defaulting to identifiable data or treating minimisation as merely a matter of convenience. Combining the Data Protection Officer and Caldicott Guardian roles is not itself a Caldicott principle, and everyone who handles patient information should understand their confidentiality responsibilities, regardless of employment status.",
+        source: "The Caldicott Principles, National Data Guardian for Health and Social Care"
+      },
+      {
+        stem: "An NHS trust is appointing a Data Protection Officer (DPO) under the requirements of the UK GDPR. The appointments panel debates several candidates, one of whom currently sits within the trust's IT service desk team and would report to the head of IT. A board member asks what characteristic of the role matters most in making this appointment. What is the correct position?",
+        options: [
+          "The DPO must act independently, without being directed on how to exercise their data protection tasks",
+          "It is sufficient for the DPO to hold a basic, general awareness of data protection principles",
+          "The DPO should report to middle management, such as a head of department, rather than more senior leadership",
+          "The DPO's role primarily involves setting the organisation's own internal technical security standards",
+          "Every individual DPO must be personally registered with the Information Commissioner's Office"
+        ],
+        correct: 0,
+        explain: "A defining requirement of the DPO role under the UK GDPR is independence — the DPO must be able to perform their tasks without being instructed on how to interpret or apply data protection law, and must report to the highest level of management, not to a departmental head such as a head of IT, to protect this independence. A basic, general level of knowledge is not sufficient; the role requires expert knowledge of data protection law and practice. Setting technical security standards is not the defining characteristic of the role, and while an organisation must notify the ICO of its DPO's contact details, this is not the same as the individual being personally registered with the ICO.",
+        source: "UK GDPR, Articles 37–39 — role and independence of the Data Protection Officer"
+      },
+      {
+        stem: "A 48-year-old customer service advisor in a call centre has been off work with chronic fatigue syndrome for 8 months. He asks occupational health to consider him for ill health retirement (IHR). He has been reviewed by a CFS specialist, who considers it unlikely he will be fit to return to work for a further 6 to 12 months. His employer's HR team, keen to resolve a long-standing absence case, is pressing for a decision. With reference to deciding whether to recommend IHR, occupational health should:",
+        options: [
+          "Refuse to consider IHR on the grounds that chronic fatigue syndrome is not a proper diagnosis",
+          "Determine whether he meets the criteria of the pension scheme's IHR policy and the terms of his contract",
+          "Refuse IHR because there remains a possibility that his condition may improve within the next year",
+          "Recommend IHR, since chronic fatigue syndrome cases are invariably protracted and rarely improve",
+          "Recommend IHR because HR is pressing to resolve the case and terminate his employment"
+        ],
+        correct: 1,
+        explain: "The correct approach is to determine whether he meets the specific criteria set out in the relevant pension scheme's IHR policy and the terms of his contract — this is a defined, scheme-specific test, not a general clinical impression. Dismissing chronic fatigue syndrome as 'not a proper diagnosis' is both clinically wrong and stigmatising; refusing simply because improvement remains possible ignores the specialist's own assessment of the likely timescale; and treating CFS cases as invariably protracted overgeneralises a genuinely variable condition. Employer pressure to resolve a case is not a proper basis for an IHR recommendation, which must rest on the medical evidence measured against the scheme's own criteria.",
+        source: "SOM, Guidance for Ill Health Retirement Advisors, 2026 edition — ME/CFS section, permanent incapacity and case-by-case prognosis assessment"
+      },
+      {
+        stem: "An occupational physician is completing an ill health retirement assessment for a 52-year-old warehouse supervisor, at the request of his employer's pension scheme administrator. The administrator asks the physician to confirm who they are professionally responsible to during this assessment, given that the resulting report will ultimately be sent to the pension scheme. Who is the doctor responsible to?",
+        options: [
+          "The applicant (patient)",
+          "The employer",
+          "The pension scheme",
+          "The applicant's general practitioner",
+          "The pensions ombudsman"
+        ],
+        correct: 2,
+        explain: "An occupational physician assessing IHR is typically acting as an Independent Registered Medical Practitioner (IRMP) — approved and appointed by the pension scheme specifically to certify whether its statutory criteria are met, with an explicit requirement of no prior involvement in the case to preserve that independence. This is a formally structured certifying role, distinct from an ordinary treating relationship, and the resulting opinion is produced for the scheme to use in its own decision-making process. This does not mean the applicant is owed no consideration at all during the assessment — informed consent to the examination and respectful conduct still apply — but the professional responsibility to certify accurately against the scheme criteria sits with the scheme itself.",
+        source: "Local Government Pension Scheme Regulations 2013, regulation 35-37 — IRMP role and certification duty; comparable NHS and other public sector pension scheme IHR frameworks"
+      },
+      {
+        stem: "An occupational physician is assessing a 46-year-old administrator for ill health retirement, working through the pension scheme's list of factors to consider. The scheme's own guidance lists age, length of service, whether the condition is terminal, and duration of absence from work as factors that may be relevant to a case. Which of these factors is properly a matter for the doctor's own medical judgement, as opposed to an administrative or scheme-eligibility factor for others to apply?",
+        options: [
+          "Length of service, since this reflects loyalty to the employer and should inform the medical opinion",
+          "Age alone, since older applicants should generally be recommended for ill health retirement",
+          "Duration of absence from work alone, regardless of the underlying medical picture",
+          "None of these factors are relevant to a properly conducted ill health retirement assessment",
+          "Whether the condition is terminal, and its functional impact and prognosis, are properly medical judgements"
+        ],
+        correct: 4,
+        explain: "Whether a condition is terminal, and its functional impact and prognosis, are properly matters for the doctor's own clinical judgement, forming the substance of a medical opinion on incapacity. Length of service, by contrast, is an administrative or scheme-eligibility factor — relevant to whether someone qualifies for a particular pension provision, but not something that should influence the doctor's clinical assessment of incapacity itself. Age alone should not automatically drive a recommendation, and duration of absence, while relevant context, does not substitute for an assessment of the underlying medical picture and its functional consequences.",
+        source: "Occupational pension scheme ill health retirement criteria — distinguishing medical from administrative factors"
+      },
+      {
+        stem: "A 27-year-old maintenance electrician is referred to occupational health by HR after eight months of sickness absence. Investigation confirms he has bipolar disorder, diagnosed some years ago, and has recently not been taking his prescribed medication, remaining symptomatic as a result. His employer has followed a structured absence management process, including regular contact and exploration of a phased return, but he remains unable to resume his maintenance role, which involves working at height and with moving machinery. What is the most appropriate advice regarding his continued employment?",
+        options: [
+          "Capability dismissal may be considered once reasonable adjustments have genuinely been tried",
+          "As he is choosing not to take his medication, the company has no further obligation to support him",
+          "He is likely to be considered disabled under the Equality Act, and this alone means he cannot be dismissed under any circumstances",
+          "Even if he recovers fully, it would not be appropriate for someone with this history to work as an electrician again",
+          "Bipolar disorder is not a recognised condition in relation to fitness to work with electrical circuits"
+        ],
+        correct: 0,
+        explain: "Where reasonable adjustments have genuinely been explored — such as a phased return, temporary redeployment away from safety-critical duties, or extended time to stabilise treatment — and the situation nonetheless remains unchanged after a properly followed process, capability dismissal may become a legitimate option. This is materially different from treating non-adherence to medication as removing the employer's obligations altogether, which overlooks the complex reasons underlying non-adherence in a mental health condition. Being likely to meet the Equality Act's definition of disability brings a duty to make reasonable adjustments, not an absolute bar on dismissal once that duty has genuinely been discharged; and a history of bipolar disorder, properly managed, is not itself a permanent bar to electrical work.",
+        source: "Equality Act 2010, reasonable adjustments and capability dismissal; case law on disability-related absence management"
+      },
     ]
   },
   {
@@ -4256,6 +4451,110 @@ const SECTIONS = [
         correct: 4,
         explain: "Injury relates to total lifetime exposure, reflecting years of exposure as well as the average daily dose, which is why a long occupational history carries weight even where current A(8) is well controlled. Option C repeats the error of treating a regulatory ceiling as a biological threshold. Option E is worth being firm about: HAVS is not reversible once established — removal from exposure may halt progression and early vascular attacks sometimes become less frequent, but the sensorineural component tends to persist, which is the whole rationale for early detection through surveillance.",
         source: "OHOH 2nd ed, Ch 1 — Vibration 2 (Risk assessment and monitoring; potential health effects)"
+      },
+      {
+        stem: "An occupational health physician is reviewing the ACDP Hazard Group classification of a range of pathogens encountered across different workplaces, to advise on the level of containment and precautions required. Anthracis (Bacillus anthracis) is correctly classified as which Hazard Group?",
+        options: [
+          "Hazard Group 1, requiring no special containment measures",
+          "Hazard Group 2, the same group as most non-typhoidal Salmonella",
+          "Hazard Group 3, reflecting its potential to cause severe human disease with available treatment",
+          "Hazard Group 4, the same group reserved for organisms such as Marburg virus",
+          "Hazard Group classification does not apply to bacterial pathogens of this kind"
+        ],
+        correct: 2,
+        explain: "Bacillus anthracis is classified as ACDP Hazard Group 3 — capable of causing severe human disease, with a risk of spread to the community, but usually with effective prophylaxis or treatment available. This is a materially different, lower category than Hazard Group 4, reserved for organisms such as Marburg virus and Ebola virus, where no effective treatment or vaccine is usually available. It is also a higher category than most non-typhoidal Salmonella species, which are typically Hazard Group 2. Hazard Group classification applies to bacteria as much as to viruses.",
+        source: "Advisory Committee on Dangerous Pathogens (ACDP), Hazard Group classification"
+      },
+      {
+        stem: "A 33-year-old radiographer reports to her employer that she is 12 weeks pregnant. Under the Ionising Radiation Regulations 2017, what dose limit applies to her for the remainder of her pregnancy?",
+        options: [
+          "An equivalent dose limit to the abdomen of 10 mSv for the remainder of the declared pregnancy",
+          "The standard annual occupational dose limit of 20 mSv continues to apply unchanged",
+          "She must be immediately suspended from all radiation work for the remainder of the pregnancy",
+          "No dose limit applies specifically to pregnancy; general risk assessment principles alone govern her continued work",
+          "An equivalent dose limit to the abdomen of 1 mSv for the remainder of the declared pregnancy"
+        ],
+        correct: 4,
+        explain: "Once a pregnancy has been declared, the Ionising Radiation Regulations 2017 set an equivalent dose limit to the abdomen of 1 mSv for the remainder of the pregnancy — a specific, materially lower figure than the standard annual occupational limit. This does not require automatic suspension from all radiation work; rather, exposure needs to be controlled, and often redeployment or adjusted duties can keep her comfortably within this limit while remaining in radiation-related work. A specific numerical limit does apply, rather than the matter being left to general risk assessment alone.",
+        source: "Ionising Radiation Regulations 2017, regulation 9 — dose limit for a declared pregnancy"
+      },
+      {
+        stem: "A 41-year-old scientist sustains a recorded acute, sudden whole-body over-exposure to X-rays at work. Occupational health is asked what level of whole-body radiation dose would generally merit hospitalisation and specialist assessment. What is the correct approximate threshold?",
+        options: [
+          "Around 0.15 Sv (150 mSv)",
+          "Around 0.5 Sv (500 mSv)",
+          "Around 1 Sv (1,000 mSv)",
+          "Around 5 Sv (5,000 mSv)",
+          "Around 20 Sv (20,000 mSv)"
+        ],
+        correct: 2,
+        explain: "A whole-body dose in the region of 1 Sv (1,000 mSv) delivered acutely represents the threshold at which clinically significant deterministic effects (acute radiation syndrome) become likely, and merits hospitalisation and specialist assessment. Doses below this, in the 150–500 mSv range, are below the level at which significant acute radiation syndrome would generally be expected, though they still warrant careful assessment and follow-up. Doses in the region of 5 Sv or above represent a substantially more severe, potentially life-threatening exposure, well beyond the threshold at which hospitalisation first becomes appropriate; 20 Sv would represent an exposure incompatible with survival in the great majority of cases.",
+        source: "Acute radiation syndrome, dose-effect thresholds — deterministic effects of ionising radiation"
+      },
+      {
+        stem: "An occupational health service reviewing psychosocial risk management for a client organisation is asked to explain what ISO 45003 actually is, since the client has heard it described in several conflicting ways. What is the most accurate description of this standard?",
+        options: [
+          "A certifiable standard requiring a mandatory external audit, in the same way as ISO 45001",
+          "A standard that replaces the need for an organisation to have an Occupational Health and Safety Management System",
+          "A standard that applies only to remote or hybrid working environments specifically",
+          "A global framework focused on managing physical hazards in the workplace",
+          "A set of guidelines providing recommendations for managing psychosocial risk in the workplace"
+        ],
+        correct: 4,
+        explain: "ISO 45003 is a set of guidelines providing recommendations for managing psychosocial risk within an occupational health and safety management system — unlike ISO 45001, it is not itself a certifiable standard requiring mandatory external audit. It does not replace the need for an organisation to have an Occupational Health and Safety Management System; rather, it complements one, addressing psychosocial risk specifically rather than physical hazards, and it is not limited only to remote or hybrid working arrangements.",
+        source: "ISO 45003:2021 — Occupational health and safety management, psychological health and safety at work"
+      },
+      {
+        stem: "A 46-year-old construction labourer presents with painful, punched-out ulcers on the dorsum of his feet and in the web spaces between his toes, worsening gradually over recent weeks. He works long shifts on-site, often standing directly in freshly poured floor screed while it is levelled and finished. What is his likely occupational exposure?",
+        options: [
+          "Inorganic lead exposure",
+          "Hexavalent chromium in the wet cement",
+          "Hair dye exposure",
+          "Coal tar pitch exposure",
+          "Mercury compound exposure"
+        ],
+        correct: 1,
+        explain: "Hexavalent chromium, present as a trace contaminant in Portland cement, is a well-recognised cause of these characteristic 'chrome ulcers' — punched-out, crusted, typically painless lesions arising from prolonged skin contact with wet cement, worsened here by the cement soaking through his boots over an extended period. Inorganic lead is not classically associated with skin ulceration as a hallmark effect, its recognised toxicity relating instead to the nervous system, blood and kidneys; hair dyes, coal tar pitch and mercury compounds are relevant to other occupational skin and systemic conditions, but are not the recognised cause of this specific presentation.",
+        source: "OSHA and HSE guidance on hexavalent chromium — chrome ulcers from wet cement exposure"
+      },
+      {
+        stem: "An HR director is developing a workplace stress policy and wants to structure it around the HSE Management Standards, understanding these to cover the primary sources of work-related stress. Which of the following is not one of the six HSE Management Standards?",
+        options: [
+          "Demands",
+          "Control",
+          "Shift patterns",
+          "Relationships",
+          "Change"
+        ],
+        correct: 2,
+        explain: "The six HSE Management Standards are Demands, Control, Support, Relationships, Role and Change. Shift patterns are not a standalone standard in their own right — they are one specific issue that would be considered within the Demands standard, alongside workload and the work environment more broadly, rather than forming a separate category. A policy structured around the six standards should reflect this, rather than incorrectly treating shift patterns as a seventh, independent area.",
+        source: "HSE Management Standards for work-related stress"
+      },
+      {
+        stem: "A 52-year-old former electroplating worker develops lung cancer many years after leaving the industry, and a claim is made for compensation via the Industrial Injuries Disablement Benefit (IIDB) scheme. Which of the following exposures, if confirmed, may allow such a claim for a primary carcinoma of the lung to succeed?",
+        options: [
+          "Inorganic lead exposure",
+          "Trivalent chromium exposure",
+          "Arsenic fume exposure",
+          "Mercury exposure",
+          "Zinc galvanising exposure"
+        ],
+        correct: 2,
+        explain: "Arsenic fume exposure is a recognised prescribed cause of primary lung carcinoma under the Industrial Injuries Disablement Benefit scheme. Trivalent chromium is a plausible-sounding distractor, but it is hexavalent, not trivalent, chromium that is the recognised occupational lung carcinogen — a genuinely easy distinction to lose track of. Inorganic lead, mercury and zinc galvanising are not established prescribed causes of primary lung cancer under this scheme, their recognised occupational health effects lying elsewhere.",
+        source: "Industrial Injuries Disablement Benefit — prescribed diseases and occupational causation, primary lung carcinoma"
+      },
+      {
+        stem: "A forklift operator working in a poorly ventilated warehouse presents to occupational health reporting intermittent, dull headaches and dizziness that consistently occur during his shift, with symptoms reliably resolving over the weekend when he is away from work. What is the most appropriate initial diagnostic investigation?",
+        options: [
+          "Arterial blood gas (ABG) with carboxyhaemoglobin (COHb) measurement",
+          "Carboxyhaemoglobin (COHb) measurement via a peripheral venous blood sample",
+          "Chest X-ray to rule out occupational lung disease",
+          "Pulse oximetry, noting that this may show a falsely elevated peripheral oxygen saturation",
+          "Full blood count to check for polycythaemia"
+        ],
+        correct: 1,
+        explain: "This presentation is strongly suggestive of carbon monoxide exposure from the forklift's combustion engine, and carboxyhaemoglobin measurement is the key investigation to confirm this. For clinical purposes, venous and arterial COHb levels are considered equivalent, with studies showing near-perfect correlation between the two, so a straightforward venous sample is entirely appropriate here and avoids the added pain and risk of arterial puncture. Arterial sampling only offers a genuine additional advantage where acid-base status also needs assessing, relevant in more acute, severe poisoning, not this intermittent, weekend-resolving picture. Standard pulse oximetry is a well-known trap in this exact scenario: it cannot reliably distinguish carboxyhaemoglobin from oxyhaemoglobin, and can appear falsely reassuring rather than genuinely elevated. A chest X-ray and full blood count are not the appropriate initial tests here, though chronic exposure could, in principle, contribute to secondary polycythaemia over time.",
+        source: "Carboxyhaemoglobin: a primer for clinicians — venous and arterial COHb equivalence in clinical practice"
       },
     ]
   },
@@ -5825,6 +6124,175 @@ const SECTIONS = [
         explain: "Individuals with immunosuppression should be given all inactivated vaccines in accordance with national recommendations, even though they may not mount as good an antibody response as immunocompetent individuals — a reduced response is not the same as no protection, and is not a reason to withhold a vaccine that remains appropriate for her. Stopping her immunosuppressive therapy solely to improve vaccine response is not appropriate advice, live vaccines are generally the ones requiring greater caution in immunosuppression rather than being preferred, and temporarily pausing medication around vaccination is not part of standard guidance here.",
         source: "Green Book Chapter 7, Immunisation of individuals with underlying medical conditions — inactivated vaccines in immunosuppression"
       },
+      {
+        stem: "A 47-year-old assembly line worker presents with numbness and tingling in her right thumb, index and middle fingers, worse at night and occasionally waking her from sleep. Nerve conduction studies confirm carpal tunnel syndrome. Regarding this presentation, the correct statement is:",
+        options: [
+          "The symptoms reflect pressure on the ulnar nerve rather than the median nerve",
+          "Wasting of the hypothenar eminence would be an expected finding if the condition progresses",
+          "The nocturnal predominance of symptoms, as described here, is a recognised and typical feature",
+          "Involvement of the little finger would be expected, given the nerve distribution affected",
+          "Carpal tunnel syndrome in this occupational context could never be considered reportable under RIDDOR"
+        ],
+        correct: 2,
+        explain: "Nocturnal symptoms, often severe enough to wake the patient, are a classic and well-recognised feature of carpal tunnel syndrome. The condition reflects compression of the median nerve, not the ulnar nerve, so the sensory distribution affects the thumb, index, middle and radial half of the ring finger — not the little finger, which is ulnar territory. Muscle wasting in carpal tunnel syndrome affects the thenar eminence (median-innervated), not the hypothenar eminence (ulnar-innervated) — a frequently confused pairing. Carpal tunnel syndrome associated with regular use of vibrating tools or repetitive manual tasks in an occupational context can, in fact, be reportable under RIDDOR as a specified work-related condition.",
+        source: "RIDDOR 2013, reportable occupational diseases; median nerve anatomy and carpal tunnel syndrome"
+      },
+      {
+        stem: "A 38-year-old mountain rescue volunteer, employed as an outdoor activities instructor, sustained a significant frostbite injury to several fingers three years ago during a winter exercise, managed at the time without amputation. He now attends occupational health for a routine medical, reporting no current symptoms but asking whether anything from that injury is likely to persist long-term. Which of the following is most likely to represent a genuine long-term sequela of his previous cold injury?",
+        options: [
+          "Cold gangrene developing spontaneously without any further cold exposure",
+          "Nasal ulceration unrelated to the site of the original injury",
+          "New-onset asthma attributable to the earlier frostbite episode",
+          "Reduced fine touch sensation in the previously affected fingers",
+          "Progressive, unexplained skin necrosis unrelated to further cold exposure"
+        ],
+        correct: 3,
+        explain: "Long-term neuropathic complications, including reduced or altered sensation and impaired fine touch, are well documented following frostbite injury, affecting a substantial proportion of those who sustain a significant cold injury, alongside vasomotor disturbances such as persistent cold sensitivity. Cold gangrene and skin necrosis are features of the acute injury itself or of severe reinjury, not typically a delayed, spontaneous sequela occurring years later without further cold exposure; nasal ulceration and asthma are not recognised long-term consequences of a peripheral cold injury of this kind.",
+        source: "Long-term sequelae of frostbite — neuropathic and vasomotor complications following cold injury"
+      },
+      {
+        stem: "A prospective apprentice joiner discloses at pre-placement screening that he has severe haemophilia A, with a natural factor VIII level below 1%, and has not had a serious bleed in 10 years while under regular review by a haematologist. His new role will involve handling timber and sharp materials in a workshop with guarded machinery. In the event of a blunt injury to the soft tissue of a limb, what is the most appropriate immediate management?",
+        options: [
+          "Immediate hospitalisation for any blunt soft tissue injury, however minor it appears",
+          "Limb elevation, application of cold packs, and a compressive bandage, alongside prompt liaison with his haematology team",
+          "Checking his pulse and blood pressure every 10 minutes, without any other specific first-aid measures",
+          "Arranging an early GP appointment, without any other immediate first-aid intervention",
+          "No specific first-aid measures are required beyond those used for any other employee"
+        ],
+        correct: 1,
+        explain: "For a blunt soft tissue injury in someone with severe haemophilia, immediate first aid of limb elevation, cold packs and a compressive bandage — alongside prompt contact with his haematology team, who can advise on and arrange clotting factor replacement as needed — is the appropriate initial management, rather than a routine general workplace approach that overlooks his specific bleeding risk. This does not require automatic hospitalisation for every such injury, nor is a GP appointment or basic observations alone a sufficient substitute for this first-aid approach and specialist liaison.",
+        source: "Haemophilia and occupational first aid; UK Haemophilia Centre Doctors' Organisation guidance"
+      },
+      {
+        stem: "A 44-year-old receptionist had an uncomplicated myocardial infarction six weeks ago and would like to return to work. Her manager asks occupational health for current guidance on when she can be expected to return, since an older colleague recalled a fixed six-week rule from many years ago. What is the most appropriate response regarding the timing of her return to work?",
+        options: [
+          "A fixed period of 4 to 6 weeks should be applied in every case of this kind",
+          "A fixed period of 6 to 8 weeks should be applied in every case of this kind",
+          "A fixed period of 8 to 10 weeks should be applied in every case of this kind",
+          "Return should be guided by an individualised occupational health assessment of her recovery and functional capacity, rather than a fixed timescale",
+          "She should not return to work until her cardiologist confirms she is fully fit, since this is the only assessment that matters"
+        ],
+        correct: 3,
+        explain: "Current guidance favours an individualised assessment of recovery and functional capacity, rather than the fixed timescales that were once more commonly quoted — someone with an uncomplicated presentation, a sedentary role and good recovery may reasonably return sooner than someone with a more complicated course, so a blanket figure risks being both too cautious in some cases and too permissive in others. This is why occupational health's own functional assessment matters here, distinct from her cardiologist's opinion, which focuses on clinical recovery rather than the specific demands of her particular job.",
+        source: "British Heart Foundation and British Cardiovascular Society guidance on return to work after myocardial infarction"
+      },
+      {
+        stem: "A 38-year-old assembly line worker at a components factory reports decreased grip strength and tingling affecting the little and ring fingers of her dominant hand, worse after a shift spent gripping a handheld tool that presses against the heel of her palm. Examination confirms reduced sensation over the little finger and the ulnar half of the ring finger, sparing the thumb, index and middle fingers. What is the most likely diagnosis?",
+        options: [
+          "Carpal tunnel syndrome",
+          "Lateral epicondylitis",
+          "Radial tunnel syndrome",
+          "Guyon's canal syndrome",
+          "Rheumatoid arthritis"
+        ],
+        correct: 3,
+        explain: "Guyon's canal syndrome involves compression of the ulnar nerve at the wrist, producing exactly this pattern — sensory change over the little finger and ulnar half of the ring finger, sparing the median nerve territory (thumb, index, middle finger), together with reduced grip strength from weakness of the ulnar-innervated intrinsic hand muscles. This is the mirror image of carpal tunnel syndrome, which affects the median nerve distribution instead. Lateral epicondylitis and radial tunnel syndrome relate to different nerves and produce different symptom patterns, typically around the elbow and forearm rather than this sensory pattern in the hand, and rheumatoid arthritis would not be expected to produce this specific, single-nerve distribution.",
+        source: "Peripheral nerve compression syndromes — ulnar nerve at Guyon's canal versus median nerve at the carpal tunnel"
+      },
+      {
+        stem: "An occupational health physician is investigating a 34-year-old hairdresser with a persistent hand rash, and wants to determine whether it represents an allergic reaction to a specific product used at work, rather than a general irritant reaction to repeated wet work. Which statement about patch testing is correct?",
+        options: [
+          "It depends primarily on a type IV immunological response",
+          "The patch test chamber reaction is read after 24 hours only, with no further reading required",
+          "It is often used to demonstrate atopy",
+          "It is used for the diagnosis of urticaria",
+          "It is used in the diagnosis of irritant contact dermatitis specifically"
+        ],
+        correct: 0,
+        explain: "Patch testing depends primarily on a type IV, delayed-type hypersensitivity response, which is why it is specifically useful for identifying allergic contact dermatitis — the mechanism this hairdresser's presentation needs to distinguish from a simple irritant reaction. It is not the appropriate test for irritant contact dermatitis, which does not involve this immunological mechanism, and reactions are typically read at multiple time points, commonly around 48 hours and again later, rather than at 24 hours alone. Atopy and urticaria involve type I, immediate hypersensitivity mechanisms and are assessed by different methods, such as skin prick testing, not patch testing.",
+        source: "Contact dermatitis diagnosis — patch testing methodology and type IV hypersensitivity"
+      },
+      {
+        stem: "A 41-year-old worker at a plastics manufacturing plant, who handles alkylphenol compounds including monobenzyl ether of hydroquinone as part of the moulding process, develops patchy depigmentation on his hands and forearms over several months, with no preceding inflammation or rash. What is the most likely diagnosis?",
+        options: [
+          "Allergic contact dermatitis",
+          "Irritant contact dermatitis",
+          "Occupational vitiligo",
+          "Chloracne",
+          "Oil folliculitis"
+        ],
+        correct: 2,
+        explain: "Certain alkylphenol compounds, including monobenzyl ether of hydroquinone, are recognised causes of occupational vitiligo — a chemically induced, patchy depigmentation of the skin resulting from selective toxicity to melanocytes, distinct from an inflammatory dermatitis. This does not present as a dermatitis with the redness, scaling or itching typical of allergic or irritant contact dermatitis, and is a different mechanism entirely from chloracne (associated with halogenated aromatic compounds in some fungicides and insecticides) or oil folliculitis (associated with mineral oil exposure blocking hair follicles).",
+        source: "Occupational dermatology — chemically induced vitiligo from alkylphenol compounds"
+      },
+      {
+        stem: "A 33-year-old firefighter has been struggling at work following a diagnosis of moderate depression, and his GP has started him on sertraline in line with NICE guidance. His watch commander asks occupational health what advice is appropriate regarding his continued firefighting duties. What is the most appropriate advice?",
+        options: [
+          "He should be advised not to work in the fire service at all, given the inherently stressful nature of the role",
+          "Occupational health should itself recommend a specific antidepressant, in line with NICE guidance",
+          "Presenteeism is not a relevant concern in cases of diagnosed mental health illness",
+          "No adjustment to his duties is required, provided he remains on treatment",
+          "Night shift working may not be advisable in this case, and should be considered as part of his overall management"
+        ],
+        correct: 4,
+        explain: "Considering whether night shift working is advisable, given its known potential to disrupt sleep and worsen mood symptoms, is an appropriate and genuinely useful piece of practical advice within occupational health's remit here. Recommending a specific medication is not occupational health's role — that is a matter for his treating clinician, not something occupational health should be directing. Blanket exclusion from firefighting on the basis of diagnosis alone is unnecessarily restrictive and potentially discriminatory, presenteeism is a genuine and relevant risk in mental health conditions rather than something that can be dismissed, and simply assuming no adjustment is needed overlooks the practical, modifiable factors — like shift pattern — that could genuinely support his recovery.",
+        source: "NICE guidance on depression in adults; occupational health scope in relation to treating clinicians"
+      },
+      {
+        stem: "A 29-year-old carpenter on a large construction site discloses to occupational health that he attempted suicide by hanging two months ago, having been found by his girlfriend. He has been at work throughout, is engaged with a crisis team, and management report no concerns about the quality of his work. His role involves working at height and with moving part machinery, and he sometimes works alone. Regarding the most appropriate immediate management step, occupational health should:",
+        options: [
+          "He should not undertake lone working for the time being",
+          "He is not fit to work at all, given the seriousness of the recent event",
+          "A Wellness Recovery Action Plan should be developed with management as the sole action taken",
+          "His medication should be increased",
+          "His psychiatrist should be written to, to determine his current suicide risk before any other action is taken"
+        ],
+        correct: 0,
+        explain: "Given his ongoing engagement with a crisis team and no current concerns about his day-to-day functioning, an outright unfit-to-work recommendation would be disproportionate — but restricting lone working specifically addresses the genuine, immediate safety risk of him being unsupervised while working at height and around moving machinery, without being unnecessarily restrictive elsewhere. A Wellness Recovery Action Plan is a valuable supportive step but does not, on its own, address this specific immediate safety risk with sufficient urgency. Adjusting medication is a clinical decision for his treating team, not occupational health, and writing to his psychiatrist to determine risk before taking any interim safety step at all leaves an immediate, identifiable hazard unmanaged in the meantime.",
+        source: "Occupational health risk management following disclosure of suicide risk in a safety-critical role"
+      },
+      {
+        stem: "An occupational health physician is assessing a 55-year-old warehouse worker with suspected peripheral neuropathy secondary to long-standing type 2 diabetes. Which of the following is a genuine characteristic of peripheral neuropathy?",
+        options: [
+          "The hands are usually affected before the feet",
+          "Vibration perception threshold (VPT) decreases as the condition develops",
+          "Reflexes become enhanced as the condition develops",
+          "The skin surface becomes thin and shiny, with hair loss",
+          "Thermal sensation becomes enhanced as the condition develops"
+        ],
+        correct: 3,
+        explain: "Trophic skin changes — thinning, shininess and hair loss — are a genuine, recognised feature of peripheral neuropathy, reflecting the autonomic component of nerve damage. In a length-dependent peripheral neuropathy, the feet are typically affected before the hands, not the other way round, since the longest nerve fibres are affected earliest. Vibration perception threshold increases, not decreases, as neuropathy develops — a higher stimulus is needed to be perceived, the opposite of what's stated here. Reflexes become diminished or absent, not enhanced, and thermal sensation is typically reduced or impaired, not enhanced, as sensory nerve function deteriorates.",
+        source: "Clinical features of peripheral neuropathy — sensory, motor and autonomic changes"
+      },
+      {
+        stem: "A 61-year-old former shipyard worker with a 30-year history of asbestos exposure is diagnosed with a primary malignancy. Which combination of malignancies is recognised as being associated with asbestos exposure?",
+        options: [
+          "Laryngeal, cervical and gastric cancer",
+          "Small cell lung tumour, colon and prostate cancer",
+          "Laryngeal, ovarian and lung cancer",
+          "Colon, testicular and lung cancer",
+          "Skin, cervical and nasal sinus cancer"
+        ],
+        correct: 2,
+        explain: "The International Agency for Research on Cancer recognises a proven causal relationship between asbestos exposure and laryngeal cancer, ovarian cancer and lung cancer, alongside mesothelioma — a genuinely wider list than the lung cancer and mesothelioma association most clinicians immediately think of. Laryngeal and ovarian cancer specifically are still commonly under-recognised as asbestos-related in clinical practice, since the connection is made far less often than for lung cancer or mesothelioma. None of the other listed combinations — involving colon, prostate, testicular, cervical, gastric, skin or nasal sinus cancers — are established, recognised associations with asbestos exposure in the way laryngeal, ovarian and lung cancer are.",
+        source: "IARC — asbestos and cancer, recognised malignancies including laryngeal and ovarian cancer"
+      },
+      {
+        stem: "An established industrial paint sprayer develops new symptoms suggestive of occupational asthma, including wheeze and chest tightness that appear to improve over weekends and holidays. What is the most appropriate initial investigation to help determine whether these symptoms are occupationally related?",
+        options: [
+          "A respiratory questionnaire alone, without any objective monitoring",
+          "Eosinophil count taken as a single blood test",
+          "Urine isocyanate levels measured at the end of a single shift",
+          "Specific inhalation challenge testing as the first-line investigation",
+          "Serial peak flow measurements over 6 weeks, both at work and away from work"
+        ],
+        correct: 4,
+        explain: "Serial peak expiratory flow measurements, recorded regularly over several weeks and covering both periods at work and away from work, are the established, practical first-line investigation for suspected occupational asthma, since they can demonstrate a genuine pattern of work-related variability. A respiratory questionnaire alone is a useful screening step but cannot confirm the diagnosis on its own. Eosinophil count is non-specific and cannot establish an occupational link. Urine isocyanate levels are used to assess exposure in specific research or biological monitoring contexts, not as a routine diagnostic test for asthma itself. Specific inhalation challenge testing is a recognised, more specialist investigation, but is invasive, hospital-based and reserved for cases where serial peak flow has not been conclusive, rather than being the appropriate initial step.",
+        source: "BOHRF/British Thoracic Society guidance — investigation of suspected occupational asthma"
+      },
+      {
+        stem: "An occupational health service is setting up a workplace vaccination clinic and reviewing what facilities are essential to have available in case of an anaphylactic reaction. Which of the following is an essential facility for a site administering vaccinations?",
+        options: [
+          "Antihistamine medication available as the primary treatment",
+          "A qualified first aider present at all times, with no other specific equipment required",
+          "Intubation equipment available on site",
+          "Injectable adrenaline and a medical oxygen supply available on site",
+          "A minimum of three staff present from occupational health at all times"
+        ],
+        correct: 3,
+        explain: "Injectable adrenaline and a medical oxygen supply are essential facilities for a site administering vaccinations, reflecting the standard immediate management of a suspected anaphylactic reaction while awaiting emergency help. Antihistamines are not the primary treatment for anaphylaxis and should not be relied upon as such; a qualified first aider alone, without appropriate equipment and medication, is not sufficient; intubation equipment represents a level of resuscitation capability well beyond what is required at a standard vaccination site, where the priority is prompt adrenaline administration and calling emergency services; and there is no fixed minimum staffing number of three from occupational health specifically that governs this.",
+        source: "Green Book, Chapter 3 — anaphylaxis management at immunisation sites"
+      },
     ]
   },
   {
@@ -5962,7 +6430,59 @@ const SECTIONS = [
         correct: 0,
         explain: "Despite work being generally recognised as good for health and long-standing awareness of these specific hazards, conditions such as lead poisoning and asbestosis remain depressingly common in current practice — long recognition of a hazard has not translated into its elimination.",
         source: "ABC of Occ & Env Medicine, Ch1 — occupational disease still occurring despite recognition"
-      }
+      },
+      {
+        stem: "A company implemented an expensive digital Employee Assistance Programme and an on-site mindfulness workshop six months ago. HR now reports that utilisation rates for both remain under 10%, while employee absenteeism due to mental health has increased by 5% over the same period. What is the most appropriate next step?",
+        options: [
+          "Make participation in the mindfulness workshops mandatory for all staff",
+          "Conduct an employee needs assessment to determine barriers to access and what support staff actually want",
+          "Cancel the Employee Assistance Programme entirely and replace it with a company gym membership",
+          "Assume the programmes are working but require the marketing team to send more emails promoting them",
+          "Issue a written warning to all staff about the rising absenteeism rates"
+        ],
+        correct: 1,
+        explain: "Given persistently low uptake alongside worsening absenteeism, understanding why staff are not engaging — through a proper needs assessment exploring both barriers to access and what kind of support staff actually want — is the appropriate next step, rather than assuming the intervention itself is right and simply needs better promotion or enforcement. Making participation mandatory risks worsening engagement further and misunderstands why voluntary wellbeing interventions often fail to reach people. Cancelling the programme outright, without understanding the underlying reasons for low uptake, discards a potentially valuable resource on the basis of an assumption rather than evidence, and a written warning about absenteeism entirely misdirects responsibility onto staff for what may be a programme design or communication failure.",
+        source: "Workplace wellbeing programme evaluation and design — addressing low intervention uptake"
+      },
+      {
+        stem: "A large NHS trust has implemented a comprehensive mental health and wellbeing programme, including resilience workshops and an employee assistance programme. The HR director wants to evaluate the short-term impact of these interventions on the workforce, six months after launch. Which of the following is the most appropriate indicator for evaluating the immediate effectiveness of this wellbeing intervention?",
+        options: [
+          "A decrease in overall clinical error rates",
+          "An increase in the organisation's net promoter score",
+          "Cost-benefit analysis of the Employee Assistance Programme",
+          "Reduced long-term sickness absence by 15% within 12 months",
+          "Employee uptake rates and participant satisfaction scores"
+        ],
+        correct: 4,
+        explain: "At six months, employee uptake rates and participant satisfaction scores are the appropriate short-term, process-level indicators — they can be measured almost immediately and reflect whether the programme is genuinely reaching and engaging staff. A 15% reduction in long-term sickness absence within 12 months is a longer-term outcome measure that would not yet be meaningfully assessable at this stage, and a cost-benefit analysis similarly requires a longer time horizon to be meaningful. Clinical error rates are not a direct or specific measure of staff wellbeing programme effectiveness, and net promoter score is typically a patient or customer satisfaction metric, not one designed to capture staff wellbeing.",
+        source: "Workplace wellbeing programme evaluation — short-term process indicators versus long-term outcome measures"
+      },
+      {
+        stem: "A company's leadership team wants to invest in a primary prevention intervention to reduce stress and improve mental wellbeing across the organisation, focusing on preventing problems before they arise rather than reacting once issues have already escalated. Which approach, drawing on the HSE Management Standards, best reflects this preventive focus?",
+        options: [
+          "Providing reactive private counselling sessions for employees experiencing burnout",
+          "Relying heavily on an Employee Assistance Programme hotline",
+          "Conducting risk assessments to proactively address demands, control and support within the organisation",
+          "Giving employees financial bonuses to offset the cost of private therapy",
+          "Offering one-off wellness days without changing the underlying core workload"
+        ],
+        correct: 2,
+        explain: "Conducting risk assessments that proactively address the Management Standards areas — such as demands, control and support — reflects the genuinely preventive philosophy underlying the HSE approach, identifying and addressing risk factors before they cause harm, rather than responding only once problems have already developed. Private counselling and an EAP hotline are valuable, but are reactive, downstream responses to problems that have already emerged, not primary prevention. Financial bonuses to offset private therapy costs do not address the underlying causes of workplace stress at all, and one-off wellness days without addressing core workload are a superficial response that leaves the underlying, ongoing risk factors unchanged.",
+        source: "HSE Management Standards — proactive risk assessment as primary prevention of work-related stress"
+      },
+      {
+        stem: "A general practice nurse designs a targeted health education leaflet campaign encouraging patients to quit smoking, using expert-defined health risk data to persuade individuals to adopt healthier lifestyle choices. Drawing on the Ewles and Simnett model of approaches to health promotion, which approach best describes this intervention?",
+        options: [
+          "Medical approach",
+          "Behaviour change approach",
+          "Educational approach",
+          "Client-centred approach",
+          "Social change approach"
+        ],
+        correct: 1,
+        explain: "The behaviour change approach, in the Ewles and Simnett model, specifically involves persuading individuals to adopt healthier behaviours based on expert-defined health risk information — exactly what this leaflet campaign is doing, using persuasion grounded in professionally determined risk data to change individual behaviour. This is distinct from the educational approach, which focuses on providing knowledge and understanding to allow informed choice without persuasion toward a particular outcome; the client-centred approach, which works from the individual's own agenda rather than an expert-defined one; the medical approach, which is narrower and disease-prevention focused; and the social change approach, which targets the wider environment rather than individual behaviour.",
+        source: "Ewles and Simnett, Promoting Health: A Practical Guide — five approaches to health education and promotion"
+      },
     ]
   },
   {
@@ -6498,6 +7018,58 @@ const SECTIONS = [
         correct: 1,
         explain: "Dismissal in circumstances like this can be fair, not primarily because of the caution's underlying seriousness, but because of the combination of his failure to disclose it — a breach of trust in its own right — and the safeguarding duty the employer owes to the vulnerable adults in its care, which justifies a materially lower threshold for tolerating undisclosed risk than in a role without this dimension. This isn't automatic in either direction: the caution's age and minor nature don't make dismissal automatically unfair, nor does any undisclosed record automatically justify dismissal without considering the specific circumstances. Rehabilitation periods can affect standard disclosure requirements, but enhanced DBS checks for roles involving vulnerable adults specifically override the standard filtering that would otherwise apply, and the caution doesn't need to have involved a vulnerable adult directly for the safeguarding duty to be engaged.",
         source: "Rehabilitation of Offenders Act 1974 (Exceptions) Order 1975; Care Act 2014 — safeguarding duty in regulated care settings"
+      },
+      {
+        stem: "An occupational health physician becomes aware that a worker may be at immediate risk of serious harm, and considers whether sharing this concern without the worker's consent would breach data protection law. A colleague argues that GDPR prevents any disclosure without explicit consent, regardless of the risk involved. What is the correct position?",
+        options: [
+          "GDPR imposes an absolute bar on disclosure without consent in every circumstance, regardless of the risk involved",
+          "Information may only be disclosed once a court order specifically directs the release of that information",
+          "Disclosure without consent is permitted only where the concern relates to a child, and never in relation to an adult",
+          "GDPR compliance should take precedence over safeguarding considerations whenever the two appear to be in tension",
+          "GDPR should not be a barrier to disclosure where there is a genuine safeguarding concern and risk of serious harm"
+        ],
+        correct: 4,
+        explain: "Data protection law is not a barrier to appropriate information sharing where there is a genuine safeguarding concern — this is a widely held misconception. GDPR and the Data Protection Act 2018 include specific provisions permitting disclosure without consent where necessary to protect someone from serious harm, and safeguarding concerns should not be held back pending a court order. This isn't limited only to concerns about children, and safeguarding considerations are not simply subordinate to data protection compliance when the two are in tension — the framework is designed to accommodate both.",
+        source: "UK GDPR, Article 6 and Article 9 — processing necessary to protect vital interests; safeguarding and data protection guidance"
+      },
+      {
+        stem: "A 35-year-old employee, the sole guardian of an 8-year-old daughter, discloses to occupational health that she has recently disengaged from her community mental health team and stopped taking medication prescribed for a psychotic illness diagnosed 18 months ago. She has had recent episodes of irrational behaviour at work and now isolates herself from colleagues, though her attendance and personal care remain unaffected. What is the most appropriate next step regarding the physician's professional responsibility toward her child?",
+        options: [
+          "Seek her permission to contact her GP, to discuss both her own health and her child's welfare and wellbeing",
+          "Contact social services immediately without her permission, given the presence of a child in her care",
+          "Take no action at all, since her attendance and personal care remain currently unaffected",
+          "Contact the police directly and request that the child be removed to a place of safety",
+          "Arrange a home visit and assess her together with her child present, without first seeking her consent"
+        ],
+        correct: 0,
+        explain: "Given the evident deterioration and a child in her sole care, seeking her permission to contact her GP — to discuss both her own health and her child's welfare — is the proportionate, least intrusive first step, respecting her autonomy while beginning to engage appropriate clinical support for both her and, indirectly, her child. Bypassing consent to escalate directly to social services, or further still to the police, is disproportionate at this stage without first attempting a more measured, consent-based approach, and taking no action at all ignores a genuine, evolving safeguarding concern. A home visit with the child present, without first establishing consent, oversteps an occupational physician's usual role and could itself raise boundary concerns.",
+        source: "GMC, Protecting children and young people: the responsibilities of all doctors; FOM Ethics Guidance 9th edition"
+      },
+      {
+        stem: "An occupational health team providing services to a residential care home is delivering safeguarding training to new staff, using the '5 Rs' framework as a memorable structure for how to handle a concern once it arises. In what order should these steps correctly be applied?",
+        options: [
+          "Respond, Recognise, Refer, Report and Record",
+          "Report, Record, Refer, Recognise and Respond",
+          "Respond, Report, Record and Recognise, Refer",
+          "Recognise, Respond, Report, Record and Refer",
+          "Recognise, Refer, Record, Report and Respond"
+        ],
+        correct: 3,
+        explain: "The '5 Rs' of safeguarding are correctly ordered as Recognise, Respond, Report, Record and Refer — first recognising that a concern exists, responding appropriately in the moment, then reporting it through the correct channel, recording what has happened and what was done, and finally referring on to the appropriate agency for further action. This sequence reflects the practical order in which a genuine safeguarding concern actually unfolds, from initial identification through to formal referral.",
+        source: "Safeguarding adults and children — the '5 Rs' framework"
+      },
+      {
+        stem: "An occupational health nurse working with a residential care home for older adults is reviewing training on recognising different types of abuse. A resident is found to have an unexplained, newly diagnosed gonorrhoea infection, with no other obvious cause identified. Which type of abuse should this specific finding most strongly prompt consideration of?",
+        options: [
+          "Neglect",
+          "Sexual abuse",
+          "Physical abuse",
+          "Institutional abuse",
+          "Psychological abuse"
+        ],
+        correct: 1,
+        explain: "An unexplained sexually transmitted infection in a resident is a recognised, specific indicator that should prompt consideration of sexual abuse, distinct from the broader and less specific signs associated with neglect, physical abuse, institutional abuse or psychological abuse. While any of these forms of abuse may coexist and a full safeguarding assessment should consider the whole picture, this particular finding points specifically and strongly toward the possibility of sexual abuse, and should not be assumed to have an innocent explanation without proper enquiry.",
+        source: "Safeguarding adults — recognising indicators of abuse in care settings"
       },
     ]
   }
