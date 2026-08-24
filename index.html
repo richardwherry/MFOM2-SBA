@@ -4539,7 +4539,7 @@ const SECTIONS = [
         tags: []
       },
       {
-        stem: "A trainee asks how much of the average UK individual's radiation dose comes from natural background, and from what sources. Which statement is correct?",
+        stem: "An occupational health trainee is shadowing a radiation protection adviser conducting an annual dose review at an industrial radiography company, where staff wear personal dosimeters and receive an annual occupational dose report. Comparing the workers' occupational readings against published figures for the general population, the trainee is surprised to learn that natural background sources still make up the great majority of the average UK individual's total radiation dose, and asks how much of that background dose comes from natural sources, and which sources specifically contribute most. Which statement is correct?",
         options: [
           "Around 50%, arising chiefly from medical imaging and occupational sources combined",
           "Around 30%, arising predominantly from nuclear industry discharges and weapons fallout",
@@ -5597,7 +5597,7 @@ const SECTIONS = [
         tags: ["toxicology", "asbestos", "occupational-cancer"]
       },
       {
-        stem: "A 38-year-old baker develops rhinitis and later wheeze, worse on working days. Which statement about his likely condition is correct?",
+        stem: "A 38-year-old baker, employed at a large commercial bakery for six years, attends occupational health after developing a runny, blocked nose that started roughly a year ago, followed more recently by episodes of wheeze and chest tightness. He has noticed both symptoms are consistently worse on working days, particularly during the early morning shift when flour is being weighed and mixed, and improve over weekends and during his recent two-week holiday. He has no personal or family history of asthma or eczema, and did not experience these symptoms at all before starting this job. Which statement about his likely condition is correct?",
         options: [
           "Flour dust causes irritant rhinitis only, with asthma requiring an alternative explanation",
           "Sensitisation to flour is confined to workers with pre-existing atopy and hay fever",
@@ -8038,7 +8038,365 @@ const SECTIONS = [
       },
     ]
   },
-];;;;
+  {
+    id: "zoonoses",
+    name: "Zoonoses & Biological Agents (LO3/LO4)",
+    icon: "Z",
+    source: "Hunter's Diseases of Occupations, 10th ed, Ch 59-60; ABC of Occupational and Environmental Medicine, 3rd ed, Ch 12; HSE MISC208 6th ed; UKHSA surveillance 2024",
+    questions: [
+      {
+        stem: "A university microbiology department plans to begin diagnostic work on samples from patients with suspected brucellosis, having previously handled only Hazard Group 2 organisms. The laboratory manager tells occupational health that the department will apply its existing Hazard Group 2 procedures until the first confirmed isolate is obtained, at which point it will review containment. She asks you to confirm this is a reasonable staged approach. What is the most appropriate response?",
+        options: [
+          "Agree, since containment requirements are triggered by confirmed identification of a Hazard Group 3 organism in the laboratory",
+          "Advise that Brucella requires containment level 3, and that most laboratory-acquired infection follows open-bench work on unsuspected cultures",
+          "Advise that Hazard Group 3 procedures apply only where the organism is deliberately cultured rather than encountered in diagnostic samples",
+          "Agree, provided all staff working on the samples are offered brucellosis vaccination before the work begins",
+          "Advise that the decision rests with the laboratory's own risk assessment, since hazard group classification is advisory rather than binding"
+        ],
+        correct: 1,
+        explain: "The risk is highest before the diagnosis is suspected. Laboratory-acquired brucellosis is usually attributable to open-bench work on cultures from patients in whom brucellosis was not considered, so waiting for a confirmed isolate means the exposure has already occurred. Brucella is Hazard Group 3 and work with it requires containment level 3. The practical corollary runs both ways: requesting clinicians should alert the laboratory when brucellosis is suspected, and the laboratory needs a policy for samples where a Hazard Group 3 organism is plausible but unconfirmed. Option E misstates the legal position: the Approved List is prepared by ACDP and approved by HSE, and COSHH refers to the approved classification, so it carries legal force; the risk assessment determines control measures for the activity, not the hazard group. Option D fails on fact, as there is no human brucellosis vaccine.",
+        source: "Hunter's Diseases of Occupations, 10th ed, Ch 60; HSE Approved List of Biological Agents (MISC208); COSHH 2002 Schedule 3",
+        tags: ["zoonoses"]
+      },
+      {
+        stem: "A university research group is establishing a new project studying a bacterial species that has only in the past two years been recognised as a cause of severe human infection, following a cluster of cases linked to contaminated wound care products. The organism does not yet appear in the Approved List of Biological Agents, and the principal investigator, keen to begin work quickly ahead of a grant deadline, tells occupational health that since the organism is not listed, it may be treated as Hazard Group 1 and handled at containment level 1. Occupational health is asked to advise before any culturing begins. Which response is correct?",
+        options: [
+          "Absence from the Approved List means the agent is unclassified, so the work may not lawfully proceed until HSE assigns a hazard group",
+          "Absence from the Approved List indicates Hazard Group 1, since all agents capable of causing human disease are listed",
+          "The organism must be classified by risk assessment against the COSHH criteria, and assigned to the higher group where two could apply",
+          "The organism should be assigned to Hazard Group 3 by default, as the precautionary principle applies to all newly described pathogens",
+          "Classification is unnecessary for research work, which is exempt from the Approved List provisions applying to diagnostic laboratories"
+        ],
+        correct: 2,
+        explain: "The Approved List includes only Hazard Groups 2 to 4, so absence from it carries no information about Group 1 membership; HSE states that an unlisted agent does not automatically fall into Group 1 and must be classified according to its level of risk using the COSHH definitions, with the higher group assigned where two could apply. Group 1 agents are not inherently safe and may cause harm in particular circumstances. The criteria are whether the agent can cause human disease and is a hazard to employees, whether it is likely to spread to the community, and whether effective prophylaxis or treatment is available. Option A treats the absence as a legal bar rather than as something the employer must resolve by assessment. Option D substitutes blanket precaution for assessment. Note that reclassification downwards, for example for an attenuated strain, requires HSE permission.",
+        source: "HSE Approved List of Biological Agents (MISC208, sixth edition, effect 24 March 2026); COSHH 2002",
+        tags: ["zoonoses"]
+      },
+      {
+        stem: "A vaccine research facility is expanding its work and asks occupational health for advice on its duties to workers who will be exposed to a Hazard Group 3 agent. The manager has arrangements for containment, training and health surveillance, and asks what record-keeping is required. Which requirement applies?",
+        options: [
+          "A list of exposed workers must be kept, with the work and agents involved, for at least 40 years from the last known exposure",
+          "Individual health records must be retained for 10 years after the worker leaves employment, in line with health surveillance requirements",
+          "Records of exposure need only be kept while the worker remains employed at the premises where the work is carried out",
+          "No specific record-keeping applies beyond the general COSHH duty to record the findings of the risk assessment",
+          "A list of exposed workers must be kept for 5 years, after which it is transferred to the Health and Safety Executive for retention"
+        ],
+        correct: 0,
+        explain: "The list must record who was exposed, the type of work, the agents involved and any exposures, accidents or incidents, and be kept for at least 40 years from the last known exposure. The rationale is latency: infections with long incubation, and later questions about occupational causation, may arise decades after the work ends. An exemption applies where the risk assessment shows no deliberate intention to work with the agent and no significant health risk to exposed workers. The 40-year period recurs across occupational health for the same reason, including asbestos health records under CAR 2012. Option B confuses the exposure list with individual health surveillance records; both are required. Option E invents a transfer to HSE, although health records are offered to HSE where a business ceases trading.",
+        source: "COSHH 2002 Schedule 3; HSE biosafety guidance",
+        tags: ["zoonoses"]
+      },
+      {
+        stem: "A sewage treatment company reports that a worker developed leptospirosis confirmed by PCR six weeks after clearing a blocked screen at a pumping station. He was admitted for four days with jaundice and renal impairment and remains off work. The health and safety manager asks what reporting is required. Which statement is correct?",
+        options: [
+          "No report is required, since leptospirosis is not a prescribed disease and the exposure cannot be attributed to a single identifiable incident",
+          "The case must be reported to the Health and Safety Executive only if the company cannot demonstrate that control measures were adequate",
+          "The case is reportable only to UKHSA under public health legislation, as RIDDOR does not extend to infectious disease",
+          "The case is reportable under RIDDOR as a disease attributed to occupational exposure to a biological agent",
+          "The case is reportable as a dangerous occurrence, since the blocked screen represents a failure of the system of work"
+        ],
+        correct: 3,
+        explain: "RIDDOR requires the responsible person to report disease attributed to occupational exposure to a biological agent. This case has a confirmed diagnosis, an identified work activity carrying recognised exposure and a plausible interval. Leptospirosis is among the specifically named reportable infections alongside anthrax, brucellosis, tetanus and hepatitis. The trigger is attribution to work rather than the diagnostic label, and leptospirosis is also a prescribed disease for industrial injuries purposes. Option B inverts the logic, since reporting is not contingent on culpability; whether controls were adequate is what the subsequent investigation determines. Option C sets up a false exclusivity, as both RIDDOR and public health routes operate. Option E misclassifies: the dangerous occurrence category for biological agents concerns incidents with potential to release an agent, not a case of illness.",
+        source: "RIDDOR 2013; Hunter's Diseases of Occupations, 10th ed, Ch 60",
+        tags: ["zoonoses"]
+      },
+      {
+        stem: "An occupational health service is asked to advise a large farming estate on controlling zoonotic risk across its livestock, arable and forestry operations. The manager asks which single measure would most reduce the number of infections among his workers. Which response best reflects the principles of control for biological agents?",
+        options: [
+          "Comprehensive vaccination of the workforce, since effective vaccines exist for the principal agricultural zoonoses",
+          "Substitution of the highest-risk livestock species, applying the hierarchy of control as for chemical hazards",
+          "No single measure predominates; control depends on combining engineering, hygiene, safe systems and information",
+          "Personal protective equipment issued to all workers, since the majority of transmission occurs through direct contact",
+          "Pre-employment screening to exclude workers with impaired immunity, who account for most serious infections"
+        ],
+        correct: 2,
+        explain: "The top of the hierarchy is largely unavailable for biological agents, since the animals cannot be eliminated and substitution is not a realistic option on a working farm. That structural difference from chemical hazards forces control onto the lower tiers, where no single measure suffices. The combination comprises engineering controls such as ventilation, filtration, caging and prompt carcass and waste disposal; safe systems and husbandry including rodent control, which addresses leptospirosis, hantavirus and salmonella together; hygiene facilities with hand washing and separated eating areas; PPE with training and covering of cuts; vaccination where it exists; and information including alert cards. Option A fails on fact: there is no human vaccine for brucellosis, Q fever in the UK, leptospirosis routinely, hepatitis E in the UK, or Streptococcus suis. Option E is discriminatory in effect and wrong in fact, since immunocompetent workers account for most infections.",
+        source: "Hunter's Diseases of Occupations, 10th ed, Ch 60; COSHH 2002",
+        tags: ["zoonoses"]
+      },
+      {
+        stem: "A 29-year-old woman works on a mixed sheep and cattle farm and is fourteen weeks pregnant. She tells you she has always helped with lambing, which begins in three weeks, and that she also washes her husband's overalls and boots after he has been in the lambing shed. She is well, has no obstetric history of note, and is keen not to be seen as letting the farm down at its busiest time. What advice should be given?",
+        options: [
+          "She may continue lambing provided she wears gloves, a fluid-resistant gown and an FFP3 respirator throughout",
+          "She should avoid lambing and contact with contaminated clothing, and the estate should redeploy her for the season",
+          "She may continue lambing provided she is serologically screened for Chlamydophila abortus immunity beforehand",
+          "She should avoid contact with ewes that abort, but may otherwise assist with normal lambing without restriction",
+          "She may continue lambing provided she reports any febrile illness promptly, as treatment is effective if started early"
+        ],
+        correct: 1,
+        explain: "Ovine enzootic abortion, caused by Chlamydophila abortus, is the classic occupational pregnancy exclusion. The organism is present in large quantity in birthing fluids and placentae, transmission is by inhalation, and infection in pregnancy can cause severe febrile systemic illness with multiorgan involvement, disseminated intravascular coagulation, fetal death or premature delivery. Infection has also been reported after handling footwear and clothing contaminated during animal contact, so exclusion must extend beyond the shed itself. Risk is greater when birthing takes place indoors. Option D is the trap: infected ewes are frequently asymptomatic and apparently normal lambing carries the exposure. Option C fails because there is no established protective immunity to rely on. Q fever, toxoplasmosis and the live C. abortus and toxoplasma sheep vaccines raise the same concern in pregnancy.",
+        source: "Hunter's Diseases of Occupations, 10th ed, Ch 60; ABC of Occupational and Environmental Medicine, 3rd ed, Ch 12",
+        tags: ["zoonoses"]
+      },
+      {
+        stem: "Three workers at a goat dairy develop a febrile illness with severe headache and myalgia over a two-week period. One has an atypical pneumonia; another has deranged liver function. None has had direct contact with kidding, and one works entirely in the office block adjacent to the milking parlour. The farm has recently expanded its herd and kidding took place four weeks ago. Which agent is most likely?",
+        options: [
+          "Chlamydophila abortus, given the close temporal relationship to kidding having taken place on the premises",
+          "Listeria monocytogenes, acquired through the milking parlour environment",
+          "Brucella melitensis, which is the commonest cause of febrile illness in goat dairy workers",
+          "Leptospira species, given rodent activity associated with expansion of animal housing",
+          "Coxiella burnetii, which is transmitted by aerosol and can affect those without direct animal contact"
+        ],
+        correct: 4,
+        explain: "Q fever presents as atypical pneumonia, a non-specific febrile illness with prominent headache and myalgia, or acute hepatitis, and all three appear in this cluster. Incubation averages 15 days with a range of 2 to 41, fitting illness four weeks after kidding. The office worker is the diagnostic detail: Coxiella burnetii is transmitted by aerosol, the infective dose is fewer than ten organisms, and the organism resists heat and drying so it persists in dust, litter and bedding and travels on the wind. This is why community outbreaks occur, as in Switzerland and in the Netherlands in association with expanded goat farming. Option C is wrong on epidemiology rather than plausibility, since UK brucellosis is near-eradicated and almost all cases are acquired overseas. Chronic Q fever means culture-negative endocarditis in those with abnormal valves.",
+        source: "Hunter's Diseases of Occupations, 10th ed, Ch 60; ABC of Occupational and Environmental Medicine, 3rd ed, Ch 12",
+        tags: ["zoonoses"]
+      },
+      {
+        stem: "A 41-year-old shepherd attends with a lesion on the index finger of his right hand. It began ten days ago as a small red papule and has enlarged to a firm nodule about 2 cm across with a central crust and a surrounding pale ring. It is mildly tender but he is systemically well, with no fever and no lymphangitis. He has been bottle-feeding orphan lambs for the past fortnight. He mentions he had something similar four years ago which settled on its own, and asks whether he needs antibiotics. What is the most appropriate management?",
+        options: [
+          "Oral flucloxacillin, since the appearance and occupational history are consistent with erysipeloid",
+          "Topical aciclovir, since parapoxvirus lesions respond to antiviral treatment if started early",
+          "Urgent referral for biopsy, since a recurrent nodular lesion raises the possibility of cutaneous anthrax",
+          "Reassurance and wound care, as the lesion is self-limiting and will resolve over several weeks",
+          "Reassurance, with advice that the previous episode confers immunity and this must be a different diagnosis"
+        ],
+        correct: 3,
+        explain: "This is orf, a parapoxvirus acquired by direct contact with lesions on the mouth or udder of sheep and goats, incubating three to seven days and producing a solitary papule on the hand or forearm that evolves through a target-like stage into a nodule and resolves over three to six weeks without treatment. Bottle-feeding orphan lambs is the classic exposure. Option E states the intuitive but incorrect position: orf does not confer protective immunity and reinfection is common, so the earlier episode supports the diagnosis. Erysipeloid is the main differential but is a bacterial cellulitis with a well-demarcated violaceous spreading edge, acquired from pigs, fish and shellfish, treated with penicillin or a cephalosporin. Cutaneous anthrax is painless with a black eschar and surrounding oedema. Management is supportive, with cover and attention to secondary bacterial infection.",
+        source: "Hunter's Diseases of Occupations, 10th ed, Ch 60",
+        tags: ["zoonoses"]
+      },
+      {
+        stem: "A 56-year-old pig farmer is admitted with meningitis. He is treated successfully but is left with bilateral sensorineural hearing loss. Blood cultures grow a Gram-positive coccus. His wife tells the occupational health physician that he had a small cut on his hand from a gate latch the week before, and that he had also been handling a batch of pigs that had been unwell. Which organism is most likely, and what is the principal occupational lesson?",
+        options: [
+          "Streptococcus suis; skin breaks are a route of entry, and covering cuts is a key control on pig units",
+          "Listeria monocytogenes; the infection is foodborne in origin and unrelated to the cut or to the handling of pigs",
+          "Erysipelothrix rhusiopathiae; meningitis is the usual presentation and penicillin is the treatment of choice",
+          "Brucella suis; sensorineural hearing loss is a recognised complication and the exposure is direct contact with pigs",
+          "Streptococcus suis; the infection is acquired only by ingestion, so kitchen hygiene is the relevant control"
+        ],
+        correct: 0,
+        explain: "Streptococcus suis serotype 2 causes septicaemia and meningitis, and sensorineural deafness is a characteristic sequela, sufficiently distinctive to prompt an occupational history in an adult presenting this way; ataxia is the other recognised sequela. Human infection follows direct contact with sick or carrier pigs, with cuts and abrasions providing entry, and also ingestion of undercooked pork products, so option E is wrong in confining the route to ingestion and directing control to the kitchen. The occupational lesson generalises: cover cuts and abrasions before animal contact, wash hands, wear gloves for handling sick animals and report skin injuries, which also addresses erysipeloid, brucellosis and leptospirosis. Case fatality is extremely high in asplenic workers, making splenectomy a genuine fitness consideration on a pig unit. Treatment is penicillin.",
+        source: "Hunter's Diseases of Occupations, 10th ed, Ch 60; ABC of Occupational and Environmental Medicine, 3rd ed, Ch 12",
+        tags: ["zoonoses"]
+      },
+      {
+        stem: "An abattoir processing cattle and sheep is reviewing its occupational health provision after a new health and safety manager joins from a food manufacturing background with no previous exposure to livestock-related risk. Keen to demonstrate a proactive approach to the board, the occupational health nurse proposes introducing annual serological screening of all slaughterhouse workers for brucellosis, Q fever and leptospirosis, arguing that this will allow infections to be detected early and treated before they become serious. What advice should be given?",
+        options: [
+          "Endorse the proposal, since early serological detection allows treatment before chronic sequelae develop",
+          "Advise against routine serological screening, and direct effort towards exposure control, information and prompt investigation of illness",
+          "Endorse serological screening for Q fever alone, since chronic infection is otherwise detected only after endocarditis develops",
+          "Advise that screening should be offered only to workers who report symptoms, making it a diagnostic rather than surveillance activity",
+          "Advise against screening on the grounds that these infections are not occupational diseases in UK abattoir workers"
+        ],
+        correct: 1,
+        explain: "A positive antibody titre in an abattoir worker indicates past exposure rather than current disease. Seroprevalence is high in exposed groups, most infections are asymptomatic, and no intervention follows from an asymptomatic seropositive result; annual testing also fails to detect anything early, since a worker infected in March is not helped by a test the following January. Health surveillance is justified where there is a detectable early adverse effect and an action that follows from finding it, and neither condition holds. Effort should go instead to exposure control and to information so that workers and their doctors recognise the illness, the alert card model, with prompt investigation of febrile illness, RIDDOR reporting and outbreak investigation. Option D describes a reasonable action but does not address what should replace surveillance. Option C is defensible in that chronic Q fever presents as endocarditis on abnormal valves, but the response is to check valve status in confirmed acute cases rather than to screen a population.",
+        source: "Hunter's Diseases of Occupations, 10th ed, Ch 60; HSE health surveillance guidance",
+        tags: ["zoonoses"]
+      },
+      {
+        stem: "A dairy farm hosts school visits in spring. About a week after an open day, eleven children and two staff develop diarrhoea. Stool samples from six children identify the same organism. The farm manager asks why hand washing facilities were emphasised so strongly by the environmental health officer when the animals appeared healthy and the children did not eat anything on site. Which explanation is most accurate?",
+        options: [
+          "The organism is shed only by animals with clinical diarrhoea, so healthy-appearing calves indicate a human source",
+          "Exposure must have occurred before the visit, since the interval is too short for infection acquired on the day",
+          "Transmission requires ingestion of contaminated food, so the absence of catering makes an environmental source unlikely",
+          "Alcohol hand gel would have been equally effective, and the emphasis on washing facilities was disproportionate",
+          "Oocysts are shed by healthy animals, are immediately infective, resist chlorination, and have a low infective dose"
+        ],
+        correct: 4,
+        explain: "Cryptosporidium oocysts are shed by healthy-appearing calves and lambs, so the absence of scouring animals proves nothing. They are infective at the moment of release, so environmental contamination is immediately hazardous and person-to-person spread follows readily. They resist chlorination, which is why waterborne outbreaks occur through treated supplies and why alcohol gel is inadequate: soap and running water physically removes them, the same limitation that applies to norovirus. The infective dose is low, so brief hand-to-mouth contact after touching an animal, fence or bedding suffices, and no food is required. Incubation is around 7 to 10 days, so illness about a week after the visit is entirely consistent with acquisition on site, and option B draws an unsupported inference. The April 2024 UK increase in Cryptosporidium was linked to lambing events and petting farms.",
+        source: "Hunter's Diseases of Occupations, 10th ed, Ch 60; HSE AIS23; UKHSA surveillance 2024",
+        tags: ["zoonoses"]
+      },
+      {
+        stem: "A 34-year-old groundworker is admitted with a five-day history of fever, severe calf and thigh myalgia, headache and photophobia. He has red eyes without discharge. Bloods show a neutrophilia, bilirubin 68 micromol/L, creatinine 210 micromol/L, ALT 90 U/L and platelets 96 x 10^9/L. He has been laying drainage in a canal-side excavation that flooded twice during the works. The admitting team have started intravenous co-amoxiclav for presumed sepsis and are considering leptospirosis. Which feature of this presentation most supports that diagnosis?",
+        options: [
+          "The neutrophilia, which reliably distinguishes bacterial from viral causes of an acute undifferentiated febrile illness",
+          "The thrombocytopenia, which is the earliest and most reliable laboratory marker of leptospirosis",
+          "The photophobia, which indicates meningeal involvement and is specific to leptospiral infection",
+          "The combination of myalgia, conjunctival suffusion and hepatorenal derangement in a worker with water exposure",
+          "The elevated ALT, which reflects the direct hepatotoxicity characteristic of leptospiral infection"
+        ],
+        correct: 3,
+        explain: "No single feature is diagnostic; the picture is. The clinical and laboratory findings are non-specific and a high index of suspicion is required if the diagnosis is not to be missed. What raises suspicion here is the combination of severe myalgia with a predilection for calves and thighs, conjunctival suffusion, hepatorenal derangement and thrombocytopenia in a worker in a flooded excavation; rodents shed leptospires in urine lifelong and organisms survive weeks in soil and water, with infection rates rising after heavy rainfall or flooding. Option E is wrong on both magnitude and mechanism: transaminase elevation is characteristically mild while bilirubin may be very high, a discordant pattern unlike viral hepatitis. The white count may be raised or lowered. Treatment is doxycycline orally, or intravenous penicillin or ceftriaxone if severe, for about ten days. UK confirmation is now by 16S rRNA PCR, with IgM detectable from about day five.",
+        source: "Hunter's Diseases of Occupations, 10th ed, Ch 60; UKHSA leptospirosis guidance",
+        tags: ["zoonoses"]
+      },
+      {
+        stem: "A water company's confined space team is called to clear a silt blockage in an old combined sewer beneath a city centre. Occupational health is asked to advise on protecting workers before the entry. Which combination of measures addresses the principal risks of this work?",
+        options: [
+          "Atmospheric monitoring and rescue arrangements, with hepatitis A immunisation, rodent control and alert cards for leptospirosis",
+          "Rabies pre-exposure immunisation and tetanus boosters, since rodent bites are the main route of infection in sewer work",
+          "Hepatitis B immunisation and blood-borne virus precautions, as needlestick injury from discarded sharps is the predominant hazard",
+          "Respiratory protective equipment alone, since the infectious agents encountered in sewers are transmitted by aerosol",
+          "Prophylactic doxycycline for the duration of the works, which is standard practice for planned sewer entry in the UK"
+        ],
+        correct: 0,
+        explain: "Two hazard classes operate together. The physical risk acts fastest: confined space entry requires atmospheric monitoring, forced ventilation, permit to work and rescue arrangements under the Confined Spaces Regulations 1997. Hydrogen sulphide is the specific danger, being heavier than air so that it pools in the invert, and smelling of rotten eggs at low concentration but becoming odourless at high concentration through olfactory paralysis, so loss of the smell signals danger rather than safety; oxygen deficiency and methane accompany it, and many deaths involve rescuers entering without breathing apparatus. The biological risks are chiefly through skin and ingestion: leptospirosis heads the list, hence rodent control, covering cuts, washing facilities and alert cards, with hepatitis A immunisation standard for sewage work and tetanus current. Doxycycline prophylaxis has been used in selected high-risk short-term exposures but is not routine UK occupational practice.",
+        source: "Hunter's Diseases of Occupations, 10th ed, Ch 60; Confined Spaces Regulations 1997; HSE sewage work guidance",
+        tags: ["zoonoses"]
+      },
+      {
+        stem: "A veterinary practice employs six vets, four nurses and two reception staff. A new graduate joining the small-animal team asks occupational health which immunisations she needs, mentioning that a colleague at another practice told her rabies vaccine is essential for all veterinary staff. What advice is correct?",
+        options: [
+          "Rabies immunisation is required for all veterinary staff in the UK, given the risk from imported animals presenting to any practice",
+          "Rabies immunisation is recommended for defined groups, and small-animal practice in the UK does not ordinarily fall within them",
+          "Rabies immunisation is unnecessary in the UK, as the country has been free of rabies and lyssaviruses since eradication",
+          "Rabies immunisation should be deferred until an exposure occurs, since post-exposure treatment is reliably effective",
+          "Rabies immunisation is required only for staff who have contact with bats, all other exposures being adequately covered post-exposure"
+        ],
+        correct: 1,
+        explain: "Pre-exposure immunisation is targeted at defined groups: laboratory workers handling lyssaviruses including vaccine production; those regularly exposed to animals imported from rabies-enzootic areas such as quarantine facilities, primate holding and ports; state veterinary and technical staff; licensed and voluntary bat handlers; animal inspectors; vets and zoologists working in enzootic areas; and healthcare workers about to care for a rabies case. Routine UK small-animal practice does not fall within these. Option C is wrong in an important respect: terrestrial rabies is absent from the UK but European bat lyssaviruses are present in UK bats, and a bat conservationist died in Scotland in 2002 after a bite, having received neither pre- nor post-exposure vaccine, so a practice taking wildlife casualties has a different risk profile. High-risk workers require serological testing at intervals with reinforcing doses. This graduate needs hepatitis B, tetanus and arrangements for bite injuries.",
+        source: "Hunter's Diseases of Occupations, 10th ed, Ch 60; Green Book rabies chapter",
+        tags: ["zoonoses"]
+      },
+      {
+        stem: "A veterinary nurse is bitten on the hand by a cat while restraining it for a procedure. The wound is a small puncture over the dorsum of the middle finger, bleeding freely, with no obvious foreign body. She attends four hours later because the finger has become swollen, red and disproportionately painful. She is systemically well and her tetanus immunisation is current. What is the most appropriate management?",
+        options: [
+          "Irrigation and observation, with antibiotics reserved for signs of established infection at 48 hours",
+          "Irrigation and primary closure of the puncture wound, with oral flucloxacillin as prophylaxis",
+          "Irrigation, and co-amoxiclav, given the rapid onset and the organisms associated with cat bites",
+          "Irrigation and oral flucloxacillin, since staphylococci and streptococci predominate in animal bite infections",
+          "Irrigation alone, since a freely bleeding puncture wound is self-cleansing and carries low infection risk"
+        ],
+        correct: 2,
+        explain: "Cellulitis developing within hours of a cat bite, with pain out of proportion, is characteristic of Pasteurella multocida, which is present in most cat mouths and produces infection far faster than staphylococcal or streptococcal cellulitis. Cat teeth are fine and sharp and inoculate deeply into joint and tendon sheath, so waiting 48 hours risks tenosynovitis, septic arthritis and osteomyelitis. Co-amoxiclav covers Pasteurella together with staphylococci, streptococci and oral anaerobes; flucloxacillin has poor activity against Pasteurella and misses the likely organism. Bite puncture wounds, particularly on the hand, are left open, since primary closure traps organisms in a deep space. Bleeding does not cleanse a deep puncture, and cat bites carry a higher infection rate than dog bites because the wound is narrow, deep and seals over. Review within 24 hours, elevation and a low threshold for hand surgery referral are needed, and bite injuries should be reported and recorded.",
+        source: "Hunter's Diseases of Occupations, 10th ed, Ch 60; UK bite management guidance",
+        tags: ["zoonoses"]
+      },
+      {
+        stem: "A poultry processing plant reports three workers off sick with a febrile illness and cough over ten days. Two have been diagnosed with community-acquired pneumonia and one has been admitted. All three work on the evisceration line handling ducks. The plant manager mentions that a similar cluster occurred two years ago and was never explained. Which agent should be considered first, and why does it matter?",
+        options: [
+          "Chlamydophila psittaci, because a macrolide or doxycycline is needed and standard empirical regimens may not cover it",
+          "Avian influenza, because the cluster indicates human-to-human transmission and urgent containment is required",
+          "Coxiella burnetii, because poultry are a principal reservoir of the organism and chronic endocarditis may follow infection",
+          "Campylobacter jejuni, because respiratory presentation is well recognised in poultry processing workers",
+          "Extrinsic allergic alveolitis, because the recurrent cluster indicates an immunological rather than infectious cause"
+        ],
+        correct: 0,
+        explain: "Psittacosis, or ornithosis where the source is non-psittacine birds, is transmitted by inhalation of dried droppings and respiratory secretions, and duck processing is a documented outbreak source; evisceration generates that aerosol, and recurrent clusters in the same plant argue for an environmental source. It matters because treatment is a macrolide or doxycycline: current empirical regimens for severe community-acquired pneumonia usually include a macrolide and would cover it, but a patient managed on amoxicillin alone receives no active treatment. Option B overreaches, since three cases sharing a workplace exposure indicate a common source rather than person-to-person spread. Option C has the wrong reservoir, Q fever arising principally from cattle, sheep and goats. Extrinsic allergic alveolitis is a genuine differential in bird workers but is characterised by breathlessness and flu-like symptoms related to shifts with recovery away from work, rather than pneumonia requiring admission.",
+        source: "Hunter's Diseases of Occupations, 10th ed, Ch 60; ABC of Occupational and Environmental Medicine, 3rd ed, Ch 12",
+        tags: ["zoonoses"]
+      },
+      {
+        stem: "A forestry worker attends occupational health having found an attached tick on his thigh that morning while showering. He estimates it has been there since he worked in bracken two days ago. He is well, has no rash, and asks whether he should be given antibiotics to prevent Lyme disease. What is the most appropriate advice?",
+        options: [
+          "Remove the tick promptly using fine-tipped tweezers, and advise him to watch for a rash or febrile illness over the weeks that follow",
+          "Remove the tick and prescribe a single dose of doxycycline, which is the standard UK approach to any known attached tick",
+          "Remove the tick and arrange baseline Lyme serology, repeating the test at six weeks in order to detect seroconversion",
+          "Remove the tick promptly with fine-tipped tweezers, and advise him to watch for a rash or febrile illness over the following weeks",
+          "Leave the tick in place for removal by a clinician, as any attempt at removal increases the risk of transmission"
+        ],
+        correct: 3,
+        explain: "Prompt removal is the intervention, using fine-tipped tweezers or a tick removal tool, grasping close to the skin and pulling steadily upward without twisting or crushing the body, then cleaning the site. Transmission risk rises with duration of attachment, so delay increases risk. Routine antibiotic prophylaxis after a tick bite is not UK practice, since most bites do not transmit Borrelia. Watchful waiting follows, with advice to look for an expanding erythematous lesion appearing between about three and thirty days, and for any unexplained febrile illness. Erythema migrans is often homogeneous and need not show central fading, so waiting for a target appearance risks missing it; it is a clinical diagnosis and treatment should not await serology, which is positive in only 20 to 30% in the first weeks. Occupational controls are awareness, covering skin, repellents and daily skin checks after work in tick habitat.",
+        source: "Hunter's Diseases of Occupations, 10th ed, Ch 60; UKHSA Lyme disease guidance",
+        tags: ["zoonoses"]
+      },
+      {
+        stem: "A pest control company has been contracted to clear a heavily infested barn on a disused farm, where rodent droppings have accumulated undisturbed for several years since the buildings were last used for livestock. The job involves sweeping out and bagging large volumes of dry, dusty debris from the floor and old feed stores before the barn can be repurposed. The company's operations manager, planning the job for the following week, asks occupational health to advise on the risks of dust exposure during this specific clearance task, given how much material has built up. Which risk is most specific to this task, and what control follows?",
+        options: [
+          "Leptospirosis, controlled by covering cuts and abrasions and providing washing facilities before eating",
+          "Rat-bite fever, controlled by training in safe handling and immediate reporting of bites and scratches",
+          "Extrinsic allergic alveolitis, controlled by pre-employment spirometry and periodic respiratory health surveillance",
+          "Psittacosis, controlled by excluding workers from buildings where birds have also roosted",
+          "Hantavirus, controlled by damping down before clearance and providing respiratory protection against contaminated dust"
+        ],
+        correct: 4,
+        explain: "Infected rodents shed hantavirus in urine, saliva and faeces without appearing ill, and human infection is usually acquired by inhalation of dust containing contaminated excreta, so disturbing years of accumulated dry droppings is the specific hazard of this task. The control follows the route: damp down before disturbing material so that it cannot become airborne, then respiratory protection, gloves and wet cleaning rather than sweeping or dry vacuuming. Leptospirosis and rat-bite fever are genuine risks in rodent work but are acquired through skin and mucous membranes or through bites rather than through inhaled dust, so neither is what this task adds. Hantaviruses cause haemorrhagic fever with renal syndrome in Europe and Asia, with Puumala causing the milder nephropathia epidemica across northwest Europe, and hantavirus pulmonary syndrome in the Americas. A UK outbreak was associated with laboratory rats, and more recent UK cases have been linked to Seoul hantavirus in pet and breeder rats.",
+        source: "Hunter's Diseases of Occupations, 10th ed, Ch 60; UKHSA hantavirus guidance",
+        tags: ["zoonoses"]
+      },
+      {
+        stem: "A 47-year-old woman working in a commercial laboratory that supplies live toxoplasma vaccine to sheep farmers reports that she has been trying to conceive. She asks whether her work poses any risk, noting that she does not handle animals and works only with the vaccine preparation and filling line. What advice is appropriate?",
+        options: [
+          "No restriction is needed, since the vaccine strain is attenuated and cannot establish infection in humans",
+          "No restriction is needed provided she is serologically screened and found to have pre-existing toxoplasma antibodies",
+          "She should avoid work involving the live vaccine, which can infect humans if accidentally inoculated",
+          "She should avoid all laboratory work until conception, after which routine precautions are sufficient",
+          "She should continue but be offered toxoplasma serology each trimester, so that seroconversion is detected early"
+        ],
+        correct: 2,
+        explain: "The live attenuated vaccine used to control toxoplasma infection in sheep may cause human infection if accidentally inoculated, and should not be administered by women of childbearing age. Attenuation for the target species does not guarantee safety in accidental human inoculation. That she does not handle animals is beside the point, since the vaccine itself is the hazard and a filling line involves needles, vials and splash risk; laboratory-acquired toxoplasmosis by needlestick is documented, including infection during the Sabin-Feldman dye test, which uses live organisms. Option B fails because past infection does not reliably protect against fresh inoculation and one would not license an exposure on presumed immunity. Option D restricts far too broadly and then relaxes when the consequence, congenital infection, is greatest. The live Chlamydophila abortus vaccine raises the same issue for the same group.",
+        source: "Hunter's Diseases of Occupations, 10th ed, Ch 60",
+        tags: ["zoonoses"]
+      },
+      {
+        stem: "A slaughterhouse worker is diagnosed with brucellosis after several weeks of undulant fever, sweats and back pain. He has worked at the same UK abattoir for eleven years. He also visits family in Turkey annually and returned six weeks before symptoms began. What is the most likely source, and what follows for the employer?",
+        options: [
+          "Occupational exposure at the abattoir; the case is RIDDOR-reportable and colleagues should be screened serologically",
+          "Occupational exposure; laboratory confirmation is unnecessary and treatment should begin on clinical grounds alone",
+          "Occupational exposure; UK cattle remain a significant reservoir of Brucella abortus despite eradication programmes",
+          "Travel-associated exposure; no investigation is required, as brucellosis is not transmissible between humans",
+          "Travel-associated exposure, most likely unpasteurised dairy products; occupational attribution is unlikely given UK herd status"
+        ],
+        correct: 4,
+        explain: "Test and slaughter combined with vaccination has brought Brucella abortus in UK cattle to near eradication, with human cases falling in parallel, and almost all UK-diagnosed brucellosis is now acquired abroad. Against eleven uneventful years at the same abattoir, a recent visit to an endemic country is the more likely exposure, with unpasteurised dairy products the classic route and B. melitensis from sheep and goats the usual species. Incubation is typically two to four weeks but ranges from five days to six months, so onset six weeks after return is compatible. Option A adds serological screening of colleagues, which generates seroprevalence data without an action attached. Option D is right on source but wrong to close the file, since public health will want the food history. Option B abandons confirmation when it matters: diagnosis is by blood culture and serology, and treatment is doxycycline with rifampicin or streptomycin for six weeks, monotherapy being inadequate.",
+        source: "Hunter's Diseases of Occupations, 10th ed, Ch 60; ABC of Occupational and Environmental Medicine, 3rd ed, Ch 12",
+        tags: ["zoonoses"]
+      },
+      {
+        stem: "A meat processing plant asks occupational health to advise following a case of E. coli O157 in a worker on the slaughter line. The worker had bloody diarrhoea and was admitted with acute kidney injury. The plant manager asks whether the remaining staff should be given antibiotics, and when the affected worker can return. What advice is correct?",
+        options: [
+          "Offer antibiotics to all close contacts, and permit return to work once the worker has been symptom-free for 48 hours",
+          "No antibiotics for contacts or for the case, as they may increase the risk of HUS; return requires microbiological clearance",
+          "Offer antibiotics to the case only, since treatment shortens the illness and reduces onward transmission from food handlers as a group",
+          "No antibiotics, and permit return once symptoms have resolved, since food handlers are covered by standard hygiene precautions",
+          "Offer ciprofloxacin to all workers on the line as an outbreak control measure, given the severity of the index case"
+        ],
+        correct: 1,
+        explain: "Antibiotics are contraindicated in VTEC O157, being associated with an increased risk of haemolytic uraemic syndrome, which follows in up to 10% of cases and particularly in children; this worker already has acute kidney injury. Management is supportive with admission for complications. Return to work is stricter than the general 48-hour rule for gastrointestinal illness: a food handler with VTEC O157 requires microbiological clearance with negative stool specimens before return, because the infective dose is very low and small-scale contamination is consequential. The organism is notifiable, so environmental health and UKHSA are involved, with investigation of whether infection was acquired at work or in the community, whether other workers are affected, and of hygiene facilities and separation of clean and dirty areas. Cattle and sheep are the reservoir and shed without appearing ill.",
+        source: "Hunter's Diseases of Occupations, 10th ed, Ch 60; UKHSA VTEC guidance; UKHSA surveillance 2024",
+        tags: ["zoonoses"]
+      },
+      {
+        stem: "A grain store worker develops breathlessness, dry cough, fever and myalgia four to six hours after each shift spent clearing mouldy grain from a silo. Symptoms settle overnight and are absent at weekends. Examination between episodes is normal; during an episode he has bibasal crackles and desaturation on exertion. Which condition is this, and what is the essential occupational action?",
+        options: [
+          "Extrinsic allergic alveolitis from mould spore exposure; prevention of further exposure to the antigen",
+          "Occupational asthma from grain dust sensitisation; serial peak flow monitoring at and away from work",
+          "Organic dust toxic syndrome; reassurance, as it is self-limiting and carries no long-term consequence",
+          "Psittacosis from bird contamination of stored grain; macrolide treatment and investigation of the store",
+          "Q fever from contaminated straw and dust; doxycycline and review of the store's ventilation"
+        ],
+        correct: 0,
+        explain: "The timing is the diagnostic signature: symptoms four to six hours after exposure, settling overnight and absent at weekends, distinguish extrinsic allergic alveolitis from asthma, which occurs during or shortly after exposure with wheeze and airflow obstruction rather than fever and myalgia. Bibasal crackles and exertional desaturation are alveolar rather than airway signs, and serial peak flows would be normal. The essential action is prevention of further antigen exposure, because continued exposure causes irreversible pulmonary fibrosis; this is not a condition to manage with respiratory protection and continued silo work, so control means mechanising the task, drying grain properly, or redeployment. Organic dust toxic syndrome is the important near-miss, being non-immunological, typically following a single heavy exposure and genuinely self-limiting, but it lacks the stereotyped recurrence, crackles and desaturation seen here.",
+        source: "Hunter's Diseases of Occupations, 10th ed; ABC of Occupational and Environmental Medicine, 3rd ed, Ch 12",
+        tags: ["zoonoses"]
+      },
+      {
+        stem: "A 27-year-old wildlife biologist is about to begin a three-month field survey trapping and sampling small mammals across rough pasture and mixed woodland for a university research project. Her daily routine will involve checking and resetting live traps early each morning, handling captured animals to record measurements before release, and emptying and cleaning traps that are often left standing in wet grass and undergrowth overnight. Ahead of the fieldwork starting, she attends occupational health to ask what precautions actually matter most for this kind of work. Which combination is most relevant?",
+        options: [
+          "Tetanus and rabies immunisation, since bites and scratches are the principal route of infection in this work",
+          "Prophylactic doxycycline throughout the field season, covering both leptospirosis and Lyme disease",
+          "Serological screening for leptospirosis and Lyme disease at the start and end of the project",
+          "Respiratory protection for all trap handling, since inhalation is the dominant route for rodent-borne infection",
+          "Leptospirosis awareness with an alert card, tick precautions with daily skin checks, and covering cuts before handling"
+        ],
+        correct: 4,
+        explain: "Three components address the actual exposures. Leptospirosis awareness with an alert card matters because rodents shed leptospires in urine lifelong, organisms survive weeks in soil and water, and the illness is non-specific and easily mistaken for influenza, so the card tells whoever sees her that the diagnosis needs excluding. Tick precautions with daily skin checks address Lyme disease in rough pasture and woodland, transmission risk rising with duration of attachment so that same-day removal is the intervention. Covering cuts addresses the shared entry route for leptospirosis and for bacterial infection from bites and scratches. Option C produces antibody results with no attached action and would be negative early in any case that mattered. Option B is not routine UK occupational practice, doxycycline prophylaxis having been used only in selected high-risk short-term exposures. Option D applies a control suited to clearing accumulated droppings rather than to outdoor trap work.",
+        source: "Hunter's Diseases of Occupations, 10th ed, Ch 60; UKHSA guidance",
+        tags: ["zoonoses"]
+      },
+      {
+        stem: "A tropical fish wholesaler is referred with a lesion on the back of his right hand. It began about six weeks ago as a small papule after he cut himself on a rock while cleaning a display tank, and has slowly enlarged into a violaceous nodule which has partly ulcerated. Two smaller nodules have since appeared along the forearm. He has taken two courses of flucloxacillin without improvement, and is systemically well. What is the most important step in securing the diagnosis?",
+        options: [
+          "Swab the ulcerated surface of the lesion for routine bacterial culture and sensitivities before giving any further antibiotics",
+          "Request serological testing, which is more sensitive than culture where a slow-growing organism is suspected",
+          "Arrange urgent excision biopsy, since the sporotrichoid pattern raises the possibility of a cutaneous malignancy",
+          "Take a tissue biopsy for histology and culture, and inform the laboratory of the suspected organism",
+          "Commence empirical clarithromycin, reserving further investigation for cases that fail to respond within four weeks"
+        ],
+        correct: 3,
+        explain: "This is Mycobacterium marinum, acquired by inoculation through damaged skin while cleaning tanks, with an incubation of several weeks and a slowly enlarging nodule on a cooler exposed site which may ulcerate, sometimes with sporotrichoid spread along the lymphatics; failure of two courses of flucloxacillin points away from ordinary pyogenic infection. Diagnosis is by histology and culture of a tissue biopsy, and the laboratory must be told what is suspected, because the organism grows at a lower temperature than routine incubation and culture at standard temperature will be reported as no growth. Serology has no role in cutaneous infection. A surface swab samples colonising flora. A sporotrichoid pattern indicates lymphatic spread of infection rather than malignancy, the differential including sporotrichosis, nocardiosis and leishmaniasis. Treatment is doxycycline, minocycline, clarithromycin, or rifampicin with ethambutol, with debridement for deep infection.",
+        source: "Hunter's Diseases of Occupations, 10th ed, Ch 60",
+        tags: ["zoonoses"]
+      },
+      {
+        stem: "An occupational health service provides cover to a large agricultural college with livestock units, a veterinary nursing course and a working farm, after a recent case of leptospirosis in a final-year student was only diagnosed several weeks into her illness because her GP was not initially told she had been working with livestock. Prompted by this near-miss, the principal asks occupational health for a single written document that will most reduce the risk of serious zoonotic illness among students and staff going forward, noting that resources are limited and that a full programme cannot be introduced at once. Which would be most valuable?",
+        options: [
+          "A vaccination schedule covering the principal zoonoses encountered in agricultural and veterinary work",
+          "A pre-placement health questionnaire identifying students with conditions that increase susceptibility to infection",
+          "Written information for staff and students on recognising illness after animal contact, and telling their doctor about the exposure",
+          "A serological surveillance protocol establishing baseline antibody status for the main agricultural zoonoses",
+          "A protocol for exclusion of pregnant students and staff from all contact with livestock for the duration of pregnancy"
+        ],
+        correct: 2,
+        explain: "The serious zoonoses, including leptospirosis, Q fever, psittacosis and brucellosis, present as non-specific febrile illnesses that are diagnosed late because the animal contact is never mentioned; a high index of suspicion is essential and the occupational history is often the only clue. Information is therefore the intervention that shortens time to diagnosis, which is where morbidity is decided, and it is inexpensive, which matters given the stated constraint. This is the alert card principle applied to a whole institution. Option A fails on availability, since there is no human vaccine for brucellosis, Q fever in the UK, leptospirosis routinely, or Streptococcus suis. Option E over-restricts: the exclusions that matter in pregnancy are lambing and kidding, contact with birthing products and contaminated clothing, and the live sheep vaccines, whereas blanket exclusion from all livestock contact would be disproportionate and probably discriminatory. Options B and D screen individuals rather than controlling exposure.",
+        source: "Hunter's Diseases of Occupations, 10th ed, Ch 60; HSE agriculture guidance",
+        tags: ["zoonoses"]
+      },
+    ]
+  }
+];
 
 /* ---------------- Combined pool for random mix ---------------- */
 SECTIONS.forEach(sec => {
@@ -8233,6 +8591,7 @@ function getIncorrectQIdxs(secId){
 /* ---------------- Browse by topic ---------------- */
 const TAG_LABELS = {
   'noise-havs': 'Noise & HAVS',
+  'zoonoses': 'Zoonoses & Biological Agents',
   'toxicology': 'Toxicology',
   'travel-medicine': 'Travel Medicine',
   'employment-law-equality-act': 'Employment Law & Equality Act',
