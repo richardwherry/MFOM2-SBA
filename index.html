@@ -1788,8 +1788,8 @@ const SECTIONS = [
           "This result indicates she requires HBIG immediately, regardless of any exposure having occurred"
         ],
         correct: 2,
-        explain: "A low antibody level below 10 mIU/mL in someone tested at the wrong interval may not indicate true non-response, since immune memory can persist even as measured antibody levels wane over time — testing at the correct 1 to 2 month interval is what allows non-response to be reliably distinguished from simple antibody decline. This doesn't mean the result is meaningless or that it can simply be disregarded, but it also shouldn't be treated as automatically confirming non-response, applied as if she were a confirmed non-responder, or used as grounds for HBIG in the absence of any actual exposure.",
-        source: "Green Book Chapter 18 (Hepatitis B, Feb 2026) — testing interval and immune memory",
+        explain: "A low antibody level below 10 mIU/mL in someone tested at the wrong interval may not indicate true non-response, since immune memory can persist even as measured antibody levels wane over time — testing at the correct 1 to 2 month interval is what allows non-response to be reliably distinguished from simple antibody decline. This doesn't mean the result is meaningless or that it can simply be disregarded, but it also shouldn't be treated as automatically confirming non-response, applied as if she were a confirmed non-responder, or used as grounds for HBIG in the absence of any actual exposure. Her actual management should follow the Green Book pathway for someone vaccinated as an adult: test for markers of current or past infection (HBsAg and anti-HBc); if there is no evidence of infection, repeat a full course of vaccine and re-test 1 to 2 months after completing it; only if the level remains below 10 mIU/mL at that correctly-timed retest is she classified as a true non-responder, requiring HBIG for protection if she is exposed in future.",
+        source: "Green Book Chapter 18 (Hepatitis B, 5 Feb 2026) — Table 18.9, testing interval and management of a result at the wrong interval",
         tags: []
       },
       {
@@ -6954,6 +6954,146 @@ const SECTIONS = [
         source: "ABC of Occ & Env Medicine, 3rd ed, Ch8 — invasive intervention, injection therapy",
         tags: ["msd-ergonomics"]
       },
+      {
+        stem: "A 47-year-old process technician has type 2 diabetes on a sulphonylurea, with an adverse trend in control over two years. The medical examiner concludes he does not meet the criteria for a standard certificate. His employer telephones, frustrated, and asks whether this means the company must now dismiss him on capability grounds, since he cannot work offshore. Which response is correct?",
+        options: [
+          "Confirm that failure to obtain a standard certificate means he cannot work offshore in any capacity, and that capability procedures are entirely the employer's decision",
+          "Explain that a conditional certificate may be possible for named installations following discussion with an operator medical advisor, and that the employer must still assess adjustments",
+          "Explain that the examiner will issue a conditional certificate directly, valid for all installations in the UK sector, once the employer confirms that the role is category 2",
+          "Advise that the employer should obtain a second OEUK medical from a different examiner, as certification decisions vary between practitioners",
+          "Confirm that the decision constitutes a finding of disability under the Equality Act, obliging the employer to make reasonable adjustments"
+        ],
+        correct: 1,
+        explain: "Where an examinee is not fit for a standard certificate but may be fit at a specified location, the examiner contacts the operator medical advisor to discuss approval, and the resulting conditional certificate is endorsed to named installations only. The examiner cannot issue one unilaterally and it never covers all installations, so option C is wrong. The guidance states explicitly that refusal of a standard certificate does not necessarily mean the individual is unfit to work offshore in any circumstances, and is not intended to give the employer guidance under the Equality Act or any other legislation; the employer must still assess whether suitable modification would allow offshore work, and the examiner should be prepared to provide a further report on functional limitation and possible modifications. Option E treats a certification decision as a legal finding, whereas disability status is decided on the statutory definition. Option D misunderstands second opinion, and note there is no formal right of appeal since the medical is not statutory.",
+        source: "OEUK Medical Fitness for Offshore Work, Issue 8.1a (Feb 2026), 2.11.2",
+        tags: ["oeuk-offshore"]
+      },
+      {
+        stem: "An operator's medical advisor reviews an OEUK certificate issued by an examiner and concludes that, despite the certificate, the worker should not travel to that operator's installations. The worker's employer contacts occupational health to ask who has the final say. Which statement is correct?",
+        options: [
+          "The certificate is definitive, since the OEUK examiner is the doctor who assessed the worker in person",
+          "The Health and Safety Executive determines such disputes, as the OEUK medical is a statutory requirement offshore",
+          "The dispute must be referred to the OEUK Medical Advisor, whose determination binds both the examiner and the operator",
+          "The duty holder has ultimate responsibility for those on its installation and is the final authority on who may travel",
+          "The worker may travel, since a valid certificate confers a right of access to any installation in the UK sector"
+        ],
+        correct: 3,
+        explain: "The duty holder, meaning the operator of a fixed installation or the owner of a mobile one, has ultimate responsibility for the safety of everyone on board and is the final authority on who may travel to its installation. An operator's decision may take account of the examiner's advice but may vary from the examiner's conclusion: the examiner advises and the duty holder decides. A standard certificate implies the holder is fully fit for all normal duties on any UK installation, but that is a statement about fitness rather than a right of entry, so option E is wrong. Option B fails on the foundational point that the OEUK medical is not statutory, unlike the seafarer ENG1 or the commercial pilot and diver medicals, resting instead on general HASAWA duties as a consensus of good practice. Option C inverts the review process, which exists for an examinee dissatisfied with a decision and which, since the medical is not statutory, provides no formal right of appeal.",
+        source: "OEUK Medical Fitness for Offshore Work, Issue 8.1a, 2.2 and 2.12",
+        tags: ["oeuk-offshore"]
+      },
+      {
+        stem: "A large occupational health provider runs high-volume OEUK medicals. History and examination are undertaken by experienced occupational health nurses, with the examiner reviewing documentation and signing certificates. A worker due to rotate between UK and Norwegian sector installations is booked in. What must the examiner ensure?",
+        options: [
+          "That the worker is examined in person by the doctor, and that any certificate carries no geographical exclusion",
+          "That the nurse holds an OEUK PIN number, which permits independent certification for all sectors",
+          "That the certificate is annotated to exclude the UK, since delegated medicals are accepted only outside the UK sector",
+          "That the assessment is delegated only where the worker has previously held a conditional certificate",
+          "That a drug screen is performed, since delegated assessments require additional objective corroboration"
+        ],
+        correct: 0,
+        explain: "A delegated medical is not accepted for travel offshore in Norwegian, Danish or Dutch waters, because those jurisdictions expect in-person examination by the doctor, and where any part of the history or examination is delegated the exclusion must be clearly stated on the certificate. For a worker rotating into the Norwegian sector, the only way to avoid that exclusion is personal examination by the doctor. Option C reverses the position: the UK exclusion exists where a certificate is issued without applying the UK safe weight limit. Delegation requires a healthcare professional such as a nurse, physician associate or installation medic, not a technician or administrator, and the certifying examiner remains entirely responsible for the accuracy of the history and interpretation of findings. Option D is the reverse of the rule, since delegation is not appropriate for a previously conditional or complicated case, or for a first OEUK medical. A drug screen is not part of the OEUK medical.",
+        source: "OEUK Medical Fitness for Offshore Work, Issue 8.1a, 2.9.1 and 2.13.4",
+        tags: ["oeuk-offshore"]
+      },
+      {
+        stem: "A 58-year-old steward has severe osteoarthritis of both knees and is awaiting bilateral replacement. He walks with a stick, and his employer confirms his role is category 2. The examiner is uncertain whether he could reach a muster station in an emergency and considers arranging a 6-minute walk test. His GP advises that exertion of that degree would risk acute deterioration and should be avoided. What follows?",
+        options: [
+          "Certification should proceed without the test, since his role is category 2 and does not involve rapid-onset incapacitation risk",
+          "Certification should be postponed pending knee replacement, after which the walk test can be performed",
+          "He is unfit for offshore work, since exertion contraindicated for the test would be equally contraindicated in an emergency",
+          "The examiner should contact an operator medical advisor to discuss a conditional certificate with an exemption from muster duties",
+          "A treadmill or cycle ergometer assessment should be substituted, as these allow graded exertion under closer supervision"
+        ],
+        correct: 2,
+        explain: "The guidance states directly that where the physical exertion involved in a 6-minute walk test is medically contraindicated, the examinee is unfit for offshore work, because the exertion required during platform emergency procedures would therefore also be contraindicated. The test is a proxy for the emergency response the installation depends on, so a contraindication to the proxy is a contraindication to the job. Option B describes a possible future rather than answering the question asked; he may become fit after surgery and rehabilitation but is unfit now. Option A misapplies the category system, which concerns the consequences of sudden incapacitation rather than physical capacity: every worker must be able to make their workstation safe and walk briskly to the muster station. Option D asks for an exemption that cannot exist, since everyone on board must be able to muster and evacuate. The threshold when the test is performed is 550 metres in six minutes.",
+        source: "OEUK Medical Fitness for Offshore Work, Issue 8.1a, 2.8.8",
+        tags: ["oeuk-offshore"]
+      },
+      {
+        stem: "A 44-year-old mechanical technician lost the sight of his left eye in a childhood injury. His right eye is 6/6 uncorrected. He has worked offshore for fifteen years without difficulty. His employer has asked whether he can be trained as a crane operator. What advice is correct?",
+        options: [
+          "He meets the standard for offshore work and for crane operation, since his corrected acuity exceeds 6/9 in the seeing eye",
+          "He is unfit for offshore work altogether, as monocular vision does not meet the minimum acuity standard for certification",
+          "He may operate a crane provided the certificate is annotated to require an employer-specific assessment of visual function",
+          "He may operate a crane provided a stereoscopic depth perception test confirms adequate distance judgement",
+          "He meets the standard for offshore work but not for crane operation, which requires binocular vision"
+        ],
+        correct: 4,
+        explain: "Monocular vision is explicitly unacceptable for crane operators, and the stated reason is the impact on field of vision rather than acuity, so no test of depth perception can substitute. Option D is doubly wrong because the guidance states that stereoscopic depth perception testing is not normally necessary, depth perception operating at ranges far closer than crane work and judgement of distance being established during onshore training. The four crane requirements are 6/6 binocularly with correction if needed, binocular vision, no visual field defect and no diplopia, with an optician's report required. For general offshore work the standard is uncorrected binocular acuity of 6/60 or better, and monocular vision is acceptable provided that standard is met and appropriate adaptation is shown, which fifteen years offshore demonstrates. Option C confuses annotations: the employer-specific assessment annotation applies to colour vision deficit, and permitted annotations are a closed list.",
+        source: "OEUK Medical Fitness for Offshore Work, Issue 8.1a, 3.18.2 and 4.2",
+        tags: ["oeuk-offshore"]
+      },
+      {
+        stem: "A 51-year-old maintenance supervisor has worn bilateral hearing aids for six years for a moderate sensorineural loss. He converses normally in the consultation without difficulty. His examiner, working from an older edition of the guidelines, tells him he must obtain written confirmation from the manufacturer that his aids are intrinsically safe before a certificate can be issued. Which statement is correct?",
+        options: [
+          "The examiner is right, since electrical devices used outside accommodation areas must be confirmed intrinsically safe",
+          "Hearing aids may be regarded as suitable for offshore use without further enquiry by the examiner",
+          "An audiogram must be obtained in every case where hearing aids are worn, regardless of conversational ability",
+          "He is unfit for a standard certificate, and an operator medical advisor must approve a conditional certificate",
+          "Certification requires confirmation that spare batteries will be carried and the aids checked annually by an audiologist"
+        ],
+        correct: 1,
+        explain: "Issue 6 advised that hearing aids should be certified as intrinsically safe, but that requirement has gone: manufacturer declarations from 2007, shared with examiners in 2014, confirmed insufficient energy to cause fire or explosion, and hearing aids may now be regarded as suitable for offshore use without further enquiry. An examiner demanding manufacturer confirmation is applying withdrawn guidance. The intrinsic safety question does still apply to insulin pumps, which cannot be used offshore unless confirmed intrinsically safe, while continuous glucose monitors are acceptable as sealed self-contained units. Option C overstates the audiometry position, since an audiogram is not always required where the examiner is satisfied the examinee can follow normal audible instructions and hear emergency alarms. Option D would be correct for a cochlear implant, where OMA approval is needed with evidence of sufficient implant-aided hearing and arrangements to mitigate difficulty responding to alerts.",
+        source: "OEUK Medical Fitness for Offshore Work, Issue 8.1a, 3.17.1 to 3.17.3",
+        tags: ["oeuk-offshore"]
+      },
+      {
+        stem: "A 38-year-old driller began sertraline six weeks ago for a first episode of depression following a bereavement. He reports no side effects, is sleeping normally, and his GP considers him well. He is otherwise fit and asks whether the medication will prevent certification. What is the correct position?",
+        options: [
+          "He is unfit for a standard certificate, as antidepressant medication carries a BNF cautionary label and a skilled task warning",
+          "He is fit for a standard certificate, but only once the medication has been stopped and he has remained well for three months",
+          "He is fit only for a conditional certificate, since certification on psychotropic medication requires operator medical advisor approval",
+          "He is fit for a standard certificate, as SSRIs are excepted where taken for at least four weeks without side effects",
+          "He is unfit for offshore work while on treatment, but may be certified for onshore duties in the interim"
+        ],
+        correct: 3,
+        explain: "The general rule is that an examinee is not fit for standard certification if taking any medication carrying BNF cautionary label 2, 3 or 19, or a skilled task warning. SSRIs are one of four named exceptions, provided they have been taken for not less than four weeks with no reported side effects; the interval exists because early SSRI treatment can cause agitation, sleep disturbance and impaired alertness that settle with continuation. The other exceptions are diabetes medication meeting the diabetes guidance, varenicline, and non-sedating antihistamines where no drowsiness is reported. The clinical picture supports certification independently, since a first episode with a clear precipitating cause and good response is the pattern that most confidently permits it, and the guidance anticipates examinees continuing antidepressants for months after recovery. The requirement is that the examinee is stable on medication before mobilisation, not that medication has stopped.",
+        source: "OEUK Medical Fitness for Offshore Work, Issue 8.1a, 3.21.9 and 3.3.1",
+        tags: ["oeuk-offshore"]
+      },
+      {
+        stem: "A 61-year-old crane operator has atrial fibrillation, well rate-controlled, and takes apixaban. His CHA2DS2-VASc is 3 and his ORBIT score is 2. He is asymptomatic with good exercise tolerance and his cardiologist is content. He asks what certificate he can expect. What is the correct position?",
+        options: [
+          "Standard certificate, since his arrhythmia is well rate-controlled and his ORBIT bleeding score is within the acceptable limit",
+          "No certificate of any kind, as anticoagulant therapy is wholly incompatible with living and working on an offshore installation",
+          "Not fit for a standard certificate, but an operator medical advisor may approve a conditional certificate given his ORBIT score",
+          "Standard certificate annotated for category 2 work only, since crane operation is a category 1 occupation",
+          "Not fit for any certificate until anticoagulation has been discontinued and rhythm control has been established by catheter ablation"
+        ],
+        correct: 2,
+        explain: "Examinees requiring DOAC anticoagulation are not fit for standard certification, the hazard being spontaneous haemorrhage or excessive bleeding from otherwise trivial injury where definitive care is hours away. The examiner may contact an operator medical advisor to discuss a conditional certificate where the ORBIT score is 3 or less, and some advisors accept only 2 or less; his score of 2 falls within both. Option A is the trap: good rate control and a low bleeding score make him a good candidate for conditional certification rather than a candidate for a standard certificate, since the medication removes the standard route regardless of control. Warfarin follows a different route, requiring a treating clinician report confirming time in therapeutic range of at least 65% over the previous six months. Low-dose aspirin for secondary prevention and antiplatelet agents such as clopidogrel are excepted from the anticoagulant guidance but still make the worker unfit for NUI work.",
+        source: "OEUK Medical Fitness for Offshore Work, Issue 8.1a, 3.21.6 and 3.1.4",
+        tags: ["oeuk-offshore"]
+      },
+      {
+        stem: "A 27-year-old catering assistant was prescribed an adrenaline auto-injector two years ago after a single episode of facial swelling following a meal, of unclear cause. She has never used it, does not carry it, and has had no further episodes. She has mild asthma controlled on a preventer inhaler. She attends for her first OEUK medical. What is the correct position?",
+        options: [
+          "She is not fit for a standard certificate, as the prescription should be interpreted as a diagnosis of anaphylaxis",
+          "She is fit for a standard certificate, since she has had no reaction for two years and does not carry the auto-injector",
+          "She is fit for a standard certificate provided the certificate is annotated to exclude food handling duties",
+          "She is not fit for any certificate, as the combination of food allergy and asthma is an absolute bar to offshore work",
+          "She is fit for a standard certificate provided she agrees to carry the auto-injector and the installation medic is informed"
+        ],
+        correct: 0,
+        explain: "Prescription of an auto-injector, or clinical advice to carry one, whether followed or not, should be interpreted as a diagnosis of anaphylaxis, and anaphylaxis means unfit for standard certification. That she has never used it and does not carry it is immaterial; the clinician's judgement that she needed one is the fact that counts. The guidance acknowledges that diagnosis is sometimes made on a single episode of unclear symptomatology with the device prescribed from an abundance of caution, and suggests encouraging full clinical investigation including immunology referral, since a clear diagnosis matters for certification. Her asthma worsens rather than improves the position: co-existing food allergy and asthma carries a worse prognosis for the outcome of anaphylaxis, and operator medical advisors are unlikely to approve anything beyond very infrequent brief mobilisations. Option C misunderstands the food handling indicator, which concerns risk to others through enteric or communicable disease.",
+        source: "OEUK Medical Fitness for Offshore Work, Issue 8.1a, 3.20 and 3.20.1",
+        tags: ["oeuk-offshore"]
+      },
+      {
+        stem: "A 34-year-old scaffolder had a single psychotic episode at 22, treated with antipsychotic medication for two years and fully resolved. He has been well for ten years, takes no medication, has been discharged from psychiatric services, and has worked onshore without difficulty throughout. He attends for an OEUK medical. What is the correct position?",
+        options: [
+          "He is fit for a standard certificate, as complete remission for ten years off medication resolves the concern",
+          "He is fit for a standard certificate provided a psychiatrist confirms a low risk of recurrence in writing",
+          "He is fit for a standard certificate, but it should be annotated to exclude work on normally-unmanned installations",
+          "He is not fit for any certificate, as any history of psychotic illness is an absolute bar to offshore work",
+          "He is not fit for a standard certificate, and an operator medical advisor would need to approve any conditional certificate"
+        ],
+        correct: 4,
+        explain: "Any prior history of psychotic illness means no standard certificate, however long the remission, and work offshore is possible only under direct operator medical advisor approval. The rationale is environmental rather than prognostic: offshore travel, sleep interruption and disruption from general platform alarm events, and the unfamiliar remote setting are themselves significant and untested triggers in susceptible individuals, none of which a decade of onshore work tests. His case is nonetheless a strong one for approval, which requires evidence of complete remission, continuing recommended follow-up, continuing recommended medication, and psychiatrist-assessed low risk of recurrence. Option B is therefore nearly right but wrong, since the psychiatric opinion is a prerequisite for the operator medical advisor discussion rather than a substitute for it, and the guidance notes some advisors consider any history of psychosis unsuitable regardless of remission. Any history of psychotic illness also independently bars NUI work.",
+        source: "OEUK Medical Fitness for Offshore Work, Issue 8.1a, 3.3.3 and 4.5",
+        tags: ["oeuk-offshore"]
+      },
     ]
   },
   {
@@ -8271,7 +8411,7 @@ const SECTIONS = [
       {
         stem: "A forestry worker attends occupational health having found an attached tick on his thigh that morning while showering. He estimates it has been there since he worked in bracken two days ago. He is well, has no rash, and asks whether he should be given antibiotics to prevent Lyme disease. What is the most appropriate advice?",
         options: [
-          "Remove the tick promptly using fine-tipped tweezers, and advise him to watch for a rash or febrile illness over the weeks that follow",
+          "Remove the tick promptly with fine-tipped tweezers, and advise him that only a rash with a classic bullseye pattern needs to be reported",
           "Remove the tick and prescribe a single dose of doxycycline, which is the standard UK approach to any known attached tick",
           "Remove the tick and arrange baseline Lyme serology, repeating the test at six weeks in order to detect seroconversion",
           "Remove the tick promptly with fine-tipped tweezers, and advise him to watch for a rash or febrile illness over the following weeks",
