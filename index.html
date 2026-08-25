@@ -3643,17 +3643,17 @@ const SECTIONS = [
     source: "HSE L108: Controlling Noise at Work",
     questions: [
       {
-        stem: "A factory is assessing noise levels across several production lines. On one line, workers have a daily personal noise exposure of 81 dB(A), with no peak sound pressure exceeding 130 dB(C). Regarding which regulatory threshold this crosses, the correct position is:",
+        stem: "A 43-year-old operator works a drop forge line in a steel components plant, spending most of his shift within three metres of the hammer. An occupational hygienist measures his daily personal noise exposure at 88 dB(A) at the unprotected ear. He wears well-maintained earmuffs which, on the manufacturer's data and confirmed by a fit check, bring his effective exposure at the ear to 79 dB(A). The site manager has read that the exposure limit value takes hearing protection into account, and argues that since the protected figure is comfortably below 85 dB(A), the area need not be designated as a hearing protection zone and the operator need not be enrolled in audiometric surveillance. Regarding how hearing protection is counted, which position is correct?",
         options: [
-          "No threshold at all is crossed here, as 81 dB(A) remains below every one of the defined values",
-          "The upper exposure action value of 85 dB(A) has already been exceeded at this level",
-          "The exposure limit value of 87 dB(A) has already been exceeded at this level",
-          "The peak sound pressure exposure limit value has already been exceeded at this level",
-          "The lower exposure action value of 80 dB(A) has been exceeded"
+          "Once effective exposure falls below 85 dB(A), the zone and surveillance duties no longer apply",
+          "Attenuation is disregarded throughout, so 88 dB(A) applies to the limit value as well as the action values",
+          "Attenuation counts for the daily exposure values but never for peak, which is always assessed unprotected",
+          "Attenuation counts for any value once protectors have been formally issued and their use recorded",
+          "Attenuation counts only against the limit value; the action values are assessed unprotected, so both duties stand"
         ],
         correct: 4,
-        explain: "The lower exposure action value is 80 dB(A) daily or weekly personal noise exposure, or a peak sound pressure of 135 dB(C). At 81 dB(A), the worker has crossed the lower but not the upper (85 dB(A)) or limit (87 dB(A)) values, and the peak figure given is well below 135 dB(C).",
-        source: "L108, Regulation 4(1) — lower exposure action value",
+        explain: "Reg 4(5) creates a deliberate asymmetry: the protection given by hearing protectors is taken into account in applying the exposure limit value, but expressly not in applying either action value. His unprotected 88 dB(A) sits above the upper action value of 85 dB(A), triggering both hearing protection zone designation and health surveillance, while his protected 79 dB(A) means the 87 dB(A) limit value is not breached. The suggestion that these duties fall away once effective exposure drops below 85 dB(A) is exactly the error the asymmetry exists to prevent — if issuing protectors extinguished the action-value duties, the obligation to designate zones and run surveillance would evaporate the moment earplugs were handed out. The answer holding that attenuation is disregarded throughout reverses the rule in the other direction: it genuinely does count against the limit value, which is why he is not in breach of it. Restricting attenuation to the daily exposure values and treating peak as always assessed unprotected misstates the peak position, where the same asymmetry applies — 135 and 137 dB(C) unprotected, 140 dB(C) protected. Making attenuation count once protectors have been issued and recorded invents a trigger found nowhere in the Regulations; what matters is which value is being applied, not whether provision has been documented.",
+        source: "Control of Noise at Work Regulations 2005, reg 4(5); HSE L108, 3rd ed (2021)",
         tags: ["noise-havs"]
       },
       {
@@ -3687,29 +3687,29 @@ const SECTIONS = [
       {
         stem: "An employer operates a workshop where preliminary observation suggests noise levels may be close to, but not clearly above, the lower exposure action value. A manager argues that because levels have not been formally measured, no risk assessment obligation yet exists. The correct position is:",
         options: [
-          "The manager is correct; the duty to assess risk arises only once formal measurement has taken place",
-          "The exposure limit value has certainly been breached, since his unprotected exposure exceeds 87 dB(A)",
-          "Not breached, since it accounts for the protection given by hearing protection actually worn",
-          "The exposure limit value simply cannot be assessed unless exposure is measured over a full working week",
-          "Risk assessment is discretionary unless requested by a health and safety representative"
+          "The manager is correct: the duty to assess arises only once measurement has established exposure at or above 80 dB(A)",
+          "An assessment is required, but it must rest on personal dosimetry, since observation alone cannot establish likelihood",
+          "An assessment is required now, and an estimate close to an action value should be treated as exceeding it",
+          "An assessment should be completed, but the workshop may be treated as below the lower action value until measured",
+          "Measurement must come first, since an estimate cannot be suitable and sufficient where levels are borderline like this"
         ],
         correct: 2,
-        explain: "The duty to carry out a suitable and sufficient risk assessment is triggered where employees are likely to be exposed at or above the lower exposure action value, established by observation of working practices, reference to relevant information, or measurement where necessary — formal measurement is one method of establishing this, not a precondition for the duty itself.",
-        source: "L108, Regulation 5 — risk assessment duty",
+        explain: "The duty to carry out a suitable and sufficient risk assessment is triggered where employees are likely to be exposed at or above the lower exposure action value. That likelihood is established by observation of working practices, by reference to reliable published or manufacturer data, and by measurement only where necessary — measurement is one route to establishing it, not a precondition for the duty. A highly precise individual figure is not what the assessment requires; a reliable estimate, precise enough to show whether the action values are likely to be exceeded, is sufficient. Where that estimate falls close to an action value, the correct approach is to proceed as if the value were exceeded, which is why borderline observations create obligations rather than deferring them. Treating the duty as arising only once measurement has established 80 dB(A) inverts the trigger: measurement follows from the assessment where it is needed, and cannot be a gateway to it. Insisting the assessment rest on personal dosimetry sets a standard the Regulations do not impose — dosimetry is reserved for highly mobile workers or greatly fluctuating exposure, and observation with reliable data is expressly sufficient elsewhere. Treating the workshop as below the lower action value pending measurement takes the borderline estimate the wrong way, giving the benefit of the doubt to the employer rather than to health. Requiring measurement before any assessment can be suitable and sufficient makes precision the test when representativeness is the test; an estimate good enough to answer the question of whether the action values are likely to be exceeded meets the standard.",
+        source: "Control of Noise at Work Regulations 2005, reg 5; HSE L108, 3rd ed (2021) — risk assessment",
         tags: ["noise-havs"]
       },
       {
-        stem: "A print works identifies that several machines exceed the upper exposure action value. Proposals include issuing improved ear defenders, reducing the time individual workers spend near the loudest machines, and replacing an ageing press with a modern, quieter model. Applying the recognised hierarchy of control for noise, the measure that should be given priority is:",
+        stem: "An occupational hygienist is advising a plant making automotive components. A 46-year-old operator currently works a full eight-hour shift at a press, where his daily personal noise exposure is 85 dB(A). The production manager proposes a job rotation: the operator will spend four hours at the press, where the level is 88 dB(A) during the faster cycle now being run, and the remaining four hours in an inspection area where noise is below 70 dB(A) and contributes negligibly. The manager believes that halving the time at the press will bring the operator below the upper action value, removing the requirement for hearing protection to be worn. What is the correct position on the operator's daily personal noise exposure after the change?",
         options: [
-          "Yes; peak sound pressure is assessed quite separately and can breach a threshold entirely on its own",
-          "No; if daily personal noise exposure is low, then no threshold at all can possibly be breached",
-          "Peak sound pressure only ever becomes relevant once daily exposure has exceeded 80 dB(A) already",
-          "Peak sound pressure is simply not assessed under these particular regulations at all",
-          "Replacing the ageing press with a modern, quieter model to reduce noise at source"
+          "It falls to about 83 dB(A), so hearing protection use becomes voluntary rather than mandatory",
+          "It falls below the lower action value, since his time at the press has been halved",
+          "It rises to about 88 dB(A), because the highest level reached during the shift governs",
+          "It cannot be determined without knowing the peak sound pressure during the press cycle",
+          "It remains about 85 dB(A), because halving the time exactly offsets a 3 dB rise in level"
         ],
         correct: 4,
-        explain: "Reducing noise at source — here, replacing the press with a quieter model — sits above administrative measures such as job rotation, and well above personal hearing protection, in the recognised hierarchy of control. Health surveillance and hearing protection zones support ongoing management of residual risk; they are not themselves controls that reduce the noise being generated.",
-        source: "L108 — hierarchy of control for noise",
+        explain: "The Regulations apply the equal-energy principle with a 3 dB exchange rate: each 3 dB rise doubles sound energy and halves the permissible exposure time. Four hours at 88 dB(A) delivers exactly the same dose as eight hours at 85 dB(A), so LEP,d is unchanged and the operator remains at the upper action value, with mandatory protection, zone designation and surveillance all still in force. This is why organisational measures alone rarely bring a loud process under an action value — the rotation has bought nothing. The figure of about 83 dB(A) is what a 5 dB exchange rate produces, a convention used in some non-UK systems; it should not be imported into a UK assessment, and it is the single most likely wrong answer here. Concluding that exposure drops below the lower action value halves the time but ignores the rise in level: halving alone would take 88 dB(A) to 85 dB(A), nowhere near 80 dB(A). Reading the exposure as 88 dB(A) confuses LEP,d with the maximum level encountered, when it is a time-weighted average across the shift. And treating the calculation as impossible without the peak conflates two separate assessments — peak sound pressure is judged against its own values in dB(C), and its absence does not prevent LEP,d being derived from level and duration.",
+        source: "Control of Noise at Work Regulations 2005, reg 4 (equal-energy principle); HSE L108, 3rd ed (2021) — exposure calculation and ready reckoner",
         tags: ["noise-havs"]
       },
       {
@@ -3741,18 +3741,18 @@ const SECTIONS = [
         tags: ["noise-havs"]
       },
       {
-        stem: "An employer is deciding which groups of staff should be enrolled in an audiometric health surveillance programme. Regarding the purpose of this surveillance, the most accurate description is:",
+        stem: "A 27-year-old has worked four years in an iron foundry, with measured exposure above the upper action value. At his annual audiometric surveillance, his summed hearing levels at 1, 2, 3, 4 and 6 kHz sit better than the 20th percentile for his age and sex in both ears — his absolute hearing is excellent for a man of his age. Comparison against his pre-placement baseline, however, shows a new bilateral dip centred at 4 kHz, with an average shift of 15 dB at 2, 3 and 4 kHz in the left ear, confirmed on repeat testing the same week. The occupational health technician proposes recording him as Category 1 and continuing routine annual surveillance, reasoning that his thresholds are well within the normal range for his age. What is the correct categorisation?",
         options: [
-          "To identify hearing damage at an early stage and check the effectiveness of control measures already in place",
-          "To determine which particular individual workers should be formally and permanently exempted from wearing hearing protection",
-          "To establish the baseline noise level of the workplace before any risk assessment has even been undertaken at all",
-          "To replace the need for carrying out a noise risk assessment where a surveillance programme exists",
-          "To provide legal evidence for use in defending future compensation claims brought against the employer directly"
+          "Category 3 — newly identified NIHL is a referral category whatever the summed levels show",
+          "Category 1, since his summed levels sit within the normal range for his age and sex",
+          "Category 2, as the warning level applies whenever any threshold shift is confirmed on repeat",
+          "Category 4, because a confirmed shift involving 3 and 4 kHz constitutes rapid loss",
+          "Categorisation should be deferred until a third audiogram confirms the change over a further year"
         ],
         correct: 0,
-        explain: "Health surveillance for hearing damage serves to detect deterioration in hearing at as early a stage as possible, and to give an indication of whether existing control measures are actually working. It supplements, rather than replaces, risk assessment and control at source, and is not primarily a device for determining PPE exemptions or a purely defensive/legal exercise.",
-        source: "L108, Part 5 — health surveillance for hearing damage",
-        tags: []
+        explain: "The third edition of L108 rewrote the categorisation table so that Category 3 is reached either by the referral level for age and sex or by NIHL being newly identified or progressive, whatever the summed levels show. This worker meets the second limb and must be referred for medical assessment by an appropriately trained doctor. Recording him as Category 1 on the strength of normal summed levels applies the pre-2021 logic, in which categorisation rested purely on thresholds against a percentile table; that reasoning is precisely what the current edition removed, and it is why a young worker with excellent absolute hearing can still require referral. Assigning Category 2 on the basis that a shift has been confirmed misdescribes that category, which is defined by reaching the warning level — a position on the percentile table, not the presence of a shift. Reaching for Category 4 overshoots: rapid loss requires deterioration of 30 dB or more summed at 3, 4 and 6 kHz within three years, which a 15 dB average shift does not approach. Deferring categorisation for a further year delays action at the point surveillance has become most informative; his shift is already reproduced on repeat testing, and the SOM/UKHCA approach reserves a six-month retest for genuine doubt, not for a change that has been confirmed.",
+        source: "HSE L108, 3rd ed (2021), Appendix 4 — categorisation and age/sex-standardised tables; SOM/UKHCA audiogram guidance, April 2024",
+        tags: ["noise-havs"]
       },
       {
         stem: "A workshop has areas where noise exposure sits between the lower and upper exposure action values. Some workers there have requested hearing protection despite not being formally required to wear it at this level. Regarding the employer's duty at this intermediate level, the correct position is:",
@@ -5051,18 +5051,18 @@ const SECTIONS = [
         tags: ["noise-havs"]
       },
       {
-        stem: "A 34-year-old machine operator undergoes audiometric surveillance shortly after starting proceedings against his employer relating to alleged inadequate hearing protection. Two threshold measurements taken twenty minutes apart show a degree of variability that falls within the range sometimes seen even in genuine sensorineural loss, and the overall pattern is broadly, though not perfectly, consistent with noise damage. Regarding the correct approach, the position is:",
+        stem: "A 49-year-old bottling line operator with twenty years of noise-exposed work attends annual audiometric surveillance. Both ears show high-frequency sensorineural loss with a notch pattern consistent with noise damage, but the left is consistently worse: summed across 1, 2, 3 and 4 kHz the difference between ears is 25 dB, and at 2 kHz and again at 4 kHz the left ear is 20 dB worse than the right. He reports no vertigo, no unilateral tinnitus, and has no facial weakness or other localising signs. The occupational health nurse notes that the summed interaural difference falls short of the 40 dB figure at which L108 directs referral, and concludes that no onward action is needed. What is the correct position?",
         options: [
-          "The ongoing legal proceedings alone mean the result should be disregarded as unreliable",
-          "Objective testing should be arranged automatically for every claimant, regardless of audiometric findings",
-          "Any degree of threshold variability here confirms non-organic hearing loss has occurred",
-          "The result should be accepted entirely at face value, without considering the legal context",
-          "Some test-retest variability is expected even in genuine hearing loss, and should be judged on its merits"
+          "No referral is needed, since the summed difference falls below the L108 threshold of 40 dB",
+          "Referral is needed only if he develops unilateral tinnitus or facial weakness alongside the asymmetry",
+          "Referral should await a repeat audiogram in twelve months to see whether the asymmetry progresses",
+          "The asymmetry is adequately explained by his noise exposure, which is often mildly asymmetrical",
+          "MRI should be considered, as the asymmetry reaches 15 dB at two adjacent frequencies under NG98"
         ],
         correct: 4,
-        explain: "Genuine sensorineural loss can show some test-retest variability, so a degree of it doesn't itself confirm non-organic hearing loss. The finding should be weighed on its merits rather than dismissed because of the litigation context, or interpreted with blinkers that ignore that context entirely. Automatically escalating to further objective testing for every claimant regardless of the findings over-medicalises what may be an unremarkable result.",
-        source: "General audiological principle — test-retest variability and interpretation in a litigation context",
-        tags: []
+        explain: "Two separate triggers operate here and they do not agree. NICE NG98 advises considering MRI of the internal auditory meati in adults with sensorineural hearing loss and no localising signs where pure tone audiometry shows asymmetry of 15 dB or more at any two adjacent test frequencies, using 0.5, 1, 2, 4 and 8 kHz. Since 2 and 4 kHz are adjacent within that set and the difference is 20 dB at each, the NICE trigger is met even though the L108 occupational referral threshold of 40 dB summed is not. Concluding that no referral is needed because the L108 figure is not reached treats clearing the occupational threshold as the end of the matter, when the NICE trigger is substantially lower and can be met while sitting nowhere near 40 dB. Waiting for unilateral tinnitus or facial weakness describes the stronger NG98 limb, where MRI is offered irrespective of pure tone thresholds when localising symptoms or signs are present — but the absence of those signs does not switch off the separate threshold-based recommendation. Repeating the audiogram in twelve months defers by a year an investigation intended to exclude a vestibular schwannoma or other cerebellopontine angle lesion, where progression is not the question being asked. Attributing the asymmetry to his noise exposure inverts the reasoning: noise damage is characteristically bilateral and broadly symmetrical, so marked asymmetry is a reason to look beyond it rather than a way of explaining it away.",
+        source: "NICE NG98, recommendation 1.3.2 (verified against nice.org.uk, August 2026); HSE L108, 3rd ed (2021), Appendix 4 — interaural difference of 40 dB summed at 1, 2, 3 and 4 kHz",
+        tags: ["noise-havs"]
       },
       {
         stem: "A 44-year-old fabrication welder shows a small but confirmed increase in hearing threshold at 4 kHz this year, against two years of previously stable results. His measured protected exposure remains comfortably below the exposure action value, hearing protection is correctly fitted and worn, and no further practicable exposure reduction is currently available. He is otherwise asymptomatic. The correct next step is:",
