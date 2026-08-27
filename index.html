@@ -6647,7 +6647,7 @@ const SECTIONS = [
         tags: ["toxicology", "respiratory-sensitisers"]
       },
       {
-        stem: "The same manufacturer asks occupational health to advise on glove selection for workers handling the isocyanate component. The purchasing manager has found a supplier offering nitrile gloves at a good price and asks whether these will be suitable. Which factors are most important in selecting gloves for this process?",
+        stem: "A 34-year-old process operator applies a two-pack polyurethane coating by spray gun in a small manufacturing unit, handling the isocyanate hardener component regularly throughout each shift. Occupational health is asked to advise on glove selection for this task. The purchasing manager has found a supplier offering standard nitrile gloves at a good price and asks whether these will be suitable. Which factors are most important in selecting gloves for this process?",
         options: [
           "The thickness of the glove material and its resistance to tearing during handling of components",
           "Breakthrough time and permeation rate for the specific chemical, together with task duration and fit",
@@ -9532,21 +9532,11 @@ function closeResumeModal(){
 }
 
 function getAllIncorrectQuestions(){
-  const out = [];
-  SECTIONS.forEach(sec=>{
-    const incorrectIdxs = new Set(getIncorrectQIdxs(sec.id));
-    sec.questions.forEach(q=>{ if (incorrectIdxs.has(q._qIdx)) out.push(q); });
-  });
-  return out;
+  return ALL_QUESTIONS.filter(q => getResultsMap(q._secId)[q._qIdx] === false);
 }
 
 function getAllUnattemptedQuestions(){
-  const out = [];
-  SECTIONS.forEach(sec=>{
-    const attempted = getAttemptedSet(sec.id);
-    sec.questions.forEach(q=>{ if (!attempted.has(q._qIdx)) out.push(q); });
-  });
-  return out;
+  return ALL_QUESTIONS.filter(q => !getAttemptedSet(q._secId).has(q._qIdx));
 }
 
 let randomUnattemptedOnly = false;
