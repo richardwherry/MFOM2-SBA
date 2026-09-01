@@ -752,13 +752,13 @@ const SECTIONS = [
         stem: "An occupational health department trials two manual handling training packages across a distribution centre, randomising teams to a conventional classroom package or a task-specific package delivered on the warehouse floor. The primary outcome is reported handling injuries over the following year, and the analysis returns a p-value of 0.03. The operations director, who is sceptical of the new package, asks what that figure actually tells him. Which statement correctly interprets it?",
         options: [
           "There is a 3% probability overall that the null hypothesis itself is actually true",
-          "There is a 97% probability overall that the alternative hypothesis itself is true",
+          "Repeating the study would produce a significant result on 97% of occasions",
           "If the null hypothesis is true, there is a 3% chance of data this extreme or more",
           "There is a 3% chance overall that the result is explained entirely by bias alone",
           "The difference between the two packages is undoubtedly large and clinically important"
         ],
         correct: 2,
-        explain: "A p-value is P(data given the null hypothesis is true), not P(null hypothesis given the data). It says nothing directly about the probability the null is true, nor about clinical importance. Note also that p-values quantify random error alone: bias and confounding do not shrink with sample size, so a thoroughly biased study can still return a very small p-value.",
+        explain: "A p-value is the probability of the observed data, or data more extreme, given that the null hypothesis is true. It is not the probability that the null hypothesis is true given the data, which is the inversion behind reading 0.03 as a 3% chance that the null is correct. Nor does it predict replication: the belief that a p-value of 0.03 means a significant result would follow on 97% of repetitions treats a statement about one dataset as a statement about future studies, and the actual probability of replication depends on the true effect size and the power of the repeat study. The figure says nothing about whether the difference between the two packages is large or clinically important, which is a question about effect size and confidence intervals rather than statistical significance. It also says nothing about bias: p-values quantify random error alone, and bias and confounding do not shrink with sample size, so a thoroughly biased study can still return a very small p-value.",
         source: "Coggon, Epidemiology for the Uninitiated — hypothesis testing",
         tags: ["msd-ergonomics"]
       },
@@ -3634,6 +3634,48 @@ const SECTIONS = [
         source: "ABC of Occ & Env Medicine, 3rd ed, Ch8 — injury vs disorder terminology",
         tags: ["msd-ergonomics"]
       },
+      {
+        stem: "A 38-year-old office worker is referred by her manager during an ongoing grievance. She describes eighteen months of belittling comments, exclusion from meetings and public criticism by her line manager, and has developed a depressive illness. Nothing she describes relates to any protected characteristic. The employer's letter asks occupational health to confirm whether she has been bullied and whether this caused her illness. Regarding the report, which position is correct?",
+        options: [
+          "Report what she describes as her account, with the health effects and prognosis",
+          "Decline to answer, as bullying is not a legal term and carries no cause of action",
+          "Confirm bullying occurred, her account being consistent and the illness established",
+          "State that no unlawful harassment has occurred, no protected characteristic being engaged",
+          "Defer the report until the grievance concludes and the facts are established"
+        ],
+        correct: 0,
+        explain: "Whether bullying occurred is a matter of fact for the employer's investigation or ultimately for a tribunal. A report concluding that a worker was bullied has adjudicated a disputed allegation on one party's account, and it will be produced in the grievance, where it is easy for an employer to dismiss entirely — which harms the worker as much as anyone. What can properly be said is that she describes experiencing bullying, what health effects are present, whether they are consistent with the account, what the outlook is, and what adjustments would help. Two things belong in the report that the employer has not asked for: the absence of a response is often more damaging than the conduct itself, because it tells the worker the organisation has taken a side, and an unresolved grievance sustains the exposure, so a process running for months is a health risk rather than a neutral interval, which makes timescale a legitimate clinical recommendation. Declining altogether is the strongest of the wrong answers and starts from something true, since bullying is not a legal term and carries no cause of action of its own; but that is a reason not to answer the legal question rather than the clinical one, and the referral still needs answering on health effects and adjustments. Confirming that bullying occurred is what the employer asked for and the error this material exists to prevent. Pronouncing that no unlawful harassment has occurred is a legal conclusion dressed as a clinical one and would also be wrong on the law, since bullying with no characteristic behind it still has routes through constructive dismissal, negligence and the Protection from Harassment Act. Deferring leaves her without advice during the period the process itself is doing harm.",
+        source: "Acas guidance on bullying and harassment; FOM Ethics Guidance, 9th ed",
+        tags: []
+      },
+      {
+        stem: "A 45-year-old laboratory technician has been subjected to a sustained campaign of humiliating and intimidating behaviour by a colleague over two years, unrelated to any protected characteristic. She has not resigned and has no diagnosed psychiatric illness, but is distressed and sleeping poorly. She has been told by a colleague that she has no legal remedy because she has not been dismissed and the conduct is not discriminatory. Regarding the routes potentially available to her, which position is correct?",
+        options: [
+          "She has no remedy, absent dismissal or a protected characteristic",
+          "A negligence claim lies, distress and sleep disturbance being sufficient injury",
+          "She must first resign to bring a constructive dismissal claim within three months",
+          "The Protection from Harassment Act 1997 requires neither injury nor a characteristic",
+          "Only an Equality Act claim is available, requiring a characteristic to be identified"
+        ],
+        correct: 3,
+        explain: "The 1997 Act was passed to deal with stalking and was not designed for the workplace, which is why it sits so awkwardly and so powerfully there. It requires a course of conduct amounting to harassment on at least two occasions, with alarm or distress being enough: no protected characteristic, no psychiatric injury, and no requirement that harm was foreseeable. The limitation period is six years rather than three months, and the House of Lords has held that its wording makes an employer vicariously liable for harassment by an employee, with no defence of having taken reasonable steps. It is the least well known of the three routes and often the strongest. A negligence claim is the strongest of the wrong answers, being a real route with the right instrument identified at the wrong stage: it requires a recognised psychiatric injury caused by breach of a duty of care and reasonably foreseeable, and distress with poor sleep falls short of that threshold. Constructive dismissal requires a fundamental breach of the implied term of trust and confidence and resignation in response, brought within three months; it exists, but stating that she must resign presents one option as a requirement. Her colleague's advice is the widespread assumption this material exists to correct, and confining her to the Equality Act reproduces it in another form. The counterintuitive consequence is worth carrying: a manager who humiliates one subordinate relentlessly for no reason connected to any characteristic has not committed unlawful harassment under the Equality Act, while a single remark related to race or sex may amount to it, so severity does not decide which applies and the link to a characteristic does.",
+        source: "Protection from Harassment Act 1997; Majrowski v Guy's and St Thomas' NHS Trust [2006] UKHL 34",
+        tags: []
+      },
+      {
+        stem: "An employer proposes to exclude women of childbearing age from a role involving heavy manual work in a hot foundry, on the basis that the work is arduous and it wishes to protect them and any pregnancy. It asks occupational health to endorse the policy as a health protection measure. Separately, it proposes a fitness test for the role which women have historically passed at a substantially lower rate than men, and says it cannot explain why. Regarding the two proposals, which position is correct?",
+        options: [
+          "Both are lawful, being health protection measures with a legitimate aim",
+          "The exclusion is direct discrimination; the test needs justification despite the unexplained difference",
+          "The exclusion is indirect discrimination, capable of justification on health grounds",
+          "Neither is discriminatory, since both apply to a genuine occupational requirement",
+          "The test is lawful unless the reason for the differential outcome can be established"
+        ],
+        correct: 1,
+        explain: "The two proposals fail in different ways. The exclusion is direct sex discrimination, treating women less favourably because of sex, and a good motive is no defence: the tribunal asks the reason for the difference in treatment rather than whether the employer meant well. Direct discrimination cannot be justified except on age, subject to a narrow occupational requirement exception, so framing the policy as health protection does not rescue it, and the same reasoning defeats a refusal to employ someone with epilepsy because colleagues might be alarmed. A physician who endorses this has helped construct an unlawful policy while believing they were protecting someone; the lawful route is individual risk assessment with adjustments where a pregnancy is declared. The test is indirect discrimination, and the Supreme Court has held that a claimant need not show why a provision disadvantages the group, only that it does, so the employer's inability to explain the differential outcome does not defeat the claim but puts the employer to proof that the test is a proportionate means of achieving a legitimate aim. That may well be arguable for a genuine fitness requirement, but it has to be argued rather than assumed. Treating the exclusion as indirect and justifiable is the strongest of the wrong answers and fails because a policy applied to women as women is not a provision applied to everyone. Requiring the reason for the differential outcome to be established is the position the Supreme Court rejected, and the occupational requirement exception is narrow and would not reach either proposal.",
+        source: "Equality Act 2010; Essop v Home Office (UK Border Agency) [2017] UKSC 27",
+        tags: []
+      },
     ]
   },
   {
@@ -3965,17 +4007,17 @@ const SECTIONS = [
         tags: ["toxicology"]
       },
       {
-        stem: "An occupational hygienist is deciding whether formal, specialist measurement of a newly identified hazard is needed, as opposed to a more informal initial assessment. The correct position is:",
+        stem: "A 44-year-old operates a newly installed CNC router in a small joinery, machining oak and beech panels. The occupational health adviser visiting the workshop notes visible airborne dust around the machine and settled dust on adjacent surfaces, and that the extraction hood sits some distance from the cutting head. No sampling has ever been carried out at the site. The owner asks whether he really needs to commission personal exposure measurement by a hygienist, or whether a walk-through appraisal and a note in the risk assessment will do. Regarding whether formal measurement is appropriate here, which position is correct?",
         options: [
-          "Formal measurement becomes appropriate where an important hazard exists and the risk is not clearly trivial",
-          "Formal measurement is required in every single case before any risk assessment can be valid",
-          "Formal measurement is never required at all where a written policy on the hazard already exists",
-          "An initial inspection can safely be dispensed with once formal measurement has been separately arranged",
-          "The decision on whether to measure formally rests solely with the affected workers themselves"
+          "Measurement is appropriate here, since an important hazard exists and the risk is not clearly trivial",
+          "Measurement should await the outcome of health surveillance for the workers concerned",
+          "Measurement is unnecessary where the substance already has an assigned workplace exposure limit",
+          "An informal appraisal suffices wherever local exhaust ventilation has already been installed",
+          "Measurement is required in every case before any risk assessment of a process can be valid"
         ],
         correct: 0,
-        explain: "Formal measurement, often needing a specialised sampling strategy directed by an occupational hygienist, becomes appropriate where an important hazard is identified and the risk cannot be judged clearly trivial — a graded approach, not a blanket requirement.",
-        source: "ABC of Occ & Env Medicine, Ch3 — graded approach to formal measurement",
+        explain: "Formal measurement, which usually needs a sampling strategy directed by an occupational hygienist, becomes appropriate where an important hazard has been identified and the risk cannot be judged clearly trivial. That is a graded approach rather than a blanket requirement, and this workshop meets it: hardwood dust is a carcinogen, visible airborne and settled dust indicates the extraction is not capturing at source, and nothing about the situation allows the risk to be dismissed as trivial without a figure. Waiting for health surveillance inverts the purpose of each activity, since surveillance looks for effects in the worker while measurement checks whether the control is working, and finding a case would be evidence that measurement should have happened sooner. Treating an assigned exposure limit as a reason not to measure reverses the position, because the existence of a limit is precisely what makes a measured comparison possible and meaningful. Relying on the presence of extraction assumes the control performs as designed, which is the proposition in doubt here given the hood position and the visible dust. Requiring measurement in every case before any assessment can be valid overstates the duty and would make routine low-risk work unassessable; measurement follows from the assessment where it is needed rather than preceding it.",
+        source: "ABC of Occ & Env Medicine, 3rd ed, Ch 3 — graded approach to formal measurement",
         tags: []
       },
       {
@@ -4035,17 +4077,17 @@ const SECTIONS = [
         tags: []
       },
       {
-        stem: "An engineer distinguishes between 'face velocity' and 'capture velocity' when describing an LEV hood's performance. Regarding the correct distinction between these two terms, the position is:",
+        stem: "An occupational hygienist is investigating why workers at a soldering bench continue to report symptoms despite local exhaust ventilation being fitted. Testing shows the hood meets its design face velocity at the opening, and the system passed its last thorough examination. Observation shows the operators working with the joint some 30 cm from the hood, rather than immediately beneath it as the designer had assumed. A maintenance engineer argues that since the measured velocity at the hood is correct, the ventilation cannot be the problem. Regarding the distinction between face velocity and capture velocity, which position is correct?",
         options: [
-          "The two terms are considered entirely synonymous and used interchangeably throughout LEV design practice generally",
-          "Face velocity is measured at the source itself, while capture velocity is measured at the hood opening",
-          "Face velocity is measured at the hood opening, while capture velocity is required at the source to draw it in",
-          "Capture velocity applies only to high-volume, low-velocity systems, with no relevance to conventional LEV design at all",
-          "Face velocity is a legal requirement while capture velocity is a purely theoretical concept with no design application"
+          "The two terms describe the same measurement, taken at different points in the same airstream",
+          "Both are measured at the hood opening, capture velocity simply being the higher figure required",
+          "Face velocity is measured at the hood opening, while capture velocity is required at the source",
+          "Capture velocity falls rapidly with distance, so face velocity is the more reliable indicator",
+          "Face velocity is recorded at thorough examination, so capture velocity need not be assessed"
         ],
         correct: 2,
-        explain: "Face velocity is measured at the hood opening itself, while capture velocity is the velocity required specifically at the point where the contaminant is released, to draw it into the hood — a hood can have an adequate face velocity yet still fail to capture a contaminant released some distance away if capture velocity at that point is insufficient.",
-        source: "HSG258, para 139 — capture velocity vs face velocity",
+        explain: "Face velocity is measured at the hood opening itself. Capture velocity is the velocity needed at the point where the contaminant is actually released, in order to draw it into the hood. A hood can therefore meet its face velocity specification and still fail completely, because velocity falls away very steeply with distance from the opening — which is exactly what has happened at 30 cm, and why the engineer's reasoning is wrong even though his measurement is right. Treating the two as one measurement taken at different points misses that they describe different requirements rather than different sampling positions for the same quantity. Placing both at the hood opening loses the distinction altogether, since the whole point of capture velocity is that it is specified where the contaminant arises. Concluding that face velocity is the more reliable indicator because capture velocity falls with distance takes a true observation and draws the opposite lesson from it: the steep fall is precisely why the velocity at the source must be considered rather than assumed from the hood reading. Relying on the thorough examination record treats a periodic statutory check as a substitute for understanding how the hood performs in the work as actually done, when operator position is one of the commonest reasons for a compliant system to fail in practice.",
+        source: "HSE HSG258 — capture velocity and face velocity",
         tags: []
       },
       {
@@ -4903,17 +4945,17 @@ const SECTIONS = [
         tags: ["toxicology", "dermatology"]
       },
       {
-        stem: "An HR director is developing a workplace stress policy and wants to structure it around the HSE Management Standards, understanding these to cover the primary sources of work-related stress. Which of the following is not one of the six HSE Management Standards?",
+        stem: "A manufacturing company runs the HSE Indicator Tool across its workforce following a restructure. The lowest-scoring domain reflects employees reporting that they are unclear what is expected of them, that different managers ask for incompatible things, and that they have nowhere to raise the conflict. Separately, a smaller group report that their shift patterns have become unmanageable. The HR director asks the occupational health adviser which Management Standard the principal finding falls under, and whether shift patterns constitute a standard of their own. Regarding the six Management Standards, which position is correct?",
         options: [
-          "Demands",
-          "Control",
-          "Shift patterns",
-          "Relationships",
-          "Change"
+          "Demands, since unclear expectations represent an excessive demand on the employee",
+          "Support, since the absence of any route to raise the conflict is a failure of support",
+          "Role, and shift patterns fall within Demands rather than forming a standard of their own",
+          "Change, since the difficulties have arisen in the aftermath of the restructure",
+          "Relationships, since the conflict described lies between the employee and different managers"
         ],
         correct: 2,
-        explain: "The six HSE Management Standards are Demands, Control, Support, Relationships, Role and Change. Shift patterns are not a standalone standard in their own right — they are one specific issue that would be considered within the Demands standard, alongside workload and the work environment more broadly, rather than forming a separate category. A policy structured around the six standards should reflect this, rather than incorrectly treating shift patterns as a seventh, independent area.",
-        source: "HSE Management Standards for work-related stress",
+        explain: "The six Management Standards are Demands, Control, Support, Relationships, Role and Change. The Role standard covers role clarity and whether an employee's roles conflict, with good practice meaning that the requirements placed on someone are clear and compatible and that there is a route to raise concerns about conflict — which describes this finding precisely. Shift patterns are not a seventh standard: work patterns sit within Demands, alongside workload and the work environment. Attributing the finding to Demands takes a real domain but the wrong one, since Demands concerns the volume and pattern of work rather than clarity about what the work is. Support covers encouragement, resources and sponsorship from the organisation, managers and colleagues, and although the absence of a route to raise conflict sounds like a support failure, the guidance places that route within the Role standard itself. Change concerns how organisational change is communicated and managed, and while the restructure is the plausible cause, the standard the survey has identified is the one describing the resulting state rather than the process that produced it. Relationships covers promoting positive working and dealing with unacceptable behaviour, which is not what conflicting instructions from different managers amounts to. Each domain is stated as an aspirational standard rather than a compliance floor, and the domains interact, so the guidance is to treat the job as a whole rather than fixing one in isolation.",
+        source: "HSE Management Standards for work-related stress — the six domains",
         tags: []
       },
       {
@@ -4987,7 +5029,7 @@ const SECTIONS = [
         tags: ["noise-havs"]
       },
       {
-        stem: "A 26-year-old apprentice joins a road maintenance contractor and will spend part of each shift operating a road breaker, with measured exposure above the upper action value. He is 17 years old for the first four months of the placement. The contracts manager notes that he will be issued the same hearing protection as everyone else and included in the health surveillance programme from the outset, and considers that this discharges the employer's obligations towards him. Regarding the employer's duties to this apprentice, which position is correct?",
+        stem: "A 17-year-old apprentice joins a road maintenance contractor and will spend part of each shift operating a road breaker, with measured exposure above the upper action value. He turns 18 four months into the placement. The contracts manager notes that he will be issued the same hearing protection as everyone else and included in the health surveillance programme from the outset, and considers that this discharges the employer's obligations towards him. Regarding the employer's duties to this apprentice, which position is correct?",
         options: [
           "Providing protection and surveillance discharges the duty, as he is treated as an employee in full",
           "Trainees on workplace schemes are excluded from health surveillance until their placement ends",
@@ -5503,6 +5545,426 @@ const SECTIONS = [
         explain: "The Workplace Regulations require only that indoor temperature be reasonable during working hours, and that is the whole legal test. The figure of 16°C, and 13°C where much of the work involves rigorous physical effort, come from the Approved Code of Practice and describe what reasonable normally means. They are not statutory thresholds, so work does not automatically stop below them, and meeting them does not discharge the duty if people are still too cold to work safely: at 14 to 15°C for sedentary work his adviser is right to be concerned but wrong about the offence. There is no maximum anywhere, the enforcing authority's position being that no meaningful upper limit can be set, because in bakeries, foundries and glassworks the heat comes from the process rather than the weather. A 30°C maximum and 27°C for strenuous work have been pressed for by trade unions and the Code of Practice is under review, but a demand under consideration is not an enforceable figure, which is the second half of the adviser's error. Neither of the two Code figures is statutory, so singling one out fails for the same reason as singling out the other. The Management Regulations do carry two thermal hooks rather than limits, namely a specific assessment for new and expectant mothers and a prohibition on employing young persons on work involving harmful exposure to extreme heat or cold. The Workplace Regulations also require thermal insulation where necessary, that excessive effects of sunlight be avoided, and that sufficient thermometers be provided.",
         source: "WHSW 1992, reg 7 and its ACOP; MHSWR 1999",
         tags: ["thermal-radiation"]
+      },
+      {
+        stem: "An occupational hygienist is designing a sampling strategy for solvent exposure at a furniture manufacturer. She has grouped the workforce by job title and location: twelve sprayers in the finishing booth, eight assemblers on the line, and six maintenance fitters. Her plan is to sample three workers from each group and treat the results as representative of everyone in it. A colleague reviewing the plan points out that the maintenance fitters move between areas and perform quite different tasks day to day, and questions whether the grouping will hold. Regarding the use of these groups in the sampling strategy, which position is correct?",
+        options: [
+          "Grouping by job title and location is the accepted method, so the plan is sound as it stands",
+          "Sampling three from each group is too few; a minimum of ten per group is required",
+          "Groups defined this way are often not homogeneous, and the assumption needs testing against the data",
+          "The fitters should be sampled individually, the other two groups being adequately defined",
+          "Grouping is invalid for any workforce under fifty, where every worker should be sampled"
+        ],
+        correct: 2,
+        explain: "Grouping by job title and location is the standard starting point and a reasonable one, but studies of similar exposure groups have found that only around a quarter of groups defined that way prove genuinely homogeneous on measurement. Exposure within a nominal group is often more variable than exposure between groups, so the grouping is a hypothesis to be tested against the data rather than a conclusion to build on: the within-group spread should be examined once results are in, and a heterogeneous group split. Sampling the fitters individually while accepting the other two groupings is the strongest of the wrong answers, because the colleague's observation is sound and mobile maintenance workers with varying tasks are the classic heterogeneous group. It falls short by fixing the group somebody happened to notice while leaving the same untested assumption standing for the sprayers, who may differ substantially by task, position at the gun and time spent spraying. Treating the grouping as accepted method and therefore sound converts a starting point into a finding. Requiring a minimum of ten per group invents a fixed number, when the number needed depends on the variability found and the precision required. Ruling grouping out below a workforce of fifty invents a size threshold that does not exist, grouping being a strategy for efficient sampling at any scale.",
+        source: "ABC of Occ & Env Medicine, 3rd ed, Ch 3; occupational hygiene sampling strategy",
+        tags: []
+      },
+      {
+        stem: "A 38-year-old works a 12-hour shift pattern in a chemical packing plant, four days on and four off. Personal sampling across a full shift gives a measured concentration of 4 mg/m³ of a substance with an 8-hour workplace exposure limit of 5 mg/m³. The plant manager notes that the measured figure sits below the limit, and adds that averaged across the eight-day cycle, including rest days, the exposure is lower still. Regarding the comparison with the exposure limit, which position is correct?",
+        options: [
+          "Exposure is compliant, since the measured concentration is below the assigned limit",
+          "The 8-hour equivalent is 6 mg/m³, which exceeds the limit",
+          "The rest days may be included, giving a compliant cycle average of about 3 mg/m³",
+          "Long-term limits cannot be applied to shifts exceeding eight hours",
+          "The measured figure should be compared against a limit reduced to two-thirds"
+        ],
+        correct: 1,
+        explain: "The reference period is eight hours in each 24, so the exposure is normalised by multiplying the concentration by the hours worked and dividing by eight: four multiplied by twelve, divided by eight, gives 6 mg/m³, which exceeds the 5 mg/m³ limit. The intuition that a measured figure below the limit means compliance fails because the limit is defined by dose across a fixed period rather than by concentration alone, and twelve hours at 4 mg/m³ delivers more of the substance than eight hours at 5 would. Reducing the limit to two-thirds for a twelve-hour shift is the strongest of the wrong answers and reaches the same conclusion, since 4 mg/m³ also fails against a reduced figure of 3.33; pro-rating limits for unusual shift patterns is a recognised approach in several published models. It falls short because it is not the convention used here, which is to normalise the exposure to eight hours and compare it against the unmodified limit. Averaging across rest days is the more seductive error, because it looks like the same kind of averaging that produced the eight-hour figure, but the reference period is eight hours in each 24, so rest days fall outside it entirely and cannot dilute a working day. Concluding that long-term limits cannot be applied to shifts over eight hours overstates a real complication into a disapplication.",
+        source: "HSE EH40/2005, 4th ed (2020) — calculating exposure",
+        tags: []
+      },
+      {
+        stem: "A 29-year-old spray painter uses a two-pack isocyanate paint and wears an air-fed hood. The hygienist calculates that the concentration in the booth reaches 20 times the workplace exposure limit during spraying. The safety manager proposes replacing the hood with a full facepiece reusable respirator with an assigned protection factor of 40, reasoning that this gives a comfortable margin over the required figure of 20. Regarding the selection of respiratory protective equipment here, which position is correct?",
+        options: [
+          "An assigned protection factor of 40 is appropriate, giving twice the required protection factor",
+          "The assigned factor should exceed the concentration multiple by at least a factor of ten",
+          "The required protection factor should be recalculated using the short-term exposure limit",
+          "The assigned factor is adequate, provided the wearer passes a face fit test for that model",
+          "The proposal is inadequate, as spraying two-pack isocyanate paint requires air-fed equipment"
+        ],
+        correct: 4,
+        explain: "The required protection factor is the concentration divided by the exposure limit, giving 20 here, and an assigned protection factor of 40 clears that arithmetically. But the calculation is not the whole of the selection: for spraying two-pack isocyanate products, guidance requires air-fed equipment with an assigned protection factor of at least 20, and states that filtering respiratory protective equipment is not suitable for this work whatever its rated factor. The proposal is therefore inadequate in the class of equipment rather than in the margin, and replacing a working air-fed hood with a filtering device would be a step backwards. Requiring a successful face fit test identifies a genuine and mandatory condition for any tight-fitting facepiece, without which real-world performance falls well short of the rated factor and facial hair defeats the seal altogether; it is necessary but not sufficient, since a well-fitting respirator of the wrong class remains the wrong class. Requiring the assigned factor to exceed the required factor tenfold expresses a sound instinct, that a bare arithmetic pass is thin comfort, as a safety multiplier that appears nowhere in the guidance. Accepting the calculation as complete is the safety manager's position. Recalculating against the short-term limit would matter for a brief peak exposure but would not change the class of equipment required.",
+        source: "HSE HSG53; HSE INDG473 and COSHH Essentials MR2/MR5 — isocyanate paint spraying",
+        tags: []
+      },
+      {
+        stem: "A university laboratory works with a Hazard Group 3 organism in a Class II microbiological safety cabinet. A visiting researcher, accustomed to a pharmacy environment, notes that the cabinet looks similar to the horizontal laminar flow units she used for aseptic preparation, and asks whether she could use one of those for a small amount of the same work if the cabinet is occupied. Regarding the suitability of that equipment, which position is correct?",
+        options: [
+          "Laminar flow units protect the product but blow air towards the operator, so are unsuitable",
+          "A horizontal laminar flow cabinet is acceptable for small quantities of Group 3 work",
+          "Either is acceptable provided the room itself is at negative pressure to the corridor",
+          "A Class I cabinet would be required, Class II being insufficient for Group 3 agents",
+          "Laminar flow units are suitable if fitted with a HEPA filter on the exhaust"
+        ],
+        correct: 0,
+        explain: "What separates the two is what each is designed to protect. A Class II microbiological safety cabinet protects the operator, the product and the environment, drawing air in through the front aperture to form an inward air curtain while filtered downflow keeps the work area clean. A horizontal laminar flow unit protects only the product, moving filtered air from the back of the cabinet outwards across the work and towards the operator's face, which is correct for aseptic pharmacy preparation where the hazard is contamination of the product, and dangerous with a Group 3 organism because it delivers any aerosol directly to the person. Requiring a Class I cabinet inverts the hierarchy: Class I protects the operator and the environment but not the product, while Class II protects all three, so Class II is the more capable of the two and is the standard choice for this work. Permitting a laminar flow unit for small quantities misunderstands the mechanism, since the direction of airflow does not change with the volume handled. Relying on room negative pressure addresses containment of the laboratory rather than protection of the person standing in the airstream, and is a supplementary measure rather than a substitute. Fitting a filter to the exhaust would clean what leaves the unit while leaving the operator exposed upstream of it.",
+        source: "ACDP guidance on containment; COSHH 2002 Schedule 3",
+        tags: []
+      },
+      {
+        stem: "A 46-year-old warehouse operative lifts boxes weighing 14 kg from a pallet at floor level to a shelf at shoulder height, around forty times an hour. The health and safety manager consults the manual handling guideline figures, notes that the load falls below the relevant figure for that zone, and concludes that no further assessment is needed and that the task is compliant. Regarding the use of the guideline figures, which position is correct?",
+        options: [
+          "The conclusion is sound, since the load sits below the applicable guideline figure",
+          "The figures apply to the load alone, so the assessment is unaffected by how often lifting occurs",
+          "The figures should be halved because the lift crosses more than one vertical zone",
+          "They are a filter for identifying tasks needing assessment, not limits establishing compliance",
+          "The frequency of forty lifts an hour requires a formal assessment tool such as RULA"
+        ],
+        correct: 3,
+        explain: "The guideline figures are a screening device. Falling below one means a task can usually be treated as low risk and does not need a detailed assessment; it does not establish compliance, and it does not discharge the duty to avoid hazardous manual handling so far as is reasonably practicable or to reduce the risk where it cannot be avoided. The manager has used a filter as though it were a limit. Several features point the other way regardless of the load: the lift starts at floor level and finishes at shoulder height, crossing zones with different figures, and the figures are reduced substantially where lifting is frequent, which forty times an hour certainly is. Treating the figures as applying to the load alone, unaffected by frequency, is a real misreading of how the table works and would leave the most demanding feature of this task out of account entirely. Halving the figures for a multi-zone lift invents an arithmetic adjustment, where the convention is that the smaller of the applicable figures governs. Reaching for a formal tool identifies correctly that the frequency demands proper assessment, but names an instrument designed for upper limb posture at a workstation rather than for lifting, where the manual handling assessment chart is the tool intended for the purpose.",
+        source: "Manual Handling Operations Regulations 1992 and HSE guidance L23; HSE MAC tool",
+        tags: []
+      },
+      {
+        stem: "An NHS trust reviews its rota after a series of near-misses among junior doctors on night shifts. The occupational health service is asked to advise. The medical director proposes that all doctors working nights complete a fatigue awareness e-learning module and are offered individual resilience coaching, and asks occupational health to deliver both. Regarding the approach proposed, which position is correct?",
+        options: [
+          "The proposal is appropriate, since fatigue management depends on individual awareness and coping",
+          "Individual measures may help, but rota design and workload are the primary control",
+          "Occupational health should decline, fatigue being outside its remit and a matter for management",
+          "A fatigue risk management system should replace the Working Time Regulations limits",
+          "Night workers should be offered a health assessment, which addresses the identified risk"
+        ],
+        correct: 1,
+        explain: "The proposal treats fatigue as an individual attribute to be managed by awareness and resilience, when it is a predictable consequence of how the work is designed. Rota design and workload are the primary control: the sequence and direction of rotation, the length and spacing of night runs, opportunities for rest, and the volume of work actually falling in the small hours. Individual measures have a place alongside those, and education about sleep behaviour is worth having, but offered instead of a change to the rota they leave the cause untouched and shift responsibility onto the people least able to alter it. The same pattern runs through psychosocial risk generally, where organisational interventions outperform individual ones. Offering night workers a health assessment identifies a genuine duty under the Working Time Regulations and is the strongest of the wrong answers, but it screens individuals for fitness for night work rather than addressing a rota generating near-misses across a group. Accepting the proposal adopts the medical director's framing. Declining on the grounds of remit abandons a question squarely within occupational health's competence, the proper contribution being advice on rota design and workload rather than delivery of coaching. Substituting a fatigue risk management system for the statutory limits misdescribes the relationship, since such a system sits alongside limits that are law rather than displacing them.",
+        source: "Working Time Regulations 1998; HSE guidance on shift work and fatigue; ISO 45003",
+        tags: []
+      },
+      {
+        stem: "A 34-year-old employee of a housing association carries out home visits alone, sometimes in the evening. She reports that a tenant has become verbally aggressive at two recent visits and has followed her to her car. Her manager considers this a matter between her and the tenant, notes that no assault has occurred, and suggests she avoid that address if she feels uncomfortable. Regarding the employer's position, which position is correct?",
+        options: [
+          "No duty arises until an assault occurs, verbal aggression being a matter of personal resilience",
+          "The employee should be redeployed to office duties pending resolution with the tenant",
+          "The duty falls under the Equality Act, the conduct amounting to third-party harassment",
+          "Lone working is prohibited where any history of aggression exists at an address",
+          "Violence at work includes threatening behaviour and abuse, and is a risk requiring assessment"
+        ],
+        correct: 4,
+        explain: "Violence at work is defined broadly enough to capture what is happening here, covering any incident in which a person is abused, threatened or assaulted in circumstances relating to their work, so verbal abuse and threatening behaviour are within it rather than outside it. Being followed to her car after two aggressive encounters is a foreseeable risk to a lone worker and engages the general duty to assess and control, which means examining the address, the visit arrangements, communication and check-in systems, whether the visit needs to happen alone or at all, and reporting and support afterwards. Leaving it to the employee's discretion places the judgement on the person least able to control the exposure and discourages reporting. Framing the matter as third-party harassment is the strongest of the wrong answers, since employers can be liable for harassment by people who are not their employees and the duty in that area has been strengthened; it requires the conduct to relate to a protected characteristic, however, and nothing here suggests it does, so the health and safety route is the one that bites on these facts. Waiting for an assault sets the threshold at the wrong point and is the manager's position. Prohibiting lone working wherever any history of aggression exists substitutes a blanket rule for assessment and proportionate control. Redeploying her to office duties removes the person rather than the risk and leaves the hazard for whoever visits next.",
+        source: "HSE guidance on violence at work; Management of Health and Safety at Work Regulations 1999, reg 3",
+        tags: []
+      },
+      {
+        stem: "A 52-year-old radiographer is one of six staff sharing a reporting room. Four of the six have complained of headache and dry eyes since a refurbishment reduced the room's ventilation openings. The facilities manager measures carbon dioxide at 1,400 ppm as an 8-hour average, notes that this is well below the workplace exposure limit of 5,000 ppm, and concludes that air quality is satisfactory. Regarding the interpretation of that measurement, which position is correct?",
+        options: [
+          "Air quality is satisfactory, the measured level being well within the exposure limit",
+          "The short-term limit rather than the long-term limit should be applied to this measurement",
+          "Carbon dioxide above 1,000 ppm suggests inadequate ventilation, whatever the limit",
+          "The figure should be compared against 20 ppm, the limit for this class of gas",
+          "Symptoms of this kind cannot be attributed to ventilation without formal air sampling"
+        ],
+        correct: 2,
+        explain: "Carbon dioxide in an occupied room is used as a proxy for the ventilation rate rather than as a toxic hazard in its own right. Its exposure limit is set for the effects of carbon dioxide itself and sits far above anything relevant to office air quality, so comparing an indoor reading against it answers a question nobody asked. The working benchmark is around 1,000 ppm, above which the space is being under-ventilated for the number of people in it, and under-ventilation is what produces this cluster of headache and dry eyes, along with the other contaminants, temperature and humidity that poor ventilation allows to accumulate. Four of six staff symptomatic since a refurbishment that reduced ventilation openings, with a reading of 1,400 ppm, is a ventilation problem. Comparing the figure against 20 ppm applies the limit for carbon monoxide, which sits two rows away in the same table; anyone slipping between the rows concludes the opposite of the truth, since 1,400 ppm looks reassuring against one figure and alarming against the other. Accepting the manager's conclusion is the error the scenario is built on. Applying the short-term limit changes which number is quoted without making the comparison any more apt. Requiring formal sampling before attributing the symptoms overlooks that a measurement has already been taken and is informative once read correctly.",
+        source: "HSE EH40/2005, 4th ed (2020); HSE guidance on ventilation and indoor air quality",
+        tags: []
+      },
+      {
+        stem: "A biotechnology company plans work involving a genetically modified organism, inserting a gene sequence into a laboratory strain of Escherichia coli. The laboratory manager, familiar with the biological agents provisions of COSHH, proposes to assess the work against the ACDP hazard groups, assign a containment level, and proceed on that basis. Regarding the regulatory framework applying to this work, which position is correct?",
+        options: [
+          "Separate regulations apply, requiring their own risk assessment and notification arrangements",
+          "The approach is correct, genetically modified organisms falling within the COSHH biological agents regime",
+          "No additional requirement arises where the recipient organism is a Hazard Group 1 laboratory strain",
+          "The work requires a licence from the enforcing authority before it may begin",
+          "Genetically modified organisms are classified by the hazard group of the donor organism"
+        ],
+        correct: 0,
+        explain: "Work with genetically modified organisms falls under the contained use regulations rather than the biological agents provisions of COSHH, and that regime has its own structure: a risk assessment considering the recipient organism, the inserted material and the resulting organism together, assignment to a class of activity with a corresponding containment level, notification of premises before contained use begins, and a genetic modification safety committee to advise on the assessments. Assessing against the hazard groups alone would miss the framework entirely, and would also miss that the hazard of a modified organism does not simply follow from the classification of the parent strain. Requiring a licence identifies a real regulatory step but attaches it to the wrong mechanism: notification is required, and consent before certain higher-class activities may begin, which is not the same as a licence attaching to a contractor as it does in the asbestos regime, and the distinction changes who applies, for what, and when work may start. Treating the COSHH biological agents regime as covering the field is the laboratory manager's position. Exempting the work because the recipient is a Hazard Group 1 laboratory strain overlooks that the assessment must consider what has been inserted and what the resulting organism can do. Classifying by the donor organism's hazard group is closer to sensible than it first appears, since donor sequences form part of the assessment, but it substitutes one parent's classification for an assessment of the construct as a whole.",
+        source: "Genetically Modified Organisms (Contained Use) Regulations 2014; HSE guidance",
+        tags: []
+      },
+      {
+        stem: "A 41-year-old office worker is referred with neck and right shoulder pain that began some months after her team moved to a new open-plan floor. She uses a laptop docked to a single monitor, works at a shared desk booked daily, and reports that she rarely finds the chair adjusted as she left it. The referring manager asks occupational health to assess her posture and recommend an appropriate chair. Regarding the assessment, which position is correct?",
+        options: [
+          "A workstation assessment is not required, since she has no fixed desk to assess",
+          "She is not a display screen equipment user, having no habitual workstation of her own",
+          "A formal upper limb posture score should be undertaken to quantify her working posture",
+          "Assess the workstation as she uses it, hot-desking not removing the display screen duties",
+          "Chair specification should follow anthropometric data for the fifth percentile female"
+        ],
+        correct: 3,
+        explain: "The display screen equipment duties attach to the user rather than to a particular desk, so someone who habitually uses such equipment as a significant part of their work is a user regardless of whether she occupies the same seat each day. The assessment covers the workstation as used, and hot-desking makes it more necessary rather than less: a chair reset by someone else each morning, a docked laptop with a single screen, and no ownership of the setup are the specific features generating her symptoms. What follows is assessment of that arrangement, training so she can adjust the chair and screen herself at each new position, and consideration of whether the equipment or the booking system needs to change. Undertaking a formal upper limb posture score reaches for an instrument genuinely designed for this kind of work, and it would be a reasonable adjunct, but it quantifies the posture without addressing why the posture arises and would confirm what the referral already describes while leaving the cause untouched. Treating the absence of a fixed desk as removing the requirement, or as removing user status, both make the duty follow the furniture rather than the person. Specifying a chair to fifth percentile female dimensions applies anthropometric reasoning in the wrong direction, since adjustable equipment should accommodate the range of users and designing for a single percentile point would fit her no better once someone else sits down.",
+        source: "Health and Safety (Display Screen Equipment) Regulations 1992; HSE guidance L26",
+        tags: []
+      },
+      {
+        stem: "An occupational hygienist reviews the safety data sheets for four substances used in a coatings plant, and the site manager asks which of them attract the duty to reduce exposure as low as is reasonably practicable rather than merely to keep it below any assigned limit. The first is classified H317, may cause an allergic skin reaction. The second is H335, may cause respiratory irritation. The third is H334, may cause allergy or asthma symptoms or breathing difficulties if inhaled. The fourth is H351, suspected of causing cancer. He assumes that both respiratory classifications must qualify, and that a substance suspected of causing cancer will qualify as well. Regarding which classifications trigger the ALARP duty under COSHH, which position is correct?",
+        options: [
+          "Only the substance classified H334, of these four",
+          "The substances classified H334 and H335, both being respiratory hazards",
+          "The substances classified H334 and H351, sensitisation and carcinogenicity",
+          "The substances classified H317 and H334, both being sensitisers",
+          "All four, since each carries a health classification of concern"
+        ],
+        correct: 0,
+        explain: "The regulation names a closed set: H340, H350 and H350i, together with H334, anything listed in Schedule 1, anything in section C of the published asthmagen list, and anything the risk assessment shows to be a potential cause of occupational asthma. Of the four substances here, only the respiratory sensitiser is on that list. The others are real health hazards attracting the ordinary duty to prevent or adequately control exposure, but not the additional duty to reduce it as low as is reasonably practicable. Including the substance suspected of causing cancer is the trap the question is built on: the statement for a category 1A or 1B carcinogen does trigger the duty, but the suspected form is the category 2 classification, suspicion rather than presumption, and the duty attaches only to categories 1A and 1B. The same split runs through mutagenicity, where the presumed form qualifies and the suspected form does not, so a single digit carries a different legal consequence. The manager's own assumption fails on the other respiratory code, since respiratory irritation is a different mechanism from respiratory sensitisation despite the adjacent numbering. Pairing the two sensitisers is the most defensible of the wrong answers, because skin sensitisation is mechanistically equivalent to respiratory sensitisation and clinically commoner, yet the skin code is simply not named in the regulation, which is an inconsistency of drafting rather than a difference in seriousness. Treating all four as qualifying abandons the distinction entirely.",
+        source: "COSHH 2002, reg 7(7)(c); GB CLP hazard statements",
+        tags: ["toxicology"]
+      },
+      {
+        stem: "A 34-year-old woman works in a lead-acid battery manufacturing plant, in a role with significant lead exposure. Her most recent blood lead is 32 µg/dL. The occupational health technician notes that this sits below the action level of 50 µg/dL for employees generally, and proposes continuing six-monthly monitoring. Regarding the management of this result, which position is correct?",
+        options: [
+          "The approach is correct, since 32 µg/dL is below the applicable action level",
+          "She is above her suspension level and must be removed from work with lead",
+          "She should move to three-monthly monitoring, being above 30 µg/dL",
+          "The result requires confirmation before any threshold can be applied to it",
+          "Her employment in this process is prohibited irrespective of the blood lead result"
+        ],
+        correct: 4,
+        explain: "The Regulations prohibit the employment of women of reproductive capacity, and of young persons, in lead smelting and refining processes and in lead-acid battery manufacturing processes. That is a prohibition rather than a control, so no assessment, no monitoring interval and no blood lead figure makes the work lawful, and the question of what her result means is downstream of one that should have been settled before she started. The answer identifying her as above her suspension level is the strongest of the wrong answers and is right on the numbers: for a woman of reproductive capacity the action level is 25 µg/dL and the suspension level 30 µg/dL, so at 32 she would have to be removed from work with lead, and the technician has applied the general employee figures to someone in a different category. In almost any other lead scenario that would be the answer; here the prohibition operates one step earlier and makes the suspension question academic. Whether she is of reproductive capacity is a determination for the relevant doctor, recorded in the health record, rather than an assumption from age or sex, and that determination is what selects the thresholds. Moving to three-monthly monitoring applies the general escalation table, which again is not her category, since women of reproductive capacity are monitored at intervals the relevant doctor specifies and at least every three months in any event. A result at or above a suspension level should indeed be repeated urgently, within about ten working days, but confirmation is a step in acting on the result rather than a reason to defer.",
+        source: "Control of Lead at Work Regulations 2002, reg 6 and the prohibitions; ACOP L132",
+        tags: ["toxicology"]
+      },
+      {
+        stem: "A 47-year-old maintenance fitter is found unconscious in a below-ground valve chamber at a water treatment works. A colleague who followed him in to help also collapsed. Atmospheric monitoring afterwards records oxygen at 20.8%, which is normal. The site manager concludes that the atmosphere cannot have been the cause, since oxygen was not depleted. Regarding the likely mechanism, which position is correct?",
+        options: [
+          "The atmosphere is excluded as a cause, oxygen having been within the normal range",
+          "A simple asphyxiant is likely, oxygen monitoring being unreliable in confined spaces",
+          "A chemical asphyxiant is likely, which oxygen monitoring would not detect",
+          "Oxygen at 20.8% is itself abnormal and indicates significant displacement",
+          "The readings are invalid, as monitoring after ventilation cannot inform the incident"
+        ],
+        correct: 2,
+        explain: "Oxygen monitoring detects displacement, which is what simple asphyxiants such as nitrogen, argon, carbon dioxide and methane do. Chemical asphyxiants interfere with the carriage of oxygen or its use in the cell, so the atmosphere may contain entirely normal oxygen while the tissues are starved of it, and a normal reading therefore excludes one mechanism while saying nothing about the other. Hydrogen sulphide is the classic agent in a below-ground chamber at a water treatment works, and olfactory paralysis at high concentration means that loss of the smell signals danger rather than safety. The second collapse is the other diagnostic feature, since a rescuer entering without breathing apparatus accounts for a large share of confined space deaths and points to an atmospheric cause rather than a medical event in the first man. Attributing the incident to a simple asphyxiant gets the setting right and the mechanism wrong, and would leave the wrong control in place, since better ventilation and oxygen alarms would not have prevented this. Treating 20.8% as abnormal misreads a normal figure. Dismissing the readings as invalid raises a fair point about timing, because post-incident monitoring may follow ventilation and cannot show what was present at the moment of collapse, but it discards a result that is informative for what it rules out.",
+        source: "Confined Spaces Regulations 1997; COSHH 2002; HSE confined space guidance",
+        tags: ["toxicology"]
+      },
+      {
+        stem: "A contractor is engaged to remove asbestos insulating board from a plant room ceiling in an office building. A refurbishment survey has identified the material as asbestos insulating board in poor condition, with visible damage and debris on the floor beneath. The contractor holds no licence, and proposes to treat the work as notifiable non-licensed work, notifying the enforcing authority before starting, setting up a designated area, and keeping records for forty years. Regarding the category of this work, which position is correct?",
+        options: [
+          "The approach is correct, since notification and designation have been provided for",
+          "This is licensed work, requiring a licensed contractor rather than notification",
+          "Non-licensed work applies, removal of bound material being one of the exempt activities",
+          "The category depends on whether the four-hour control limit will be exceeded",
+          "Notifiable non-licensed work applies, but with fourteen days' notice rather than immediate"
+        ],
+        correct: 1,
+        explain: "Asbestos insulating board sits in the licensed category unless the risk is low, and material in poor condition with visible damage and debris beneath it is not low risk. This is therefore licensed work: a licence is required, notification is fourteen days in advance, medical surveillance runs at two-yearly intervals with a specific examination of the chest, and records are kept for forty years. A contractor without a licence cannot lawfully do it, and notifying does not cure the absence of one. Treating the job as an exempt activity is the most tenable of the wrong answers, because one of the four exemptions is removal without deterioration of non-degraded material with fibres firmly bound in a matrix, and asbestos insulating board sometimes qualifies; what defeats it here is the condition, since board that is already degraded and shedding debris cannot be removed without deterioration, so the activity falls outside the exemption on its facts rather than on its description. Making the category turn on the control limit takes a real element of the test and gives it too much weight, because the disapplication requires all three conditions together — exposure sporadic and of low intensity, the assessment showing the control limit will not be exceeded, and the work being one of the four listed activities — so failing any one puts the work at least in the notifiable category. Accepting the contractor's plan misses the licence, and the fourteen-day notice period belongs to licensed work rather than to notifiable non-licensed work, which carries no minimum notice.",
+        source: "Control of Asbestos Regulations 2012, regs 3(2), 8 and 9; ACOP L143",
+        tags: ["toxicology"]
+      },
+      {
+        stem: "A 38-year-old agricultural worker is brought to occupational health having become unwell an hour after decanting and mixing an organophosphate insecticide for spraying. He was wearing a coverall and boots but no gloves, and reports headache, nausea, blurred vision, sweating and abdominal cramps. He is bradycardic with pinpoint pupils and audible wheeze. Regarding the immediate priorities, which position is correct?",
+        options: [
+          "Take blood for cholinesterase measurement, which will guide whether treatment is needed",
+          "Administer pralidoxime, which reverses the acute cholinergic effects most rapidly",
+          "Observe for six hours, as symptoms this soon after exposure are usually self-limiting",
+          "Decontaminate the skin and refer urgently, atropine being the mainstay of treatment",
+          "Exposure is unlikely without respiratory protection, so an alternative cause is likely"
+        ],
+        correct: 3,
+        explain: "The picture is a cholinergic crisis from inhibition of acetylcholinesterase, with bradycardia, pinpoint pupils, sweating, cramps and bronchospasm. Skin decontamination comes first because dermal absorption is the dominant route for organophosphates and he was mixing concentrate without gloves, so material remaining on the skin continues to be absorbed and endangers staff handling him. Urgent referral follows, with atropine titrated against secretions and bronchospasm as the primary treatment. Pralidoxime is a real and important drug that belongs in this patient's management, but it sits alongside atropine rather than ahead of it: it reactivates the inhibited enzyme, which is a different action from blocking muscarinic effects, does not relieve the acute crisis quickly, and becomes ineffective once the enzyme complex has aged. Naming it as the immediate priority identifies the right second agent as the first. Measuring cholinesterase confirms rather than guides, being a biological effect measurement whose results are not immediate, and treatment must proceed on the clinical picture. Observing for six hours misjudges a condition that can deteriorate rapidly to respiratory failure. Attributing the exposure to a missing respirator inverts the route entirely, which is why these substances carry a skin notation, why air sampling understates dose, and why swabs at set body positions appear in the assessment methods.",
+        source: "OHOH 2nd ed, Ch 2 — pesticides; HSE guidance on organophosphates",
+        tags: ["toxicology"]
+      },
+      {
+        stem: "An employer is preparing a COSHH assessment for a small engineering workshop. The occupational health adviser asks how the process-generated agents will be handled, and the manager replies that he has obtained safety data sheets for every product purchased and filed them, that none of the sheets covers welding fume or the dust from dry grinding, and that he assumes those are outside COSHH since no supplier provides information on them. Regarding the scope of COSHH here, which position is correct?",
+        options: [
+          "Substances generated by a work process are within scope despite having no supplier",
+          "COSHH applies only to substances classified and supplied with a safety data sheet",
+          "Welding fume is within scope, but grinding dust falls below the threshold for a nuisance dust",
+          "Filing the sheets discharges the assessment duty for the purchased products at least",
+          "Process-generated agents are covered by the general duties of the 1974 Act instead"
+        ],
+        correct: 0,
+        explain: "A substance hazardous to health is defined by its properties and effects rather than by whether it arrives in a labelled container. The definition covers substances classified as hazardous, substances assigned a workplace exposure limit, biological agents, and substances generated by a work process, so welding fume and respirable crystalline silica are squarely within scope despite having no supplier and no safety data sheet. Dust is caught too, at or above 10 mg/m³ inhalable or 4 mg/m³ respirable as an eight-hour average, so an unclassified nuisance dust becomes a COSHH substance purely by concentration. Relying on the general duties of the 1974 Act is the most tenable of the wrong answers, since sections 2 and 3 do run alongside COSHH and COSHH is itself made under section 15 of that Act; treating them as the alternative route for process-generated agents, however, would leave welding fume outside the regime that most obviously governs it, with no assessment duty, no limits for its components and no health surveillance requirement, when the general duties are a floor beneath COSHH rather than a substitute for it. Restricting COSHH to supplied and classified substances is the manager's assumption. Exempting grinding dust as a nuisance dust inverts the threshold, since reaching those concentrations is what brings a dust in. Filing the sheets is the commonest misreading in practice, because a sheet describes the substance as supplied rather than as used.",
+        source: "COSHH 2002, regs 2 and 6; HSE COSHH guidance",
+        tags: ["toxicology"]
+      },
+      {
+        stem: "A 44-year-old has worked for nine years in a plant using a solvent with a skin notation and an assigned biological monitoring guidance value. Routine biological monitoring returns a result above the guidance value, though personal air sampling on the same day was well below the workplace exposure limit. The plant manager argues that since the air result is compliant, the biological result must be a laboratory error or reflect exposure outside work. Regarding the interpretation, which position is correct?",
+        options: [
+          "The air result governs, biological monitoring guidance values being non-statutory",
+          "Exceeding the value indicates a breach of the workplace exposure limit has occurred",
+          "Absorption by other routes is likely, and control measures need investigation",
+          "The discrepancy indicates the guidance value is health-based rather than benchmark",
+          "Biological monitoring cannot be interpreted without a pre-shift baseline sample"
+        ],
+        correct: 2,
+        explain: "The two measurements answer different questions, so the discrepancy is informative rather than contradictory. Air sampling captures the inhalation route alone, while biological monitoring reflects absorption by all routes and all patterns of work, picking up skin absorption, ingestion and the effect of respiratory protection worn imperfectly. For a substance carrying a skin notation that gap is precisely what the notation warns about, and a compliant air result alongside an elevated biological result is the characteristic signature of dermal uptake. The response is to investigate control measures and working practices — glove selection and breakthrough time, splash contact, hand-to-mouth transfer, contaminated surfaces and clothing — rather than to dismiss the result. Reading the discrepancy as revealing the derivation basis is the most tenable of the wrong answers, since a value derived from the relationship to the airborne limit would be expected to track air results and its failure to do so is suggestive; but the derivation basis is a property of the value as published rather than something inferred from one worker's result, and dermal absorption sits well ahead of it as an explanation. Giving the air result priority because guidance values are non-statutory confuses legal status with informativeness, since the values are indeed non-statutory and monitoring against them requires fully informed consent, without that making an elevated result meaningless. Treating exceedance as proving a breach of the airborne limit overstates what the value means. Requiring a pre-shift baseline imports a rule that does not generally apply, sampling time being dictated by the elimination half-life.",
+        source: "HSE EH40/2005 Table 2; HSE biological monitoring guidance",
+        tags: ["toxicology"]
+      },
+      {
+        stem: "A joinery employs eleven people machining hardwood. Personal sampling gives inhalable dust exposures of around 2 mg/m³, below the hardwood dust limit of 3 mg/m³. The employer has fitted extraction at each machine and asks the occupational health adviser to confirm that exposure is adequately controlled and that nothing further is required. Regarding the adequacy of control, which position is correct?",
+        options: [
+          "Control is adequate, since exposure sits below the assigned limit for hardwood dust",
+          "Exposure must also be reduced as low as reasonably practicable, hardwood dust being a carcinogen",
+          "The softwood limit of 5 mg/m³ applies where both wood types are machined together",
+          "Control is adequate only if the extraction has passed a thorough examination within 14 months",
+          "The respirable rather than inhalable fraction should be sampled for wood dust"
+        ],
+        correct: 1,
+        explain: "Meeting the limit is one of three tests, and for hardwood dust all three must hold: the principles of good control practice must be applied, any assigned limit must not be exceeded, and because hardwood dust is a carcinogen associated with sinonasal adenocarcinoma, exposure must additionally be reduced as low as is reasonably practicable. No threshold can be assumed for a genotoxic carcinogen, so a figure below the limit does not discharge the duty; in practice the extraction should perform as well as it reasonably can rather than merely well enough to land under the limit, and the additional carcinogen measures apply, including enclosure where reasonably practicable, prohibition of eating and drinking in contaminated areas, regular cleaning, designated areas and keeping quantities to the minimum. The thorough examination point is the strongest of the wrong answers and describes a genuine requirement, since engineering controls must be examined and tested at intervals not exceeding fourteen months with the report kept for five years; it falls short by treating a maintenance obligation as the whole of adequate control when the substantive gap is the duty to reduce exposure further. Accepting the figure as sufficient is the employer's position. Applying the softwood limit inverts the convention, since where hardwood and softwood dusts are mixed the hardwood limit applies to the whole mixture. Sampling the respirable fraction is wrong for this substance, wood dust limits referring to the inhalable fraction, which is the one relevant to nasal and sinus deposition.",
+        source: "COSHH 2002, reg 7 and Schedule 2A; HSE EH40/2005; IARC on wood dust",
+        tags: ["toxicology"]
+      },
+      {
+        stem: "A 29-year-old is starting work as a laboratory technician handling vinyl chloride monomer in a polymer plant. The occupational health adviser is asked to set up the surveillance arrangements. The plant manager notes that the company already runs annual health surveillance questionnaires reviewed by an occupational health nurse across the site, and asks whether anything further is needed for this role. Regarding the requirements for this work, which position is correct?",
+        options: [
+          "The existing arrangements suffice, annual review by a qualified nurse being appropriate",
+          "A relevant doctor must certify fitness before the technician may begin the work",
+          "Health surveillance is not required, biological monitoring being the appropriate measure",
+          "Surveillance is required only once exposure exceeds the assigned exposure limit",
+          "Medical surveillance under a relevant doctor is required, at intervals not exceeding 12 months"
+        ],
+        correct: 4,
+        explain: "Vinyl chloride monomer appears in Schedule 6, which lists substances paired with specified processes. Where an employee is exposed to a listed substance and engaged in the listed process, the health surveillance otherwise required must include medical surveillance under the supervision of a relevant doctor, meaning an employment medical adviser or a doctor appointed by the enforcing authority, at intervals of not more than twelve months or shorter if that doctor requires. The common error is to treat health surveillance and medical surveillance as parallel regimes, when medical surveillance sits inside health surveillance rather than alongside it. Vinyl chloride is also the one substance named in both Schedule 5, requiring monitoring at specified frequencies regardless of the assessment, and Schedule 6, which makes it the worked example tying the framework to a single agent; the sentinel tumour is hepatic angiosarcoma, otherwise so rare that a single case prompts an occupational enquiry. Requiring certification before the work begins is the most tenable of the wrong answers and describes a real architecture, but that sequence belongs to ionising radiation and to lead rather than to COSHH, which gives the relevant doctor power to certify that an employee should not do the work or may do it only under specified conditions without making prior certification a precondition of starting. Accepting nurse-reviewed questionnaires misses the statutory role. Substituting biological monitoring confuses what each measures. Making surveillance conditional on exceeding the limit inverts the trigger, which follows from the substance and process.",
+        source: "COSHH 2002, reg 11(5) and Schedules 5 and 6; ACOP L5",
+        tags: ["toxicology"]
+      },
+      {
+        stem: "An occupational health adviser is asked to comment on a proposed substitution. A workshop currently uses a solvent classified as a category 1B carcinogen, applied by brush in a well-ventilated bay with local exhaust ventilation, in quantities of a few hundred millilitres a week. The proposed replacement carries no carcinogenicity classification but is a respiratory sensitiser, and the supplier's technique requires it to be sprayed, which would increase the quantity used roughly tenfold. Regarding the proposed substitution, which position is correct?",
+        options: [
+          "The substitution should proceed, replacing a carcinogen with a non-carcinogen",
+          "Substitution is required by regulation, so the assessment is not a matter of discretion",
+          "The substitution is neutral, both substances attracting the same ALARP duty",
+          "The replacement must be assessed as used, and may not reduce risk under these conditions",
+          "Sensitisers are more hazardous than carcinogens, so the substitution should be refused"
+        ],
+        correct: 3,
+        explain: "The duty is to avoid the substance so far as is reasonably practicable by replacing it with a substance or process that eliminates or reduces the risk under the conditions of its use, and that qualifier does the work here. A replacement safer in the abstract but used in a way that raises exposure has not discharged the duty. The change proposed is from brushing a few hundred millilitres in a ventilated bay with extraction to spraying ten times the quantity: spraying generates far higher airborne concentrations, and the new substance is a respiratory sensitiser, where once someone is sensitised reactions occur at exposures far below any limit and short-term peaks matter more than averages. The classification has improved while the risk may well have worsened. Treating the substitution as neutral because both attract the same duty to reduce exposure as low as is reasonably practicable is correct on the law, since category 1B carcinogens and respiratory sensitisers are both named, but wrong to infer that equal duties mean equal risk. Refusing on the grounds that sensitisers are inherently more hazardous reaches a defensible conclusion by an indefensible route, neither class outranking the other in the abstract. Stating that substitution is required by regulation is half right, since it is required by preference, but only where it eliminates or reduces the risk, which is the question at issue. Proceeding because a carcinogen is being replaced by a non-carcinogen treats classification as though it were risk.",
+        source: "COSHH 2002, reg 7(2) and 7(7)(c); GB CLP",
+        tags: ["toxicology"]
+      },
+      {
+        stem: "A large local authority runs the HSE Indicator Tool across its workforce and gets poor scores on Demands and Control in one directorate. The director proposes a package of stress awareness training, mindfulness sessions and an expanded employee assistance programme, and asks occupational health to endorse it as the response to the survey. He notes that the survey identified stress, and that these interventions are all evidence-based for stress. Regarding the response proposed, which position is correct?",
+        options: [
+          "The package is appropriate, since the interventions named are evidence-based for stress",
+          "The survey identifies work design problems, which individual interventions do not address",
+          "Occupational health should not endorse interventions it has not itself evaluated",
+          "An employee assistance programme discharges the employer's duty following Sutherland v Hatton",
+          "The Indicator Tool cannot support intervention decisions, being a screening instrument only"
+        ],
+        correct: 1,
+        explain: "Poor scores on Demands and Control are findings about how the work is designed: workload, work patterns, the working environment, and how much say people have over pace and method. Training, mindfulness and counselling act on the individual's response to those conditions and leave the conditions untouched. The Management Standards approach is a survey-and-action-group method, taking the domain scores back to the people who produced them, identifying which specific aspect of the domain is the problem, and changing it. The evidence favours organisational interventions over individual ones, and a proactive risk assessment addressing demands, control and support is the primary preventive measure, with individual support secondary or tertiary. The reference to the confidential advice service is the strongest of the wrong answers and a real trap, since the proposition that an employer providing such a service with appropriate counselling or treatment is unlikely to be found in breach comes from a genuine authority; but that speaks to liability in negligence rather than to the statutory duty to assess and control, so treating counselling as discharging the duty offers a tertiary measure as though it were the whole response. Endorsing the package because the interventions are evidence-based accepts the director's framing, since they have evidence for what they do rather than for what the survey asked for. Declining to endorse anything not independently evaluated raises a fair governance caution but answers a different question. Treating the Indicator Tool as unable to support intervention decisions understates it, its structure having been independently validated and its output including item-level detail precisely so the problematic aspect of a domain can be identified.",
+        source: "HSE Management Standards; ISO 45003; ABC of Occ & Env Medicine, 3rd ed, Ch 5",
+        tags: []
+      },
+      {
+        stem: "A 41-year-old care assistant works permanent night shifts in a nursing home. Her occupational health assessment is requested because she is worried about long-term health effects, having read that night work causes cancer. She has worked nights for eleven years and asks whether she should change to days. Regarding what she should be told about the evidence, which position is correct?",
+        options: [
+          "Night shift work is classified as carcinogenic to humans, so a change to days is advisable",
+          "No carcinogenic classification applies to shift work, the evidence being inadequate",
+          "The classification applies only to rotating shifts, not to permanent night work",
+          "Shift work involving circadian disruption is classified as probably carcinogenic",
+          "The classification was withdrawn following re-evaluation of the breast cancer evidence"
+        ],
+        correct: 3,
+        explain: "Night shift work involving circadian disruption is classified in Group 2A, probably carcinogenic to humans. The classification was first made in 2007 and retained on re-evaluation in 2019, resting on limited evidence in humans, chiefly for breast cancer, together with sufficient evidence in experimental animals and strong mechanistic evidence. The wording changed at that re-evaluation and matters: the classification attaches to night shift work involving circadian disruption rather than to shift work generally, so it is disruption of the circadian system that carries the association rather than unsocial hours as such. Concluding that no classification applies because the human evidence is inadequate is the strongest of the wrong answers and is right that the human evidence is limited rather than sufficient, which is exactly why the group is 2A and not Group 1; the error is treating limited human evidence as meaning no classification, when human and animal evidence are graded separately and limited human evidence combined with sufficient animal evidence is the standard route to 2A. Reading the classification as Group 1 overstates it. Restricting it to rotating shifts is wrong on the current wording, which turns on circadian disruption and so captures permanent nights. Nothing has been withdrawn. What she should be told is that the scheme classifies hazard rather than risk, so it says nothing about how much additional risk eleven years of nights carries for her, that the absolute effect on breast cancer risk appears small, and that rota design, sleep and screening attendance are where the useful conversation lies.",
+        source: "IARC Monographs vol 124 (2020); HSE guidance on shift work",
+        tags: []
+      },
+      {
+        stem: "A 52-year-old maintenance electrician is found to have been working from a mobile scaffold tower on a hospital site with the guardrails removed on one side to allow access to a ceiling void. He was not wearing a harness. The estates manager states that the work was brief, that a harness was available, and that as the electrician chose not to wear it the responsibility rests with him. Regarding the arrangements, which position is correct?",
+        options: [
+          "Collective protection takes precedence, and removing the guardrails is the primary failure",
+          "Responsibility rests with the electrician, who declined equipment that was provided",
+          "A harness was required in any event, work at height always demanding fall arrest",
+          "Work at height of short duration falls outside the Work at Height Regulations",
+          "The tower should have been inspected before use, which is the substantive breach"
+        ],
+        correct: 0,
+        explain: "The Regulations set an order: avoid work at height where reasonably practicable; where it cannot be avoided, prevent falls using a safe place of work or suitable equipment; and where a risk remains, minimise the distance and consequences of a fall. Guardrails are collective fall prevention and take precedence over personal fall arrest, which protects one person and only after a fall has begun, so removing them to gain access is the substantive failure and the answer is a different means of access rather than a harness to compensate. The inspection point is the strongest of the wrong answers and describes a genuine duty, since towers must be inspected before use in the position where they are to be used and at intervals thereafter; it falls short because inspection would confirm the configuration was unsafe rather than change it, and because the guardrails were removed deliberately rather than found defective. Placing responsibility on the electrician is the manager's position and inverts the duty. Making a harness mandatory in every case is the mirror error, elevating personal protection into a universal requirement when it sits below collective measures, and a harness in any event needs a suitable anchor and sufficient clearance to arrest a fall, neither of which a mobile tower reliably provides. Treating short-duration work as outside the Regulations reverses the position, since duration bears on what is reasonably practicable and on the equipment justified without disapplying the Regulations, and brief work at height accounts for a large share of falls.",
+        source: "Work at Height Regulations 2005, regs 6 and 7",
+        tags: []
+      },
+      {
+        stem: "An NHS trust's water system serves a haematology unit with a bone marrow transplant service. Routine sampling detects Legionella in the hot water calorifier at low counts. The estates lead proposes to record the result, continue routine monitoring, and take no further action, on the basis that low counts are common and no cases have occurred. Regarding the response required, which position is correct?",
+        options: [
+          "The approach is reasonable, as low counts are common in large water systems",
+          "The system should be chlorinated immediately, regardless of the count detected",
+          "Any detection requires review of control measures, more so given the population served",
+          "Action is required only where counts exceed 1,000 colony-forming units per litre",
+          "Legionella control falls outside occupational health's remit, being an estates matter"
+        ],
+        correct: 2,
+        explain: "Detection is evidence that the control scheme is not working as intended, so the response is to review it rather than to record and continue. That means examining the temperature regime, with hot water stored at 60°C and reaching outlets at 50°C or above and cold water below 20°C, along with dead legs, infrequently used outlets, flushing regimes and the calorifier itself, where sediment and stratification allow the base to sit well below the stored temperature; the written scheme and the responsible person's arrangements come under scrutiny at the same time. The population served raises the stakes rather than changing the principle, since bone marrow transplant recipients are severely immunocompromised and such units frequently operate augmented control including point-of-use filtration. Waiting for a numerical threshold is the most tenable of the wrong answers, because action levels by colony count do exist and are used to grade the response; the error is treating a threshold as the trigger for any action at all, when the graded figures determine how urgent and extensive the response should be rather than whether one is needed. Immediate chlorination jumps to one remedy without diagnosing the failure, and disinfection without correcting the underlying conditions gives temporary results. Accepting low counts as common mistakes prevalence for acceptability. Treating the matter as outside occupational health's remit ignores that staff are exposed alongside patients.",
+        source: "HSE ACOP L8; HSG274; HTM 04-01",
+        tags: []
+      },
+      {
+        stem: "A 33-year-old healthcare assistant sustains a needlestick injury from a hollow-bore device while disposing of it after a venepuncture. The device was a conventional needle and syringe; safer sharps with an engineered protection mechanism are available on the ward but were not used because the trolley had run out. The ward manager reports the incident and arranges follow-up, and notes that the assistant should have checked the trolley before starting. Regarding the employer's position, which position is correct?",
+        options: [
+          "The assistant is at fault, having begun a procedure without checking her equipment",
+          "The incident is reportable under RIDDOR only if seroconversion subsequently occurs",
+          "The Sharps Regulations apply only to devices used for taking blood, so do not apply here",
+          "Recapping is the practice the Regulations prohibit, which did not occur here",
+          "Safer sharps must be used where reasonably practicable, and supply is the employer's duty"
+        ],
+        correct: 4,
+        explain: "The Regulations require employers to substitute traditional sharps with safer devices incorporating a protection mechanism where it is reasonably practicable to do so. If safer sharps are the ward's standard and the trolley had run out, the failure lies in supply and stock control rather than in the assistant's checking, and that duty sits alongside the others: safe systems for handling and disposal, secure containers close to the point of use, information and training, and prompt investigation and follow-up after an incident. The recapping point is the strongest of the wrong answers, since prohibiting the recapping of needles unless a risk assessment shows it is required, with a safe means provided, is a genuine and specific duty under the same Regulations; it fails here by identifying a duty that was not engaged rather than the one that was, the injury having occurred during disposal with no recapping described. Blaming the individual is the manager's position and the reflex the Regulations were written against. Restricting the Regulations to blood-taking devices is wrong, since they cover sharps used in healthcare generally. Reporting does not wait for seroconversion: an injury from a sharp known or suspected to be contaminated with a blood-borne virus is reportable as a dangerous occurrence at the time, and a diagnosed infection would be separately reportable as a disease, so making the report contingent on outcome would delay it by months and defeat its purpose.",
+        source: "Health and Safety (Sharp Instruments in Healthcare) Regulations 2013; RIDDOR 2013",
+        tags: []
+      },
+      {
+        stem: "An occupational hygienist is assessing exposure to a solvent carrying a skin notation at a printing works. She proposes to supplement personal air sampling with an assessment of dermal exposure. The plant manager questions the value of this, noting that the workers wear gloves and that air sampling is the recognised method with an established exposure limit to compare against. Regarding the assessment of dermal exposure, which position is correct?",
+        options: [
+          "Air sampling suffices, dermal exposure being controlled by the gloves provided",
+          "Dermal assessment is needed, but no established methods or limits exist for it",
+          "Surface and skin sampling should be undertaken, air sampling understating total dose",
+          "Biological monitoring should replace air sampling entirely where a skin notation applies",
+          "Dermal exposure is only relevant for substances causing local skin effects"
+        ],
+        correct: 2,
+        explain: "A skin notation means the substance can be absorbed through intact skin in amounts contributing to systemic toxicity, so air sampling measures one route while the dose arrives by two. Methods exist: gauze or patch sampling at set body positions, wipe sampling of skin and surfaces, hand rinsing, and observation of the task to establish where and how contact occurs, which is often the most informative part because it reveals immersion, splash, contaminated tools and glove removal technique. The answer stating that no methods or limits exist is the strongest of the wrong answers and is half right in a way worth being precise about: there are no dermal exposure limits comparable to a workplace exposure limit, which is a genuine gap, but methods do exist and the absence of a limit does not make measurement pointless, since it establishes where contact occurs so control can be directed at it. Biological monitoring then quantifies what has been absorbed by all routes together, supplementing air sampling rather than replacing it, the two in combination separating inhalation from other routes. Relying on gloves assumes performance that depends on the right material, the breakthrough time and permeation rate for the specific chemical, task duration and removal without contaminating the hands. Restricting dermal exposure to substances causing local skin effects inverts the meaning of the notation, which concerns systemic absorption.",
+        source: "HSE dermal exposure guidance; EH40/2005 notations; OHOH 2nd ed, Ch 1",
+        tags: []
+      },
+      {
+        stem: "A 47-year-old works on an assembly line fitting components using a pistol-grip screwdriver, working with the wrist deviated and the elbow raised, at around thirty cycles a minute. She has developed forearm pain. The occupational health adviser is asked to assess the task and quantify the risk. A colleague suggests using the manual handling assessment chart, since the work involves handling components. Regarding the choice of assessment tool, which position is correct?",
+        options: [
+          "A tool for repetitive upper limb tasks is indicated, such as the ART tool or RULA",
+          "The manual handling assessment chart is appropriate, components being handled throughout",
+          "No validated tool exists for upper limb assessment, which remains a clinical judgement",
+          "Assessment tools are unnecessary where a diagnosis has already been made",
+          "REBA should be used, being the whole-body tool and therefore the most comprehensive"
+        ],
+        correct: 0,
+        explain: "Repetition, force and awkward posture at the wrist and elbow are what this task presents, and the instruments built for it are the assessment of repetitive tasks tool, which scores frequency, force, posture and additional factors, or the rapid upper limb assessment, which scores upper limb posture in detail. Either would direct attention to the deviated wrist, the raised elbow and the cycle rate. The colleague's suggestion is the error the question turns on, since the manual handling chart is designed for lifting, carrying and team handling and would produce a confident score for a task it was not built to describe while missing repetition entirely. Reaching for the whole-body tool is the strongest of the wrong answers, because it is a real and validated instrument and its broader scope sounds like an advantage; it is designed for whole-body postural assessment where trunk, legs and neck are loaded together, and using it for a seated repetitive hand task would dilute the finding across body segments that are not the problem, so more comprehensive is not more appropriate. Claiming no validated tool exists is wrong on the facts. Treating assessment as unnecessary once a diagnosis exists confuses two questions, since the diagnosis describes what has happened to her while the assessment establishes what in the task caused it and therefore what must change, both for her return and for the colleagues still doing the work.",
+        source: "HSE ART tool; RULA and REBA; HSE guidance on upper limb disorders",
+        tags: []
+      },
+      {
+        stem: "A 39-year-old is exposed to a solvent with an elimination half-life of about four hours. The occupational health nurse is setting up a biological monitoring programme and proposes to take urine samples at the start of the working day, reasoning that a consistent time of day will make results comparable between workers. Regarding the timing of sampling, which position is correct?",
+        options: [
+          "Start of day is appropriate, consistency of timing being the main requirement",
+          "Sampling should be at the end of the working week, as for substances that accumulate",
+          "Timing is not critical for urinary metabolites, which reflect accumulated body burden",
+          "Sampling should be at the end of shift, the half-life determining the optimum time",
+          "A pre-shift and post-shift pair is required to establish the increment across the shift"
+        ],
+        correct: 3,
+        explain: "The elimination half-life dictates when a sample is representative, which is more useful to hold than a list of substances and times. A half-life under about two hours means sampling at the end of exposure; roughly two to ten hours means end of shift, or the beginning of the next; ten to a hundred hours means end of exposure at the end of the working week; and over a hundred hours means timing is not critical. At four hours this solvent sits in the second band, so an end of shift sample reflects that day's exposure, whereas a start of day sample taken after several half-lives of overnight elimination would substantially understate it: consistency of timing would be preserved and the result would be consistently wrong. Taking a pre-shift and post-shift pair sounds methodologically stronger and is occasionally used in research, but it is not the standard for occupational biological monitoring against a guidance value, since the published values are specified with a sampling time attached and a result is compared against that value rather than expressed as an increment; it would also double the burden on the individual, and every biological sample requires fully informed consent. Treating timing as uncritical describes substances with very long half-lives such as mercury or cadmium. End of the working week belongs to the longer band, benzene being the example. The nurse's reasoning gets consistency right and representativeness wrong.",
+        source: "OHOH 2nd ed, Ch 31, after HSE HSG167; EH40/2005 Table 2",
+        tags: []
+      },
+      {
+        stem: "A manufacturer buys a second-hand press brake from another company. It carries a CE mark and came with its original instructions. The maintenance manager intends to put it into service after a visual check, on the basis that the CE mark demonstrates conformity and no modification has been made. Regarding the requirements before use, which position is correct?",
+        options: [
+          "The CE mark demonstrates conformity, so a visual check before use is sufficient",
+          "Equipment must be suitable and safe for its intended use, which requires assessment",
+          "Second-hand equipment falls outside PUWER, which applies to new equipment only",
+          "A thorough examination by a competent person is required before any use",
+          "The machine must be re-marked by the purchaser before it can lawfully be used"
+        ],
+        correct: 1,
+        explain: "The duty falls on the employer using the equipment and concerns the equipment in this workplace: suitable for the purpose and conditions of use, properly maintained, with adequate guarding, controls and isolation, and used by trained people. A conformity mark records that the manufacturer declared conformity at the point of supply, which is a statement about the machine as built, and says nothing about whether the guarding remains intact after years in another factory, whether the machine suits the work now intended, or whether it can be installed safely here. Requiring a thorough examination by a competent person names a real requirement but attaches it to the wrong category of equipment: such examination is required where deterioration would cause a significant risk and where safety depends on installation conditions, and under separate regulations for lifting equipment, but it is not a blanket precondition for putting any second-hand machine into service. A press brake needs a proper pre-use assessment and quite possibly examination of specific safety-critical elements, rather than a periodic examination regime. Accepting the mark and a visual check is the maintenance manager's position. Excluding second-hand equipment inverts the position, since the Regulations apply to work equipment regardless of age or origin and second-hand purchases are where supply-side assurance is weakest. There is no requirement for a purchaser to re-mark a machine, conformity marking being a supply obligation.",
+        source: "Provision and Use of Work Equipment Regulations 1998, regs 4, 5, 6 and 11",
+        tags: []
+      },
+      {
+        stem: "An endoscopy unit uses glutaraldehyde for instrument decontamination in a manual soaking bath in a small room with general ventilation. Two of five staff have developed work-related wheeze. The manager proposes issuing FFP3 respirators to all five, arguing that this protects everyone including those already affected. Regarding the response required, which position is correct?",
+        options: [
+          "Respirators are appropriate, providing protection for affected and unaffected staff alike",
+          "The two affected staff have irritant symptoms, glutaraldehyde not being a sensitiser",
+          "Air sampling should be undertaken first, to establish whether the limit is being exceeded",
+          "Health surveillance should be introduced for the three unaffected staff",
+          "Substitution and enclosure are required, and those sensitised must be removed from exposure"
+        ],
+        correct: 4,
+        explain: "Glutaraldehyde is a respiratory sensitiser carrying a sensitisation notation, and endoscopy decontamination is the setting to recognise. Two things follow. For those already sensitised, reactions occur at exposures far below anything a limit or a respirator would control, so removal from exposure is the response rather than better protection, as with isocyanate sensitisation. For the unit as a whole the duty is to reduce exposure as low as is reasonably practicable, and the established route is substitution with peracetic acid or ortho-phthalaldehyde, with enclosed automated reprocessors and local exhaust ventilation where glutaraldehyde is retained; a manual soaking bath under general ventilation is the arrangement the guidance exists to displace. Introducing health surveillance for the unaffected staff is the strongest of the wrong answers and is genuinely required, since respiratory health surveillance is appropriate for everyone exposed or liable to be exposed to an asthmagen and with two cases in five it is overdue; it falls short as the answer because surveillance detects further cases rather than preventing them, and the control failure has already produced two. Issuing respirators to everyone inverts the hierarchy twice, putting personal protection ahead of substitution and enclosure and offering protection to two people for whom no protection is adequate. Air sampling first defers action pending a measurement that cannot answer the question, since compliance with a limit does not discharge the duty for a sensitiser and short-term peaks matter more than averages. Describing the symptoms as irritant is wrong on the substance, the contrast being with formaldehyde, which provokes symptoms in already hyper-responsive airways without clear evidence of inducing sensitisation.",
+        source: "OHOH 2nd ed, Ch 2 — glutaraldehyde; COSHH 2002, reg 7; HSE endoscopy decontamination guidance",
+        tags: []
       },
     ]
   },
@@ -8600,6 +9062,104 @@ const SECTIONS = [
         correct: 1,
         explain: "An unexplained sexually transmitted infection in a resident is a recognised, specific indicator that should prompt consideration of sexual abuse, distinct from the broader and less specific signs associated with neglect, physical abuse, institutional abuse or psychological abuse. While any of these forms of abuse may coexist and a full safeguarding assessment should consider the whole picture, this particular finding points specifically and strongly toward the possibility of sexual abuse, and should not be assumed to have an innocent explanation without proper enquiry.",
         source: "Safeguarding adults — recognising indicators of abuse in care settings",
+        tags: []
+      },
+      {
+        stem: "An occupational health service covers sites in England and in Scotland. A 42-year-old warehouse worker at the Scottish site has a long-standing psychotic illness, lives alone, and has been found repeatedly to be self-neglecting to a degree that has led to two admissions. He has no package of care and receives nothing from the local authority. The service's safeguarding policy, written for the English sites, records that a referral requires care and support needs, experience of or risk of abuse or neglect, and an inability to protect oneself as a result of those needs. Regarding a safeguarding referral for this worker in Scotland, which position is correct?",
+        options: [
+          "The English three-limb test applies throughout Great Britain, so no referral is indicated",
+          "Scotland uses a different three-limb test, and self-harm is expressly within its scope",
+          "Self-neglect falls outside safeguarding in every UK jurisdiction, being self-directed",
+          "A referral is precluded because he receives no services from the local authority",
+          "Scotland has no statutory adult safeguarding regime, so the concern goes to his GP alone"
+        ],
+        correct: 1,
+        explain: "Scotland asks a different question altogether. An adult at risk there is someone unable to safeguard their own wellbeing, property, rights or interests, who is at risk of harm, and who is more vulnerable to being harmed because of disability, mental disorder, illness or infirmity — three limbs, none referring to capacity. The word used is harm rather than abuse or neglect, and harm expressly includes the adult's own conduct, so self-harm and self-neglect engage the regime directly. An adult in Scotland is also 16 rather than 18. Two further differences follow: Scottish councils hold powers the English regime lacks, running to visits, private interviews, medical examinations, examination of records, and a warrant for entry with assessment, removal and banning orders, whereas England abolished the old power to remove a person in need of care from their home and put nothing in its place. Applying the English test throughout Great Britain is the policy error described in the stem and would produce a defensible conclusion under the wrong statute. Treating self-neglect as outside safeguarding everywhere is wrong even in England, where it is one of the ten categories in the statutory guidance. Excluding him because he receives no services conflates care and support needs with eligibility for them, since a person receiving nothing may still satisfy the first English limb. Scotland is the jurisdiction with the strongest statutory regime rather than the weakest; Northern Ireland is the one operating on policy rather than statute.",
+        source: "Adult Support and Protection (Scotland) Act 2007; Care Act 2014, s 42",
+        tags: []
+      },
+      {
+        stem: "A 43-year-old delivery driver attends occupational health for a fitness assessment after a positive workplace alcohol test. In the course of the consultation he describes drinking heavily most evenings, and mentions that his two children, aged four and seven, live with him and that his partner works nights. He has no health visitor or social work involvement. The occupational health physician advises the employer that he is unfit for safety-critical driving pending assessment and treatment, and records the fitness advice in the report. Regarding what else is required, which position is correct?",
+        options: [
+          "The fitness advice addresses the risk, since he will not be driving while impaired",
+          "The concern should be raised only if he refuses treatment for the alcohol dependence",
+          "A referral is premature, dependence alone not establishing that the children are suffering harm",
+          "The safeguarding concern is separate and does not go to the employer",
+          "The employer should be told of the children so it can consider its own duty"
+        ],
+        correct: 3,
+        explain: "One disclosure has raised two questions with different recipients, different thresholds and different consequences. Fitness for work goes to the employer in the ordinary way, with consent; the safeguarding concern does not go to the employer at all, but to the service's safeguarding lead and, where the threshold is met, to children's services. Neither track discharges the other, since restricting him from driving protects the public from him at work and does nothing for two young children at home, where the employer has no role. A management referral answered fully on fitness, with the safeguarding concern unrecorded and unreferred, is the specific failure this material exists to prevent. Parental substance misuse is the standard case, the harm usually being neglect rather than assault, because dependence consumes the time, money and attention that parenting requires and the effect is cumulative; the partner working nights means the children are alone with him during the period he describes drinking. Treating dependence as insufficient is the strongest of the wrong answers and states something true, since dependence does not establish that a child is suffering harm — what it establishes is that somebody should look, and certainty is not the threshold, the judgement being whether a concern exists rather than whether it is made out. Making the referral conditional on refusing treatment defers a concern about children to the progress of an adult's treatment. Telling the employer inverts the confidentiality position and discloses family information to a party with no role in it.",
+        source: "GMC, Protecting children and young people; Good medical practice 2024, paras 41-42",
+        tags: []
+      },
+      {
+        stem: "A 29-year-old woman attends occupational health following a period of sickness absence. During the consultation she describes her partner monitoring her phone, controlling her spending, and shouting at her in front of their eight-year-old son, though she says he has never hit her. She is clear that she does not want any referral made and does not consider herself abused. She has capacity and no care and support needs. Regarding the safeguarding position, which position is correct?",
+        options: [
+          "No safeguarding concern arises, as she has capacity and declines a referral",
+          "The section 42 duty is engaged, controlling behaviour being abuse under the Care Act",
+          "She falls outside section 42, but the child is a victim of domestic abuse in his own right",
+          "A referral cannot be made without her consent where no criminal offence has occurred",
+          "The absence of physical violence means this falls short of the statutory definition"
+        ],
+        correct: 2,
+        explain: "She fails the section 42 test on its third limb: she has capacity, no care and support needs, and is therefore not unable to protect herself as a result of such needs. That limb is the one most often absent, and failing it settles only which duty is engaged rather than whether a concern exists. The child is the answer. Domestic abuse is defined as behaviour between two people aged 16 or over who are personally connected, expressly including controlling or coercive behaviour, economic abuse, and psychological or emotional abuse, so monitoring her phone, controlling her spending and shouting at her all fall within it with or without physical violence. The provision that matters is that a child who sees, hears or experiences the effects of that abuse is a victim of it in their own right, so she has disclosed something about her son without mentioning him and no further inference is needed. Her declining a referral engages the consent framework rather than ending the matter, since a child's welfare may justify disclosure without consent and she need not be told where telling her would place the child at greater risk. Concluding that no concern arises stops at her capacity and misses the child. Reading section 42 as engaged is the strongest of the wrong answers on the law of abuse, since controlling behaviour genuinely is abuse for safeguarding purposes, but the section 42 test concerns her needs rather than the conduct's severity. Treating consent as an absolute bar overstates it, and requiring physical violence is wrong under a definition where a single incident counts as much as a pattern.",
+        source: "Domestic Abuse Act 2021; Care Act 2014, s 42",
+        tags: []
+      },
+      {
+        stem: "A 31-year-old woman attends a pre-placement assessment for a role in a food factory. During the discussion she mentions, without prompting, that she underwent female genital mutilation as a child in her country of origin at the age of eight. She is well, has no gynaecological symptoms, and does not wish to discuss it further. She has a four-year-old daughter living with her in the UK. Regarding the physician's obligations, which position is correct?",
+        options: [
+          "No mandatory duty arises, but the daughter raises a safeguarding question",
+          "The mandatory reporting duty applies, and the police must be informed",
+          "The duty applies but may be discharged by informing the safeguarding lead",
+          "No duty or concern arises, the procedure having occurred abroad and long ago",
+          "Mandatory reporting applies only where physical signs are observed on examination"
+        ],
+        correct: 0,
+        explain: "The mandatory reporting duty is narrower than its reputation in three ways that all matter here. It applies where the girl is under 18 at the time of disclosure rather than at the time of the act, so a woman of thirty-one describing a procedure performed on her at eight falls outside it entirely. It applies to cases that are known, meaning she tells you or you observe physical signs, rather than suspected. And it covers England and Wales only. An occupational physician will almost never be under this duty, and the point of knowing it exists is to recognise when it does not apply. The daughter is where the concern lies: a four-year-old girl in a family where the mother underwent the procedure is a recognised risk, and that is an ordinary safeguarding referral to children's services rather than a mandatory report, the distinction being that the duty concerns a known act on a child in front of you while a risk to another child takes the general route. Reporting to the police under the mandatory duty applies a personal statutory obligation to a case outside it. Discharging the duty through the safeguarding lead misstates its character on the other side, since where the duty does apply it is personal and cannot be delegated, with failure treated as a fitness to practise matter. Concluding that nothing arises because the procedure was long ago and abroad is the strongest of the wrong answers, being correct about the reporting duty and wrong about the child. Confining the duty to observed physical signs drops the disclosure limb, which is the commoner route.",
+        source: "Female Genital Mutilation Act 2003, s 5B, inserted by the Serious Crime Act 2015",
+        tags: []
+      },
+      {
+        stem: "An occupational health service is asked to advise a manufacturer that has taken on twelve agency workers, all from the same country, placed through an intermediary. The occupational health nurse notices at health surveillance that the workers give the same residential address, that several say their wages are paid to the person who arranged their work, and that none holds identity documents. One has an injury inconsistent with the account he gives of it. The workers do not wish anything to be done. Regarding the response, which position is correct?",
+        options: [
+          "Nothing can be done without consent, adults being entitled to decline referral",
+          "Referral requires the workers first to be assessed as adults at risk under the Care Act",
+          "The statutory duty to notify the Home Office applies and must be discharged",
+          "This is an employment matter for the intermediary and the labour market authority alone",
+          "Concerns should be raised, though an adult's entry to the referral mechanism needs consent"
+        ],
+        correct: 4,
+        explain: "The indicators are the recognised organisational picture for labour exploitation: a group sharing an address, wages paid to a third party, absent identity documents, fear of the person who arranged the work, and injuries inconsistent with the account given. The National Referral Mechanism operates across the United Kingdom and an adult must consent to enter it, so refusal blocks that route without stopping the concern being raised with the safeguarding lead, with the police where a crime is suspected, or with the local authority; a child does not have to consent. Invoking the statutory duty to notify the Home Office is the strongest of the wrong answers and identifies the right instrument for exactly this situation, where a suspected adult victim will not enter the mechanism — but that duty falls on specified public authorities, meaning police forces, local authorities, the National Crime Agency and the labour abuse authority, and health bodies are not among them. A physician may notify voluntarily; what they must not do is assume the referral has been made by someone under a duty, which is the practical trap here. Treating consent as ending the matter overstates it. Framing the situation as an employment matter for others misses that the workplace is where this form of abuse happens and that occupational health is placed to see the pattern. Requiring a Care Act assessment first inverts the sequence and applies a test that may well not be met.",
+        source: "Modern Slavery Act 2015; Home Office duty to notify guidance",
+        tags: []
+      },
+      {
+        stem: "A 17-year-old apprentice on a construction site attends occupational health after a minor injury. During the consultation he discloses that his stepfather assaults his mother at home and has recently begun hitting him. He asks the physician not to tell anyone, saying he will be in more trouble if it comes out, and says he is nearly eighteen and can make his own decisions. Regarding the response, which position is correct?",
+        options: [
+          "He is 17 and capable of consenting, so his refusal is determinative",
+          "The concern should be raised with his employer, who holds the duty of care on site",
+          "He is a child for safeguarding purposes, and a referral should be made",
+          "Referral should await his eighteenth birthday, when adult safeguarding applies",
+          "The disclosure concerns his mother, so the adult safeguarding route applies"
+        ],
+        correct: 2,
+        explain: "He is under 18 and therefore a child for safeguarding purposes, and a disclosure of physical assault at home is a child protection referral to children's services. Capacity and safeguarding are separate questions: a young person of 16 or 17 is generally presumed able to consent to assessment and treatment, and that presumption does not displace the duty to act on a concern about their welfare. Certainty is not the threshold either, the judgement being whether a concern exists rather than whether it is made out. His request should be taken seriously and cannot be determinative; he should be told what will happen and why wherever possible, though not where telling him would place him at greater risk or alert someone suspected of harming him. Under-18s reach occupational health as apprentices, weekend staff and work experience placements, and the ordinary assumptions of the consultation do not hold for them; where a placement is involved the host is the employer for health and safety purposes while the school or college retains responsibilities for the pupil, so a concern can have two homes and end up with neither. Deferring to his refusal is the trap and would be the answer if this were only a consent question. Raising it with the employer confuses tracks, since a young worker disclosing abuse at home is a child protection referral rather than an employment matter. Waiting for his birthday leaves a child being assaulted for the sake of a date and would then apply a test he may not meet. Routing it as adult safeguarding for his mother identifies a real second concern while missing that he is himself a child disclosing assault.",
+        source: "Children Act 1989, s 47; GMC, 0-18 years",
+        tags: []
+      },
+      {
+        stem: "An occupational health nurse in a large NHS trust becomes concerned about a healthcare assistant who works on a children's ward. A colleague has told her, in confidence, that the assistant has been seen taking photographs of patients on her own phone and has recently been asking to be assigned to particular children. The nurse is uncertain whether this is a matter for the trust's safeguarding lead, for HR, or for the police, and is reluctant to act on second-hand information. Regarding the correct route, which position is correct?",
+        options: [
+          "Raise with the safeguarding lead, who will decide whether any referral follows",
+          "This is a disciplinary matter for HR, no allegation having been made by a patient",
+          "The police should be contacted directly, photography of children being an offence",
+          "Nothing can be done, the information being second-hand and given in confidence",
+          "The local authority designated officer must be informed within one working day"
+        ],
+        correct: 4,
+        explain: "Where an allegation is made that someone working with children may pose a risk to them, the local authority designated officer must be informed within one working day. That route is separate from ordinary safeguarding referrals and from disciplinary processes, and it applies whether the concern arose in the person's professional life or at home. Photographing patients on a personal phone and seeking access to particular children is the pattern it exists for. Second-hand information is not a reason to hold back, since certainty is not the threshold anywhere in this material and it is the designated officer's function rather than the nurse's to decide what happens next; confidence between colleagues does not survive a concern of this kind and should be explained rather than honoured. Raising the matter with the safeguarding lead is the strongest of the wrong answers and would be right for almost any other concern, being the standard first step and available without identifying anyone; it falls short here because allegations against a person in a position of trust carry their own route and their own timescale, and going through the lead alone risks the one working day passing, even though in practice the lead will usually make the referral. Treating it as an HR matter subordinates a child protection concern to an employment process. Doing nothing is the reluctance the stem names. Contacting the police directly may sometimes be right where a crime is suspected but bypasses the mechanism designed to co-ordinate police, local authority and employer together. Note that there is no equivalent officer where the person at risk is an adult, the concern then going to the local authority under the arrangements for a person in a position of trust.",
+        source: "HM Government, Working Together to Safeguard Children, 2023",
         tags: []
       },
     ]
