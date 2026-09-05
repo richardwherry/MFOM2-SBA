@@ -1043,7 +1043,7 @@ const SECTIONS = [
         tags: ["noise-havs"]
       },
       {
-        stem: "An occupational physician is assessing a bakery worker with intermittent wheeze and is considering a workplace-based screening questionnaire for occupational asthma. Validation work in a comparable population shows the questionnaire has a sensitivity of 90% and a specificity of 80% against serial peak flow and specific challenge testing. The physician wants to express the questionnaire's usefulness in a way that does not depend on how common occupational asthma happens to be in the particular workforce being screened, so that the same figure can be quoted to bakeries, paint sprayers and laboratory animal handlers alike. Which value expresses this, and what is it here?",
+        stem: "An occupational physician is assessing a bakery worker with intermittent wheeze and is considering a workplace-based screening questionnaire for occupational asthma. Validation work in a comparable population shows the questionnaire has a sensitivity of 90% and a specificity of 80% against serial peak flow and specific challenge testing. The physician wants a single figure describing how much a positive answer should raise her suspicion of occupational asthma, and wants it to hold whatever the underlying frequency of the condition in the workforce being screened, so that the same figure can be quoted to bakeries, paint sprayers and laboratory animal handlers alike. Which value expresses this, and what is it here?",
         options: [
           "The positive likelihood ratio, which is 4.5",
           "The positive predictive value, which is 4.5",
@@ -1052,7 +1052,7 @@ const SECTIONS = [
           "The diagnostic odds ratio, which is 36"
         ],
         correct: 0,
-        explain: "Likelihood ratios derive from sensitivity and specificity alone, so unlike predictive values they are independent of prevalence and transfer between populations. The positive likelihood ratio is the true positive rate divided by the false positive rate, 0.90 divided by 0.20, giving 4.5. Option C is sensitivity divided by specificity, a common slip. As a guide to magnitude, a ratio above 10 shifts probability substantially, around 5 moderately, and below 2 very little.",
+        explain: "Likelihood ratios derive from sensitivity and specificity alone, so unlike predictive values they are independent of prevalence and transfer between populations. The positive likelihood ratio is the true positive rate divided by the false positive rate, 0.90 divided by 0.20, giving 4.5, and it is the figure that answers the question asked, because it states how much a positive answer multiplies the odds of disease. A value of 4.5 represents a moderate shift, useful for raising suspicion but not for confirming a diagnosis. The negative likelihood ratio of 0.13, being one minus the sensitivity divided by the specificity, is also correctly calculated and also prevalence-independent, but it describes what a negative answer does rather than a positive one. The diagnostic odds ratio of 36 is likewise correctly calculated and likewise independent of prevalence, being the positive likelihood ratio divided by the negative one, but it summarises the test as a whole and cannot be applied to a particular result, which is why it does not answer a question about what to make of a positive answer. Naming the positive predictive value gives a measure that does depend on prevalence, which is the property the physician is trying to avoid, and attaches to it a figure that is not a predictive value at all. A likelihood ratio of 1.1 would describe a test that barely shifts the probability of disease in either direction.",
         source: "Screening — likelihood ratios and prevalence independence",
         tags: ["respiratory-sensitisers"]
       },
@@ -1150,7 +1150,7 @@ const SECTIONS = [
           "45"
         ],
         correct: 3,
-        explain: "The number needed to treat is the reciprocal of the absolute risk difference. The difference is 20 percentage points, and the reciprocal of 0.20 is 5. Option A is the relative risk and option B its reciprocal; option C is the absolute difference left unconverted. The NNT translates trial results into service planning because it is expressed in people rather than ratios, but it is specific to this baseline risk and cannot be carried to a population with a different spontaneous return-to-work rate.",
+        explain: "The number needed to treat is the reciprocal of the absolute risk difference. The difference here is 20 percentage points, and the reciprocal of 0.20 is 5, so five employees must go through the programme for one additional sustained return to work. The figure of 1.8 is the relative risk, 45 divided by 25, which expresses how much more likely return to work is in the intervention group but says nothing about how many people must be treated. The figure of 2.2 is the reciprocal of the intervention group's own success rate, one divided by 0.45, which counts everyone who returns to work rather than only those who returned because of the programme, and so understates what the programme has to do. The figure of 20 is the absolute difference left unconverted, in percentage points rather than as a count of people. The figure of 45 is simply the intervention group's success rate. The number needed to treat translates trial results into service planning because it is expressed in people rather than ratios, but it is specific to this baseline risk and cannot be carried to a population with a different spontaneous return-to-work rate.",
         source: "Measures of effect — number needed to treat",
         tags: []
       },
@@ -1309,7 +1309,7 @@ const SECTIONS = [
         tags: []
       },
       {
-        stem: "An occupational physician is asked to advise whether exposure to a metalworking fluid mist caused a cluster of extrinsic allergic alveolitis at a machining plant. The literature contains several cohort studies reporting associations of similar magnitude in different countries and industries, a plausible immunological mechanism involving mycobacterial contamination of the fluid, and case series in which symptoms resolved when workers were removed from exposure and returned when they went back. Which feature of this body of evidence most strengthens the case for causation?",
+        stem: "An occupational physician is asked to advise whether exposure to a metalworking fluid mist caused a cluster of hypersensitivity pneumonitis, formerly termed extrinsic allergic alveolitis at a machining plant. The literature contains several cohort studies reporting associations of similar magnitude in different countries and industries, a plausible immunological mechanism involving mycobacterial contamination of the fluid, and case series in which symptoms resolved when workers were removed from exposure and returned when they went back. Which feature of this body of evidence most strengthens the case for causation?",
         options: [
           "The associations reported reach conventional statistical significance",
           "The exposure is one that regulators already control under COSHH",
@@ -1446,6 +1446,118 @@ const SECTIONS = [
         correct: 4,
         explain: "Attrition matters not through its size but through whether it is related to exposure or outcome. Here the people leaving are disproportionately those developing the very problem under study, so restricting analysis to completers systematically removes cases and understates incidence. Loss of power, in option A, is a real but secondary consequence: a study can be adequately powered and still thoroughly biased. Sensitivity analyses that impute plausible outcomes for those lost are the usual response.",
         source: "Bias — attrition and loss to follow-up",
+        tags: []
+      },
+      {
+        stem: "An occupational health service is introducing a screening measure for early airflow obstruction in a foundry workforce, based on a continuous measurement from a hand-held device. The validation study supplies a receiver operating characteristic curve, and the clinical lead asks the occupational physician to confirm which cut-off the service should adopt, saying that the curve should tell them where to set it. Regarding the use of the curve, which position is correct?",
+        options: [
+          "The cut-off should be set at the point closest to the top left corner of the curve",
+          "The curve sets out the available trade-off; the choice of cut-off is a judgement about the costs of each error",
+          "Sensitivity and specificity are fixed properties of the measure, so no cut-off decision arises",
+          "The cut-off follows from the prevalence of airflow obstruction in the workforce being screened",
+          "The curve identifies the cut-off at which sensitivity and specificity are equal, which should be adopted"
+        ],
+        correct: 1,
+        explain: "The curve plots sensitivity against one minus specificity for every possible cut-off, so it displays what is available: at 75% sensitivity a measurement might offer only 50% specificity, while accepting 60% sensitivity might buy 75%. It sets out the exchange rate. Which point on it to accept is a judgement about the relative cost of the two errors, and that judgement belongs to whoever is responsible for what happens to the people the test flags. Which way to err follows from consequence rather than from the test: where a missed case is the serious outcome, sensitivity is bought at the price of false positives, and where acting on a false positive is itself harmful, specificity matters more. The top-left-corner method is a real technique and the strongest wrong answer, but it weights the two errors equally by construction, which is the assumption the decision exists to examine. Treating sensitivity and specificity as fixed properties of the measure inverts the point of the exercise: where a positive result is defined by a threshold on a continuous measurement, they are not properties at all but consequences of where the threshold was put. Deriving the cut-off from prevalence confuses two things, since prevalence drives the predictive values once a cut-off is chosen but does not determine the cut-off itself. The crossover point where sensitivity equals specificity has no special claim; it is simply another point on the curve.",
+        source: "Zweig MH, Campbell G. Receiver-operating characteristic (ROC) plots: a fundamental evaluation tool in clinical medicine. Clin Chem. 1993;39(4):561-577.",
+        tags: []
+      },
+      {
+        stem: "An occupational health researcher plans a cross-sectional survey of hand-arm vibration symptoms among current employees at a large engineering group. She obtains the payroll list of all 4,200 people employed on the census date, draws a random sample of 600 from it, achieves an 82% response, and reports the prevalence of finger blanching among respondents as an estimate of the prevalence in the vibration-exposed workforce. Regarding the sampling, which position is correct?",
+        options: [
+          "The estimate is sound, a random sample of this size with 82% response being adequate",
+          "Stratified sampling was required, simple random sampling being invalid for prevalence work",
+          "The frame excludes those who have left, so it is not a frame of the exposed workforce",
+          "The response rate is the principal threat, 82% being below the conventional minimum",
+          "The sample size is insufficient to estimate prevalence in a workforce of this size"
+        ],
+        correct: 2,
+        explain: "The payroll list on the census date is a frame of current employees, which is not the same thing as a frame of the exposed workforce. Anyone whose blanching led them to leave, transfer, or be redeployed off the tools is absent from it, and those are exactly the cases most relevant to the estimate. The survey is therefore structurally selected towards the healthy before a single questionnaire goes out, and no amount of care with the random draw or the response rate recovers a person who was never in the frame. The random draw and the response are both perfectly respectable, which is what makes the first answer the natural error, since the mechanics are done properly and the problem sits upstream of them. Requiring stratification imports a refinement that may improve precision within strata but does nothing about who is in the frame. Treating 82% as below a conventional minimum invents a threshold; non-response matters where the reason for refusing relates to the exposure or the outcome, which is a question about who refused rather than how many. And 600 from 4,200 is ample for a prevalence estimate, since sample size governs precision rather than validity, and a precise estimate of the wrong population is still an estimate of the wrong population.",
+        source: "Checkoway H, Pearce N, Kriebel D. Research Methods in Occupational Epidemiology, 2nd ed. Oxford University Press, 2004.",
+        tags: []
+      },
+      {
+        stem: "An occupational physician is asked to give an opinion on causation for a 63-year-old former insulation worker with lung cancer, who smoked twenty a day for forty years and had heavy asbestos exposure over twelve years in the 1970s. The best available cohort evidence gives a relative risk of lung cancer of 2.4 in workers with his level of asbestos exposure, compared with unexposed workers of similar smoking habit. His solicitor asks whether, on the balance of probabilities, the asbestos caused his cancer. Regarding the opinion, which position is correct?",
+        options: [
+          "Causation cannot be attributed, since his smoking is a sufficient explanation on its own",
+          "Attribution is impossible where the disease has no feature distinguishing an asbestos-caused case",
+          "Attribution requires a relative risk above 2 in the population as a whole, not in a subgroup",
+          "The balance of probabilities is met only where the relative risk exceeds 3",
+          "A relative risk above 2 means the attributable fraction exceeds half, so attribution is more likely than not"
+        ],
+        correct: 4,
+        explain: "At a relative risk of exactly 2 the attributable fraction in the exposed is 50%. Above it, more than half the cases arising among exposed people would not have occurred without the exposure, so an individual case arising in those circumstances is more likely than not attributable to it, which is the balance of probabilities test. At 2.4 the attributable fraction is about 58%, and the standard is met. This is the arithmetic used in deciding whether a disease should be prescribed for compensation and by courts in negligence. The qualification in the stem does real work: the relative risk of 2.4 is for his level of exposure and against comparators of similar smoking habit, since both the relative risk and the attributable fraction vary with cumulative exposure, and the estimate holds for the circumstances it was derived from and for a person whose exposure resembles them. Smoking being a sufficient explanation on its own does not defeat attribution, because the comparison already holds smoking constant, and the interaction is multiplicative rather than additive, so smoking raises rather than dilutes the asbestos contribution. Requiring the doubling in the whole population inverts the logic, since attribution needs the circumstances in which doubling occurs and the circumstances this person actually worked in, not a population average that would wash out the exposed subgroup. A threshold of 3 has no basis, 2 being where the attributable fraction crosses one half. The absence of a distinguishing feature is the reason attribution has to rest on the attributable fraction rather than a bar to it, since nothing in the arithmetic identifies which cases were caused and it does not need to.",
+        source: "Industrial Injuries Advisory Council methodology for prescription; Coggon D, Rose G, Barker DJP. Epidemiology for the Uninitiated, 5th ed. BMJ Books.",
+        tags: []
+      },
+      {
+        stem: "An occupational physician is reviewing surveillance data from a national reporting scheme for occupational respiratory disease. The scheme's returns show large numbers of asbestos-related pleural disease and mesothelioma, but strikingly few cases of lung cancer or chronic obstructive pulmonary disease attributed to work, even though the epidemiological evidence indicates that asbestos and dust cause far more of the latter. A colleague concludes that occupational lung cancer and COPD must be rarer than the epidemiology suggests. Regarding the interpretation, which position is correct?",
+        options: [
+          "The pattern reflects attribution bias: diseases specific to work are reported preferentially",
+          "The colleague is right, since the scheme captures cases as they actually present to physicians",
+          "The pattern reflects ascertainment bias: pleural disease is more likely to reach a reporting physician",
+          "Lung cancer and COPD fall outside the scheme's case definitions, which explains their absence",
+          "Under-reporting is uniform across conditions, so the relative proportions remain valid"
+        ],
+        correct: 0,
+        explain: "A register collects cases physicians have seen and considered occupational, so diseases with a more specific relationship to work are reported preferentially. Pleural thickening and mesothelioma are uncommon without asbestos and are readily attributed to it, whereas lung cancer and COPD are common in the general population, so a physician seeing one in a former asbestos worker is far less likely to record it as occupational however strong the population-level evidence. This is attribution bias, and it means the pattern of what a scheme reports reflects how attributable the diseases are rather than how common they are. The colleague has read the register as though it were a population study. The distinction from ascertainment bias matters and is the reason the question exists: ascertainment bias concerns which cases reach a reporting physician at all, referral patterns varying between sources and over time often without the physicians noticing, producing numbers that rise or fall for reasons unrelated to how much disease there is. That is a real problem for these schemes too, but it does not explain a systematic tilt towards specific diseases and away from non-specific ones, which attribution does. Accepting the colleague's conclusion mistakes a register for a population at risk. Reading lung cancer and COPD out of the case definitions is wrong on the facts, since schemes accept them and simply rarely receive them. Uniform under-reporting is exactly what the pattern shows not to be the case, since the shortfall is concentrated in the diseases hardest to attribute.",
+        source: "Meredith SK, McDonald JC. Work-related respiratory disease in the United Kingdom, 1989-1992. Occup Med (Lond). 1994;44(4):183-189.",
+        tags: []
+      },
+      {
+        stem: "An occupational physician is asked to advise on a proposed cohort study of cardiovascular mortality in a chemical workforce. The investigators intend to compare the workforce with national mortality rates and calculate standardised mortality ratios. A preliminary analysis of the first fifteen years of follow-up gives an SMR for cardiovascular disease of 82, and the investigators propose to report that the workforce shows no excess cardiovascular risk from the exposure. Regarding that conclusion, which position is correct?",
+        options: [
+          "The conclusion is sound, an SMR below 100 indicating lower mortality than expected",
+          "Fifteen years of follow-up is too short for cardiovascular outcomes to emerge",
+          "An SMR of 82 is not statistically distinguishable from 100 without a confidence interval",
+          "The SMR may reflect selection into and out of employment rather than absence of risk",
+          "National rates are inappropriate because they are not age-standardised"
+        ],
+        correct: 3,
+        explain: "For cardiovascular and respiratory disease, valid comparison of a workforce against the general population is difficult, particularly in the first fifteen to twenty years of employment, which is exactly the window this preliminary analysis sits in. Healthy people are selected into work and unhealthy people leave or are excluded from it, so a workforce compared against the general population, which includes everyone too unwell to be employed at all, will tend to show lower mortality regardless of what the exposure does. An SMR somewhat below 100 may report roughly what selection alone would produce, and an SMR at exactly 100 could conceal a real excess that selection has cancelled out, so 82 is as consistent with a harmful exposure masked by selection as it is with no effect. The remedy is to stop using the general population as the comparator and run an internal comparison instead, setting more-exposed against less-exposed members of the same cohort, which gives up the statistical stability of national rates but buys a comparison group that has been through the same selection into and out of employment. Reading 82 as reassuring is the investigators' own conclusion and the error the question is built on. The confidence interval point is real practice, but it is a precision question rather than the reason 82 might mislead even if significantly below 100. Fifteen years being too short assumes the true effect has simply not appeared yet, when the mechanism here is that the comparison itself is distorted rather than that time is needed. National rates not being age-standardised is wrong, since standardisation against age and sex structure is what standardised in SMR means.",
+        source: "McMichael AJ. Standardized mortality ratios and the healthy worker effect: scratching beneath the surface. J Occup Med. 1976;18(3):165-168.",
+        tags: []
+      },
+      {
+        stem: "An occupational hygienist has grouped 340 warehouse workers into eight job-title categories to estimate historical exposure to diesel particulate for a case-control study of lung cancer, since individual exposure records do not exist. Within each category she assigns every worker the same exposure value, based on typical measurements for that job title. A colleague argues that because the assignment method is identical for cases and controls, any resulting error cannot bias the odds ratio. Regarding the colleague's argument, which position is correct?",
+        options: [
+          "The colleague is right, since identical measurement error in both groups is always non-differential",
+          "Non-differential misclassification from this method usually biases the odds ratio towards the null",
+          "The method introduces differential misclassification, since cases will recall their exposure more accurately",
+          "Job-exposure matrices eliminate misclassification entirely, being based on measured rather than recalled data",
+          "The bias is unpredictable in direction and magnitude, so no correction is possible"
+        ],
+        correct: 1,
+        explain: "A job-exposure matrix assigns everyone in a job title the same exposure value, so it cannot distinguish the truly high-exposed worker from the truly low-exposed one within that title, and everyone receives the average. That is exposure misclassification, and because the same matrix is applied identically to cases and controls it is non-differential by construction. Non-differential misclassification of a categorical exposure usually biases the effect estimate towards the null, diluting a real association rather than manufacturing a false one, which matters for interpreting a negative or weak finding as an absence of risk. The colleague's error is real and common: identical method is not the same as no bias, since non-differential error still biases, only in a knowable direction rather than an unpredictable one, which is what defeats the unpredictability answer. The differential misclassification answer inverts the mechanism, since differential error requires cases and controls to be measured differently, and nothing here does that, the matrix being applied the same way regardless of case status. Claiming job-exposure matrices eliminate misclassification overclaims for the method, which reduces reliance on individual recall but does not eliminate misclassification, since true exposure still varies within a job title. And the colleague's rule stated without qualification is not exceptionless in general, since it usually holds for a simple binary exposure but can behave differently once there are more than two exposure categories, though that subtlety does not change the answer here, where the mechanism described is genuinely non-differential.",
+        source: "Rothman KJ, Greenland S, Lash TL. Modern Epidemiology, 3rd ed. Lippincott Williams & Wilkins, 2008.",
+        tags: []
+      },
+      {
+        stem: "A study nurse recruiting participants for a case-control study of occupational exposure and bladder cancer telephones cases identified from hospital records and separately recruits controls by asking existing participants to nominate a friend or neighbour of similar age. Response among cases is 91%; among nominated controls it is 74%, and several nominators report that the friends who declined were too busy at work. Regarding this control selection method, which position is correct?",
+        options: [
+          "Friend controls are appropriate here, since they are naturally matched for lifestyle and locality",
+          "The lower control response rate is unlikely to bias the study, response bias affecting cases and controls equally",
+          "The unequal response rates are the principal problem; equalising them would resolve the selection concern",
+          "Friend controls may differ systematically from the source population if declining is related to occupational exposure",
+          "Case-control studies require population-based controls by design, so friend controls invalidate the study regardless of response"
+        ],
+        correct: 3,
+        explain: "Control selection is where a case-control study lives or dies on validity, and the question is always whether the controls represent the source population the cases came from, not whether they were drawn by any particular method in the abstract. Friend or neighbour controls are a legitimate design used throughout epidemiology and are not disqualified by definition. What matters here is the specific mechanism reported, that nominators describe the friends who declined as too busy at work. If declining is related to occupation or occupational exposure, the controls who do end up in the study are systematically different from the source population on the very dimension being measured, and busier or more heavily working friends are underrepresented. This is the selection bias mechanism arising through non-response: the sample is the people who agreed, and where the reason for refusing tracks the exposure, the groups differ systematically. The population-based-controls-by-design answer states a rule too absolutely, since hospital controls, friend controls and population controls are all used in practice, each with known strengths and weaknesses, and the choice is a design decision rather than a validity floor; population sampling is often preferred precisely because it avoids the friend-selection problem, but its absence does not automatically invalidate a study on its own. Naturally matched for lifestyle and locality treats closeness as an unqualified virtue, when that same closeness creates a risk of over-matching on factors related to the exposure. Response bias affecting both groups equally assumes the two response mechanisms operate the same way, when only the control route shows an occupation-linked reason for refusal. And the unequal response rates are not themselves the problem, since equal response rates achieved by two equally biased mechanisms would fix nothing; the concern is the reason for refusal, not the arithmetic gap between the two percentages.",
+        source: "Wacholder S, McLaughlin JK, Silverman DT, Mandel JS. Selection of controls in case-control studies. I. Principles. Am J Epidemiol. 1992;135(9):1019-1028.",
+        tags: []
+      },
+      {
+        stem: "A paper proposing that occupational solvent exposure causes renal disease reports a large sample size with a p-value below 0.001, a dose-response gradient across exposure categories, and consistent findings across three separately conducted studies. An occupational physician is asked to summarise, for a journal club, which features of the paper's argument align with Bradford Hill's considerations for judging causation from an association. Which of the following did Hill NOT include among those considerations?",
+        options: [
+          "Strength of association",
+          "Biological plausibility",
+          "Statistical significance",
+          "Exposure-response gradient",
+          "Consistency across different populations and circumstances"
+        ],
+        correct: 2,
+        explain: "Hill did not include statistical significance among his considerations, and warned against leaning on it: a small, unstable study can produce an impressively low p-value by chance or through bias, while a large, well-conducted one may show a modest, non-significant association that is nonetheless real. He treated significance testing as capable of substituting spurious precision for judgement, which is exactly the trap the paper in the stem sets, since a p-value below 0.001 sounds decisive but speaks to the play of chance rather than to whether the association is causal. The other four are genuine considerations and each does real work. Strength of association: the larger the relative risk, the less plausible that confounding alone produced it. Biological plausibility: a mechanism helps, though it is weaker than it looks, since mechanisms have been proposed for associations that proved artefactual, and an agent can act by a mechanism not yet known. Exposure-response gradient: a dose-response relationship is hard to produce by confounding or bias and is among the most persuasive patterns available. Consistency: repetition across different populations, places and methods carries far more weight than any single finding. One further consideration sits above all of them and is not itself in this list: temporality, that the exposure preceded the disease, which is not weighed against the others but presupposed by them, since an association in which the disease came first is not a candidate for causation at all.",
+        source: "Hill AB. The environment and disease: association or causation? Proc R Soc Med. 1965;58(5):295-300.",
         tags: []
       },
     ]
@@ -6050,6 +6162,20 @@ const SECTIONS = [
         source: "OHOH 2nd ed, Ch 2 — glutaraldehyde; COSHH 2002, reg 7; HSE endoscopy decontamination guidance",
         tags: []
       },
+      {
+        stem: "An occupational hygienist visits a small fellmongering works. Raw skins are steeped in pits containing sodium sulphide and lime to loosen the wool, and the liquor is periodically drained and the pits cleaned out by a worker who climbs in. The manager explains that the pits are open to the air in a well-ventilated shed, that the process has run unchanged for forty years, and that the only protection needed is gloves and boots because the liquor is caustic. Regarding the principal acute hazard, which is correct?",
+        options: [
+          "Hydrogen sulphide release on acidification of the liquor, requiring confined space controls",
+          "Alkali burns from the lime, which the gloves and boots adequately address",
+          "Ammonia generated by protein breakdown in the steeping pits",
+          "Chromium VI exposure from the tanning liquors used later in the process",
+          "Dermatitis from prolonged contact with sulphide, managed by barrier creams"
+        ],
+        correct: 0,
+        explain: "Sulphide liquors release hydrogen sulphide when acidified, and acidification happens in practice without anyone intending it, through residues from other stages, spent pickle liquor, or decomposing organic matter in the sludge at the bottom of a pit. Disturbing that sediment while cleaning out is the classic trigger, and the gas is heavier than air, so it accumulates in exactly the space the worker has climbed into. The manager's reasoning fails on both grounds he offers: an open pit in a ventilated shed is still a confined space once someone is inside it, and forty years without an incident says nothing, because the events that kill are episodic rather than continuous. The controls are therefore the confined space ones, meaning atmospheric monitoring before and during entry, forced ventilation, a permit system, harness and rescue arrangements, and no reliance on smell, since olfactory paralysis at high concentration means that loss of the smell signals danger rather than safety and the lethal concentrations act within a breath or two. Rescuers entering without breathing apparatus account for a large share of deaths, which matters because the natural response to a collapsed colleague in a pit is to climb in after him. Alkali burns from lime are real and gloves and boots are appropriate for them, but that is the hazard the manager has already recognised and it is not the one that kills. Ammonia arises elsewhere in hide processing rather than being the principal risk of a sulphide pit. Chromium exposure belongs to the tanning stage, downstream of dewooling. Sulphide dermatitis is genuine and barrier creams are a poor answer to it, but it is a chronic problem rather than the acute one.",
+        source: "Confined Spaces Regulations 1997; COSHH 2002; HSE guidance on tanneries and confined space entry",
+        tags: ["zoonoses"]
+      },
     ]
   },
   {
@@ -6565,7 +6691,7 @@ const SECTIONS = [
       {
         stem: "A welder attends occupational health reporting several episodes of fever, chills, myalgia and dry cough beginning a few hours after shifts spent welding galvanised steel. Each episode resolves fully within 24 to 48 hours, and he feels well by Monday after a weekend off. What is the diagnosis?",
         options: [
-          "Extrinsic allergic alveolitis from microbial contamination of the workshop air supply",
+          "Hypersensitivity pneumonitis from microbial contamination of the workshop air supply",
           "Metal fume fever, a self-limiting response to freshly formed zinc oxide fume",
           "Occupational asthma due to chromium VI generated when welding stainless steel",
           "Chronic beryllium disease presenting with granulomatous inflammation of the lungs",
@@ -6684,7 +6810,7 @@ const SECTIONS = [
           "Faecal mercury, which is the principal route of elimination for inhaled elemental mercury"
         ],
         correct: 1,
-        explain: "Urinary mercury is the standard measure for elemental and inorganic exposure, reflecting recent weeks to months (elimination half-life 40-60 days), with random sampling acceptable against creatinine — unusual in a chapter where timing is normally critical. Blood mercury is for acute exposure, so option A inverts the two. Mercury vaporises at room temperature and condenses on cold surfaces, so an unrecovered spillage is a persistent source needing decontamination. The psychomotor triad of tremor, irritability and nervousness reflects ready blood-brain barrier crossing; renal tubular damage follows accumulation in the kidney.",
+        explain: "Mercury exists in three toxicologically distinct forms, and the form determines both the clinical picture and the right test. Elemental mercury is the liquid metal, hazardous mainly as inhaled vapour; together with inorganic salts it distributes to brain and kidney and is cleared renally. Organic mercury, chiefly methylmercury, is formed by bacterial methylation in aquatic environments and reaches people through the food chain rather than through workplace air; it is highly lipophilic, accumulates in the central nervous system, and is excreted in bile and faeces rather than urine. Because this dentist has inhaled elemental vapour, renal clearance is what makes urine the correct matrix. Urinary mercury reflects the preceding weeks to months, with an elimination half-life of 40 to 60 days, and a random sample corrected against creatinine is acceptable rather than requiring end-of-shift timing — unusual in an area where timing is normally critical. Blood is not a shorter-window version of the same test. Inhaled elemental mercury redistributes out of blood into tissue within hours to days, so blood reflects acute or very recent exposure and never cumulative burden, which makes the rationale attached to option A wrong for blood in any form. Blood is instead the matrix of choice for organic mercury, which urinary testing largely misses. That same fact defeats the two remaining distractors: hair analysis is a genuine technique, but for methylmercury rather than the inorganic exposure described here, and faecal excretion is indeed the principal route for methylmercury, not for elemental vapour. The rule worth carrying is that the form and route of exposure decide the matrix — urine for elemental and inorganic, blood for organic and for acute exposure. The two clinical pictures differ as sharply as the tests: elemental mercury crosses the blood-brain barrier readily and produces the psychomotor triad of tremor, irritability and nervousness seen here, with renal tubular damage following accumulation in the kidney, whereas methylmercury produces paraesthesiae, constriction of the visual fields, ataxia and dysarthria. Finally, elemental mercury vaporises at room temperature and condenses on cold surfaces, so an unrecovered spillage beneath floorboards remains an active source until it is properly decontaminated.",
         source: "OHOH 2nd ed, Ch 2 — Mercury (measurement; key health effects)",
         tags: ["toxicology"]
       },
@@ -6778,11 +6904,11 @@ const SECTIONS = [
           "Occupational asthma from biocide additives, with a delayed asthmatic response",
           "Oil mist pneumonitis, from direct aspiration of mineral oil droplets",
           "Metal fume fever from particulate metal suspended in the fluid",
-          "Extrinsic allergic alveolitis related to microbial contamination of the fluid",
+          "Hypersensitivity pneumonitis related to microbial contamination of the fluid",
           "Chronic bronchitis from cumulative irritant exposure to aerosolised fluid"
         ],
         correct: 3,
-        explain: "Delayed onset of breathlessness, dry cough and fever some hours after exposure, improving away from work, with ground-glass change, is hypersensitivity pneumonitis — here from microbial contamination of water-based MWF, with bacteria, mycobacteria, fungi and endotoxins growing in sumps. Several UK outbreaks have affected multiple workers on the same machines. Distinguish from asthma: airway disease with wheeze and serial peak flow deterioration, versus alveolar disease with fever, systemic upset and a restrictive pattern. Management is fluid management — dip-slide monitoring, sump cleaning, biocide control, enclosure and LEV.",
+        explain: "Delayed onset of breathlessness, dry cough and fever some hours after exposure, improving away from work, with ground-glass change, is hypersensitivity pneumonitis, formerly termed extrinsic allergic alveolitis and still so called in some occupational sources — here from microbial contamination of water-based MWF, with bacteria, mycobacteria, fungi and endotoxins growing in sumps. Several UK outbreaks have affected multiple workers on the same machines. Distinguish from asthma: airway disease with wheeze and serial peak flow deterioration, versus alveolar disease with fever, systemic upset and a restrictive pattern. Management is fluid management — dip-slide monitoring, sump cleaning, biocide control, enclosure and LEV.",
         source: "OHOH 2nd ed, Ch 2 — Oil mist (metal working fluids); hypersensitivity pneumonitis",
         tags: ["respiratory-sensitisers"]
       },
@@ -6871,7 +6997,7 @@ const SECTIONS = [
         tags: ["travel-medicine"]
       },
       {
-        stem: "A 31-year-old female consultant and her male partner both travel together to an area with a risk of Zika virus transmission. Neither is currently pregnant. On their return, regarding the appropriate period for which conception should be avoided, the position is:",
+        stem: "A 31-year-old female consultant and her male partner both travel together to an area with a risk of Zika virus transmission. She is not currently pregnant. On their return, regarding the appropriate period for which conception should be avoided, the position is:",
         options: [
           "Two months, since the advice for a female traveller always takes precedence over that for her male partner",
           "One month, reflecting a reduced risk where both partners have been exposed simultaneously",
@@ -8284,6 +8410,34 @@ const SECTIONS = [
         source: "HSE L140, 2nd ed (2019); SOM, Vibration-related disease, January 2025",
         tags: ["noise-havs"]
       },
+      {
+        stem: "A 54-year-old has kept and bred racing pigeons for twenty years and has worked for the past eleven years in a grain store, where he clears mouldy grain from silos. He has been diagnosed with fibrotic hypersensitivity pneumonitis and is now breathless on moderate exertion. He asks occupational health whether he can claim Industrial Injuries Disablement Benefit, and mentions that he has searched the list of prescribed diseases for hypersensitivity pneumonitis and cannot find it. Regarding his prospects, which position is correct?",
+        options: [
+          "He is right that no prescription exists, the condition having been renamed since the schedule was drawn up",
+          "He must first establish which of the two exposures caused the disease before any claim can proceed",
+          "The prescription covers farmer's lung alone, so grain store work falls outside it",
+          "No claim lies where a non-occupational exposure such as pigeon keeping could also account for it",
+          "The prescription exists under the title extrinsic allergic alveolitis, the older name for the condition"
+        ],
+        correct: 4,
+        explain: "The prescribed disease is listed under the title extrinsic allergic alveolitis, which remains the statutory wording even though hypersensitivity pneumonitis is now the preferred clinical term. Searching the schedule for the current name therefore finds nothing, and concluding from that that no prescription exists is the error a well-informed candidate is most at risk of, since the more current the terminology the more likely the entry is to be missed. The general point is worth carrying: the schedule preserves historical disease names, so a search on current terminology can return nothing where a prescription exists. The pigeon keeping does not defeat the claim, because prescription requires the disease to be due to the nature of the employment in a prescribed occupation, and a concurrent non-occupational exposure to the same class of antigen does not extinguish that where the occupational exposure is itself sufficient; clearing mouldy grain from silos is a recognised prescribed occupation. Nor must he establish which exposure was responsible before claiming, since attribution between two sources of the same antigen is not a precondition and the decision belongs to the department rather than to him. The prescription is not confined to farmer's lung either, covering exposure to a range of organic antigens, with the agricultural presentation being the best known rather than the only one.",
+        source: "Prescribed disease B6, extrinsic allergic alveolitis; ATS/JRS/ALAT guideline on hypersensitivity pneumonitis, 2020",
+        tags: ["respiratory-sensitisers"]
+      },
+      {
+        stem: "A 47-year-old worked for nine years in a mushroom farm and developed hypersensitivity pneumonitis, confirmed on high-resolution CT with a fibrotic pattern. She left that employment four years ago and has had no further antigen exposure. Her breathlessness has continued to progress since leaving. Her employer's insurer argues that because exposure ceased four years ago and she has since been unexposed, any continuing deterioration cannot be attributable to the occupational disease. Regarding the natural history, which position is correct?",
+        options: [
+          "Fibrotic disease may progress despite removal from exposure, unlike the non-fibrotic form",
+          "The insurer is correct, as the disease is not expected to progress once exposure ends",
+          "Progression indicates the diagnosis is wrong, fibrosis not being a feature of this condition",
+          "Continued progression establishes ongoing exposure to the antigen at home",
+          "The distinction between fibrotic and non-fibrotic disease bears only on treatment, not prognosis"
+        ],
+        correct: 0,
+        explain: "The current classification divides the condition into fibrotic and non-fibrotic forms, replacing the older acute, subacute and chronic categories, which divided by time course and proved hard to demarcate. The division matters because fibrosis is what determines prognosis: non-fibrotic disease typically improves or resolves on removal from the antigen, whereas fibrotic disease may progress despite removal and behaves more like other fibrotic interstitial lung diseases. Continuing decline four years after leaving is therefore consistent with the diagnosis rather than against it. The insurer's argument would hold for non-fibrotic disease, which is what makes it the natural assumption and the reason the question exists, but her scan shows a fibrotic pattern and that is the finding which defeats it. Treating progression as disproving the diagnosis inverts the position, fibrosis being a recognised form rather than an inconsistency. Inferring continuing domestic exposure is possible in principle and a source at home would be worth asking about, but progression alone does not establish it and reaching for that explanation first leaves a recognised natural history unaccounted for. Confining the fibrotic distinction to treatment understates it, since prognosis is the reason the classification changed. The occupational consequence follows: removal from exposure protects against further insult but cannot be relied on to arrest the course, so prevention matters more here than in conditions where cessation halts progression.",
+        source: "ATS/JRS/ALAT clinical practice guideline on hypersensitivity pneumonitis in adults, 2020",
+        tags: ["respiratory-sensitisers"]
+      },
     ]
   },
   {
@@ -8515,6 +8669,20 @@ const SECTIONS = [
         explain: "Work-relevant does not mean work-caused: symptoms may be more pronounced at work, and work may be difficult because of symptoms, without work having caused the underlying problem — musculoskeletal problems may be work-relevant irrespective of their actual cause. Self-reported attribution to work is often unreliable and tends to overestimate work as the cause, but this does not mean the condition lacks genuine relevance to the workplace, and work-relevance is a broader, separate concept from meeting prescribed disease criteria.",
         source: "ABC of Occ & Env Medicine, 3rd ed, Ch8, Box 8.1 — work relevant does not mean work caused",
         tags: ["msd-ergonomics"]
+      },
+      {
+        stem: "A 24-year-old woman attends an occupational health consultation at a private clinic. She works as an independent sex worker, selling content online and seeing clients in person, and reports condomless sex with multiple partners. She has had two episodes of chlamydia in the past year. She has read that a vaccine against gonorrhoea became available in England in 2025 and asks whether she can have it, saying she assumes it is only for men. Regarding her request, which is correct?",
+        options: [
+          "Advice on condoms and regular testing is the appropriate response, vaccination having no role here",
+          "Eligibility is restricted to gay, bisexual and other men who have sex with men",
+          "She should be given a prescription for antibiotics to take should symptoms develop",
+          "Refer her to a sexual health service, where individual risk assessment may support offering 4CMenB",
+          "No gonorrhoea vaccine exists; the reports she has read concern a trial not yet in use"
+        ],
+        correct: 3,
+        explain: "The national programme began on 1 August 2025 and uses 4CMenB, a meningococcal B vaccine given off-licence for this purpose because Neisseria meningitidis and Neisseria gonorrhoeae are genetically closely related, with observational studies estimating 30 to 41 per cent protection. It is delivered opportunistically through specialist sexual health services and targets primarily gay, bisexual and other men who have sex with men at high risk, defined as a bacterial sexually transmitted infection in the previous twelve months or five or more partners in the previous three months. Her assumption that it is only for men is the point the question turns on: clinicians have discretion to perform an individual risk assessment and consider offering the vaccine to people whose gonorrhoea incidence approaches that of the eligible group, and the guidance expressly names sex workers practising condomless sex. Her two chlamydia episodes and reported exposure make her a plausible candidate, though the assessment belongs to the service that can deliver the vaccine rather than to a private occupational health clinic. Advice on condoms and regular testing is correct and should be given, but offered instead of referral it withholds something she may be eligible for, and the guidance is explicit that such advice continues alongside vaccination rather than replacing it. A prescription held against future symptoms is indefensible in a condition requiring testing before treatment, and antimicrobial resistance is among the reasons the programme exists. Denying that any vaccine exists is simply wrong, and telling her so would be the most damaging of the five answers. The vaccine is given as two doses, and its off-licence use should be explained to the person receiving it.",
+        source: "UKHSA, national gonorrhoea vaccination programme using 4CMenB — frequently asked questions and patient group direction, August 2025",
+        tags: []
       },
     ]
   },
@@ -9815,10 +9983,10 @@ const SECTIONS = [
           "Avian influenza, because the cluster indicates human-to-human transmission and urgent containment is required",
           "Coxiella burnetii, because poultry are a principal reservoir of the organism and chronic endocarditis may follow infection",
           "Campylobacter jejuni, because respiratory presentation is well recognised in poultry processing workers",
-          "Extrinsic allergic alveolitis, because the recurrent cluster indicates an immunological rather than infectious cause"
+          "Hypersensitivity pneumonitis, because the recurrent cluster indicates an immunological rather than infectious cause"
         ],
         correct: 0,
-        explain: "Psittacosis, or ornithosis where the source is non-psittacine birds, is transmitted by inhalation of dried droppings and respiratory secretions, and duck processing is a documented outbreak source; evisceration generates that aerosol, and recurrent clusters in the same plant argue for an environmental source. It matters because treatment is a macrolide or doxycycline: current empirical regimens for severe community-acquired pneumonia usually include a macrolide and would cover it, but a patient managed on amoxicillin alone receives no active treatment. Option B overreaches, since three cases sharing a workplace exposure indicate a common source rather than person-to-person spread. Option C has the wrong reservoir, Q fever arising principally from cattle, sheep and goats. Extrinsic allergic alveolitis is a genuine differential in bird workers but is characterised by breathlessness and flu-like symptoms related to shifts with recovery away from work, rather than pneumonia requiring admission.",
+        explain: "Psittacosis, or ornithosis where the source is non-psittacine birds, is transmitted by inhalation of dried droppings and respiratory secretions, and duck processing is a documented outbreak source; evisceration generates that aerosol, and recurrent clusters in the same plant argue for an environmental source. It matters because treatment is a macrolide or doxycycline: current empirical regimens for severe community-acquired pneumonia usually include a macrolide and would cover it, but a patient managed on amoxicillin alone receives no active treatment. Option B overreaches, since three cases sharing a workplace exposure indicate a common source rather than person-to-person spread. Option C has the wrong reservoir, Q fever arising principally from cattle, sheep and goats. Hypersensitivity pneumonitis, formerly termed extrinsic allergic alveolitis, is a genuine differential in bird workers but is characterised by breathlessness and flu-like symptoms related to shifts with recovery away from work, rather than pneumonia requiring admission.",
         source: "Hunter's Diseases of Occupations, 10th ed, Ch 60; ABC of Occupational and Environmental Medicine, 3rd ed, Ch 12",
         tags: ["zoonoses"]
       },
@@ -9841,7 +10009,7 @@ const SECTIONS = [
         options: [
           "Leptospirosis, controlled by covering cuts and abrasions and providing washing facilities before eating",
           "Rat-bite fever, controlled by training in safe handling and immediate reporting of bites and scratches",
-          "Extrinsic allergic alveolitis, controlled by pre-employment spirometry and periodic respiratory health surveillance",
+          "Hypersensitivity pneumonitis, controlled by pre-employment spirometry and periodic respiratory health surveillance",
           "Psittacosis, controlled by excluding workers from buildings where birds have also roosted",
           "Hantavirus, controlled by damping down before clearance and providing respiratory protection against contaminated dust"
         ],
@@ -9895,14 +10063,14 @@ const SECTIONS = [
       {
         stem: "A grain store worker develops breathlessness, dry cough, fever and myalgia four to six hours after each shift spent clearing mouldy grain from a silo. Symptoms settle overnight and are absent at weekends. Examination between episodes is normal; during an episode he has bibasal crackles and desaturation on exertion. Which condition is this, and what is the essential occupational action?",
         options: [
-          "Extrinsic allergic alveolitis from mould spore exposure; prevention of further exposure to the antigen",
+          "Hypersensitivity pneumonitis from mould spore exposure; prevention of further exposure to the antigen",
           "Occupational asthma from grain dust sensitisation; serial peak flow monitoring at and away from work",
           "Organic dust toxic syndrome; reassurance, as it is self-limiting and carries no long-term consequence",
           "Psittacosis from bird contamination of stored grain; macrolide treatment and investigation of the store",
           "Q fever from contaminated straw and dust; doxycycline and review of the store's ventilation"
         ],
         correct: 0,
-        explain: "The timing is the diagnostic signature: symptoms four to six hours after exposure, settling overnight and absent at weekends, distinguish extrinsic allergic alveolitis from asthma, which occurs during or shortly after exposure with wheeze and airflow obstruction rather than fever and myalgia. Bibasal crackles and exertional desaturation are alveolar rather than airway signs, and serial peak flows would be normal. The essential action is prevention of further antigen exposure, because continued exposure causes irreversible pulmonary fibrosis; this is not a condition to manage with respiratory protection and continued silo work, so control means mechanising the task, drying grain properly, or redeployment. Organic dust toxic syndrome is the important near-miss, being non-immunological, typically following a single heavy exposure and genuinely self-limiting, but it lacks the stereotyped recurrence, crackles and desaturation seen here.",
+        explain: "The timing is the diagnostic signature: symptoms four to six hours after exposure, settling overnight and absent at weekends, distinguish hypersensitivity pneumonitis, formerly termed extrinsic allergic alveolitis, from asthma, which occurs during or shortly after exposure with wheeze and airflow obstruction rather than fever and myalgia. Bibasal crackles and exertional desaturation are alveolar rather than airway signs, and serial peak flows would be normal. The essential action is prevention of further antigen exposure, because continued exposure causes irreversible pulmonary fibrosis; this is not a condition to manage with respiratory protection and continued silo work, so control means mechanising the task, drying grain properly, or redeployment. Organic dust toxic syndrome is the important near-miss, being non-immunological, typically following a single heavy exposure and genuinely self-limiting, but it lacks the stereotyped recurrence, crackles and desaturation seen here.",
         source: "Hunter's Diseases of Occupations, 10th ed; ABC of Occupational and Environmental Medicine, 3rd ed, Ch 12",
         tags: ["zoonoses"]
       },
@@ -9946,6 +10114,34 @@ const SECTIONS = [
         correct: 2,
         explain: "The serious zoonoses, including leptospirosis, Q fever, psittacosis and brucellosis, present as non-specific febrile illnesses that are diagnosed late because the animal contact is never mentioned; a high index of suspicion is essential and the occupational history is often the only clue. Information is therefore the intervention that shortens time to diagnosis, which is where morbidity is decided, and it is inexpensive, which matters given the stated constraint. This is the alert card principle applied to a whole institution. Option A fails on availability, since there is no human vaccine for brucellosis, Q fever in the UK, leptospirosis routinely, or Streptococcus suis. Option E over-restricts: the exclusions that matter in pregnancy are lambing and kidding, contact with birthing products and contaminated clothing, and the live sheep vaccines, whereas blanket exclusion from all livestock contact would be disproportionate and probably discriminatory. Options B and D screen individuals rather than controlling exposure.",
         source: "Hunter's Diseases of Occupations, 10th ed, Ch 60; HSE agriculture guidance",
+        tags: ["zoonoses"]
+      },
+      {
+        stem: "A 58-year-old man is admitted with a painless black eschar on his left forearm, surrounded by marked non-tender oedema, which began four days ago as a small papule. He has worked for thirty years at a small tannery that processes imported goat and sheep skins, and he removes wool from raw hides by hand before liming. He is systemically well. His employer says the premises have handled imported skins since the 1950s and that no case of this kind has ever occurred there. Regarding the diagnosis and its implications, which is correct?",
+        options: [
+          "Cutaneous anthrax; spores persist for decades and the absence of prior cases is not reassurance",
+          "Orf is most likely, given direct contact with sheep material",
+          "Cutaneous anthrax is excluded by the absence of pain and systemic upset",
+          "A cutaneous leishmaniasis should be considered first given the imported material",
+          "Erysipeloid is most likely, being the classic occupational lesion in hide handling"
+        ],
+        correct: 0,
+        explain: "The lesion is characteristic: a papule progressing over days to a painless ulcer with a black eschar, surrounded by extensive non-tender oedema, in a person who is systemically well. Painlessness is a diagnostic feature rather than a reason to exclude the diagnosis, which is what makes the exclusion answer the trap, since a painful lesion would point away from anthrax rather than towards it. The employer's reassurance is worth nothing, and that is the more important half of the answer: spores survive for decades in hides, hair and the fabric of premises, so an absence of cases over seventy years reflects the low probability of any individual skin being contaminated rather than the absence of a hazard. Imported goat and sheep skins are the classic vehicle and hand dewooling of raw hides the classic exposure, which is why the historical names attach to precisely this work. Orf produces a nodule on the hand in sheep handlers but follows contact with live infected animals rather than raw hides, and is a self-limiting parapoxvirus lesion without eschar or gross oedema. Leishmaniasis is transmitted by sandflies and has no relationship to imported material as such. Erysipeloid is a genuine occupational infection but of fish, meat and poultry handlers, presenting as a spreading violaceous cellulitis rather than an eschar. The practical consequences follow quickly: urgent treatment, notification, and immediate consideration of the rest of the workforce and of the consignment.",
+        source: "OHOH 2nd ed, biological hazards; UKHSA anthrax guidance",
+        tags: ["zoonoses"]
+      },
+      {
+        stem: "An occupational physician is asked to advise a company importing untanned hides and skins from countries where anthrax is endemic. The managing director proposes that all staff handling raw material be offered anthrax vaccination, and that this be made a condition of employment for those roles, on the basis that it is the most direct way of protecting them. Regarding the proposed approach, which is correct?",
+        options: [
+          "Vaccination is the appropriate primary control given the severity of the disease",
+          "Immunisation is unnecessary where cutaneous rather than inhalational exposure is anticipated",
+          "Anthrax vaccination is not available in the United Kingdom for occupational use",
+          "Vaccination may be required as a condition of employment where the risk assessment supports it",
+          "Control of the material and of dust generation come first; vaccination is not the primary measure"
+        ],
+        correct: 4,
+        explain: "Vaccination is available in the United Kingdom for those at occupational risk, but it sits below source control in the hierarchy. What comes first is control of the material and of the dust it generates: sourcing from suppliers able to certify their material, disinfection of imported product where practicable, wet methods and enclosure to suppress dust, ventilation, hygiene and washing facilities, and strict separation of clean and dirty areas with protective clothing that does not leave the site. Immunisation supplements those measures rather than substituting for them, which is the general principle that personal measures rank below control at source. Making vaccination a condition of employment inverts the hierarchy and raises a consent problem, since a vaccine accepted in order to keep a job is not freely accepted, and it also protects nobody but the individual, whereas spores carried out on clothing reach families and are addressed by control of the material rather than by immunising the worker. Asserting that no vaccine is available is wrong on the facts. Treating immunisation as unnecessary for cutaneous exposure misreads the position, since the cutaneous form is the commoner occupational presentation and the same organism causes both, so anticipated route does not determine whether immunisation is offered.",
+        source: "COSHH 2002; Green Book, anthrax; HSE guidance on anthrax in animal products",
         tags: ["zoonoses"]
       },
     ]
