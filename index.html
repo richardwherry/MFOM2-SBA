@@ -3802,17 +3802,17 @@ const SECTIONS = [
         tags: ["noise-havs"]
       },
       {
-        stem: "A 56-year-old spent twenty-two years using hand-held breakers for a road maintenance contractor before moving to a supervisory role four years ago, since when he has used no vibrating tools at all. Eighteen months into the supervisory role he developed numbness and tingling in both hands, and he has now been diagnosed with carpal tunnel syndrome, confirmed on nerve conduction studies. He asks whether he can claim Industrial Injuries Disablement Benefit for prescribed disease A12, and his employer separately asks whether the case must be reported under RIDDOR. Regarding the two questions, which position is correct?",
+        stem: "A 56-year-old spent twenty-two years using hand-held breakers for a road maintenance contractor before moving to a supervisory role four years ago, since when he has used no vibrating tools at all. Eighteen months into the supervisory role he developed numbness and tingling in both hands, and he has now been diagnosed with carpal tunnel syndrome, confirmed on nerve conduction studies. He asks whether he can claim Industrial Injuries Disablement Benefit for prescribed disease A12, and his employer separately asks whether the case must be reported under RIDDOR. Which position is correct?",
         options: [
-          "Both succeed, since his history of regular percussive tool use satisfies each requirement",
-          "Both fail, since he was not using vibrating tools when the symptoms first developed",
-          "The prescription claim fails on timing; the reporting duty also falls away as he no longer uses tools",
-          "The prescription claim fails on timing, but reporting turns on whether his current work involves such tools",
-          "The prescription claim succeeds on his cumulative exposure; reporting requires proof that work caused it"
+          "Both the claim and the reporting duty succeed, his cumulative exposure satisfying each",
+          "The claim fails because symptoms began after tool use ceased; the case is reportable because the disease is attributable to that earlier use",
+          "The claim fails because symptoms began after tool use ceased; the case is not reportable because his current work involves no such tools",
+          "The claim succeeds on his cumulative exposure; the case is not reportable because he no longer uses tools",
+          "Both fail, carpal tunnel syndrome being neither a prescribed disease nor reportable"
         ],
-        correct: 3,
-        explain: "The two systems apply different tests, which is the point of the pairing. The prescription for carpal tunnel syndrome requires use of hand-held powered tools at the time the symptoms first develop, so onset must post-date starting the tools and cases arising after exposure has ceased are excluded. His symptoms began eighteen months into a supervisory role in which he used no tools, so the claim fails on timing however long his earlier exposure ran. The reporting requirement asks only whether the work involves regular use of percussive or vibrating tools, with no causation requirement at all, so it turns on what his current work involves; as a supervisor no longer using tools, that trigger is not met either. Treating twenty-two years of exposure as satisfying both is the natural instinct, since that much exposure feels as though it ought to settle everything, but neither test concerns the quantity of past exposure: one is about the timing of onset and the other about the nature of current work. Concluding that both fail because he was not using tools when symptoms developed reaches the right outcome by the wrong route, since that reasoning is the prescription test and applying it to reporting imports a causation requirement the reporting provision does not contain. Saying the reporting duty falls away implies it lapsed, when it was never triggered by this work. Reversing the two, so that cumulative exposure rescues the claim and reporting demands proof of causation, inverts both tests at once. The distinction bites hardest the other way round: a worker with heavy constitutional risk factors who currently uses percussive tools is reportable even though work may well not have caused the condition.",
-        source: "Prescribed disease A12(a); RIDDOR 2013, reg 8(a); SOM, Vibration-related disease, January 2025",
+        correct: 2,
+        explain: "The two systems apply different tests, and both fail here for different reasons. Prescribed disease A12(a) requires the use, at the time the symptoms first develop, of hand-held powered tools whose internal parts vibrate. Onset must therefore post-date the start of tool work and must not follow the end of it — so symptoms beginning eighteen months into a tool-free supervisory role fall outside the prescription however long the earlier exposure ran. Reporting asks a different question entirely: regulation 8 requires a report where the person's work involves regular use of percussive or vibrating tools, and HSE guidance states that this applies only where the current job involves that exposure. There is no causation test in the reporting provision at all. His current work involves no such tools, so no report is due. The option treating the case as reportable because the disease is attributable to the earlier exposure is the error worth naming: it imports a causation requirement the regulation does not contain, and it is the commonest misreading of RIDDOR in this area. The distinction bites hardest the other way round — a worker with heavy constitutional risk factors who currently uses percussive tools is reportable even though work may well not have caused the condition. Treating twenty-two years of exposure as settling either question mistakes quantity of past exposure for the tests actually applied, one being about timing of onset and the other about the nature of current work.",
+        source: "Social Security (Industrial Injuries) (Prescribed Diseases) Regulations, prescribed disease A12(a); Reporting of Injuries, Diseases and Dangerous Occurrences Regulations 2013, regulation 8(a); HSE guidance on reportable occupational diseases.",
         tags: ["noise-havs"]
       },
       {
@@ -10503,6 +10503,286 @@ const SECTIONS = [
         source: "Divers Alert Network, Decompression Illness — first aid; Divers Alert Network position on in-water recompression.",
         tags: ["diving", "neurology-epilepsy"]
       },
+      {
+        stem: "A catering assistant works aboard a jack-up accommodation platform on station in the North Sea. Her contract describes her as a seafarer, and her employer has asked an occupational physician to arrange an ENG1 before she mobilises, on the basis that her normal place of work is afloat. What is the correct advice?",
+        options: [
+          "An ENG1 is required, the requirement applying to anyone working afloat",
+          "An ENG1 is required, accommodation platforms being treated as vessels",
+          "No ENG1 is required; the Regulations exclude installations on their working stations",
+          "An ENG1 is required only if the platform moves between locations under its own power",
+          "No ENG1 is required, but a certificate is needed under the fishing vessel Regulations"
+        ],
+        correct: 2,
+        explain: "The Regulations apply to seafarers working on sea-going vessels, but expressly do not apply to offshore installations whilst on their working stations. She is therefore outside the ENG1 requirement and falls instead within the non-statutory offshore medical scheme — which is why a worker on a vessel and a worker on an installation may sit under different medical regimes despite doing similar work in the same waters. Her contractual description as a seafarer does not determine the legal position, and nothing turns on whether the platform can move under its own power, the exclusion being about being on station. The other exclusions worth knowing are pleasure vessels not used commercially and vessels operating solely in inland waterways of categories A to D. Fishing vessels are covered separately, under the Work in Fishing Convention Regulations 2018.",
+        source: "MSN 1886 (M+F) Amendment 3, 2025, section 2; MLC (Medical Certification) Regulations 2010.",
+        tags: ["seafaring", "oeuk-offshore"]
+      },
+      {
+        stem: "A 17-year-old deck cadet attends for his first ENG1 and meets the standards in full, with no restrictions. He is beginning a three-year cadetship and asks whether his certificate can be issued for the full two years, since that is what his older colleagues receive and it would spare him a medical part-way through his training. What is the position on validity, and does the doctor have any discretion?",
+        options: [
+          "Two years may be issued, the standards being met in full",
+          "One year applies, a first certificate never exceeding twelve months",
+          "One year applies, and the doctor has no discretion to issue for any shorter period",
+          "Validity is set by the shipowner according to the intended voyage pattern",
+          "Maximum two years for adults, one year for under-eighteens; shorter for a medical reason"
+        ],
+        correct: 4,
+        explain: "Under the Regulations the maximum validity is two years for anyone over 18 and one year for a candidate under 18, and where there is a medical reason the approved doctor may issue a certificate valid for less than that maximum. The age limit is statutory and cannot be extended, so the discretion runs only downwards — which is the part the option denying any discretion gets wrong, and the answer to his question. Shortening is used where a condition needs review sooner than the full period, and is a distinct device from a restriction: a time-limited certificate constrains when the seafarer is next examined rather than what they may do. There is no rule making a first certificate shorter, and validity is a matter for the doctor and the Regulations rather than the shipowner.",
+        source: "MSN 1886 (M+F) Amendment 3, 2025, paragraph 3.7.",
+        tags: ["seafaring"]
+      },
+      {
+        stem: "A 52-year-old seafarer is assessed by an approved doctor and found permanently unfit for sea service following a serious neurological event with residual deficit. He asks whether that is final, and whether anything could change it in future. What should he be told about the category assigned?",
+        options: [
+          "It normally lasts a minimum of five years, reversible only on evidence of reversal",
+          "It is irreversible, permanent unfitness being a final determination",
+          "It may be reconsidered at any time by any approved doctor on request",
+          "It lapses automatically after two years, when a fresh examination becomes due",
+          "It may be changed only by the Maritime and Coastguard Agency, not by an approved doctor"
+        ],
+        correct: 0,
+        explain: "Category 4, permanently unfit for sea service, will normally be considered to last for a minimum of five years, and may be changed at a later date only if an approved doctor is presented with medical evidence of the reversal of the original medical condition; review by a medical referee may also be required. So it is neither irreversible nor freely revisited on request, and the two mistaken options sit either side of the actual position. The four categories are fit without restriction, fit with restrictions, temporarily unfit with the period specified, and permanently unfit. Much of the clinical skill lies in category 2, where the question is what restriction makes continued service safe rather than whether the seafarer is fit at all. Note separately that where a medical referee has determined permanent unfitness, a further review is not normally allowed within five years.",
+        source: "MSN 1886 (M+F) Amendment 3, 2025, paragraph 3.5.",
+        tags: ["seafaring", "neurology-epilepsy"]
+      },
+      {
+        stem: "An approved doctor certifies a seafarer fit for near-coastal service only, and separately tells him in writing that he must continue his medication and carry a reserve supply on board. The seafarer asks which of these will appear on his certificate, and what happens if he does not comply with each. What is the correct position?",
+        options: [
+          "Both appear on the certificate, and breach of either is an offence",
+          "Neither appears on the certificate, both being confidential between doctor and seafarer",
+          "The medication requirement appears on the certificate; the geographical limit is advisory",
+          "The geographical limit appears on the certificate; the medication requirement is a condition and should not",
+          "Both appear, but only the geographical limit carries a right of review"
+        ],
+        correct: 3,
+        explain: "A restriction limits the locations or duties for which the seafarer is fit and is written on the face of the ENG1, notifying the shipowner, employer, master and the issuing authority for any certificate of competency — the geographical limit here. A condition is a formal notification from the doctor to the candidate of measures that must be taken to maintain fitness; it is put in writing but should not appear on the certificate, being confidential between doctor and candidate, though the candidate may need to make the employer or master aware of it, as with medication carried on board. The consequences differ too: a restriction carries a right of review, a condition does not. That asymmetry is the practical reason for keeping the two apart rather than a drafting nicety.",
+        source: "MSN 1886 (M+F) Amendment 3, 2025, paragraphs 3.5.1 and 3.5.2.",
+        tags: ["seafaring"]
+      },
+      {
+        stem: "An approved doctor assesses a seafarer and concludes that he is temporarily unfit for about six weeks, pending an outpatient scan. The seafarer is unhappy with the decision, says it will cost him a contract, and asks for the paperwork he needs in order to appeal. What should the doctor do?",
+        options: [
+          "Issue a Notice of Failure or Restriction, as for any finding of unfitness",
+          "Explain that no notice is issued, unfitness of three months or less carrying no review right",
+          "Issue a Notice of Failure or Restriction only if the seafarer requests one in writing",
+          "Refer him to the agency, which issues the notice where the doctor declines",
+          "Issue a restricted certificate instead, so that a right of review arises"
+        ],
+        correct: 1,
+        explain: "The ENG3 must be issued where the doctor considers the candidate temporarily unfit for more than three months, permanently unfit, or issues any certificate subject to a restriction. Six weeks falls outside all three, and that is deliberate rather than an oversight: a candidate temporarily unfit for three months or less has no right of review, and the ENG3 is the document through which a review is applied for. The notice therefore tracks the review right rather than adverse outcomes generally. Issuing a restricted certificate to manufacture a right of review would misstate his fitness, and the agency does not issue the notice in the doctor's place. The doctor should still normally explain the medical reasons for the decision, the exception being where disclosure would be harmful to the candidate's health.",
+        source: "MSN 1886 (M+F) Amendment 3, 2025, paragraphs 3.6.1 and 3.6.2.",
+        tags: ["seafaring"]
+      },
+      {
+        stem: "A seafarer is certified fit only for restricted service, which will cost him his current position on unlimited voyages. He disputes the decision and asks his occupational physician who would consider a challenge, against what standards it would be judged, and how long he has to bring one. What should he be told?",
+        options: [
+          "The Maritime and Coastguard Agency will reconsider the decision within three months",
+          "A second approved doctor of his choosing may re-examine him and issue a fresh certificate",
+          "The Chief Medical Adviser of the agency decides, applying discretion outside the published standards",
+          "An employment tribunal, the restriction affecting his ability to work",
+          "An independent medical referee appointed by the Secretary of State, applying within one month"
+        ],
+        correct: 4,
+        explain: "A candidate found permanently unfit, temporarily unfit for over three months, fit only for restricted service, or whose certificate is cancelled or suspended for more than three months, has a right of review by an independent medical referee appointed by the Secretary of State for Transport. The application is made on the form forming part of the ENG3, within one month of its date. The referee works to the same medical and eyesight standards as the approved doctor, so the review is not an appeal to a different yardstick — the role is to check that the diagnosis is established beyond reasonable doubt, that the standards including their discretionary elements have been properly interpreted, and to consider whether someone previously found permanently unfit might return to sea in some capacity. Seeking out a second approved doctor is not the mechanism.",
+        source: "MSN 1886 (M+F) Amendment 3, 2025, section 5.",
+        tags: ["seafaring"]
+      },
+      {
+        stem: "An approved doctor issues a certificate subject to a condition that the seafarer attends every three months for review of his blood pressure. He considers this excessive and disproportionate to his level of risk, says it will be difficult to arrange around his voyage pattern, and asks the occupational physician how he can challenge it. What should he be told?",
+        options: [
+          "He may apply for a review within one month, as for any restriction",
+          "He may apply for a review only once the condition has been breached",
+          "He has no right of review against a condition, though he may discuss it with the doctor",
+          "He may not seek a review until the certificate itself has expired",
+          "He may seek a review, the condition being recorded on the certificate"
+        ],
+        correct: 2,
+        explain: "There is no right of review against a condition set by an approved doctor. That absence is the counterpart of its confidentiality: a condition is a clinical undertaking between doctor and seafarer rather than a limitation on what he may do, it does not appear on the face of the certificate, and it is therefore not a restriction — which is what defeats the options treating it as one. What he can do is discuss it with the doctor, who may reconsider the interval. Non-compliance is a ground on which the certificate may later be suspended or cancelled, and if a suspension exceeds three months a review right does then arise. There is likewise no right of review against a decision of temporary unfitness for three months or less.",
+        source: "MSN 1886 (M+F) Amendment 3, 2025, paragraph 5.2.",
+        tags: ["seafaring", "cardiac-fitness"]
+      },
+      {
+        stem: "A seafarer has applied for review of a finding of permanent unfitness. His employer asks the occupational physician how long the process will take, who pays for it, and what happens to the medical information the approved doctor holds. Which statement is correct?",
+        options: [
+          "The referee should decide within two months; the agency meets the cost; signing the application consents to release of the approved doctor's report",
+          "The referee should decide within two months; the seafarer meets the cost of any specialist reports required",
+          "There is no time limit on the referee; the employer meets the cost where the seafarer is in employment",
+          "The referee should decide within six months; the approved doctor's report is released only on a separate signed authority",
+          "The referee should decide within two months; the approved doctor's report is not disclosed to the referee"
+        ],
+        correct: 0,
+        explain: "Three points travel together. The medical referee should reach a decision within two months of the date on which the review was lodged, and any longer must be agreed with the agency. The cost of the review, and of any additional specialist reports the referee requires, is met by the agency, though the seafarer pays his own travel expenses. And in signing the application the candidate consents to the approved doctor releasing the ENG2 report form and any other information that led to the decision — supplementary medical reports, GP letters and the rest — so no separate authority is needed, and withholding that material would leave the referee unable to test the original reasoning. The candidate may also submit additional evidence, which should reach the referee before the appointment.",
+        source: "MSN 1886 (M+F) Amendment 3, 2025, paragraphs 5.3 to 5.8.",
+        tags: ["seafaring", "confidentiality-data-protection"]
+      },
+      {
+        stem: "A seafarer was determined permanently unfit by a medical referee eighteen months ago following a cardiac event. His condition has improved and he wishes to apply for a further review, arguing that his circumstances have changed materially. What is the position?",
+        options: [
+          "He may apply for a further review at any time on production of new medical evidence",
+          "He may apply for a further review after two years from the determination",
+          "He has exhausted the process and no further route exists",
+          "He may not normally apply for a further review within five years of the determination",
+          "He must first obtain a fresh ENG1 examination and a new Notice of Failure before any review"
+        ],
+        correct: 3,
+        explain: "Where a medical referee has determined that a candidate is permanently unfit to go to sea, the agency will not normally allow a further application for review from that person within five years of that determination. The word doing the work is \"normally\" — it is a strong default rather than an absolute bar, so the option describing the process as exhausted overstates it in one direction and the option permitting reapplication at will overstates it in the other. The five-year figure aligns with the period category 4 is normally taken to last, and the route back through an approved doctor remains open on medical evidence that the original condition has reversed. Note the distinction between an approved doctor's category 4 decision and a referee's determination: the second carries this additional consequence.",
+        source: "MSN 1886 (M+F) Amendment 3, 2025, paragraph 5.6.",
+        tags: ["seafaring", "cardiac-fitness"]
+      },
+      {
+        stem: "An approved doctor learns that a seafarer to whom she issued a certificate eight months ago did not disclose a significant condition at the examination, and that had she known of it she could not reasonably have considered him to meet the standards. He is currently ashore between contracts. What may she do?",
+        options: [
+          "Nothing until his next periodic examination, the certificate being valid on its face",
+          "Suspend or cancel the certificate, and require the holder to surrender it",
+          "Refer the matter to the agency, which alone may withdraw a certificate",
+          "Annotate the certificate with a restriction reflecting the undisclosed condition",
+          "Report the matter to the master, who may stand the seafarer down"
+        ],
+        correct: 1,
+        explain: "The approved doctor may suspend or cancel where there are reasonable grounds for believing that there has been a significant change in medical fitness, that the holder is not complying with a condition of issue, that she did not have full details of the condition at the time and could not reasonably have considered the standards met had she done so, or that the certificate was not issued in accordance with the Regulations. The third ground applies here. The certificate may be suspended until a further examination, or for a specified period, or cancelled permanently. She has the right to require surrender, and if it is not returned may inform the agency's medical administration team. Failing to disclose a significant condition may also amount to obtaining a certificate under false pretences. Suspension for more than three months, or cancellation, carries a right of review.",
+        source: "MSN 1886 (M+F) Amendment 3, 2025, section 4.",
+        tags: ["seafaring"]
+      },
+      {
+        stem: "An approved doctor is retiring and closing her practice. She holds completed ENG2 medical report forms and clinical notes from seafarer examinations, and separately holds records from health surveillance carried out under the merchant shipping health and safety regulations for a shipping company client. How long must each be retained?",
+        options: [
+          "Both for ten years from the date of the examination",
+          "Both for forty years, all maritime health records being long-retention",
+          "ENG2 forms for five years; health surveillance records for ten",
+          "ENG2 forms for two years, matching certificate validity; health surveillance for forty",
+          "ENG2 forms and clinical notes for ten years; health surveillance records for up to forty years"
+        ],
+        correct: 4,
+        explain: "The approved doctor must keep full clinical notes of any detailed medical examination, and records including the completed ENG2 must be retained for ten years. Records relating to health surveillance under the Merchant Shipping (Health and Safety at Work) Regulations 1997 and related legislation must be retained for up to forty years. The two periods answer different questions: ten years is long enough to support audit of certification decisions and any dispute about them, while forty years reflects the latency of occupational disease and the possibility that a former seafarer will need the record decades later — the same logic as the forty-year exposure record under COSHH. Tying retention to certificate validity would discard the record almost as soon as it became useful. Approved doctors also submit statistical returns to the agency, and records may be audited.",
+        source: "MSN 1886 (M+F) Amendment 3, 2025, section 7.",
+        tags: ["seafaring", "confidentiality-data-protection", "coshh"]
+      },
+      {
+        stem: "A shipping company crews its vessels largely from one overseas country and wishes to have a locally based doctor examine them there rather than flying crew to the United Kingdom. The company asks its occupational health adviser what the agency requires of a practitioner based outside the United Kingdom before that doctor may issue ENG1 certificates. Which statement is correct?",
+        options: [
+          "Full registration with the General Medical Council is required wherever the doctor is based",
+          "Any doctor licensed in the country concerned may issue an ENG1 to a national of that country",
+          "A listed medical school, local entitlement to practise, skills maintenance, and good English",
+          "A recognised qualification in occupational medicine is required, as for diving examiners",
+          "Overseas doctors may complete the ENG2 but the certificate must be countersigned in the United Kingdom"
+        ],
+        correct: 2,
+        explain: "A practitioner based in the United Kingdom must be fully registered with the General Medical Council and hold a valid licence to practise. One based outside it must be qualified from a medical school listed in the Avicenna Directory, be entitled to practise in the country or territory where they are based, satisfy the agency that they are subject to a programme ensuring maintenance of their medical skills, and have a good command of English. Requiring GMC registration worldwide would make the overseas network impossible, and it is the second option that most needs resisting: being licensed locally is necessary but not sufficient, and a doctor approved by another maritime authority to issue that country's certificate is not thereby entitled to issue an ENG1. Unlike the diving examiner, no occupational medicine qualification is specified.",
+        source: "MSN 1886 (M+F) Amendment 3, 2025, section 6; MSN 1815.",
+        tags: ["seafaring"]
+      },
+      {
+        stem: "A seafarer lost his ENG1 overboard four months into its two-year validity and is due to join a vessel in three weeks. He is well, his circumstances are unchanged, and he asks the approved doctor who issued the original whether she can simply replace it, and for how long any replacement would run. What is the position?",
+        options: [
+          "The issuing doctor may at her discretion replace it for the remaining validity",
+          "Any approved doctor may issue a replacement on sight of proof of identity",
+          "A full re-examination is required in every case, the original certificate being irrecoverable",
+          "The agency issues replacements directly, the certificate being its property",
+          "A replacement runs for a fresh two years from the date of reissue"
+        ],
+        correct: 0,
+        explain: "Once issued, the ENG1 is the property of the candidate rather than the agency or the employer. Where it is lost or damaged, the approved doctor who issued the original may be asked, at her discretion, to issue a replacement, valid for the remaining validity of the original — so no fresh two-year period arises. Only the issuing doctor can do this without conducting a full examination, which is what defeats the option allowing any approved doctor to replace it. Where a significant period has passed since the examination, the doctor may decide a new examination is needed, in which case a new certificate of up to two years may be issued and the full statutory fee becomes payable. An administrative charge may be made for a replacement, and the agency is notified of the details of both certificates.",
+        source: "MSN 1886 (M+F) Amendment 3, 2025, paragraphs 3.6.3 to 3.6.6.",
+        tags: ["seafaring"]
+      },
+      {
+        stem: "A trainee deck officer partway through a cadetship fails the Ishihara plate test at his routine examination. He is referred for colour assessment and diagnosis testing at an approved centre and fails that too. He is otherwise entirely fit, and points out that colleagues on deck continue to work with colour vision defects. What follows for him?",
+        options: [
+          "He may be certified with a restriction precluding lookout duties at night, as his colleagues are",
+          "He may be certified unrestricted, the Ishihara plates being a screening test only",
+          "He may complete the cadetship and be reassessed when he applies for his first certificate",
+          "He cannot obtain a deck certificate, and permanent unfitness follows unless he retrains",
+          "He may be certified once he passes the Holmes Wright B lantern test instead"
+        ],
+        correct: 3,
+        explain: "A deck applicant who fails the Ishihara plates may be retested at an approved colour assessment and diagnosis centre, and failure there means a certificate may be issued only with a restriction precluding lookout duties at night. For a trainee deck officer the position differs, because restricted duties are impractical where the full range of cadet training cannot be completed, and candidates for deck or dual career officer certificates need full colour vision. The consequence is not automatic permanent unfitness, and that refinement matters: he cannot obtain a deck certificate of competency, he should then receive career advice including which duties might suit him on a different cadetship, and a category 4 follows only if he decides not to pursue another seafaring career. A move to engineering or a catering role remains open, with an appropriate restriction rather than permanent unfitness. His observation about colleagues is accurate and does not help him — existing deck seafarers who fail may hold a restricted certificate, and those who failed the plates but passed the Holmes Wright B lantern test, with evidence of it, still meet the standard. Neither route is open to a new candidate, so completing the cadetship and being reassessed would leave him unable to qualify at the end of it.",
+        source: "MSN 1886 (M+F) Amendment 3, 2025, paragraph 3.4; MCA, Seafarers: medical certification guidance — colour vision and career advice.",
+        tags: ["seafaring"]
+      },
+      {
+        stem: "An engineer officer attends for renewal. His unaided acuity is 6/60 in each eye and, with spectacles, 6/18 in each eye. He reads N8 at near with correction. He fails the Ishihara plates and is referred for further colour vision testing. What is the position?",
+        options: [
+          "He fails the acuity standard, 6/18 being insufficient in the better eye for any department",
+          "He meets the engineer acuity standard; City University or Farnsworth D15 may follow",
+          "He must be referred for colour assessment and diagnosis testing, as for the deck department",
+          "He fails, unaided acuity of 6/60 being below the minimum for any seafarer",
+          "He meets the standard, and may use a colour vision aid if he fails the confirmatory test"
+        ],
+        correct: 1,
+        explain: "The aided standard differs by department: deck and dual career officers require 6/6 in the better eye and 6/12 in the other, while engineers and radio officers require 6/18 in each eye — which this man meets. The unaided minimum of 6/60 in each eye applies across both and exists so that a seafarer who loses spectacles in an emergency retains enough vision to carry out emergency procedures, so 6/60 is the floor rather than a failure. Colour vision confirmatory testing also differs: deck candidates go to an approved colour assessment and diagnosis centre, engineers and radio officers may be referred to an optometrist for City University or Farnsworth D15 testing. Aids to colour vision are not accepted. N8 near vision is required in both departments.",
+        source: "MSN 1886 (M+F) Amendment 3, 2025, Annex A eyesight standards.",
+        tags: ["seafaring"]
+      },
+      {
+        stem: "A serving deck officer loses the sight of one eye following trauma. After a period of adaptation his remaining eye is 6/60 unaided and 6/6 corrected, with no progressive disease and a full field. He wishes to return to sea and his employer asks whether he can be certified. What is the position?",
+        options: [
+          "He is permanently unfit, binocular vision being required for deck duties",
+          "He may be certified only for engineer or radio duties, where the acuity standard is lower",
+          "He may be certified without restriction, and the employer need not be told which eye is affected",
+          "He may be certified if he passes a practical assessment of depth perception at sea",
+          "He may be certified, and the employer informed of the special duty of care"
+        ],
+        correct: 4,
+        explain: "A seafarer who becomes monocular in service, with no progressive disease in the remaining eye, may be certified where that eye meets 6/60 unaided and the department standard corrected — 6/6 for deck, 6/9 for engineer or radio — with a sufficient period of adaptation. This officer meets it. The distinctive feature is what follows certification: the employer should be informed of the special duty of care owed to the remaining eye, which is a positive obligation rather than a disclaimer, and is why the option certifying him while telling the employer nothing is wrong. The contrast with offshore work is worth holding, where monocular vision is acceptable generally but bars crane operation and emergency response team membership outright. Binocular vision is not a requirement, and no depth perception assessment features in the standards.",
+        source: "MSN 1886 (M+F) Amendment 3, 2025, Annex A; LO7 comparison of regimes.",
+        tags: ["seafaring", "oeuk-offshore"]
+      },
+      {
+        stem: "A candidate has a condition that is well controlled on a medication which, if lost or unavailable, would lead to rapid deterioration over a few days. He is otherwise well and asymptomatic, and the condition itself is not listed in the standards. Which consideration bears most directly on his fitness?",
+        options: [
+          "Whether the condition is likely to be aggravated by the physical demands of shipboard work",
+          "Whether he can meet the physical capability requirements for emergency duties",
+          "Whether loss of a necessary medicine could precipitate rapid deterioration",
+          "Whether his employer is willing to accept the residual risk in writing",
+          "Whether the condition would be detectable by another crew member before it became serious"
+        ],
+        correct: 2,
+        explain: "The standards cannot cover every condition, and where one is not listed the approved doctor works from stated occupational circumstances. Among them is the possible difficulty of providing or replacing required medication: as a rule a candidate should not be accepted for service if the loss of a necessary medicine could precipitate rapid deterioration of the condition. That is the circumstance this scenario is built on. The others in the list are real and would matter in other cases — the hazardous nature of work at sea, the restricted medical facilities and delay before full treatment, the confined nature of shipboard life, limited crew complements meaning one person's illness burdens others, the potential need to play a role in an emergency, and freedom from conditions precluding air travel such as pneumothorax. Employer acceptance of risk is not among them.",
+        source: "MSN 1886 (M+F) Amendment 3, 2025, paragraph 3.3.1.",
+        tags: ["seafaring"]
+      },
+      {
+        stem: "A 41-year-old able seafarer has recently started insulin for type 2 diabetes. He has been stable for four months, has good control and no complications, and wishes to return to deck duties including watchkeeping on unlimited voyages. What is the position?",
+        options: [
+          "Category 2 with restrictions only, no unrestricted certificate being permissible on insulin",
+          "Category 1 may be issued, control being good and complications absent",
+          "Category 4, insulin treatment being incompatible with sea service",
+          "Category 3 for a further two months, then category 1 if control is maintained",
+          "Category 1 restricted to vessels carrying a ship's doctor, with no other limitation"
+        ],
+        correct: 0,
+        explain: "No unrestricted certificate may be issued to an insulin-using seafarer. Category 3 applies from the start of treatment until stabilised, for up to six months; thereafter category 2 time limited may be considered, with restrictions typically covering no solo watchkeeping, no lone working, no work at heights and UK near-coastal service only — or unlimited waters on a vessel carrying a ship's doctor where control and surveillance are good, subject to individual risk assessment. Category 4 follows where control is poor or the seafarer non-compliant. So insulin is neither an automatic bar nor consistent with the unrestricted watchkeeping this man wants, and the two options at either extreme are the ones to resist. Diet or oral treatment is handled differently, allowing category 1 once stabilised without complications, though a sulphonylurea may itself attract a watchkeeping restriction.",
+        source: "MSN 1886 (M+F) Amendment 3, 2025, Annex A; LO7 revision guide.",
+        tags: ["seafaring", "diabetes"]
+      },
+      {
+        stem: "A 55-year-old chief engineer had a myocardial infarction, was revascularised, and has completed investigation and rehabilitation. He is asymptomatic and meets the physical requirements. Specialist assessment places his annual excess risk of a recurrent event at about 3 per cent. Five months have elapsed since the event. What is the position?",
+        options: [
+          "Category 1 time limited, the risk being below 5 per cent",
+          "Category 4, any myocardial infarction being permanently disqualifying for sea service",
+          "Category 3 until twelve months have elapsed, whatever the risk estimate",
+          "Category 2, no lone working or solo watchkeeping, near-coastal unless a doctor is aboard",
+          "Category 2 restricted to non-watchkeeping duties, and reviewed again at five years"
+        ],
+        correct: 3,
+        explain: "After a cardiac event — infarct, angina, arrest, bypass or angioplasty — category 3 applies for three months after investigation and treatment, which has elapsed. Thereafter the annual excess risk of recurrence decides the category. Below 2 per cent gives category 1 time limited; 2 to 5 per cent gives category 2 with no lone working or solo watchkeeping and near-coastal service only unless a ship's doctor is carried; 5 per cent or more permits category 2 only where the seafarer is asymptomatic and able to meet the physical requirements, with further restriction and annual review. At 3 per cent he sits in the middle band. The structure is worth noting: the risk estimate does the work rather than the diagnosis, so the same event produces three different outcomes depending on the figure, and a blanket permanent bar is wrong.",
+        source: "MSN 1886 (M+F) Amendment 3, 2025, Annex A; LO7 revision guide.",
+        tags: ["seafaring", "cardiac-fitness"]
+      },
+      {
+        stem: "A seafarer with obstructive sleep apnoea has been established on continuous positive airway pressure for four months. Compliance data confirm consistent use, his daytime somnolence has resolved, and he wishes to return to watchkeeping duties. His employer asks whether anything needs to be communicated to the vessel. What is the position?",
+        options: [
+          "Category 2 restricted to non-watchkeeping duties while treatment continues",
+          "Category 1 time limited, with the master informed of continuing use at sea",
+          "Category 1 without restriction or communication, the condition being treated",
+          "Category 3 until twelve months of demonstrated compliance have elapsed",
+          "Category 4 if treatment is required indefinitely, treatment dependence being disqualifying"
+        ],
+        correct: 1,
+        explain: "Category 3 applies until treatment starts. Once treatment is demonstrably working for three months with compliance confirmed, category 1 time limited may be issued — and the master must be told of the requirement for continuing use of the device at sea. That communication is the feature of this standard worth carrying, and it sits at the boundary between a restriction and a condition: the seafarer's obligation to keep using the device is a condition and confidential, but the master's need to know that a device must be usable on board is a practical necessity the guidance expressly contemplates. Category 4 follows where treatment is ineffective or the seafarer non-compliant, so dependence on treatment is not itself disqualifying — effectiveness and compliance are what matter. Four months of confirmed compliance exceeds the three required.",
+        source: "MSN 1886 (M+F) Amendment 3, 2025, Annex A; LO7 revision guide.",
+        tags: ["seafaring"]
+      },
     ]
   },
   {
@@ -12655,6 +12935,7 @@ const TAG_LABELS = {
   'dvla': 'DVLA / Driving',
   'bbv': 'BBV / Healthcare Worker Protection',
   'diving': 'Diving',
+  'seafaring': 'Seafaring',
   'dermatology': 'Dermatology',
   'cardiac-fitness': 'Cardiac Fitness',
   'ill-health-retirement': 'Ill Health Retirement',
