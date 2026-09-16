@@ -2189,7 +2189,7 @@ const SECTIONS = [
         correct: 1,
         explain: "Silicosis is irreversible and may progress after exposure ceases, which is the essential counselling point — removal still matters, but does not reverse established fibrosis. Silica impairs macrophage function, so TB and atypical mycobacterial risk is raised and new symptoms warrant active exclusion. Option C is wrong: respirable crystalline silica is an IARC Group 1 lung carcinogen with possible synergy with smoking, and COPD and renal and autoimmune disease are also associated. Sandstone is 70-90% crystalline silica, against slate 20-40% and marble about 2%. There is no biological monitoring for silica.",
         source: "OHOH 2nd ed, Ch 2 — Crystalline silica (quartz); key health effects",
-        tags: ["toxicology", "tuberculosis", "asbestos", "occupational-cancer"]
+        tags: ["toxicology", "tuberculosis", "occupational-cancer"]
       },
       {
         stem: "A 29-year-old process operator attends his annual occupational health review, having worked for four years in a plant producing polyurethane articles, where MbOCA is used as a curing agent during moulding. He wears gloves inconsistently, since they interfere with handling small components, and reports occasional skin contact with the curing agent during his shift. The occupational health nurse is reviewing what health surveillance is actually appropriate for someone in his specific role, rather than applying a generic programme. Which surveillance approach is most appropriate?",
@@ -2259,7 +2259,7 @@ const SECTIONS = [
         correct: 3,
         explain: "IARC concluded that all welding fume causes lung cancer and may cause kidney cancer, classifying it Group 1 — removing the previous assumption behind options A and E that mild steel welding was lower risk. The regulatory consequence followed: HSE requires effective engineering control, usually LEV, for all indoor welding with RPE where LEV cannot control fume adequately, and RPE outdoors; general ventilation is no longer sufficient. Other effects: asthma mainly from stainless steel (CrVI), COPD, metal fume fever, and asphyxiation from inert shield gases in confined spaces. MMA and FCA generate more fume than MIG or TIG.",
         source: "OHOH 2nd ed, Ch 2 — Welding fume; IARC Monograph 118 (2018)",
-        tags: ["toxicology", "asbestos", "occupational-cancer"]
+        tags: ["toxicology", "occupational-cancer"]
       },
       {
         stem: "A 38-year-old baker, employed at a large commercial bakery for six years, attends occupational health after developing a runny, blocked nose that started roughly a year ago, followed more recently by episodes of wheeze and chest tightness. He has noticed both symptoms are consistently worse on working days, particularly during the early morning shift when flour is being weighed and mixed, and improve over weekends and during his recent two-week holiday. He has no personal or family history of asthma or eczema, and did not experience these symptoms at all before starting this job. Which statement about his likely condition is correct?",
@@ -2679,7 +2679,7 @@ const SECTIONS = [
         correct: 2,
         explain: "TWA is concentration multiplied by time, summed and divided by eight: (4.0 x 6) + (0 x 2) = 24, divided by 8 = 3.0 mg/m3. Option E divides by the sampled period rather than normalising to the eight-hour reference; option B omits normalisation altogether. The judgement is the harder half. Hardwood dust carries both Carc and Sen notations, and for substances with no identifiable safe threshold the WEL is not a target: COSHH requires exposure to be reduced as low as is reasonably practicable in addition to remaining below the limit, with the Schedule 2A principles of good control practice applied. Sitting exactly at the limit is therefore not compliance. The same reasoning applies to carcinogens, mutagens, reproductive toxins, respiratory sensitisers, asbestos, silica, ionising radiation, noise and vibration.",
         source: "EH40/2005 (hardwood dust 3 mg/m3 inhalable, 8-hr TWA, since Jan 2020); COSHH 2002 reg 7 and Schedule 2A",
-        tags: ["thermal-radiation", "asbestos", "occupational-cancer", "respiratory-sensitisers"]
+        tags: ["occupational-cancer", "respiratory-sensitisers"]
       },
       {
         stem: "A fabrication shop welds stainless steel using manual metal arc, and a worker is referred with a two-year history of cough and episodic wheeze. The employer has installed a general dilution ventilation system across the shop and asks what more could reasonably be done, noting that the system was expensive and that welders dislike wearing powered respirators in summer. The production manager confirms that most of the components could be fabricated in mild steel without affecting the finished product, and that the shop holds equipment for other welding techniques. Which intervention would be expected to reduce exposure most effectively?",
@@ -4808,6 +4808,90 @@ const SECTIONS = [
         explain: "Where an applicant is disabled within the meaning of the Equality Act 2010, the higher education institution must consider reasonable adjustments including auxiliary aids (such as, but not limited to, assistive technology), physical features of the premises, and alteration of a provision, criterion or practice (PCP) — a change to how an assessment is normally conducted falls into this last category. Auxiliary aid isn't limited only to physical equipment in this context, since it's given as one example within a broader adjustment framework; 'derogation' and 'accommodation' aren't the terms used within this specific statutory framework, and competence standards themselves are not something the Act requires to be adjusted, unlike a PCP.",
         source: "HEOPS Medical Students Standards of Medical Fitness to Train 2026",
         tags: ["employment-law-equality-act", "heops"]
+      },
+      {
+        stem: "A 71-year-old retired laggers' mate is diagnosed with diffuse pleural thickening, bilateral and causing breathlessness, with a history of heavy asbestos exposure in the 1970s. He also has pleural plaques. He asks his occupational physician what he might be entitled to claim. Which prescribed disease is relevant?",
+        options: [
+          "D1, which covers all asbestos-related pleural disease",
+          "D3, which covers mesothelioma and pleural thickening together",
+          "D8, which requires lung cancer accompanied by asbestosis",
+          "D9, diffuse pleural thickening being separately prescribed",
+          "None, pleural disease falling outside the prescribed disease scheme"
+        ],
+        correct: 3,
+        explain: "The asbestos-related prescribed diseases are distinct and it is worth holding them apart. D1 is pneumoconiosis, which for asbestos means asbestosis, a parenchymal fibrosis. D3 is diffuse mesothelioma. D8 is primary lung cancer accompanied by asbestosis. D8A is primary carcinoma of the lung following specified qualifying occupational asbestos exposure, and does not require diffuse pleural thickening to be present. D9 is unilateral or bilateral diffuse pleural thickening in its own right, which is this man's position. The distinction from pleural plaques matters: plaques are markers of exposure rather than of disease, do not usually cause symptoms, and are neither prescribed nor actionable at common law in England and Wales. Diffuse pleural thickening is a different entity, can restrict lung function and cause breathlessness, and is compensable.",
+        source: "Social Security (Industrial Injuries) (Prescribed Diseases) Regulations 1985, as amended, diseases D1, D3, D8, D8A and D9.",
+        tags: ["asbestos"]
+      },
+      {
+        stem: "A 64-year-old former electrician has bilateral pleural plaques found incidentally on a chest radiograph arranged for another reason. He is asymptomatic, his lung function is normal, and he worked in buildings containing asbestos in the 1980s. He wishes to bring a civil claim against his former employer in England. What should he be told about the legal position?",
+        options: [
+          "Plaques are actionable, the employer having breached its duty by exposing him",
+          "Plaques alone do not found a claim in England and Wales; other UK jurisdictions differ",
+          "Plaques are actionable only where accompanied by anxiety about future disease",
+          "Plaques are actionable if exposure can be proved to have exceeded the control limit",
+          "Plaques found a claim in all parts of the United Kingdom following legislation in 2009"
+        ],
+        correct: 1,
+        explain: "Pleural plaques are localised areas of collagen on the parietal pleura, are markers of past exposure rather than a disease process, do not usually cause symptoms or impair lung function, and do not themselves progress to mesothelioma. The House of Lords held that plaques without symptoms do not constitute actionable damage in England and Wales, and that anxiety about future disease does not convert them into one. Scotland took a different course, legislating in 2009 to make plaques actionable, and Northern Ireland did likewise in 2011, so the answer depends on jurisdiction — which is why the question specifies England. Proving heavy exposure does not alter the analysis, because the issue is the absence of damage rather than the absence of breach. The practical consequence is that the finding still matters clinically as evidence of exposure.",
+        source: "Rothwell v Chemical and Insulating Co Ltd [2007] UKHL 39; Damages (Asbestos-related Conditions) (Scotland) Act 2009; Damages (Asbestos-related Conditions) Act (Northern Ireland) 2011.",
+        tags: ["asbestos"]
+      },
+      {
+        stem: "A 68-year-old man is diagnosed with diffuse mesothelioma. He worked for several companies in the 1970s, at least two of which no longer exist and whose employers' liability insurers cannot be traced. His family asks whether anything can be recovered where no defendant can be found. What should they be told?",
+        options: [
+          "Nothing is recoverable where the employer and its insurer cannot be traced",
+          "Recovery is limited to Industrial Injuries Disablement Benefit",
+          "A claim lies against the current occupier of the premises where he worked",
+          "Recovery is possible only if another traceable employer can be shown to have caused the disease",
+          "A scheme exists to make payments where no liable employer or insurer can be traced"
+        ],
+        correct: 4,
+        explain: "Several routes run in parallel and they are not alternatives to each other. Industrial Injuries Disablement Benefit is payable for prescribed disease D3 without proof of fault. A lump sum may be payable under the 1979 Act where the disease is prescribed and no civil claim can be pursued against an employer. And the Diffuse Mesothelioma Payment Scheme, established in 2014, makes payments to people diagnosed with mesothelioma who cannot trace a liable employer or its insurer — which is precisely the gap this family faces. Civil claims remain possible against any traceable defendant, and in mesothelioma a claimant need not identify which employer's exposure caused the disease, since liability may attach to any that materially increased the risk. Occupiers are not liable merely as current owners.",
+        source: "Mesothelioma Act 2014 and the Diffuse Mesothelioma Payment Scheme; Pneumoconiosis etc. (Workers' Compensation) Act 1979.",
+        tags: ["asbestos", "occupational-cancer"]
+      },
+      {
+        stem: "An occupational physician receives a consultant's letter confirming asbestosis in a current employee of a construction firm, who worked with asbestos insulation for the same employer during the 1980s and has had no asbestos exposure in his present role for many years. What is the employer's reporting duty?",
+        options: [
+          "The case must be reported within ten days as a dangerous occurrence",
+          "The case is reportable, asbestosis being a listed reportable occupational disease",
+          "No duty arises, the diagnosis not being linked to his current work",
+          "Reporting is required only where the diagnosis is made by a consultant occupational physician",
+          "The duty falls on the employee's general practitioner rather than on the employer"
+        ],
+        correct: 2,
+        explain: "Disease reporting under RIDDOR is tied to the person's CURRENT work, not to the exposure that caused the disease. HSE's guidance is explicit that a former asbestos worker's later asbestos-related disease is not reportable where it was not caused or made worse by the work the person does now. He has had no asbestos exposure in his present role for many years, so no reporting duty arises, and the fact that the historical exposure was with the same employer does not preserve one. The reasoning is the same as for carpal tunnel syndrome, occupational dermatitis and hand-arm vibration syndrome, each of which is reportable only where the current job involves the relevant exposure — a point that regularly catches people out, because the intuition is that a work-caused disease must be reportable by the employer whose work caused it. It is not: RIDDOR is a live-risk reporting system rather than a compensation or attribution mechanism, and the routes that do capture historical exposure are the prescribed disease scheme and civil claims.",
+        source: "Reporting of Injuries, Diseases and Dangerous Occurrences Regulations 2013, regulation 8; HSE guidance on reportable occupational diseases.",
+        tags: ["asbestos"]
+      },
+      {
+        stem: "A 62-year-old former shipyard worker with heavy asbestos exposure has smoked twenty cigarettes daily since his teens. He asks the occupational physician whether smoking has made any difference to his risk, having read that asbestos causes cancer regardless. What should he be told about the interaction?",
+        options: [
+          "The two combine synergistically for lung cancer, but smoking does not increase mesothelioma risk",
+          "Smoking and asbestos combine additively for both lung cancer and mesothelioma",
+          "Smoking has no bearing on either, asbestos acting through a separate mechanism",
+          "Smoking increases mesothelioma risk but has no effect on asbestos-related lung cancer",
+          "The interaction is multiplicative for mesothelioma and additive for lung cancer"
+        ],
+        correct: 0,
+        explain: "The two exposures interact very differently with the two cancers. For lung cancer the combined effect is synergistic — greater than the sum of the separate effects — the classic demonstration being the insulation worker cohorts in which asbestos and smoking together produced a risk far exceeding either alone. Those cohorts approximated a multiplicative relationship, and the interaction is often taught that way, but later meta-analyses support something more-than-additive and sometimes submultiplicative, so the safer formulation is synergistic rather than strictly multiplicative. That is why smoking cessation is one of the few genuinely useful interventions to offer a worker with past asbestos exposure: the asbestos exposure cannot be undone, but the multiplier can be reduced. Mesothelioma behaves differently — smoking is not an established risk factor for it, and a lifelong non-smoker with asbestos exposure carries essentially the same mesothelioma risk as a smoker. Telling a worker that smoking makes no difference is therefore wrong in a way that costs him something actionable.",
+        source: "Selikoff and colleagues, asbestos insulation worker cohort studies; IARC Monographs on asbestos.",
+        tags: ["asbestos", "occupational-cancer"]
+      },
+      {
+        stem: "A 70-year-old man with a forty pack-year smoking history is diagnosed with lung cancer. He worked for eleven years as a pipe lagger. His chest radiograph shows bilateral pleural plaques but no parenchymal fibrosis, and his lung function is normal. His solicitor asks whether the cancer can be attributed to asbestos. What is the most appropriate response?",
+        options: [
+          "Attribution is excluded by the smoking history, which fully accounts for the cancer",
+          "Attribution follows automatically from any documented occupational asbestos exposure",
+          "Attribution is excluded because plaques are markers of exposure rather than disease",
+          "Attribution turns on whether cumulative exposure was sufficient to double the risk",
+          "Attribution requires asbestosis to be present, in the absence of which the claim fails"
+        ],
+        correct: 3,
+        explain: "Attribution of lung cancer to asbestos rests on whether the cumulative exposure was sufficient to have at least doubled the risk, which is the threshold at which occupational causation is treated as more likely than not. The Helsinki criteria approach that through cumulative exposure, taking around 25 fibre-years per millilitre as an exposure associated with roughly a doubling of lung cancer risk, and through markers of substantial exposure such as fibre burden, a documented occupational history of the requisite intensity and duration, or asbestosis. Eleven years as a pipe lagger is the kind of history that requires assessment rather than assumption. This is an epidemiological attribution framework rather than an automatic legal test, and a court applies it as evidence rather than as a rule. Asbestosis is one route to establishing sufficient exposure but is not a precondition, which is where the prescribed disease scheme and civil causation diverge, since D8 does require accompanying asbestosis. Smoking does not exclude attribution; because the effects are multiplicative, a heavy smoker with substantial asbestos exposure has a greater absolute risk attributable to the asbestos, not a smaller one.",
+        source: "Helsinki Criteria on asbestos, asbestosis and cancer; Social Security (Industrial Injuries) (Prescribed Diseases) Regulations, disease D8.",
+        tags: ["asbestos", "occupational-cancer"]
       },
     ]
   },
@@ -8064,6 +8148,132 @@ const SECTIONS = [
         explain: "Vaccination is available in the United Kingdom for those at occupational risk, but it sits below source control in the hierarchy. What comes first is control of the material and of the dust it generates: sourcing from suppliers able to certify their material, disinfection of imported product where practicable, wet methods and enclosure to suppress dust, ventilation, hygiene and washing facilities, and strict separation of clean and dirty areas with protective clothing that does not leave the site. Immunisation supplements those measures rather than substituting for them, which is the general principle that personal measures rank below control at source. Making vaccination a condition of employment inverts the hierarchy and raises a consent problem, since a vaccine accepted in order to keep a job is not freely accepted, and it also protects nobody but the individual, whereas spores carried out on clothing reach families and are addressed by control of the material rather than by immunising the worker. Asserting that no vaccine is available is wrong on the facts. Treating immunisation as unnecessary for cutaneous exposure misreads the position, since the cutaneous form is the commoner occupational presentation and the same organism causes both, so anticipated route does not determine whether immunisation is offered.",
         source: "COSHH 2002; Green Book, anthrax; HSE guidance on anthrax in animal products",
         tags: ["zoonoses", "coshh"]
+      },
+      {
+        stem: "A contractor is asked to remove the remaining sections of asbestos insulating board from the ceiling of a plant room, an area of about twelve square metres. The board is in poor condition and will break up during removal. The site manager believes the job is small enough to be handled by his own maintenance team with appropriate masks. How should the work be classified?",
+        options: [
+          "Non-licensed work, the area being small and the duration short",
+          "Notifiable non-licensed work, requiring notification but no licence",
+          "Licensable work, requiring a contractor holding an HSE licence",
+          "Non-licensed work provided exposure is shown to remain below the control limit",
+          "Notifiable non-licensed work, since the board is in poor condition"
+        ],
+        correct: 2,
+        explain: "Work on asbestos insulating board is licensable unless it falls within a narrow exception for short-duration work, and removal of twelve square metres of deteriorated board that will break up during the work falls well outside it. The exception covers short, non-continuous maintenance-type tasks where no one person works for more than one hour and the total does not exceed two hours in any seven-day period — a scale quite unlike this job. The size of the area and the availability of respiratory protection do not determine the category: the material, its condition and the likely fibre release do. Classifying downwards is the error, and where there is doubt the work should be treated as falling in the higher category until a competent risk assessment says otherwise.",
+        source: "Control of Asbestos Regulations 2012, regulation 3; HSE guidance on licensable work with asbestos.",
+        tags: ["asbestos"]
+      },
+      {
+        stem: "A maintenance joiner will drill four fixing holes through an intact asbestos cement soffit to mount a light fitting. The material is firmly bound, the task will take about ten minutes, and a risk assessment concludes that exposure will remain well below the control limit. What does the employer have to do?",
+        options: [
+          "Notify the enforcing authority and arrange medical surveillance every three years",
+          "Engage a licensed contractor, all work on asbestos cement being licensable",
+          "Notify the enforcing authority, though no medical surveillance is required",
+          "Arrange medical surveillance every two years by an HSE appointed doctor",
+          "Provide training and controls, with no notification or medical surveillance required"
+        ],
+        correct: 4,
+        explain: "Three conditions together take work out of the notifiable category: exposure is sporadic and of low intensity, the risk assessment shows the control limit will not be exceeded, and the work is of the short, non-continuous kind the Regulations describe. Drilling a handful of holes in firmly bound, intact asbestos cement satisfies all three, so this is non-licensed work — training, controls and a risk assessment, but no notification, no medical surveillance and no forty-year health record. Asbestos cement is not licensable by virtue of the material alone, and the licensed-work medical interval belongs to a different category entirely. The distinction matters practically because notifiable non-licensed work imports three separate obligations that this job does not attract.",
+        source: "Control of Asbestos Regulations 2012, regulation 3(2); HSE guidance on non-licensed work.",
+        tags: ["asbestos"]
+      },
+      {
+        stem: "A worker employed by a licensed asbestos removal contractor has been under medical surveillance every two years by an HSE appointed doctor and holds a current certificate with fourteen months left to run. He is offered a job with a general maintenance firm which carries out notifiable non-licensed work only. The new employer asks whether he must undergo a fresh medical before he starts. What is the position?",
+        options: [
+          "No fresh medical is needed; a licensed-work medical covers notifiable non-licensed work",
+          "A fresh medical is needed, notifiable non-licensed work requiring its own examination",
+          "A fresh medical is needed unless it is conducted by the same appointed doctor",
+          "A fresh medical is needed, an appointed doctor being required for both categories",
+          "No fresh medical is needed, and none will be required while he remains in this work"
+        ],
+        correct: 0,
+        explain: "The two medicals are not equivalent, and the interchangeability runs one way only. Licensed work requires examination by an HSE appointed doctor at intervals of at least once every two years, with a specific examination of the chest, and a medical not more than two years before exposure begins. Notifiable non-licensed work requires examination at least once every three years, and it need not be by an appointed doctor — a licensed medical practitioner such as a general practitioner may carry it out. A worker already holding a valid licensed-work certificate therefore needs no additional medical to undertake notifiable non-licensed work, because the higher standard subsumes the lower. The reverse does not hold: a notifiable non-licensed medical will not admit someone to licensed work, having been conducted neither by an appointed doctor nor at the required interval. Surveillance does not stop, though — once his current certificate expires he comes under the three-yearly requirement for his new work.",
+        source: "Control of Asbestos Regulations 2012, regulation 22; HSE guidance on asbestos medical surveillance.",
+        tags: ["asbestos"]
+      },
+      {
+        stem: "A licensed asbestos removal company is ceasing to trade. It holds health records for workers exposed to asbestos, some created twenty-five years ago and relating to men who left the company long ago. The director asks how long the records must be kept and what should happen to them now. What is the correct position?",
+        options: [
+          "Records are kept for ten years from creation and may now be destroyed",
+          "Records are kept for forty years and should be offered to the employees concerned",
+          "Records are kept until each worker reaches 65, after which they may be destroyed",
+          "Records are kept forty years from the last entry, with the authority notified on closure",
+          "Records pass automatically to the licensing authority once the licence lapses"
+        ],
+        correct: 3,
+        explain: "A health record must be maintained for every employee exposed to asbestos in licensable work and kept available for at least forty years from the date of the last entry, the same obligation applying to notifiable non-licensed work. The period reflects the latency of asbestos-related disease: a mesothelioma may present four decades after exposure, and the record may then be the only evidence that the exposure occurred at all. Where a company ceases to trade within that period the records should be made available to the enforcing authority rather than destroyed. Each employee is entitled to see their own record. Offering records to former employees is sensible in itself but does not discharge the duty, and no automatic transfer follows the lapse of a licence.",
+        source: "Control of Asbestos Regulations 2012, regulation 22.",
+        tags: ["asbestos", "confidentiality-data-protection"]
+      },
+      {
+        stem: "Air monitoring during a licensed removal project returns a four-hour time-weighted average of 0.04 fibres per cubic centimetre. The project manager circulates the result to the workforce with a note saying that exposures are safe and that respiratory protection can be relaxed for the remainder of the job. What is wrong with that message?",
+        options: [
+          "The result exceeds the control limit and the work should therefore stop",
+          "The control limit is not a safe level, and exposure must still be reduced further",
+          "Four hours is the wrong averaging period, which is ten minutes for asbestos",
+          "Air monitoring results cannot be disclosed to a workforce without individual consent",
+          "The control limit applies only to chrysotile, and a separate limit applies to amphiboles"
+        ],
+        correct: 1,
+        explain: "The control limit is 0.1 fibres per cubic centimetre averaged over four hours, and this result sits comfortably below it. What the message gets wrong is the inference. The control limit is not a threshold of safety and not a boundary between harmful and harmless exposure: no safe level of asbestos exposure has been identified, and the duty is to reduce exposure to the lowest level reasonably practicable, with the control limit as a maximum that must never be exceeded rather than a target to work up to. Relaxing controls because a measurement came in low inverts that duty. A separate short-term reference period of ten minutes exists for peak exposures but does not replace the four-hour limit, and the limit applies to all asbestos types.",
+        source: "Control of Asbestos Regulations 2012, regulations 2 and 11.",
+        tags: ["asbestos"]
+      },
+      {
+        stem: "A company owns a 1970s office block and leases the upper floors to tenants, retaining responsibility for the stairwells, lift lobbies and plant rooms. The managing agent asks whether the duty to manage asbestos rests with the company, the tenants, or neither, given that no work is planned and the building is in daily use. Where does the duty fall?",
+        options: [
+          "On the tenants, as the occupiers of the areas concerned",
+          "On neither, the duty arising only when work is planned that may disturb asbestos",
+          "On the company alone, as owner of the freehold",
+          "On the enforcing authority, which maintains registers for premises of this age",
+          "On whoever has responsibility for maintenance and repair, by contract or by default the owner"
+        ],
+        correct: 4,
+        explain: "The duty to manage asbestos in non-domestic premises falls on the dutyholder, defined by reference to responsibility for maintenance and repair rather than by ownership or occupation. Where a tenancy agreement allocates that responsibility, it follows the allocation; where there is none, or the position is unclear, it falls on whoever controls the premises. Here the company retains the common parts and plant rooms and will hold the duty for those, while the tenants may hold it for their demised areas depending on the lease. The duty is continuous and does not wait for planned work: it requires taking reasonable steps to find asbestos-containing materials, assessing and recording their condition, preparing a management plan, and making the information available to anyone liable to disturb them.",
+        source: "Control of Asbestos Regulations 2012, regulation 4.",
+        tags: ["asbestos"]
+      },
+      {
+        stem: "A dutyholder has commissioned a management survey of a large building and holds a register listing the location, type and condition of the asbestos-containing materials found. A contractor is about to begin refurbishment of a wing that was inaccessible during the survey, and the dutyholder proposes to give him the existing register. What is the principal deficiency?",
+        options: [
+          "The register should have been supplied to the enforcing authority before the work",
+          "A management survey is valid for three years and this one may have expired",
+          "Refurbishment work requires a refurbishment and demolition survey of the areas concerned",
+          "The register may not be shared with a contractor without the consent of the surveyor",
+          "Only a licensed contractor may be given access to an asbestos register"
+        ],
+        correct: 2,
+        explain: "A management survey locates asbestos-containing materials so far as reasonably practicable in order to manage them in place during normal occupation, and it does not enter areas that are inaccessible without disturbance. Refurbishment or demolition requires a more intrusive refurbishment and demolition survey of the areas affected, which is intended to find asbestos before structural work begins and which may involve destructive inspection. Handing a contractor a management survey for an area it never reached is one of the commonest routes to uncontrolled exposure. The duty to provide information to anyone liable to disturb asbestos is a positive one, so withholding the register from a contractor would itself be a breach, and no fixed expiry period applies — the register is kept up to date as conditions change.",
+        source: "Control of Asbestos Regulations 2012, regulation 4; HSE HSG264, Asbestos: the survey guide.",
+        tags: ["asbestos"]
+      },
+      {
+        stem: "A licensed contractor has completed removal of sprayed coating from a plant room and wishes to hand the area back. The contractor proposes that its own experienced supervisor carry out the visual inspection and air test, on the basis that he knows the enclosure better than anyone and the work was straightforward. What is the correct position on clearance?",
+        options: [
+          "Certification must be by an analyst independent of the removal contractor",
+          "The supervisor may certify provided the results are countersigned by the licence holder",
+          "Clearance is a matter for the client, who may accept the contractor's own certificate",
+          "Air testing alone suffices where the removal was carried out under full enclosure",
+          "Clearance certification is required only where the control limit was exceeded during the work"
+        ],
+        correct: 0,
+        explain: "Clearance following licensable work is a four-stage process set out in HSG248 — a preliminary check of site condition and job completeness, a thorough visual inspection inside the enclosure, air monitoring, and a final assessment after dismantling — leading to a Certificate for Reoccupation. It is carried out by an analyst independent of the organisation that did the removal, normally from a body accredited for the purpose, and is distinct from the contractor's own visual handover check. The independence requirement is the point of the exercise: the analyst is certifying that the area may be reoccupied, and a contractor certifying its own work has an obvious interest in the answer. Air testing is only the third of the four stages and cannot stand alone, because a satisfactory air result in a poorly cleaned enclosure may simply reflect settled fibre that will be disturbed later.",
+        source: "HSE HSG248 (2nd ed), Asbestos: the analysts' guide — four-stage clearance and Certificate for Reoccupation; HSE L143; Control of Asbestos Regulations 2012, regulation 17.",
+        tags: ["asbestos"]
+      },
+      {
+        stem: "A licensed removal contractor asks its occupational health provider to add annual chest radiography and low-dose computed tomography to the two-yearly asbestos medical, on the basis that earlier detection of mesothelioma would improve its workers' outcomes. What is the most appropriate advice?",
+        options: [
+          "Both should be added, earlier detection of mesothelioma improving survival",
+          "Neither is justified for mesothelioma detection; the statutory medical serves a different purpose",
+          "Chest radiography should be added annually but computed tomography reserved for symptomatic workers",
+          "Computed tomography should be added, being the only modality able to detect early mesothelioma",
+          "Imaging should be arranged only after exposure ceases, when latency has elapsed"
+        ],
+        correct: 1,
+        explain: "No screening programme for mesothelioma meets the criteria for a worthwhile programme: there is no test of adequate performance for early detection, no evidence that earlier detection improves survival, and a long latency during which repeated imaging would deliver radiation dose, incidental findings and anxiety without demonstrated benefit. That is the answer to the contractor's request. What the statutory medical does is different again, and worth stating accurately. Its purpose is to monitor for early signs of potential work-related ill health and to advise whether further exposure to asbestos is appropriate for that worker. It is not a fitness assessment for respiratory protective equipment or for work in an enclosure — HSE's own licensed-work certificate should not contain a fitness statement, and a separate medical may be needed for that purpose — and it is not the mechanism by which exposure is documented, the employer's health record being a distinct duty. Explaining those boundaries is more useful to the contractor than adding investigations, since the impulse behind the request is better served by controlling exposure and supporting smoking cessation.",
+        source: "Control of Asbestos Regulations 2012, regulation 22; UK National Screening Committee criteria.",
+        tags: ["asbestos", "occupational-cancer"]
       },
     ]
   },
