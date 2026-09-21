@@ -36,6 +36,7 @@
   header{
     display:flex;align-items:center;gap:20px;
     padding:24px 26px;
+    background-color:var(--navy);
     background:linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
     border-radius:14px;color:#f2ede2;margin-bottom:20px;flex-wrap:wrap;
   }
@@ -251,10 +252,10 @@
   .exam-intro-rules li{margin-bottom:4px;}
 
   .exam-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px;flex-wrap:wrap;}
-  .exam-title{font-weight:600;font-size:15px;}
+  .exam-title{font-weight:600;font-size:15px;flex:1 1 auto;min-width:0;}
   .exam-timer{
     font-family:'IBM Plex Mono',monospace;font-size:15px;font-weight:600;color:var(--navy);
-    background:#eef2f4;border-radius:8px;padding:6px 12px;
+    background:#eef2f4;border-radius:8px;padding:6px 12px;flex-shrink:0;
   }
   .exam-timer.low{color:#fff;background:var(--bad);}
 
@@ -280,10 +281,12 @@
   }
   .exam-flag-btn.active{color:var(--brass);border-color:var(--brass);background:#fbfaf6;}
 
-  .exam-nav-row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:18px;flex-wrap:wrap;}
+  .exam-nav-row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:18px;}
+  .exam-submit-row{margin-top:14px;}
   .exam-submit-btn{
-    background:var(--bad);color:#fff;border:none;border-radius:8px;padding:10px 20px;
-    font-size:13.5px;font-weight:500;cursor:pointer;font-family:'IBM Plex Sans',sans-serif;
+    display:block;width:100%;
+    background:var(--bad);color:#fff;border:none;border-radius:8px;padding:14px 20px;
+    font-size:15px;font-weight:600;cursor:pointer;font-family:'IBM Plex Sans',sans-serif;
   }
   .exam-submit-btn:hover{background:#9c3833;}
 
@@ -821,8 +824,10 @@ function renderExamQuestion(){
     </div>
     <div class="exam-nav-row">
       <button class="btn-secondary" id="examPrevBtn" ${examIndex===0?'disabled':''}>Previous</button>
-      <button class="exam-submit-btn" id="examSubmitBtn">Submit exam</button>
       <button class="next-btn" id="examNextBtn" ${examIndex===examQuestions.length-1?'disabled':''}>Next</button>
+    </div>
+    <div class="exam-submit-row">
+      <button class="exam-submit-btn" id="examSubmitBtn">Submit exam</button>
     </div>
   `;
   document.querySelectorAll('#examOptionsWrap .option').forEach(el=>{
