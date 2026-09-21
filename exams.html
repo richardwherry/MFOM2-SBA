@@ -36,8 +36,7 @@
   header{
     display:flex;align-items:center;gap:20px;
     padding:24px 26px;
-    background-color:var(--navy);
-    background:linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
+    background:var(--navy);
     border-radius:14px;color:#f2ede2;margin-bottom:20px;flex-wrap:wrap;
   }
   header .title-block{flex:1;min-width:220px;}
@@ -270,8 +269,10 @@
   .exam-nav-btn:hover{border-color:var(--brass-light);}
   .exam-nav-btn.answered{background:#eef2f4;border-color:var(--navy);color:var(--navy);}
   .exam-nav-btn.current{border-color:var(--brass);border-width:2px;font-weight:600;}
+  .exam-nav-btn.flagged{background:#fbf0dc;border-color:var(--brass);border-width:2px;}
   .exam-nav-btn.flagged::after{
-    content:'';position:absolute;top:-3px;right:-3px;width:7px;height:7px;border-radius:50%;background:var(--brass);
+    content:'★';position:absolute;top:-7px;right:-7px;width:16px;height:16px;border-radius:50%;
+    background:var(--brass);color:#fff;font-size:10px;line-height:16px;text-align:center;
   }
 
   .exam-flag-row{display:flex;justify-content:flex-end;margin-bottom:10px;}
