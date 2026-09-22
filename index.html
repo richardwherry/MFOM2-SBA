@@ -153,6 +153,15 @@
   }
   .random-start-btn:hover{background:var(--brass-light);}
 
+  .exam-new-star{
+    position:absolute;top:-14px;right:-10px;width:58px;height:58px;
+    background:#e8362d;color:#fff;
+    clip-path:polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'IBM Plex Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:.03em;
+    transform:rotate(12deg);z-index:2;
+  }
+
   /* --- quiz --- */
   .quiz-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:10px;}
   .quiz-title{font-weight:600;font-size:15px;}
@@ -240,6 +249,17 @@
   </header>
 
   <div class="view active" id="view-sections">
+    <div class="mode-label">Timed exams</div>
+    <a href="exams.html" class="random-card" style="display:block;text-decoration:none;color:inherit;position:relative;overflow:visible;">
+      <div class="exam-new-star">NEW</div>
+      <div class="random-top">
+        <div class="random-main">
+          <div class="random-name">Mock Exam 1 →</div>
+          <div class="random-meta">60 questions · 60 minutes · no feedback until you submit</div>
+        </div>
+      </div>
+    </a>
+
     <div class="mode-label">Random mix</div>
     <div class="random-card">
       <div class="random-top">
@@ -11456,7 +11476,7 @@ const SECTIONS = [
         tags: ["seafaring", "diabetes"]
       },
       {
-        stem: "A 55-year-old chief engineer had a myocardial infarction, was revascularised, and has completed investigation and rehabilitation. He is asymptomatic and meets the physical requirements. Specialist assessment places his annual excess risk of a recurrent event at about 3 per cent. Five months have elapsed since the event. What is the position?",
+        stem: "A 55-year-old ship's chief engineer had a myocardial infarction, was revascularised, and has completed investigation and rehabilitation. He is asymptomatic and meets the physical requirements. Specialist assessment places his annual excess risk of a recurrent event at about 3 per cent. Five months have elapsed since the event. What is the position?",
         options: [
           "Category 1 time limited, the risk being below 5 per cent",
           "Category 4, any myocardial infarction being permanently disqualifying for sea service",
